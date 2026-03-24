@@ -70,7 +70,7 @@
 
   /* ---- Features ---- */
   .features{background:#fff}
-  .feature-grid{display:grid;grid-template-columns:1fr;gap:32px}
+  .feature-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
   .feature-card{
     background:#fafafa;border-radius:16px;padding:28px 24px;
     border:1px solid #eee;transition:box-shadow .2s;
@@ -84,11 +84,26 @@
   .feature-card p{font-size:.9rem;color:#666;margin-bottom:12px}
   .feature-card ul{font-size:.85rem;color:#666;margin:0 0 20px 1.2em;line-height:1.8}
   .feature-card li{margin-bottom:2px}
-  .feature-screenshots{
-    display:flex;gap:12px;margin-top:16px;justify-content:center;
+  .feature-videos{
+    display:flex;gap:12px;margin-top:16px;justify-content:center;flex-wrap:wrap;
   }
-  .feature-screenshots img{
-    height:400px;width:auto;border-radius:12px;border:1px solid #eee;
+  .feature-videos .video-item{text-align:center;position:relative;display:inline-block;cursor:pointer}
+  .feature-videos video{
+    width:100%;max-width:280px;height:auto;border-radius:12px;border:1px solid #eee;
+  }
+  .play-overlay{
+    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+    width:56px;height:56px;background:rgba(0,0,0,.5);border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    transition:opacity .2s;pointer-events:none;
+  }
+  .play-overlay::after{
+    content:'';border-style:solid;border-width:12px 0 12px 22px;
+    border-color:transparent transparent transparent #fff;margin-left:4px;
+  }
+  .video-item.playing .play-overlay{opacity:0}
+  .feature-videos .video-label{
+    font-size:.8rem;color:#888;margin-top:4px;
   }
   .feat-doc .feature-icon{background:#E8F5E9;color:#4CAF50}
   .feat-diff .feature-icon{background:#E3F2FD;color:#2196F3}
@@ -176,8 +191,8 @@
     section{padding:56px 16px}
     .feature-grid,.download-grid{grid-template-columns:1fr}
     .gallery-item{flex:0 0 180px}
-    .feature-screenshots{flex-direction:column;align-items:center}
-    .feature-screenshots img{height:auto;width:70%;max-width:280px}
+    .feature-videos{flex-direction:column;align-items:center}
+    .feature-videos video{height:auto;width:70%;max-width:280px}
   }
 </style>
 </head>
@@ -225,10 +240,15 @@
           <li>同じPDFの二重取り込みを自動で防止</li>
           <li>すべてのデータは端末内に保存 — クラウド不要で安心</li>
         </ul>
-        <div class="feature-screenshots">
-          <img src="images/doc_list.png" alt="ドキュメント一覧">
-          <img src="images/doc_group.png" alt="図面番号グループ">
-          <img src="images/import_files.png" alt="PDF取り込み">
+        <div class="feature-videos">
+          <div class="video-item">
+            <div class="play-overlay"></div><video preload="metadata" playsinline><source src="videos/upload_official.mp4" type="video/mp4"></video>
+            <p class="video-label">公式アプリから直接取り込み</p>
+          </div>
+          <div class="video-item">
+            <div class="play-overlay"></div><video preload="metadata" playsinline><source src="videos/upload_cloud.mp4" type="video/mp4"></video>
+            <p class="video-label">スマホ・クラウドから取り込み</p>
+          </div>
         </div>
       </div>
 
@@ -241,10 +261,10 @@
           <li>ピンチ操作で最大8倍ズーム、差分・新・旧をワンタップ切替</li>
           <li>比較履歴を保存し、過去の差分を即座に再表示</li>
         </ul>
-        <div class="feature-screenshots">
-          <img src="images/diff_select.png" alt="バージョン選択">
-          <img src="images/diff_result2.png" alt="差分結果">
-          <img src="images/diff_align.png" alt="位置合わせ">
+        <div class="feature-videos">
+          <div class="video-item">
+            <div class="play-overlay"></div><video preload="metadata" playsinline><source src="videos/diff_check.mp4" type="video/mp4"></video>
+          </div>
         </div>
       </div>
 
@@ -258,10 +278,10 @@
           <li>推移表で複数バージョンの金額変動を横スクロールで俯瞰</li>
           <li>CSVエクスポートで家族や営業担当との共有も簡単</li>
         </ul>
-        <div class="feature-screenshots">
-          <img src="images/estimate_list.png" alt="見積りリスト">
-          <img src="images/estimate_diff.png" alt="見積り比較">
-          <img src="images/estimate_trend.png" alt="推移表">
+        <div class="feature-videos">
+          <div class="video-item">
+            <div class="play-overlay"></div><video preload="metadata" playsinline><source src="videos/estimate.mp4" type="video/mp4"></video>
+          </div>
         </div>
       </div>
 
@@ -275,10 +295,10 @@
           <li>全メモを横断検索、一覧画面から元の画面に即ジャンプ</li>
           <li>CSV出力で打ち合わせ資料としてそのまま活用</li>
         </ul>
-        <div class="feature-screenshots">
-          <img src="images/memo_list.png" alt="メモ一覧">
-          <img src="images/memo_on_diff.png" alt="図面上メモ">
-          <img src="images/memo_edit.png" alt="メモ編集">
+        <div class="feature-videos">
+          <div class="video-item">
+            <div class="play-overlay"></div><video preload="metadata" playsinline><source src="videos/memo.mp4" type="video/mp4"></video>
+          </div>
         </div>
       </div>
 
@@ -401,5 +421,17 @@
   <p class="disclaimer-footer">「ICHIJO施主手帳」は一条工務店の公式アプリではありません。一条工務店とは一切の関係がありません。</p>
 </footer>
 
+<script>
+document.querySelectorAll('.video-item').forEach(item=>{
+  item.addEventListener('click',()=>{
+    const v=item.querySelector('video');
+    if(v.paused){v.play();item.classList.add('playing')}
+    else{v.pause();item.classList.remove('playing')}
+  });
+  item.querySelector('video').addEventListener('ended',()=>{
+    item.classList.remove('playing');
+  });
+});
+</script>
 </body>
 </html>
