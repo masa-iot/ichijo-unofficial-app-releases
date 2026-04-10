@@ -110,6 +110,8 @@
   .feat-est .feature-icon{background:#FFF3E0;color:#FF9800}
   .feat-spec .feature-icon{background:#EDE7F6;color:#7E57C2}
   .feat-memo .feature-icon{background:#FBE9E7;color:#E07B54}
+  .feat-bookmark .feature-icon{background:#E0F7FA;color:#00ACC1}
+  .feat-schedule .feature-icon{background:#FCE4EC;color:#E91E63}
 
   /* ---- Screenshots gallery ---- */
   .screenshots{background:#f5f7fa}
@@ -228,7 +230,7 @@
 <!-- Features -->
 <section class="features" id="features">
   <div class="section-inner">
-    <h2 class="section-title">4つの主要機能</h2>
+    <h2 class="section-title">7つの主要機能</h2>
     <p class="section-subtitle">PDFを取り込むだけで、家づくりの書類をスマートに管理</p>
     <div style="max-width:640px;margin:0 auto 36px;padding:16px 24px;background:#E8F5E9;border-radius:12px;text-align:center;font-size:.95rem;color:#2E7D32">
       🔐 <strong>完全オフライン動作</strong> — サーバー不要、アカウント登録不要。<br>図面や見積りの個人データがスマホの外に出ることはありません。
@@ -291,6 +293,19 @@
         </div>
       </div>
 
+      <div class="feature-card feat-spec">
+        <div class="feature-icon">📋</div>
+        <h3>仕様書チェック</h3>
+        <p>設備仕様書PDFを取り込むだけで自動的に構造化。修正のたびにページ構成が変わっても、どこが変わったかを2版比較で一目で把握できます。</p>
+        <ul>
+          <li>設備仕様書PDFを自動パース — 8セクションに構造化</li>
+          <li>階→部屋→部位の階層表示で、変更箇所が一目瞭然</li>
+          <li>「★要選択★」が確定した箇所を優先表示</li>
+          <li>CSVエクスポートで打ち合わせ資料に活用</li>
+        </ul>
+        <p style="font-size:.8rem;color:#999;margin-bottom:0">※ 古いフォーマットのPDFでは正しくパースできない場合があります。</p>
+      </div>
+
       <div class="feature-card feat-memo">
         <div class="feature-icon">📝</div>
         <h3>ウチメモ+</h3>
@@ -308,6 +323,29 @@
         </div>
       </div>
 
+      <div class="feature-card feat-bookmark">
+        <div class="feature-icon">🔖</div>
+        <h3>ブックマーク</h3>
+        <p>よく見る図面や比較結果をブックマークして、ワンタップでアクセス。打ち合わせ中にすぐ開きたい画面を登録しておけます。</p>
+        <ul>
+          <li>図面ファイル・CAD差分・見積り詳細/比較・仕様書詳細/比較に対応</li>
+          <li>各画面のAppBarからワンタップで登録/解除</li>
+          <li>ホーム画面のブックマーク一覧から即ジャンプ</li>
+        </ul>
+      </div>
+
+      <div class="feature-card feat-schedule">
+        <div class="feature-icon">📅</div>
+        <h3>スケジュール</h3>
+        <p>家づくりのマイルストーンを管理。「着手承諾まであと何日？」をホーム画面で常に確認できます。</p>
+        <ul>
+          <li>プリセット12種（仮契約・着手承諾・上棟・引き渡しなど）＋自由入力</li>
+          <li>タイムライン表示でマイルストーンを俯瞰</li>
+          <li>カウントダウン日数をホーム画面に表示</li>
+          <li>ホームウィジェットで端末のホーム画面にも表示可能</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
@@ -318,23 +356,29 @@
     <h2 class="section-title">What's New</h2>
     <div style="max-width:720px;margin:0 auto">
       <div style="padding:24px;background:#fafafa;border:1px solid #eee;border-radius:16px;margin-bottom:16px">
-        <h3 style="margin:0 0 12px;color:#6BA3D6">v0.2.1 <span style="font-size:.75rem;background:#E3F2FD;color:#2196F3;padding:2px 8px;border-radius:4px;margin-left:8px">NEW</span></h3>
+        <h3 style="margin:0 0 12px;color:#6BA3D6">v1.0.0 — Google Play ストア公開 <span style="font-size:.75rem;background:#E3F2FD;color:#2196F3;padding:2px 8px;border-radius:4px;margin-left:8px">NEW</span></h3>
+        <p style="font-size:.9rem;color:#666;margin:0 0 12px">Google Play ストアで正式公開。3つの新機能を追加しました。</p>
         <ul style="font-size:.85rem;color:#666;margin:0 0 8px 1.2em;line-height:1.8">
-          <li><strong>メモバッジ</strong> — メモが紐づいている項目に件数バッジを表示。見積り・仕様書・図面チェック・ドキュメント管理の全画面対応</li>
-          <li><strong>比較履歴</strong> — 見積り管理・仕様書管理に「比較履歴」タブを追加。比較実行時に自動保存、タップで即再表示</li>
-          <li><strong>単独図面解析</strong> — 図面チェックに単独表示モードを追加。1枚の図面をカラー表示で確認、ピンメモ・画像エクスポートも利用可能</li>
-          <li><strong>更新通知の改善</strong> — リリースノートが長い場合にスクロールで全文表示</li>
+          <li><strong>ブックマーク</strong> — 図面・CAD差分・見積り・仕様書をブックマークしてワンタップアクセス</li>
+          <li><strong>スケジュール</strong> — 家づくりマイルストーン管理。プリセット12種＋自由入力、タイムライン表示・カウントダウン日数</li>
+          <li><strong>ホームウィジェット</strong> — 端末のホーム画面にカウントダウンを表示</li>
+        </ul>
+      </div>
+      <div style="padding:24px;background:#fafafa;border:1px solid #eee;border-radius:16px;margin-bottom:16px">
+        <h3 style="margin:0 0 12px;color:#7E57C2">v0.2.1</h3>
+        <ul style="font-size:.85rem;color:#666;margin:0 0 8px 1.2em;line-height:1.8">
+          <li><strong>メモバッジ</strong> — メモが紐づいている項目に件数バッジを表示</li>
+          <li><strong>比較履歴</strong> — 見積り管理・仕様書管理に「比較履歴」タブを追加</li>
+          <li><strong>単独図面解析</strong> — 図面チェックに単独表示モードを追加</li>
         </ul>
       </div>
       <div style="padding:24px;background:#fafafa;border:1px solid #eee;border-radius:16px;margin-bottom:16px">
         <h3 style="margin:0 0 12px;color:#7E57C2">v0.2.0 — 仕様書チェック</h3>
-        <p style="font-size:.9rem;color:#666;margin:0 0 12px">打ち合わせ後半で確認が必要になる大量の設備仕様書。図面には載らない仕様が記載されているためチェックは欠かせませんが、修正のたびにページ構成が変わり、どこが変わったのか探すだけでも一苦労。このアプリなら、PDFを取り込むだけで自動的に構造化＆2版比較できます。</p>
         <ul style="font-size:.85rem;color:#666;margin:0 0 8px 1.2em;line-height:1.8">
           <li>設備仕様書PDFを自動パース — 8セクションに構造化</li>
           <li>階→部屋→部位の階層表示で、変更箇所が一目瞭然</li>
-          <li>「★要選択★」が確定した箇所を優先表示</li>
+          <li>2版比較で差分を色分け表示</li>
         </ul>
-        <p style="font-size:.8rem;color:#999;margin:0">※ 古いフォーマットのPDFでは正しくパースできない場合があります。</p>
       </div>
     </div>
   </div>
@@ -374,22 +418,17 @@
 
       <div class="download-card">
         <h3>🤖 Android</h3>
-        <p>APKファイルを直接ダウンロードしてインストールします。Google Play ストアを経由しないため、端末の設定変更が必要です。</p>
-        <a href="https://github.com/masa-iot/ichijo-unofficial-app-releases/releases/download/v0.2.1/ichijo-unofficial-v0.2.1.apk" class="btn-download">APKをダウンロード (v0.2.1)</a>
+        <p>Google Play ストアからインストールできます。</p>
+        <a href="https://play.google.com/store/apps/details?id=jp.smartolio.ichijo_unofficial" class="btn-download" target="_blank" rel="noopener">Google Play ストアでインストール</a>
         <div class="install-note">
-          <strong>インストール手順：</strong>
-          <ol>
-            <li>上のボタンからAPKファイルをダウンロード</li>
-            <li>端末の「設定」→「セキュリティ」→「提供元不明のアプリ」を許可</li>
-            <li>ダウンロードしたAPKファイルをタップしてインストール</li>
-            <li>インストール完了後、「提供元不明のアプリ」を無効に戻すことを推奨</li>
-          </ol>
+          <strong>APK版をお使いの方へ：</strong>
+          <p style="margin-top:6px">APK版からの上書きインストールはできません。アプリの「設定→バックアップ」でデータを保存してからAPK版をアンインストールし、Play ストア版をインストール後に「設定→復元」でデータを引き継げます。詳しくは <a href="https://github.com/masa-iot/ichijo-unofficial-app-releases/releases/tag/v1.0.0">v1.0.0 リリースノート</a>をご覧ください。</p>
         </div>
       </div>
 
       <div class="download-card">
         <h3>🍎 iOS</h3>
-        <p>TestFlight経由での配布を予定しています。準備が整い次第、こちらにリンクを掲載します。</p>
+        <p>TestFlight経由での配布を準備中です。準備が整い次第、こちらにリンクを掲載します。</p>
         <span class="btn-download btn-disabled">準備中</span>
         <div class="install-note">
           <strong>TestFlightとは：</strong>
@@ -428,23 +467,8 @@
   <div class="section-inner">
     <div class="privacy-content">
       <h2 class="section-title">プライバシーポリシー</h2>
-      <p class="section-subtitle">最終更新日: 2026年3月26日</p>
-
-      <h3>データの保存について</h3>
-      <p>このアプリはすべてのデータをお使いの端末内にのみ保存します。外部サーバーへのデータ送信は一切行いません。</p>
-
-      <h3>収集する情報</h3>
-      <ul>
-        <li>このアプリはユーザーの個人情報を収集しません</li>
-        <li>アプリに取り込まれたPDF・画像データは端末内のローカルストレージにのみ保存されます</li>
-        <li>バックアップファイル（Zip形式）はユーザーが明示的に操作した場合のみ作成・保存されます</li>
-      </ul>
-
-      <h3>第三者への提供</h3>
-      <p>端末内に保存されたデータを第三者に提供・共有することはありません。</p>
-
-      <h3>お問い合わせ</h3>
-      <p>プライバシーに関するお問い合わせは、<a href="https://x.com/masa_iot" target="_blank" rel="noopener">X (Twitter) @masa_iot</a> までご連絡ください。</p>
+      <p style="text-align:center;font-size:.95rem;color:#666;margin-bottom:24px">プライバシーポリシーの全文は以下のリンクからご確認ください。</p>
+      <p style="text-align:center"><a href="https://smartolio.jp/privacy/ichijo-unofficial-app/" target="_blank" rel="noopener" style="font-weight:600;font-size:1rem">プライバシーポリシー（smartolio.jp）</a></p>
     </div>
   </div>
 </section>
