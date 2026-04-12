@@ -186,11 +186,29 @@
   footer p{margin-bottom:6px}
   footer .disclaimer-footer{font-size:.75rem;color:#888}
 
+  /* ---- Hamburger menu ---- */
+  .hamburger{
+    display:none;background:none;border:none;font-size:1.5rem;
+    cursor:pointer;padding:4px 8px;color:#333;
+  }
+  .mobile-nav{
+    display:none;background:#fff;border-top:1px solid #eee;
+    padding:12px 20px;
+  }
+  .mobile-nav.open{display:block}
+  .mobile-nav a{
+    display:block;padding:10px 0;font-size:.95rem;color:#555;
+    border-bottom:1px solid #f0f0f0;
+  }
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a:hover{color:#6BA3D6;text-decoration:none}
+
   /* ---- Responsive ---- */
   @media(max-width:600px){
     .hero h1{font-size:1.5rem}
     .hero .tagline{font-size:1rem}
     .header-nav{display:none}
+    .hamburger{display:block}
     section{padding:56px 16px}
     .feature-grid,.download-grid{grid-template-columns:1fr}
     .gallery-item{flex:0 0 180px}
@@ -213,7 +231,16 @@
       <a href="#about">概要</a>
       <a href="#privacy">プライバシー</a>
     </nav>
+    <button class="hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('open')" aria-label="メニュー">☰</button>
   </div>
+  <nav class="mobile-nav">
+    <a href="#features" onclick="document.querySelector('.mobile-nav').classList.remove('open')">機能</a>
+    <a href="#screenshots" onclick="document.querySelector('.mobile-nav').classList.remove('open')">画面</a>
+    <a href="#download" onclick="document.querySelector('.mobile-nav').classList.remove('open')">ダウンロード</a>
+    <a href="#faq" onclick="document.querySelector('.mobile-nav').classList.remove('open')">FAQ</a>
+    <a href="#about" onclick="document.querySelector('.mobile-nav').classList.remove('open')">概要</a>
+    <a href="#privacy" onclick="document.querySelector('.mobile-nav').classList.remove('open')">プライバシー</a>
+  </nav>
 </header>
 
 <!-- Hero -->
@@ -453,28 +480,6 @@
   </div>
 </section>
 
-<!-- About -->
-<section class="about" id="about">
-  <div class="section-inner">
-    <div class="about-content">
-      <h2 class="section-title">このアプリについて</h2>
-      <div class="disclaimer">
-        ⚠️ このアプリは一条工務店の公式アプリではありません。<br>
-        施主個人が自身の家づくりのために開発した非公式アプリです。<br>
-        一条工務店とは一切の関係がありません。
-      </div>
-      <div class="developer">
-        <img src="images/masa_iot.webp" alt="masa_iot" style="width:56px;height:56px;border-radius:50%;vertical-align:middle;margin-right:10px">
-        <span>開発者: <strong>masa_iot</strong>（一条工務店 施主）</span>
-      </div>
-      <div class="social-links">
-        <a href="https://note.com/masa_iot" target="_blank" rel="noopener">📝 note</a>
-        <a href="https://x.com/masa_iot" target="_blank" rel="noopener">𝕏 X (Twitter)</a>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FAQ -->
 <section class="faq" id="faq" style="background:#fff">
   <div class="section-inner">
@@ -531,6 +536,28 @@
         <p style="font-size:.9rem;color:#666;margin:0">現在はiPhone・Androidスマートフォン向けに最適化しています。iPadでも動作しますが、画面レイアウトはスマートフォン向けです。</p>
       </div>
 
+    </div>
+  </div>
+</section>
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="section-inner">
+    <div class="about-content">
+      <h2 class="section-title">このアプリについて</h2>
+      <div class="disclaimer">
+        ⚠️ このアプリは一条工務店の公式アプリではありません。<br>
+        施主個人が自身の家づくりのために開発した非公式アプリです。<br>
+        一条工務店とは一切の関係がありません。
+      </div>
+      <div class="developer">
+        <img src="images/masa_iot.webp" alt="masa_iot" style="width:56px;height:56px;border-radius:50%;vertical-align:middle;margin-right:10px">
+        <span>開発者: <strong>masa_iot</strong>（一条工務店 施主）</span>
+      </div>
+      <div class="social-links">
+        <a href="https://note.com/masa_iot" target="_blank" rel="noopener">📝 note</a>
+        <a href="https://x.com/masa_iot" target="_blank" rel="noopener">𝕏 X (Twitter)</a>
+      </div>
     </div>
   </div>
 </section>
