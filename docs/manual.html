@@ -1,0 +1,2444 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ICHIJO施主手帳【非公式】完全ユーザーマニュアル</title>
+<meta name="description" content="ICHIJO施主手帳（非公式）の完全マニュアル。1画面ずつ、全操作をスクリーンショット付きで網羅的に解説します。">
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:64px}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+    color:#333;background:#fafafa;line-height:1.8;font-size:15px;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:#6BA3D6;text-decoration:none}
+  a:hover{text-decoration:underline}
+  kbd{
+    background:#f0f2f5;border:1px solid #d0d4d9;border-bottom-width:2px;
+    border-radius:4px;padding:1px 6px;font-size:.82em;font-family:inherit;
+  }
+
+  /* Header */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;height:56px;
+    background:rgba(255,255,255,.95);backdrop-filter:blur(8px);
+    border-bottom:1px solid #e8e8e8;
+  }
+  .header-inner{
+    max-width:1280px;margin:0 auto;padding:0 20px;height:100%;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .header-logo{
+    font-size:.95rem;font-weight:700;color:#333;
+    display:flex;align-items:center;gap:8px;
+  }
+  .header-logo .home-link{color:#6BA3D6;font-size:.8rem}
+  .header-nav{display:flex;gap:22px}
+  .header-nav a{font-size:.85rem;color:#555}
+  .header-nav a:hover{color:#6BA3D6;text-decoration:none}
+  .hamburger{
+    display:none;background:none;border:none;font-size:1.4rem;
+    cursor:pointer;padding:4px 8px;color:#333;
+  }
+
+  /* Search */
+  .search-box{
+    display:flex;align-items:center;gap:4px;
+    background:#f5f7fa;border:1px solid #e2e6eb;border-radius:20px;
+    padding:2px 6px 2px 12px;
+    transition:border-color .15s,box-shadow .15s;
+    min-width:180px;max-width:320px;flex:1 1 220px;
+  }
+  .search-box:focus-within{border-color:#6BA3D6;box-shadow:0 0 0 2px rgba(107,163,214,.15)}
+  .search-box::before{content:"🔍";font-size:.82rem;opacity:.55;margin-right:4px}
+  .search-box input{
+    flex:1;min-width:0;border:none;background:transparent;outline:none;
+    font-size:.82rem;font-family:inherit;color:#333;padding:4px 0;
+  }
+  .search-box input::placeholder{color:#999}
+  .search-count{
+    font-size:.72rem;color:#888;white-space:nowrap;
+    padding:0 6px;font-variant-numeric:tabular-nums;
+  }
+  .search-count.empty{color:#c94f4f}
+  .search-btn{
+    background:none;border:none;cursor:pointer;color:#888;
+    font-size:.75rem;padding:3px 5px;border-radius:4px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .search-btn:hover{background:#e4e9ee;color:#333}
+  .search-btn:disabled{opacity:.3;cursor:default}
+  .search-btn:disabled:hover{background:none;color:#888}
+  .search-shortcut{
+    font-size:.65rem;color:#aaa;border:1px solid #d0d4d9;border-radius:3px;
+    padding:1px 5px;background:#fff;margin-left:4px;
+  }
+
+  /* Search highlights */
+  mark.search-hit{
+    background:#fff59d;color:inherit;
+    padding:0 2px;border-radius:2px;
+  }
+  mark.search-hit.current{
+    background:#ff9800;color:#fff;
+    box-shadow:0 0 0 2px rgba(255,152,0,.3);
+  }
+
+  /* Layout */
+  .layout{
+    max-width:1280px;margin:0 auto;padding-top:56px;
+    display:grid;grid-template-columns:280px 1fr;gap:40px;
+  }
+
+  /* Sidebar */
+  .sidebar{
+    position:sticky;top:56px;height:calc(100vh - 56px);
+    overflow-y:auto;padding:24px 0 24px 20px;
+    border-right:1px solid #eee;
+  }
+  .sidebar h4{
+    font-size:.7rem;font-weight:700;letter-spacing:.1em;
+    text-transform:uppercase;color:#999;
+    margin:18px 0 6px;padding:0 12px;
+  }
+  .sidebar h4:first-child{margin-top:0}
+  .sidebar ul{list-style:none}
+  .sidebar li a{
+    display:block;padding:6px 12px;font-size:.84rem;color:#555;
+    border-left:3px solid transparent;border-radius:0 6px 6px 0;
+    transition:background .12s,color .12s;
+  }
+  .sidebar li a:hover{background:#f0f6fc;color:#6BA3D6;text-decoration:none}
+  .sidebar li a.active{
+    background:#E8F2FB;color:#6BA3D6;font-weight:600;
+    border-left-color:#6BA3D6;
+  }
+  .sidebar li.sub a{padding-left:24px;font-size:.78rem;color:#777}
+  .sidebar li.sub2 a{padding-left:36px;font-size:.75rem;color:#888}
+
+  /* Main */
+  main{padding:28px 24px 80px;max-width:900px;min-width:0}
+
+  h1{font-size:2rem;font-weight:800;color:#222;margin-bottom:12px}
+  h2{
+    font-size:1.55rem;font-weight:800;color:#222;
+    margin:60px 0 18px;padding-bottom:14px;
+    border-bottom:3px solid #6BA3D6;
+  }
+  h2:first-of-type{margin-top:20px}
+  h3{
+    font-size:1.2rem;font-weight:700;color:#2a5082;
+    margin:44px 0 14px;padding:10px 14px;
+    background:#f0f6fc;border-left:4px solid #6BA3D6;border-radius:0 6px 6px 0;
+  }
+  h4{
+    font-size:1.02rem;font-weight:700;color:#444;
+    margin:28px 0 10px;
+  }
+  h5{font-size:.95rem;font-weight:700;color:#555;margin:18px 0 8px}
+  p{margin-bottom:12px;color:#444}
+  ul,ol{margin:8px 0 16px 1.6em;color:#444}
+  li{margin-bottom:5px}
+  li > p{margin-bottom:6px}
+  strong{color:#222;font-weight:700}
+  code{
+    font-family:"SF Mono",Menlo,Consolas,monospace;
+    font-size:.88em;background:#f0f2f5;
+    padding:2px 6px;border-radius:4px;color:#c7254e;
+  }
+
+  /* Intro */
+  .intro{
+    background:linear-gradient(135deg,#6BA3D6 0%,#8EC5E8 100%);
+    color:#fff;padding:32px 28px;border-radius:16px;margin-bottom:32px;
+  }
+  .intro h1{color:#fff;font-size:1.5rem;margin-bottom:10px}
+  .intro p{color:rgba(255,255,255,.95);margin-bottom:0;font-size:.94rem}
+  .breadcrumb{font-size:.8rem;color:#999;margin-bottom:16px}
+
+  /* Steps */
+  .steps{list-style:none;margin:18px 0;padding:0;counter-reset:step}
+  .steps > li{
+    position:relative;padding:14px 18px 14px 56px;
+    background:#fff;border:1px solid #eee;
+    border-radius:10px;margin-bottom:10px;
+    counter-increment:step;
+  }
+  .steps > li::before{
+    content:counter(step);
+    position:absolute;left:14px;top:14px;
+    width:28px;height:28px;background:#6BA3D6;color:#fff;
+    border-radius:50%;font-size:.82rem;font-weight:700;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .steps > li strong:first-of-type{display:block;margin-bottom:3px;color:#222}
+  .steps > li p{margin-bottom:0;font-size:.88rem;color:#555}
+  .steps > li p + p{margin-top:4px}
+  .steps.substeps{counter-reset:substep;margin-left:16px}
+  .steps.substeps > li{counter-increment:substep;padding-left:48px}
+  .steps.substeps > li::before{content:counter(substep,lower-alpha);background:#9ECBEA;width:24px;height:24px;font-size:.78rem}
+
+  /* Figures */
+  figure{
+    margin:16px 0;background:#fff;border:1px solid #eee;
+    border-radius:10px;padding:14px;text-align:center;
+  }
+  figure img{max-width:100%;height:auto;border-radius:6px;cursor:zoom-in;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+  figure.shot-phone img{max-height:520px;width:auto;max-width:100%}
+  figcaption{margin-top:8px;font-size:.8rem;color:#888}
+  .shot-grid{display:grid;gap:14px;margin:16px 0;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+  .shot-grid figure{margin:0}
+
+  /* Screenshot placeholder (まだ撮影していないスクショ) */
+  .placeholder{
+    background:repeating-linear-gradient(45deg,#fafbfc,#fafbfc 8px,#f0f2f5 8px,#f0f2f5 16px);
+    border:2px dashed #c8cdd3;border-radius:10px;
+    padding:18px 16px;margin:12px 0;
+    display:flex;gap:12px;align-items:flex-start;
+    font-size:.85rem;color:#666;
+  }
+  .placeholder .placeholder-icon{font-size:1.4rem;flex-shrink:0}
+  .placeholder strong{display:block;color:#444;margin-bottom:2px}
+  .placeholder code{background:#fff}
+  .placeholder-list{margin:10px 0 16px 0;padding-left:0;list-style:none}
+  .placeholder-list .placeholder{margin:6px 0}
+
+  /* Gallery (horizontal swipe carousel for related screenshots) */
+  .gallery{
+    display:flex;gap:12px;
+    overflow-x:auto;scroll-snap-type:x mandatory;
+    padding:28px 20px 20px;
+    margin:14px -20px 20px;
+    scrollbar-width:thin;
+    -webkit-overflow-scrolling:touch;
+    position:relative;
+    scroll-padding-left:20px;
+  }
+  .gallery::-webkit-scrollbar{height:6px}
+  .gallery::-webkit-scrollbar-track{background:#f0f2f5;border-radius:3px}
+  .gallery::-webkit-scrollbar-thumb{background:#c8cdd3;border-radius:3px}
+  .gallery::-webkit-scrollbar-thumb:hover{background:#9aa4ae}
+  /* swipe hint */
+  .gallery::before{
+    content:"◀ 横にスワイプ ▶";
+    position:absolute;top:6px;left:20px;right:20px;
+    text-align:center;
+    font-size:.72rem;font-weight:600;letter-spacing:.08em;
+    color:#9aa4ae;pointer-events:none;
+  }
+  /* items: each placeholder/figure is a flex card with peek */
+  .gallery > *{
+    flex:0 0 calc(88% - 12px);
+    max-width:340px;
+    scroll-snap-align:start;
+    margin:0;
+  }
+  .gallery > figure{text-align:center}
+  .gallery > figure img{max-width:100%;height:auto;border-radius:6px}
+  /* tablet/desktop: show two at a time, hide swipe hint */
+  @media(min-width:720px){
+    .gallery{padding-top:20px}
+    .gallery > *{flex:0 0 calc(50% - 12px);max-width:420px}
+    .gallery::before{display:none}
+  }
+  /* wide desktop: three at a time, still scrollable if >3 items */
+  @media(min-width:1024px){
+    .gallery > *{flex:0 0 calc(33.33% - 12px);max-width:380px}
+  }
+  /* single-item safety: if gallery has only 1 child, don't force narrow */
+  .gallery:has(> :only-child) > *{flex:1 1 auto;max-width:100%}
+  .gallery:has(> :only-child)::before{content:""}
+  /* print: expand gallery into vertical list */
+  @media print{
+    .gallery{display:block;overflow:visible;padding:0;margin:12px 0}
+    .gallery > *{flex:none;max-width:none;margin:8px 0}
+    .gallery::before{display:none}
+  }
+
+  /* Callouts */
+  .callout{
+    padding:13px 16px;border-radius:8px;margin:14px 0;
+    border-left:4px solid;font-size:.89rem;
+  }
+  .callout.info{background:#EBF5FE;border-color:#6BA3D6;color:#1a4e7a}
+  .callout.warn{background:#FFF8E1;border-color:#FFC107;color:#6D4C00}
+  .callout.tip{background:#E8F5E9;border-color:#4CAF50;color:#1B5E20}
+  .callout.note{background:#F3E5F5;border-color:#9C27B0;color:#4A148C}
+  .callout.danger{background:#FFEBEE;border-color:#F44336;color:#B71C1C}
+  .callout strong{color:inherit}
+  .callout p{margin-bottom:6px}
+  .callout p:last-child{margin-bottom:0}
+
+  /* Tables */
+  table{
+    width:100%;border-collapse:collapse;margin:14px 0;
+    font-size:.87rem;background:#fff;
+    border:1px solid #eee;border-radius:8px;overflow:hidden;
+  }
+  th,td{padding:9px 12px;text-align:left;border-bottom:1px solid #f0f0f0;vertical-align:top}
+  th{background:#f8f9fa;font-weight:700;color:#333}
+  tr:last-child td{border-bottom:none}
+  td code{white-space:nowrap}
+
+  /* Tabs */
+  .tabs{display:flex;gap:4px;margin:16px 0 0;border-bottom:1px solid #eee}
+  .tab-btn{
+    padding:9px 18px;background:none;border:none;
+    font-size:.88rem;font-weight:600;color:#777;cursor:pointer;
+    border-bottom:2px solid transparent;transition:all .15s;
+  }
+  .tab-btn:hover{color:#6BA3D6}
+  .tab-btn.active{color:#6BA3D6;border-bottom-color:#6BA3D6}
+  .tab-content{display:none;padding:18px 0}
+  .tab-content.active{display:block}
+
+  /* Feature map */
+  .feature-map{
+    display:grid;gap:14px;margin:22px 0;
+    grid-template-columns:repeat(auto-fill,minmax(200px,1fr));
+  }
+  .feature-map a{
+    display:block;padding:18px 16px;background:#fff;
+    border:1px solid #eee;border-radius:12px;
+    transition:border-color .15s,transform .15s;color:#333;
+  }
+  .feature-map a:hover{border-color:#6BA3D6;transform:translateY(-2px);text-decoration:none}
+  .feature-map .fmap-icon{
+    width:38px;height:38px;border-radius:10px;
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.1rem;margin-bottom:8px;
+  }
+  .feature-map strong{display:block;font-size:.92rem;margin-bottom:2px;color:#222}
+  .feature-map small{font-size:.78rem;color:#888}
+
+  /* Modal */
+  .modal{
+    display:none;position:fixed;inset:0;z-index:200;
+    background:rgba(0,0,0,.85);align-items:center;justify-content:center;
+    cursor:zoom-out;padding:20px;
+  }
+  .modal.open{display:flex}
+  .modal img{max-width:100%;max-height:90vh;border-radius:6px}
+  .modal-close{
+    position:absolute;top:20px;right:20px;color:#fff;
+    font-size:2rem;background:none;border:none;cursor:pointer;
+  }
+
+  /* Action reference box (per-screen summary) */
+  .action-box{
+    background:#fff;border:1px solid #eee;border-radius:10px;
+    padding:16px 18px;margin:14px 0;
+  }
+  .action-box h5{margin-top:0}
+  .action-box .action-row{
+    display:grid;grid-template-columns:160px 1fr;
+    gap:10px;padding:6px 0;border-bottom:1px dashed #f0f0f0;
+    font-size:.86rem;
+  }
+  .action-box .action-row:last-child{border-bottom:none}
+  .action-box .action-row > strong{color:#6BA3D6;font-weight:700}
+
+  /* Quick jump */
+  .quick-jump{
+    background:#f5f7fa;border-radius:10px;padding:14px 18px;
+    margin:14px 0 24px;font-size:.84rem;
+  }
+  .quick-jump strong{font-size:.76rem;color:#888;display:block;margin-bottom:6px;letter-spacing:.08em;text-transform:uppercase}
+  .quick-jump a{margin-right:14px;display:inline-block}
+
+  /* Responsive */
+  @media(max-width:900px){
+    .layout{grid-template-columns:1fr;gap:0}
+    .sidebar{
+      position:fixed;top:56px;left:0;right:0;bottom:0;
+      background:#fff;z-index:90;padding:24px 20px;
+      transform:translateX(-100%);transition:transform .2s;
+      border-right:none;height:calc(100vh - 56px);
+    }
+    .sidebar.open{transform:translateX(0)}
+    .header-nav{display:none}
+    .hamburger{display:block}
+    .search-box{min-width:0;flex:1 1 auto;max-width:none}
+    .search-shortcut{display:none}
+    main{padding:22px 16px 60px}
+    h1{font-size:1.45rem}
+    h2{font-size:1.22rem;margin-top:44px}
+    h3{font-size:1.05rem}
+    .intro{padding:22px 18px}
+    .feature-map{grid-template-columns:1fr}
+    .shot-grid{grid-template-columns:1fr}
+    .steps > li{padding:12px 14px 12px 46px}
+    .action-box .action-row{grid-template-columns:1fr;gap:2px}
+    .action-box .action-row > strong{margin-top:4px}
+  }
+  @media(max-width:480px){
+    body{font-size:14px}
+    main{padding:18px 14px 50px}
+    .header-logo{font-size:.82rem}
+    .header-logo .home-link{display:none}
+    .header-logo span:not(.home-link){display:none}
+    .search-count{padding:0 3px;font-size:.68rem}
+    .search-box{padding:2px 4px 2px 8px}
+  }
+  @media print{
+    header,.sidebar,.hamburger{display:none}
+    .layout{grid-template-columns:1fr}
+    main{max-width:none;padding:0}
+    figure,.action-box{break-inside:avoid}
+    h2{break-before:page}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="header-logo">
+      <button class="hamburger" onclick="document.querySelector('.sidebar').classList.toggle('open')" aria-label="目次">☰</button>
+      <span>ICHIJO施主手帳 完全マニュアル</span>
+      <a href="index.html" class="home-link">← LPへ戻る</a>
+    </div>
+    <div class="search-box" role="search">
+      <input type="search" id="manual-search" placeholder="マニュアル内を検索…" autocomplete="off" aria-label="マニュアル内検索">
+      <span class="search-count" id="search-count" aria-live="polite"></span>
+      <button class="search-btn" id="search-prev" aria-label="前のヒット" title="前へ (Shift+Enter)" disabled>▲</button>
+      <button class="search-btn" id="search-next" aria-label="次のヒット" title="次へ (Enter)" disabled>▼</button>
+      <button class="search-btn" id="search-clear" aria-label="クリア" title="クリア (Esc)" style="display:none">✕</button>
+      <kbd class="search-shortcut" aria-hidden="true">/</kbd>
+    </div>
+  </div>
+</header>
+
+<div class="layout">
+
+<aside class="sidebar">
+  <h4>はじめに</h4>
+  <ul>
+    <li><a href="#overview">アプリ概要</a></li>
+    <li><a href="#install">インストール</a></li>
+    <li><a href="#first-launch">初回起動</a></li>
+    <li><a href="#onboarding">オンボーディング</a></li>
+  </ul>
+
+  <h4>ホーム</h4>
+  <ul>
+    <li><a href="#home">ホーム画面</a></li>
+    <li class="sub"><a href="#home-ieduzukuri">家づくりモード</a></li>
+    <li class="sub"><a href="#home-living">暮らしモード</a></li>
+    <li class="sub"><a href="#home-countdown">カウントダウンカード</a></li>
+    <li class="sub"><a href="#home-drawer">サイドメニュー</a></li>
+    <li class="sub"><a href="#home-links">リンク集</a></li>
+  </ul>
+
+  <h4>書類の取り込み</h4>
+  <ul>
+    <li><a href="#import">取り込み画面</a></li>
+    <li class="sub"><a href="#import-share">iサポから共有</a></li>
+    <li class="sub"><a href="#import-open-with">「で開く」ルート</a></li>
+    <li class="sub"><a href="#import-bulk">一括取り込み</a></li>
+    <li class="sub"><a href="#import-edit">取り込み後の修正</a></li>
+    <li class="sub"><a href="#import-dedupe">重複チェック</a></li>
+  </ul>
+
+  <h4>ドキュメント管理</h4>
+  <ul>
+    <li><a href="#doc-management">一覧・グループ表示</a></li>
+    <li class="sub"><a href="#doc-list">図面番号一覧</a></li>
+    <li class="sub"><a href="#doc-group">グループ詳細</a></li>
+    <li class="sub"><a href="#doc-file-action">長押しメニュー</a></li>
+    <li class="sub"><a href="#doc-delete">削除操作</a></li>
+    <li><a href="#pdf-viewer">PDFビューア</a></li>
+  </ul>
+
+  <h4>図面チェック（CAD差分）</h4>
+  <ul>
+    <li><a href="#diff">差分比較の流れ</a></li>
+    <li class="sub"><a href="#diff-select">種別とバージョン選択</a></li>
+    <li class="sub"><a href="#diff-single">単独図面解析</a></li>
+    <li class="sub"><a href="#diff-result">差分結果画面</a></li>
+    <li class="sub"><a href="#diff-view-mode">ビューモード切替</a></li>
+    <li class="sub"><a href="#diff-filter">ノイズ除去フィルタ</a></li>
+    <li class="sub"><a href="#diff-adjusted">調整済/元切替</a></li>
+    <li class="sub"><a href="#diff-page">複数ページ操作</a></li>
+    <li class="sub"><a href="#diff-zoom">ズーム・パン</a></li>
+    <li class="sub"><a href="#diff-export">画像エクスポート</a></li>
+    <li class="sub"><a href="#diff-history">比較履歴</a></li>
+    <li><a href="#alignment">位置合わせ画面</a></li>
+  </ul>
+
+  <h4>見積り管理</h4>
+  <ul>
+    <li><a href="#estimate">見積り一覧</a></li>
+    <li><a href="#estimate-detail">見積り詳細</a></li>
+    <li class="sub"><a href="#estimate-detail-items">項目ツリー</a></li>
+    <li class="sub"><a href="#estimate-detail-validation">自動検算</a></li>
+    <li class="sub"><a href="#estimate-detail-item-longpress">項目長押し</a></li>
+    <li><a href="#estimate-diff">2版比較</a></li>
+    <li><a href="#estimate-trend">推移表</a></li>
+    <li><a href="#estimate-history">比較履歴</a></li>
+  </ul>
+
+  <h4>仕様書チェック（β）</h4>
+  <ul>
+    <li><a href="#spec">仕様書管理</a></li>
+    <li><a href="#spec-detail">仕様書詳細</a></li>
+    <li><a href="#spec-diff">仕様書比較</a></li>
+  </ul>
+
+  <h4>ウチメモ+</h4>
+  <ul>
+    <li><a href="#memo">メモ機能の全体像</a></li>
+    <li class="sub"><a href="#memo-entry-points">メモの記録方法</a></li>
+    <li class="sub"><a href="#memo-on-pdf">PDF閲覧中</a></li>
+    <li class="sub"><a href="#memo-on-diff">差分画面（ピンメモ）</a></li>
+    <li class="sub"><a href="#memo-on-estimate">見積り項目</a></li>
+    <li class="sub"><a href="#memo-on-spec">仕様書項目</a></li>
+    <li><a href="#memo-list">メモ一覧画面</a></li>
+    <li class="sub"><a href="#memo-filter">フィルタと検索</a></li>
+    <li class="sub"><a href="#memo-jump">元画面ジャンプ</a></li>
+    <li class="sub"><a href="#memo-export">CSVエクスポート</a></li>
+  </ul>
+
+  <h4>ブックマーク</h4>
+  <ul>
+    <li><a href="#bookmark">ブックマーク一覧</a></li>
+    <li class="sub"><a href="#bookmark-register">登録対象6種</a></li>
+    <li class="sub"><a href="#bookmark-action">ジャンプ・削除</a></li>
+  </ul>
+
+  <h4>スケジュール</h4>
+  <ul>
+    <li><a href="#schedule">スケジュール一覧</a></li>
+    <li class="sub"><a href="#schedule-presets">プリセット12種</a></li>
+    <li class="sub"><a href="#schedule-add">追加ダイアログ</a></li>
+    <li class="sub"><a href="#schedule-pin">ピン留めとホーム表示</a></li>
+    <li class="sub"><a href="#schedule-today">今日ライン</a></li>
+    <li class="sub"><a href="#schedule-meeting">打ち合わせ第N回</a></li>
+    <li class="sub"><a href="#schedule-display-option">新居生活カウンター表示</a></li>
+    <li><a href="#widget">ホームウィジェット</a></li>
+    <li class="sub"><a href="#widget-android">Android追加手順</a></li>
+    <li class="sub"><a href="#widget-ios">iOS追加手順</a></li>
+    <li class="sub"><a href="#widget-patterns">表示パターン</a></li>
+  </ul>
+
+  <h4>でんき通信簿</h4>
+  <ul>
+    <li><a href="#electricity">メイン画面</a></li>
+    <li class="sub"><a href="#electricity-import">CSV取り込み</a></li>
+    <li class="sub"><a href="#electricity-plan">料金プラン設定</a></li>
+    <li class="sub2"><a href="#electricity-plan-preset">プリセット選択</a></li>
+    <li class="sub2"><a href="#electricity-plan-custom">カスタム作成</a></li>
+    <li class="sub"><a href="#electricity-holidays">祝日管理</a></li>
+    <li class="sub"><a href="#electricity-special-days">特別日</a></li>
+    <li class="sub"><a href="#electricity-fuel">燃料費調整</a></li>
+    <li class="sub"><a href="#electricity-renewable">再エネ賦課金</a></li>
+    <li class="sub"><a href="#electricity-subsidy">補助金</a></li>
+    <li class="sub"><a href="#electricity-monthly">月次レポート</a></li>
+    <li class="sub"><a href="#electricity-annual">年間レポート</a></li>
+    <li class="sub"><a href="#electricity-best">通算（マイベスト）</a></li>
+    <li class="sub2"><a href="#electricity-recovery">投資回収ゴール</a></li>
+    <li class="sub2"><a href="#electricity-records">ベスト記録</a></li>
+    <li class="sub2"><a href="#electricity-badges">実績バッジ</a></li>
+    <li class="sub"><a href="#electricity-share">SNS共有カード</a></li>
+  </ul>
+
+  <h4>便利ツール</h4>
+  <ul>
+    <li><a href="#tools">ツール一覧</a></li>
+    <li><a href="#humidity">湿度計算ツール</a></li>
+    <li><a href="#iedukuri-record">家づくり記録</a></li>
+  </ul>
+
+  <h4>設定</h4>
+  <ul>
+    <li><a href="#settings">設定画面</a></li>
+    <li class="sub"><a href="#settings-backup">バックアップ/復元</a></li>
+    <li class="sub"><a href="#settings-rebuild">データ再構築</a></li>
+    <li class="sub"><a href="#settings-mode">モード切替</a></li>
+    <li class="sub"><a href="#settings-display">表示設定</a></li>
+    <li class="sub"><a href="#settings-theme">テーマ</a></li>
+    <li class="sub"><a href="#settings-demo">デモモード</a></li>
+    <li class="sub"><a href="#settings-tutorial">チュートリアル再表示</a></li>
+    <li class="sub"><a href="#settings-devmode">開発者モード</a></li>
+  </ul>
+
+  <h4>その他</h4>
+  <ul>
+    <li><a href="#troubleshooting">困ったときは</a></li>
+    <li><a href="#privacy">プライバシー</a></li>
+    <li><a href="#contact">お問い合わせ</a></li>
+  </ul>
+</aside>
+
+<main>
+
+<p class="breadcrumb"><a href="index.html">ICHIJO施主手帳</a> › 完全マニュアル</p>
+
+<div class="intro">
+  <h1>完全ユーザーマニュアル</h1>
+  <p>全画面・全操作を1つずつ網羅的に解説します。目次（左メニュー、スマホは☰）から該当の項目へジャンプしてください。画像をタップすると拡大表示されます。</p>
+</div>
+
+<div class="feature-map">
+  <a href="#import"><div class="fmap-icon" style="background:#E8F5E9;color:#4CAF50">📥</div><strong>書類取り込み</strong><small>iサポから数タップで</small></a>
+  <a href="#diff"><div class="fmap-icon" style="background:#E3F2FD;color:#2196F3">🔍</div><strong>図面チェック</strong><small>赤青の差分表示</small></a>
+  <a href="#estimate"><div class="fmap-icon" style="background:#FFF3E0;color:#FF9800">💰</div><strong>見積り管理</strong><small>2版比較・推移表</small></a>
+  <a href="#memo"><div class="fmap-icon" style="background:#FBE9E7;color:#E07B54">📝</div><strong>ウチメモ+</strong><small>画面に直接ピンメモ</small></a>
+  <a href="#schedule"><div class="fmap-icon" style="background:#FCE4EC;color:#E91E63">📅</div><strong>スケジュール</strong><small>家づくり工程をカウントダウン</small></a>
+  <a href="#electricity"><div class="fmap-icon" style="background:#FFF9C4;color:#F57F17">⚡</div><strong>でんき通信簿</strong><small>太陽光・蓄電池の通信簿</small></a>
+</div>
+
+<div class="callout info">
+  <p><strong>この操作は本当にこれで合ってる？</strong> 各セクションの末尾に「操作リファレンス」を置いています。すべてのタップ・長押し・スワイプアクションを網羅しているので、辞書としてもお使いいただけます。</p>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- はじめに                                                 -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="getting-started">はじめに</h2>
+
+<h3 id="overview">このアプリについて</h3>
+<p><strong>ICHIJO施主手帳（非公式）</strong>は、一条工務店の施主が自分の打ち合わせを効率化するために作った非公式アプリです。一条公式「iサポ」で届くPDFを取り込むだけで、以下のことが片手でできます。</p>
+<ul>
+  <li><strong>ドキュメント管理</strong>：図面番号ベースでグループ化</li>
+  <li><strong>図面チェック</strong>：CAD・電気図面のピクセル差分を色分け表示</li>
+  <li><strong>見積り管理</strong>：2版比較・推移表</li>
+  <li><strong>仕様書チェック</strong>：設備仕様書のセクション別差分</li>
+  <li><strong>ウチメモ+</strong>：画面上の位置にピン留めしてメモ</li>
+  <li><strong>ブックマーク</strong>：よく見る画面にワンタップアクセス</li>
+  <li><strong>スケジュール</strong>：家づくり工程のタイムライン＆カウントダウン</li>
+  <li><strong>ホームウィジェット</strong>：端末ホーム画面にカウントダウン表示</li>
+  <li><strong>でんき通信簿</strong>（入居後）：太陽光・蓄電池の経済効果を可視化</li>
+  <li><strong>便利ツール</strong>：湿度計算、外部リンク集など</li>
+</ul>
+
+<div class="callout info">
+  <p>🔒 <strong>すべてのデータは端末内のみ</strong>に保管されます。クラウドに送信されたり、開発者に送信されることはありません。アカウント登録も不要です。</p>
+</div>
+
+<h3 id="install">インストール</h3>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="switchTab(event,'tab-android')">🤖 Android</button>
+  <button class="tab-btn" onclick="switchTab(event,'tab-ios')">🍎 iOS</button>
+</div>
+<div id="tab-android" class="tab-content active">
+  <p><a href="https://play.google.com/store/apps/details?id=jp.smartolio.ichijo_unofficial" target="_blank" rel="noopener">Google Playストア</a>からインストールしてください。</p>
+</div>
+<div id="tab-ios" class="tab-content">
+  <p><a href="https://apps.apple.com/jp/app/ichijo%E6%96%BD%E4%B8%BB%E6%89%8B%E5%B8%B3-%E9%9D%9E%E5%85%AC%E5%BC%8F/id6761674540" target="_blank" rel="noopener">App Store</a>からインストールしてください。TestFlight版ご利用の方は、App Storeからそのまま上書きインストールできます。データは引き継がれます。</p>
+</div>
+
+<h3 id="first-launch">初回起動</h3>
+<p>初回起動時は、以下の順で画面が遷移します。</p>
+<ol class="steps">
+  <li><strong>スプラッシュ画面</strong><p>アプリのロゴが表示され、データベースの初期化が走ります。</p></li>
+  <li><strong>オンボーディング（チュートリアル）</strong><p>アプリの使い方を紹介する5ページのスライド。左右スワイプまたはページ下のドットで移動できます。各ページ下部に「スキップ」「次へ」ボタン、最終ページで「はじめる」をタップすると完了します。</p></li>
+  <li><strong>ホーム画面（家づくりモード）</strong><p>初期状態は家づくりモード。入居済みの方は設定画面から暮らしモードに切り替えてください。</p></li>
+</ol>
+
+<div class="placeholder-list">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>スプラッシュ画面</strong><code>splash.png</code></div></div>
+</div>
+
+<h3 id="onboarding">オンボーディング（チュートリアル）</h3>
+<p>5ページ構成のアプリ紹介スライドです。初回起動後に自動表示されるほか、<strong>設定 → チュートリアルを再表示</strong> からいつでも再確認できます。</p>
+<p>ページ構成：</p>
+<ol>
+  <li><strong>書類を取り込む</strong>：PDFの取り込みとドキュメント管理の紹介</li>
+  <li><strong>図面をチェック</strong>：CAD差分の赤青色分けと位置合わせの紹介</li>
+  <li><strong>見積り・仕様書を比較</strong>：推移表と2版比較の紹介</li>
+  <li><strong>メモを残す</strong>：画面に直接ピン留めするウチメモ+の紹介</li>
+  <li><strong>プライバシーについて</strong>：端末内のみでデータを扱うことの説明</li>
+</ol>
+
+<div class="placeholder-list">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>オンボーディング全5ページ</strong><code>onboarding_01.png</code> 〜 <code>onboarding_05.png</code></div></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ホーム画面                                               -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="home">ホーム画面</h2>
+
+<p>アプリの起点となる画面です。カラフルなタイルで各機能にアクセスできます。</p>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ホーム画面（家づくりモード / 10タイル）</strong><code>home_ieduzukuri.png</code></div></div>
+
+<h3 id="home-ieduzukuri">家づくりモード（10タイル）</h3>
+<p>打ち合わせ中の施主向け。5行×2列のグリッドで10個のタイルが並びます。</p>
+<table>
+  <thead><tr><th>色</th><th>タイル</th><th>遷移先</th></tr></thead>
+  <tbody>
+    <tr><td style="color:#6BA3D6">●</td><td>ドキュメント管理</td><td>図面番号一覧</td></tr>
+    <tr><td style="color:#D87BA2">●</td><td>PDF取り込み</td><td>取り込み画面</td></tr>
+    <tr><td style="color:#5CAD6F">●</td><td>見積り管理</td><td>見積り一覧</td></tr>
+    <tr><td style="color:#D4A843">●</td><td>図面チェック</td><td>差分選択画面</td></tr>
+    <tr><td style="color:#9B7BB8">●</td><td>仕様書チェック <small>β</small></td><td>仕様書一覧</td></tr>
+    <tr><td style="color:#E07B54">●</td><td>ウチメモ+</td><td>メモ一覧</td></tr>
+    <tr><td style="color:#DEB896">●</td><td>ブックマーク</td><td>ブックマーク一覧</td></tr>
+    <tr><td style="color:#8B6F47">●</td><td>スケジュール</td><td>スケジュール一覧</td></tr>
+    <tr><td style="color:#5CABB5">●</td><td>便利ツール</td><td>ツール一覧</td></tr>
+    <tr><td style="color:#9E9E9E">●</td><td>設定</td><td>設定画面</td></tr>
+  </tbody>
+</table>
+
+<h3 id="home-living">暮らしモード（6タイル）</h3>
+<p>入居後のオーナー向けに、打ち合わせ系機能を隠した簡潔なレイアウト。</p>
+<table>
+  <thead><tr><th>色</th><th>タイル</th><th>遷移先</th></tr></thead>
+  <tbody>
+    <tr><td style="color:#E8B931">●</td><td>でんき通信簿</td><td>でんき通信簿</td></tr>
+    <tr><td style="color:#8B6F47">●</td><td>スケジュール</td><td>スケジュール一覧</td></tr>
+    <tr><td style="color:#DEB896">●</td><td>ブックマーク</td><td>ブックマーク一覧</td></tr>
+    <tr><td style="color:#5CABB5">●</td><td>便利ツール</td><td>ツール一覧</td></tr>
+    <tr><td style="color:#6BA3D6">●</td><td>家づくり記録</td><td>家づくり記録</td></tr>
+    <tr><td style="color:#9E9E9E">●</td><td>設定</td><td>設定画面</td></tr>
+  </tbody>
+</table>
+
+<p>モード切替は <strong>設定 → モード切替</strong> から行います。</p>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ホーム画面（暮らしモード）</strong><code>home_living.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>モード切替トグル（設定画面の該当部分）</strong><code>settings_mode_toggle.png</code></div></div>
+</div>
+
+<h3 id="home-countdown">カウントダウンカード（ホーム上部）</h3>
+<p>スケジュールでピン留めしたイベント、または次の未来イベントがホーム画面の上部にカード表示されます。基本表示は以下の通り：</p>
+<ul>
+  <li><strong>次のイベントまでの日数</strong>（例：「引き渡しまで あと 42 日」）</li>
+  <li>タップでスケジュール画面にジャンプ</li>
+</ul>
+
+<div class="callout tip">
+  <p>家づくりの節目や新居生活の区切りでは、カードの見た目や文言がそっと変わる仕掛けがあります。ぜひ育てながら発見してみてください🎁</p>
+</div>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>カウントダウンカード（基本形）</strong><code>home_countdown_card.png</code></div></div>
+
+<h3 id="home-drawer">サイドメニュー（ドロワー）</h3>
+<p>AppBarの左上の☰アイコンから開くサイドメニュー。現在のモードに応じた機能リストが表示されます。</p>
+<ul>
+  <li>ヘッダー：アプリ名＋バージョン番号＋アイコン</li>
+  <li>メニュー（家づくりモード時）：ドキュメント管理／PDF取り込み／見積り管理／図面チェック／仕様書チェック／ウチメモ+／ブックマーク／スケジュール／便利ツール／設定</li>
+  <li>メニュー（暮らしモード時）：でんき通信簿／スケジュール／ブックマーク／便利ツール／家づくり記録／設定</li>
+</ul>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>サイドメニュー（家づくりモード）</strong><code>home_drawer_ieduzukuri.png</code></div></div>
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>サイドメニュー（暮らしモード）</strong><code>home_drawer_living.png</code></div></div>
+
+<h3 id="home-links">リンク集（ホーム下部）</h3>
+<p>タイルの下に、左右2グループのリンクカードが並びます。</p>
+<ul>
+  <li><strong>Created by masa_iot</strong>（左）：
+    <ul>
+      <li>🟢 スマートホーム攻略note（note.com/masa_iot）</li>
+      <li>⚫ @masa_iot（X / Twitter）</li>
+    </ul>
+  </li>
+  <li><strong>Supported by</strong>（右）：
+    <ul>
+      <li>🟢 ややマニアックな相談部屋（LINEオープンチャット）</li>
+      <li>🔵 便利グッズ IMF（IMFのストア）</li>
+    </ul>
+  </li>
+</ul>
+
+<!-- Action reference -->
+<div class="action-box">
+  <h5>ホーム画面 操作リファレンス</h5>
+  <div class="action-row"><strong>タイルをタップ</strong><span>各機能画面に遷移</span></div>
+  <div class="action-row"><strong>☰アイコン（左上）</strong><span>サイドメニュー展開</span></div>
+  <div class="action-row"><strong>カウントダウンカードをタップ</strong><span>スケジュール画面に遷移</span></div>
+  <div class="action-row"><strong>リンクカードをタップ</strong><span>外部ブラウザで開く</span></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 取り込み                                                 -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="import">書類の取り込み</h2>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>取り込み画面（ファイル選択前）</strong><code>import_top.png</code></div></div>
+
+<p>このアプリのワークフローの起点は <strong>PDFの取り込み</strong>。iサポ経由、クラウド経由、端末内ファイル経由など、複数の経路を用意しています。</p>
+
+<div class="quick-jump">
+  <strong>このセクションの目次</strong>
+  <a href="#import-share">共有ルート</a>
+  <a href="#import-open-with">「で開く」ルート</a>
+  <a href="#import-bulk">一括取り込み</a>
+  <a href="#import-edit">取り込み後の修正</a>
+  <a href="#import-dedupe">重複チェック</a>
+</div>
+
+<h3 id="import-share">iサポから「共有」で取り込む（メインルート）</h3>
+
+<ol class="steps">
+  <li><strong>iサポでPDFを開く</strong><p>公式アプリで図面・見積り・仕様書のPDFをタップして閲覧画面を開きます。</p></li>
+  <li><strong>共有メニューを開く</strong><p>PDF閲覧中の画面から共有メニュー（OSの共有シート）を呼び出します。共有ボタンの位置や表記はご利用のOS・iサポのバージョンによって異なりますので、お使いの環境に合わせてください。</p></li>
+  <li><strong>「ICHIJO施主手帳」を選択</strong><p>共有シートから本アプリを選びます。</p></li>
+  <li><strong>自動取り込み完了</strong><p>アプリが起動（もしくは既に起動中ならフォアグラウンドに）し、取り込みが自動で始まります。図面番号・種別・改訂日付が自動検出されます。</p></li>
+</ol>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>iサポのPDF閲覧画面（共有メニューの呼び出し）</strong><code>import_share_step1.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>共有シートからアプリ選択</strong><code>import_share_step2.png</code></div></div>
+</div>
+
+<h3 id="import-open-with">「このアプリで開く」ルート</h3>
+<p>既定のPDFビューワを登録していない場合、iサポでPDFをタップした瞬間の「どのアプリで開きますか？」リストに本アプリが表示されます。これを選べばワンタップで取り込みが走ります。iOSでは「共有」の代わりに Safari・ファイルアプリからの「このアプリで開く」も同様に動作します。</p>
+<div class="callout warn">
+  <p>多くの方は別のPDFビューワ（Adobe、Acrobat等）を既定に設定しているため、このルートが出ないケースも多いです。<strong>基本は「共有」ルートがメイン</strong>と考えてください。</p>
+</div>
+
+<div class="callout info">
+  <p>どちらの経路でも、取り込み時に端末内へPDFのコピーが作られます。元のPDFはそのまま残るので、誤って削除する心配はありません。</p>
+</div>
+
+<h3 id="import-bulk">一括取り込み（クラウド・端末から）</h3>
+<p>Dropbox・iCloud・Google Driveなどに保管しているPDF、または端末にダウンロード済みのPDFを、<strong>複数まとめて</strong>取り込む方法です。</p>
+
+<ol class="steps">
+  <li><strong>「PDF取り込み」タイルをタップ</strong><p>ホーム画面から。</p></li>
+  <li><strong>「ファイルから選択」をタップ</strong><p>取り込み画面上部のボタン。</p></li>
+  <li><strong>複数選択</strong><p>端末のファイルピッカーまたはクラウドから、PDFを複数選択できます。</p></li>
+  <li><strong>プレビューリストで確認</strong><p>選択したPDFが一覧表示され、各ファイルに自動検出された図面番号・種別・日付が表示されます。</p></li>
+  <li><strong>必要なら個別編集</strong><p>検出が失敗した項目は、その場で手動修正できます。</p></li>
+  <li><strong>「取り込み実行」をタップ</strong><p>一気にDBに登録されます。</p></li>
+</ol>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ファイル選択後のプレビューリスト</strong><code>import_preview_list.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>重複警告（同じPDFを再取り込み時）</strong><code>import_duplicate.png</code></div></div>
+</div>
+
+<h3 id="import-edit">取り込み後の修正</h3>
+<p>取り込み時に検出ミスがあった場合は、以下の項目を後から修正できます。</p>
+<ul>
+  <li><strong>図面番号</strong></li>
+  <li><strong>種別</strong>（CAD / 電気 / 仕様書 / 見積り / その他）</li>
+  <li><strong>改訂日付</strong></li>
+  <li><strong>ファイル表示名</strong></li>
+</ul>
+<p>修正方法：<strong>ドキュメント管理 → 該当ファイル長押し → ファイル情報を編集</strong>。</p>
+
+<h3 id="import-dedupe">重複チェック</h3>
+<p>同じPDFを2回取り込もうとすると、自動で重複検知されて「既に取り込み済み」の警告が出ます。バックアップから復元した直後など、同じPDFを再取り込みしようとしたときに便利です。</p>
+
+<div class="action-box">
+  <h5>取り込み画面 操作リファレンス</h5>
+  <div class="action-row"><strong>「ファイルから選択」</strong><span>ファイルピッカー起動（複数選択可）</span></div>
+  <div class="action-row"><strong>プレビューリストのタップ</strong><span>個別編集（図面番号・種別・日付・ファイル名）</span></div>
+  <div class="action-row"><strong>プレビューリストのスワイプ</strong><span>取り込み候補から除外</span></div>
+  <div class="action-row"><strong>「取り込み実行」</strong><span>選択したPDF全てを登録</span></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ドキュメント管理                                         -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="doc-management">ドキュメント管理</h2>
+
+<p>取り込んだPDFを <strong>図面番号単位でグループ化</strong> して管理する機能です。</p>
+
+<h3 id="doc-list">図面番号一覧</h3>
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ドキュメント一覧（図面番号グループ表示）</strong><code>doc_list.png</code></div></div>
+
+<h4>一覧カードに含まれる情報</h4>
+<ul>
+  <li><strong>図面番号</strong>（例：CAD-001）</li>
+  <li><strong>最新バッジ</strong>：最新リビジョンのグループにつく</li>
+  <li><strong>改訂日付</strong></li>
+  <li><strong>サブリビジョン件数</strong>（例：「(3件)」枝番3つある場合）</li>
+  <li><strong>ファイル種別バッジ</strong>：CAD x2、電気 x1 など、含まれるファイル種別と件数</li>
+  <li><strong>右端の</strong> › アイコン</li>
+</ul>
+
+<h5>空状態</h5>
+<p>取り込み前のアイコン＋「まだドキュメントがありません」＋取り込み画面への誘導ボタンが表示されます。</p>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ドキュメント一覧の空状態</strong><code>doc_list_empty.png</code></div></div>
+
+<h3 id="doc-group">グループ詳細（複数枝番のとき）</h3>
+<p>同じ図面番号（例：CAD-001, CAD-001A, CAD-001B）が複数ある場合、一覧でグループをタップすると枝番を横断表示する <strong>グループ詳細画面</strong> に遷移します。</p>
+
+<h4>2カラムのカラフルタイル表示</h4>
+<p>グループ内の全ファイルが、種別色付きのタイル（2カラムグリッド）として並びます。</p>
+<ul>
+  <li>中央に大きな種別アイコン（CAD / 電気 / 仕様書 / 見積り / その他）</li>
+  <li>種別ラベル</li>
+  <li>枝番（基本番号と違う場合のみ小バッジで表示）</li>
+  <li>ファイル名</li>
+  <li>見積りの場合は通し番号（No.xxx）</li>
+</ul>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>グループ詳細（2カラムの種別タイル）</strong><code>doc_group.png</code></div></div>
+
+<h3 id="doc-file-action">ファイルの長押しメニュー</h3>
+<p>グループ内のファイルを長押しすると、BottomSheetで2つの選択肢が出ます。</p>
+<ol>
+  <li><strong>ファイル情報を編集</strong> — ファイル名を変更するダイアログが開きます。</li>
+  <li><strong>削除</strong>（赤） — 確認ダイアログの後、ファイル単独で削除。空になったリビジョンは自動でクリーンアップされます。</li>
+</ol>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ファイル長押しのBottomSheet</strong><code>doc_file_longpress.png</code></div></div>
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ファイル情報編集ダイアログ</strong><code>doc_file_edit_dialog.png</code></div></div>
+
+<h3 id="doc-delete">削除操作のまとめ</h3>
+<table>
+  <thead><tr><th>操作</th><th>対象</th><th>確認ダイアログ</th></tr></thead>
+  <tbody>
+    <tr><td>図面番号カード長押し</td><td>グループ全体</td><td>「図面番号 ${番号} を削除 / この図面番号に含まれる${N}件のリビジョンと全ファイルを削除します。削除してよいですか？」</td></tr>
+    <tr><td>グループ詳細のタイル長押し → 削除</td><td>ファイル単独</td><td>「${種別}を削除 / 「${ファイル名}」を削除してよいですか？」</td></tr>
+  </tbody>
+</table>
+
+<div class="callout warn">
+  <p><strong>削除は元に戻せません。</strong> バックアップZipから復元する場合も、削除時点のバックアップがないと取り戻せません。大事なデータの操作前にはバックアップを取ることをお勧めします。</p>
+</div>
+
+<div class="callout info">
+  <p>ファイル削除後に、リビジョン内のファイルがすべて無くなった場合は、そのリビジョン自体も自動で整理されます（孤立行は残りません）。</p>
+</div>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>図面番号まるごと削除の確認ダイアログ</strong><code>doc_delete_group.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ファイル単独削除の確認ダイアログ</strong><code>doc_delete_file.png</code></div></div>
+</div>
+
+<h3 id="pdf-viewer">PDFビューア</h3>
+<p>ファイルタップで開くPDF閲覧画面です。iOSでは図面系のページ回転に対応、Androidおよび見積り/仕様書はテキスト表示の安定性を優先したビューアで開きます。</p>
+
+<h4>画面要素</h4>
+<ul>
+  <li><strong>AppBar タイトル</strong>：「${現在ページ} / ${総ページ数} ページ」</li>
+  <li><strong>AppBar 右上アクション</strong>：
+    <ul>
+      <li>✏️ <strong>ファイル情報を編集</strong>：図面番号・種別・改訂日付・表示名を変更</li>
+      <li>🔖 <strong>ブックマーク</strong>：このPDFをブックマーク登録／解除（トグル）</li>
+      <li>📝 <strong>ページメモバッジ</strong>：このページにメモが1件以上あるときのみ表示。タップで当該ページのメモ一覧</li>
+    </ul>
+  </li>
+  <li><strong>画面右下 FAB（オレンジ）</strong>：現在ページへのメモを追加</li>
+  <li><strong>メインエリア</strong>：PDFページ（ピンチズーム・スワイプ切替）</li>
+</ul>
+
+<h4>操作</h4>
+<ul>
+  <li><strong>左右スワイプ</strong>：ページ送り</li>
+  <li><strong>ピンチズーム</strong>：拡大縮小</li>
+  <li><strong>FAB タップ</strong>：現在ページにメモを追加</li>
+  <li><strong>編集アイコン</strong>：ファイル情報編集ダイアログ</li>
+  <li><strong>ブックマークアイコン</strong>：登録／解除トグル</li>
+</ul>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>PDFビューア（AppBar＋FAB）</strong><code>pdf_viewer.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>AppBar にページメモバッジが付いた状態</strong><code>pdf_viewer_memo_badge.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ページメモ一覧ポップアップ</strong><code>pdf_viewer_page_memos.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>FABから開くメモ追加ダイアログ</strong><code>pdf_viewer_add_memo.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ファイル情報編集ダイアログ（PDFビューアから）</strong><code>pdf_viewer_edit.png</code></div></div>
+</div>
+
+<div class="action-box">
+  <h5>ドキュメント管理 操作リファレンス</h5>
+  <div class="action-row"><strong>グループタップ</strong><span>詳細画面へ（単独なら直接PDFへ）</span></div>
+  <div class="action-row"><strong>グループ長押し</strong><span>図面番号ごと全削除（確認あり）</span></div>
+  <div class="action-row"><strong>タイルタップ（詳細内）</strong><span>PDFビューアへ</span></div>
+  <div class="action-row"><strong>タイル長押し（詳細内）</strong><span>ファイル情報編集 or 削除のBottomSheet</span></div>
+  <div class="action-row"><strong>PDFビューアで左右スワイプ</strong><span>ページ送り</span></div>
+  <div class="action-row"><strong>PDFビューア右下 FAB</strong><span>現在ページへメモ追加</span></div>
+  <div class="action-row"><strong>PDFビューアのページメモバッジ</strong><span>当該ページのメモ一覧を表示</span></div>
+  <div class="action-row"><strong>PDFビューアの編集アイコン</strong><span>ファイル情報編集ダイアログ</span></div>
+  <div class="action-row"><strong>PDFビューアのブックマークアイコン</strong><span>登録／解除トグル</span></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 図面チェック                                             -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="diff">図面チェック（CAD差分）</h2>
+
+<p>CAD図面・電気図面の2バージョンを重ね合わせて、変更箇所を色分け表示する機能です。</p>
+
+<h3 id="diff-select">種別とバージョンの選択</h3>
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>図面チェック選択画面（種別セグメント＋Dropdown＋履歴）</strong><code>diff_select.png</code></div></div>
+
+<h4>画面構成（縦方向）</h4>
+<ol>
+  <li><strong>AppBar</strong>：「図面チェック」</li>
+  <li><strong>種別セグメント</strong>：CAD図面 ／ 電気図面（SegmentedButton）</li>
+  <li><strong>単独図面解析トグル</strong>（SwitchListTile）</li>
+  <li><strong>バージョンセレクター</strong>：旧／新の2つのDropdown（単独モード時は1つ）</li>
+  <li><strong>アクションボタン</strong>：「比較する」または「表示する」（単独モード時）</li>
+  <li><strong>比較履歴リスト</strong>：過去の比較実績が新しい順に表示</li>
+  <li><strong>バナー広告</strong>（画面下部）</li>
+</ol>
+
+<div class="callout info">
+  <p>種別セグメントを切り替えると、対応するリビジョンだけが Dropdown の選択肢になります。</p>
+</div>
+
+<h3 id="diff-single">単独図面解析モード</h3>
+<p>差分比較ではなく、1つの図面を高画質で開いて <strong>画面上にピンメモ</strong> したい場合のモードです。</p>
+<ul>
+  <li>SwitchListTileをONにすると、バージョン選択が1つに変わります</li>
+  <li>「表示する」ボタンで該当ファイルを開きます</li>
+  <li>画面構成は差分結果画面とほぼ同じですが、差分/新/旧の切替は無効</li>
+</ul>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>単独図面解析モードON</strong><code>diff_select_single.png</code></div></div>
+
+<h3 id="diff-result">差分結果画面</h3>
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>差分結果画面（赤青の差分表示・標準）</strong><code>diff_result.png</code></div></div>
+
+<h4>自動計算の流れ</h4>
+<ol>
+  <li><strong>PDFを画像に変換</strong>（300dpi／グレースケール）</li>
+  <li><strong>自動位置合わせ</strong>（3段階）：
+    <ul>
+      <li>グリッド検出でざっくり合わせる</li>
+      <li>ダウンサンプル画像で微調整</li>
+      <li>原寸で最終調整</li>
+    </ul>
+  </li>
+  <li><strong>ピクセル差分を計算</strong>（閾値30）</li>
+  <li><strong>色分け</strong>：赤=削除／青=追加／薄グレー=変化なし</li>
+</ol>
+
+<p>計算中は進捗バーと「準備中...」などのメッセージが表示されます。計算結果はキャッシュされるので、同じ版の組み合わせをもう一度開いたときは再計算なしで即表示されます。</p>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>差分計算中の進捗画面</strong><code>diff_computing.png</code></div></div>
+
+<h4>AppBarのアクション</h4>
+<ul>
+  <li>戻る</li>
+  <li><strong>図面番号タイトル</strong>（例：CAD-001 → CAD-002）</li>
+  <li><strong>メモアイコン</strong>：このページのメモ一覧</li>
+  <li><strong>ブックマークアイコン</strong>：この比較結果を登録</li>
+  <li><strong>位置合わせ（手動調整）アイコン</strong>：位置合わせ画面へ</li>
+  <li><strong>エクスポートアイコン</strong>：画像保存／共有</li>
+</ul>
+
+<h3 id="diff-view-mode">ビューモード切替（画面下部）</h3>
+<p>画面下のBottomAppBarにSegmentedButtonで3つのビューモードが並びます。</p>
+<ul>
+  <li><strong>差分</strong>：赤青の差分画像（デフォルト）</li>
+  <li><strong>旧</strong>：旧バージョンの原画像</li>
+  <li><strong>新</strong>：新バージョンの原画像</li>
+</ul>
+<p>単独モード時はこのセグメントは非表示です。</p>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ビューモード「旧」表示</strong><code>diff_result_old.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ビューモード「新」表示</strong><code>diff_result_new.png</code></div></div>
+</div>
+
+<h3 id="diff-filter">ノイズ除去フィルタ</h3>
+<p>スキャンノイズや1pxの細かいズレで不要な差分が大量に出る場合、右上のドロップダウンから4段階のフィルタを選べます。</p>
+<table>
+  <thead><tr><th>レベル</th><th>効果</th><th>推奨シーン</th></tr></thead>
+  <tbody>
+    <tr><td>しっかり（デフォルト）</td><td>フィルタなし、全差分を表示</td><td>厳密に確認したい</td></tr>
+    <tr><td>ややざっくり</td><td>1pxノイズ除去</td><td>一般的な用途</td></tr>
+    <tr><td>ざっくり</td><td>小さな塊を除去</td><td>スキャンPDF</td></tr>
+    <tr><td>超ざっくり</td><td>目立つ変更のみ表示</td><td>概要把握</td></tr>
+  </tbody>
+</table>
+
+<div class="callout tip">
+  <p>フィルタレベルは <strong>ページ別</strong> に保存されます。1ページ目は「しっかり」、2ページ目は「ざっくり」のような使い分けが可能。レベル変更時は再計算が走ります。</p>
+</div>
+
+<h3 id="diff-adjusted">調整済 / 元の差分 切替</h3>
+<p>手動で位置合わせを行ったページでは、画面右上に「調整済 / 元の差分」の切替スイッチが表示されます。調整結果を適用した差分と、自動位置合わせ時の差分を比較できます。</p>
+<p>※フィルタレベルが「しっかり」以外の場合、このスイッチは無効になります（常に調整済を表示）。</p>
+
+<h3 id="diff-page">複数ページ操作（BottomAppBar）</h3>
+<p>PDFが複数ページある場合、画面下にページナビが表示されます。</p>
+<ul>
+  <li><strong>← / →</strong> でページ送り</li>
+  <li>中央に「現在ページ / 総ページ数」</li>
+  <li>ページを送るごとにズームは初期化</li>
+</ul>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>複数ページ時のページナビ（BottomAppBar）</strong><code>diff_page_nav.png</code></div></div>
+
+<h3 id="diff-zoom">ズーム・パン・スクロール</h3>
+<ul>
+  <li><strong>ピンチアウト</strong>：最大8倍まで拡大</li>
+  <li><strong>ピンチイン</strong>：縮小（等倍が最小）</li>
+  <li><strong>ドラッグ</strong>：パン（拡大中のみ）</li>
+  <li><strong>ダブルタップ</strong>：ズームイン／リセット</li>
+</ul>
+
+<h3 id="diff-export">画像エクスポート</h3>
+<p>AppBar右上のエクスポートアイコンをタップすると、BottomSheetで2つの選択肢が出ます。</p>
+<ol>
+  <li><strong>現在の画像を保存/共有（${viewMode} P${page}）</strong>：今見ている1枚だけ</li>
+  <li><strong>P${page}の3枚をまとめて共有（差分・新・旧）</strong>：現在ページの3モードを一気に</li>
+</ol>
+<p>エクスポートしたPNGはファイル名 <code>${図面番号}_P${ページ番号}.png</code> で保存／共有できます。</p>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>差分結果（フィルタ：ざっくり適用）</strong><code>diff_filter_moderate.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ノイズフィルタのドロップダウン</strong><code>diff_filter_dropdown.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>調整済/元の差分スイッチ</strong><code>diff_adjusted_switch.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>エクスポートBottomSheet</strong><code>diff_export_sheet.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ズーム後の差分確認（8倍）</strong><code>diff_zoomed.png</code></div></div>
+</div>
+
+
+<h3 id="diff-history">比較履歴</h3>
+<p>差分選択画面の下部に、過去の比較結果が新しい順に並びます。履歴にはメモ件数・位置合わせ調整の有無・ノイズ除去レベルがすべて紐づいており、タップで瞬時に前回の状態から再表示できます。</p>
+<ul>
+  <li>図面番号（旧 → 新）と種別（CAD／電気／単独図面）</li>
+  <li>実行日時</li>
+  <li>メモバッジ（この比較に紐づくメモ件数）</li>
+  <li>位置合わせ調整済マーク（手動調整を保存した比較に付く）</li>
+</ul>
+<p><strong>タップ</strong>で比較結果を即表示（キャッシュ使用・手動調整値もそのまま復元）、<strong>長押し</strong>で「履歴を削除」の確認ダイアログが出ます。</p>
+
+<div class="callout tip">
+  <p>位置合わせの調整値（オフセット量）は比較ID＋ページ単位で保存されるため、後日同じ組み合わせで開いても再調整は不要です。</p>
+</div>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>比較履歴リスト拡大（種別アイコン＋メモバッジ＋調整済マーク）</strong><code>diff_history.png</code></div></div>
+
+<h3 id="alignment">位置合わせ画面</h3>
+<p>差分結果でズレが大きいときに、手動で旧図の位置を調整する画面です。差分結果のAppBarから遷移します。</p>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>位置合わせ画面（手動調整）</strong><code>diff_align.png</code></div></div>
+
+<h4>操作方法</h4>
+<ul>
+  <li><strong>ドラッグ</strong>：旧図を上下左右に移動</li>
+  <li><strong>ピンチ</strong>：全体の表示倍率を変える（基準線があるので位置は保持）</li>
+  <li><strong>長押し</strong>：基準点（アンカー）を追加</li>
+  <li><strong>右上「自動調整」</strong>：再度自動位置合わせを実行</li>
+  <li><strong>右上「保存」</strong>：現在の調整値を保存し、差分を再計算して結果画面へ戻る</li>
+  <li><strong>右上「リセット」</strong>：調整をクリア</li>
+</ul>
+
+<div class="callout note">
+  <p>調整した結果は <strong>ページ単位</strong> で保存されます。ほかのページには影響しません。</p>
+</div>
+
+<div class="action-box">
+  <h5>図面チェック 操作リファレンス</h5>
+  <div class="action-row"><strong>種別セグメント</strong><span>CAD図面 / 電気図面 切替</span></div>
+  <div class="action-row"><strong>単独図面解析トグル</strong><span>差分モード↔単独モード</span></div>
+  <div class="action-row"><strong>Dropdown（旧／新）</strong><span>比較バージョン選択</span></div>
+  <div class="action-row"><strong>「比較する」「表示する」</strong><span>差分結果画面へ</span></div>
+  <div class="action-row"><strong>履歴タップ</strong><span>キャッシュから即表示</span></div>
+  <div class="action-row"><strong>履歴長押し</strong><span>履歴削除（確認あり）</span></div>
+  <div class="action-row"><strong>差分結果：ビューモード</strong><span>差分／旧／新 切替</span></div>
+  <div class="action-row"><strong>差分結果：フィルタDropdown</strong><span>ノイズ除去4段階</span></div>
+  <div class="action-row"><strong>差分結果：調整済/元</strong><span>位置合わせ適用前後の比較</span></div>
+  <div class="action-row"><strong>ページ送り（←→）</strong><span>複数ページ切替</span></div>
+  <div class="action-row"><strong>ピンチ・ダブルタップ</strong><span>最大8倍ズーム</span></div>
+  <div class="action-row"><strong>画面長押し</strong><span>その位置にメモを追加（ピンメモ）</span></div>
+  <div class="action-row"><strong>エクスポートアイコン</strong><span>現在の1枚 or 3枚まとめ</span></div>
+  <div class="action-row"><strong>位置合わせアイコン</strong><span>手動調整画面へ</span></div>
+  <div class="action-row"><strong>ブックマークアイコン</strong><span>登録／解除</span></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 見積り管理                                               -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="estimate">見積り管理</h2>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>見積り一覧（日付順カード）</strong><code>estimate_list.png</code></div></div>
+
+<h3>画面の基本構成</h3>
+<ul>
+  <li><strong>AppBar</strong>：「見積り管理」＋右上にヘルプ・エクスポートアイコン</li>
+  <li><strong>タブ</strong>：見積り一覧 ／ 比較履歴</li>
+  <li><strong>見積り一覧タブ</strong>：取り込んだ全見積りPDFを日付順に表示</li>
+  <li><strong>FAB</strong>：右下に「取り込み」ボタン</li>
+</ul>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>見積り管理のタブ切替（一覧／比較履歴）</strong><code>estimate_tabs.png</code></div></div>
+
+<h4>一覧カードの情報</h4>
+<ul>
+  <li>通し番号（No.xxx）— 取り込み順の連番。編集画面から上書き可能</li>
+  <li>発行日</li>
+  <li>総額（税込）</li>
+  <li>最新バッジ — 同じ枝で最も新しい版に付与</li>
+  <li>検算ステータス（⚠️ バッジは金額の整合にズレがある場合のみ表示）</li>
+</ul>
+
+<h4>操作</h4>
+<ul>
+  <li><strong>カードタップ</strong>：見積り詳細画面へ</li>
+  <li><strong>カード長押し</strong>：「比較対象に選択」または「削除」のBottomSheet</li>
+  <li><strong>比較ボタン</strong>（詳細画面から）：2版選択 → 比較画面</li>
+</ul>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>見積り一覧カード長押しのBottomSheet</strong><code>estimate_list_longpress.png</code></div></div>
+
+<h3 id="estimate-detail">見積り詳細画面</h3>
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>見積り詳細（項目ツリー表示）</strong><code>estimate_detail.png</code></div></div>
+
+<h4 id="estimate-detail-items">項目ツリー</h4>
+<p>見積りPDFを取り込むと、以下の <strong>8つの費用区分</strong> に自動で分類され、折りたたみ可能なツリーで表示されます（①〜⑧の番号は一条工務店の見積書フォーマットに対応）。</p>
+<ol>
+  <li>①建物本体工事</li>
+  <li>②建築申請・その他業務</li>
+  <li>③付帯・屋外給排水等</li>
+  <li>④標準仕様外工事</li>
+  <li>⑤太陽光・蓄電池</li>
+  <li>⑥土地購入費用</li>
+  <li>⑦その他費用</li>
+  <li>⑧預り金精算費用</li>
+</ol>
+<p>区分内にさらに小計行や特別割引（例：建物本体工事内の「法人契約特別割引」「ご紹介割引」等）があり、ネストして展開できます。</p>
+
+<h4 id="estimate-detail-validation">自動検算（整合性チェック）</h4>
+<p>取り込み時に、パースした各項目を合計して見積書の小計・合計と突き合わせる検算が走ります。ズレがある区分にはカード上に ⚠️ アイコンが付き、詳細画面でもズレ金額が赤字で併記されます。検算が通らない代表ケース：</p>
+<ul>
+  <li>新フォーマットや法人契約の特別割引行のパース失敗</li>
+  <li>手書き／スキャン取り込みのPDF</li>
+  <li>一部項目の単価×数量の端数処理ズレ</li>
+</ul>
+<p>⚠️ が出ていても、推移表や2版比較のソートには影響しません。</p>
+
+<h4 id="estimate-detail-item-longpress">項目の長押しメニュー</h4>
+<p>任意の項目を長押しすると、BottomSheetで以下が出ます。</p>
+<ul>
+  <li>メモを追加</li>
+  <li>メモ一覧を表示（この項目のメモだけ）</li>
+  <li>コピー（項目名と金額をクリップボードへ）</li>
+</ul>
+
+<h4>AppBarアクション</h4>
+<ul>
+  <li>ブックマーク（この見積り詳細を登録）</li>
+  <li>CSVエクスポート</li>
+  <li>編集（通し番号の上書き等）</li>
+</ul>
+
+<h3 id="estimate-diff">2版比較</h3>
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>見積り2版比較（サマリー＋項目差額）</strong><code>estimate_diff.png</code></div></div>
+
+<h4>画面構成</h4>
+<ul>
+  <li>画面上部：旧版の通し番号・日付・総額／新版の通し番号・日付・総額／差額</li>
+  <li>メインエリア：項目ごとに旧金額・新金額・差額のテーブル表示</li>
+  <li>色分け：追加（新のみ）青／削除（旧のみ）赤／金額変更 オレンジ</li>
+</ul>
+
+<h4>項目の長押し</h4>
+<p>差額の大きい項目や気になる項目を長押しすると、メモを追加できます。</p>
+
+<h4>フィルタオプション</h4>
+<ul>
+  <li>変更ありのみ表示</li>
+  <li>追加のみ／削除のみ／変更のみ</li>
+  <li>金額差の絶対値でソート</li>
+</ul>
+
+<h3 id="estimate-trend">推移表</h3>
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>推移表（全バージョン横並び）</strong><code>estimate_trend.png</code></div></div>
+
+<p>3バージョン以上の見積りがある場合に真価を発揮する画面です。</p>
+
+<h4>特徴</h4>
+<ul>
+  <li>左列：項目名（固定）</li>
+  <li>右側：全バージョン横並び（横スクロール）</li>
+  <li>セル色で変動を可視化（増加：赤系／減少：青系）</li>
+  <li>ヘッダー：各バージョンの通し番号・日付</li>
+</ul>
+
+<h3 id="estimate-history">比較履歴タブ</h3>
+<p>過去に実行した2版比較の履歴が新しい順に並びます。</p>
+<ul>
+  <li>タップで再表示</li>
+  <li>長押しで履歴削除</li>
+</ul>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>見積り比較履歴タブの中身</strong><code>estimate_history.png</code></div></div>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>見積り項目長押しBottomSheet</strong><code>estimate_item_longpress.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>⚠️ 検算ズレ表示（詳細画面）</strong><code>estimate_validation_warn.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>見積り比較フィルタ</strong><code>estimate_diff_filter.png</code></div></div>
+</div>
+
+<div class="action-box">
+  <h5>見積り管理 操作リファレンス</h5>
+  <div class="action-row"><strong>一覧カードタップ</strong><span>詳細画面へ</span></div>
+  <div class="action-row"><strong>一覧カード長押し</strong><span>比較対象に選択 or 削除</span></div>
+  <div class="action-row"><strong>詳細：項目タップ</strong><span>展開／折りたたみ</span></div>
+  <div class="action-row"><strong>詳細：項目長押し</strong><span>メモ追加／メモ一覧／コピー</span></div>
+  <div class="action-row"><strong>詳細：ブックマーク</strong><span>登録／解除</span></div>
+  <div class="action-row"><strong>詳細：CSVエクスポート</strong><span>BOM付きUTF-8で書き出し</span></div>
+  <div class="action-row"><strong>2版比較：項目長押し</strong><span>メモ追加</span></div>
+  <div class="action-row"><strong>推移表：横スクロール</strong><span>全バージョン横断</span></div>
+  <div class="action-row"><strong>履歴長押し</strong><span>履歴削除（確認あり）</span></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 仕様書チェック                                           -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="spec">仕様書チェック（β）</h2>
+
+<p>設備仕様書PDFを取り込んで、セクション別の階層表示＋2版比較する機能です。現在β版として提供しています。画面構成は見積り管理と似ており、一覧タブ／比較履歴タブの2タブ構成です。</p>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>仕様書管理 一覧タブ</strong><code>spec_list.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>一覧カード長押しのBottomSheet</strong><code>spec_list_longpress.png</code></div></div>
+</div>
+
+<h3>自動構造化（8セクション）</h3>
+<p>設備仕様書PDFを、以下の8セクションに自動分類します。これは一条工務店の「設備仕様書」PDFに含まれる表の見出しに対応しています。</p>
+<ol>
+  <li><strong>外部仕上表</strong>：屋根・外壁・外構まわり</li>
+  <li><strong>内部仕上表</strong>：床・壁・天井の仕上げ</li>
+  <li><strong>設備仕上表</strong>：キッチン・浴室・給湯・衛生設備</li>
+  <li><strong>エアコン仕上表</strong>：エアコン・換気まわり（指示No付き）</li>
+  <li><strong>収納仕上表</strong>：収納・クローゼット</li>
+  <li><strong>内装仕上表</strong>：カーテン・クロス等の内装</li>
+  <li><strong>設定外工事</strong>：標準外の特別工事</li>
+  <li><strong>施工連絡表一覧</strong>：現場への指示事項</li>
+</ol>
+
+<h3 id="spec-detail">仕様書詳細</h3>
+<p>各セクションはカードで区切られ、内部は表形式に整形して表示されます。</p>
+<ul>
+  <li>セクションタイトルタップで展開／折りたたみ</li>
+  <li>項目長押しで「メモ追加」／「メモ一覧」／「コピー」の BottomSheet</li>
+  <li>右上：ブックマーク／CSVエクスポート</li>
+</ul>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>仕様書詳細（セクション別カード）</strong><code>spec_detail.png</code></div></div>
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>項目長押しの BottomSheet</strong><code>spec_item_longpress.png</code></div></div>
+
+<h3 id="spec-diff">仕様書 2版比較</h3>
+<p>異なる2バージョンの仕様書を項目単位で比較します。色分けは以下の通り：</p>
+<ul>
+  <li><strong>変更あり</strong>：オレンジハイライト（旧→新の値を併記）</li>
+  <li><strong>追加</strong>：青（新版にのみ存在する項目）</li>
+  <li><strong>削除</strong>：赤（旧版にのみ存在する項目）</li>
+  <li><strong>変更なし</strong>：通常表示（フィルタで非表示にもできる）</li>
+</ul>
+<p>項目長押しでメモ追加、右上からCSVエクスポート可能。</p>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>仕様書2版比較画面</strong><code>spec_diff.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>仕様書 比較履歴タブ</strong><code>spec_history.png</code></div></div>
+</div>
+
+<div class="callout warn">
+  <p>仕様書PDFのフォーマットはロット・地域によって揺れがあります。列境界の検出が崩れる場合は、<strong>設定 → 仕様書データ再構築</strong> を実行後もズレが残るようであればお問い合わせください。</p>
+</div>
+
+<div class="action-box">
+  <h5>仕様書チェック 操作リファレンス</h5>
+  <div class="action-row"><strong>一覧カードタップ</strong><span>詳細画面へ</span></div>
+  <div class="action-row"><strong>一覧カード長押し</strong><span>比較対象に選択 or 削除</span></div>
+  <div class="action-row"><strong>詳細：セクションタップ</strong><span>展開／折りたたみ</span></div>
+  <div class="action-row"><strong>詳細：項目長押し</strong><span>メモ追加／メモ一覧／コピー</span></div>
+  <div class="action-row"><strong>詳細：ブックマーク／CSV</strong><span>AppBar右上</span></div>
+  <div class="action-row"><strong>2版比較：項目長押し</strong><span>メモ追加</span></div>
+  <div class="action-row"><strong>履歴長押し</strong><span>履歴削除（確認あり）</span></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ウチメモ+                                                -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="memo">ウチメモ+</h2>
+
+<p>画面上で気づいたことを <strong>その場で残せる</strong> 仕組みです。メモはすべて元の画面・位置にリンクされ、一覧からワンタップで戻れます。</p>
+
+<h3 id="memo-entry-points">メモの記録方法</h3>
+<p>メモを残せる画面は以下の4箇所。内部的には<strong>6種類のメモ種別</strong>に分類され、一覧のフィルタと連動します。</p>
+<table>
+  <thead><tr><th>記録場所</th><th>操作</th><th>内部種別</th></tr></thead>
+  <tbody>
+    <tr><td>PDFビューア</td><td>画面右下のオレンジFABをタップ → 現在ページへ記録</td><td>PDF</td></tr>
+    <tr><td>CAD差分画面</td><td>画面上の気になる位置を <strong>長押し</strong>（ピンメモ）</td><td>図面差分</td></tr>
+    <tr><td>見積り詳細</td><td>項目を <strong>長押し</strong> → メモ追加</td><td>見積り詳細</td></tr>
+    <tr><td>見積り2版比較</td><td>項目を <strong>長押し</strong> → メモ追加</td><td>見積り比較</td></tr>
+    <tr><td>仕様書詳細</td><td>項目を <strong>長押し</strong> → メモ追加</td><td>仕様書詳細</td></tr>
+    <tr><td>仕様書2版比較</td><td>項目を <strong>長押し</strong> → メモ追加</td><td>仕様書比較</td></tr>
+  </tbody>
+</table>
+<p>それぞれのメモには画面復元に必要な情報（ファイルID・ページ番号・座標・項目ID・セクション等）が自動で紐づきます。</p>
+
+<h3 id="memo-on-pdf">PDF閲覧中のメモ</h3>
+<ol class="steps">
+  <li><strong>PDFを開く</strong></li>
+  <li><strong>画面右下のオレンジFABをタップ</strong><p>現在表示中のページへメモを追加するダイアログが表示されます。</p></li>
+  <li><strong>テキストを入力して保存</strong></li>
+  <li><strong>登録後はAppBarにページメモバッジが表示</strong><p>同じページに複数メモが溜まると件数バッジで表示、タップで一覧に遷移できます。</p></li>
+</ol>
+
+<h3 id="memo-on-diff">CAD差分画面のピンメモ</h3>
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>差分画面：画面上の気になる位置に直接ピンメモ</strong><code>memo_on_diff.png</code></div></div>
+
+<ol class="steps">
+  <li><strong>差分画面で気になる位置を長押し</strong><p>長押しした座標にピンが立ち、メモダイアログが開きます。</p></li>
+  <li><strong>テキストを入力して保存</strong><p>画面上にピンアイコンが残り、タップで再表示できます。</p></li>
+</ol>
+
+<div class="callout tip">
+  <p>ピンメモはズーム・パンと連動します。拡大した状態で細かい位置に打っても、拡大縮小・パンしても同じ位置に追従します。</p>
+</div>
+
+<h3 id="memo-on-estimate">見積り項目メモ</h3>
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>見積り項目にメモを紐づける</strong><code>memo_on_estimate.png</code></div></div>
+
+<p>見積り詳細の任意の項目を長押し → 「メモ追加」。メモは項目IDに紐づくので、版が変わっても同じ項目を追跡できます。</p>
+
+<h3 id="memo-on-spec">仕様書項目メモ</h3>
+<p>仕様書詳細の項目を長押し → 「メモ追加」。セクション＋項目IDで紐づけ。</p>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>仕様書項目にメモを紐づける</strong><code>memo_on_spec.png</code></div></div>
+
+<h3 id="memo-list">メモ一覧画面</h3>
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>メモ一覧画面（種別バッジ＋フィルタ）</strong><code>memo_list.png</code></div></div>
+
+<h4>カード情報</h4>
+<ul>
+  <li>種別バッジ（PDF／図面差分／見積り詳細／見積り比較／仕様書詳細／仕様書比較）</li>
+  <li>紐づく対象（図面番号・ページ番号・項目名 など）</li>
+  <li>メモ本文の先頭</li>
+  <li>作成日時</li>
+</ul>
+
+<h3 id="memo-filter">フィルタと検索</h3>
+<p>AppBar右上からフィルタ＆検索が開けます。</p>
+<ul>
+  <li><strong>種別フィルタ</strong>：すべて／PDF／図面差分／見積り詳細／見積り比較／仕様書詳細／仕様書比較</li>
+  <li><strong>図面番号フィルタ</strong>：特定の図面番号に紐づくメモのみ表示</li>
+  <li><strong>キーワード検索</strong>：メモ本文を全文検索</li>
+</ul>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>フィルタUIの展開</strong><code>memo_filter.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>キーワード検索の入力中</strong><code>memo_search.png</code></div></div>
+</div>
+
+<h3 id="memo-jump">元画面へのジャンプ</h3>
+<p>メモカードをタップすると、<strong>メモを残した元の画面にそのまま戻れます</strong>。図面差分ならそのピン位置で、見積りならその項目で。</p>
+
+<h3 id="memo-export">CSVエクスポート</h3>
+<p>AppBar右上のエクスポートアイコンから、フィルタ適用後のメモ一覧をBOM付きUTF-8のCSVで書き出せます。Excelでそのまま開けます。</p>
+
+<h3>メモ編集・削除</h3>
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>メモ編集ダイアログ</strong><code>memo_edit.png</code></div></div>
+
+<ul>
+  <li><strong>メモ一覧のカードタップ</strong>：元画面へジャンプ</li>
+  <li><strong>メモ一覧のカード長押し</strong>：削除確認ダイアログ</li>
+  <li>元画面側で再度長押し → 編集／削除のBottomSheet</li>
+</ul>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>元画面でのメモ編集／削除メニュー</strong><code>memo_longpress_action.png</code></div></div>
+
+<div class="action-box">
+  <h5>ウチメモ+ 操作リファレンス</h5>
+  <div class="action-row"><strong>PDFビューア右下 FAB</strong><span>現在ページへメモ追加</span></div>
+  <div class="action-row"><strong>差分画面で画面長押し</strong><span>その位置にピンメモ</span></div>
+  <div class="action-row"><strong>見積り項目長押し</strong><span>メモ追加</span></div>
+  <div class="action-row"><strong>仕様書項目長押し</strong><span>メモ追加</span></div>
+  <div class="action-row"><strong>ピン長押し（差分画面）</strong><span>ピンメモの編集／削除</span></div>
+  <div class="action-row"><strong>メモ一覧カードタップ</strong><span>元画面へジャンプ</span></div>
+  <div class="action-row"><strong>メモ一覧カード長押し</strong><span>削除（確認あり）</span></div>
+  <div class="action-row"><strong>フィルタアイコン</strong><span>種別／図面番号／キーワード</span></div>
+  <div class="action-row"><strong>CSVエクスポート</strong><span>フィルタ後のメモを書き出し</span></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ブックマーク                                             -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="bookmark">ブックマーク</h2>
+
+<p>よく見る画面を <strong>ワンタップでアクセス</strong> できるようにする機能です。打ち合わせ直前に「今日触りたい書類」を並べておくと便利。</p>
+
+<h3 id="bookmark-register">登録できる6種類</h3>
+<table>
+  <thead><tr><th>種別</th><th>登録元画面</th></tr></thead>
+  <tbody>
+    <tr><td>PDFファイル</td><td>PDFビューア</td></tr>
+    <tr><td>図面差分</td><td>CAD差分結果画面</td></tr>
+    <tr><td>見積り詳細</td><td>見積り詳細画面</td></tr>
+    <tr><td>見積り比較</td><td>見積り2版比較画面</td></tr>
+    <tr><td>仕様書詳細</td><td>仕様書詳細画面</td></tr>
+    <tr><td>仕様書比較</td><td>仕様書2版比較画面</td></tr>
+  </tbody>
+</table>
+
+<h3>登録・解除の方法</h3>
+<p>対応画面のAppBar右上にあるブックマークアイコン（🔖）をタップ。もう一度タップで解除。</p>
+
+<h3 id="bookmark-action">ブックマーク一覧画面</h3>
+<ul>
+  <li>新しい順で表示</li>
+  <li>種別バッジ（色分け）</li>
+  <li>ラベル（自動生成）</li>
+  <li>サブラベル（該当する場合）</li>
+  <li>登録日時（M/D HH:MM）</li>
+</ul>
+
+<h4>空状態</h4>
+<p>アイコン＋「まだブックマークがありません」＋「図面やPDF、比較結果の画面でブックマークを追加できます」の案内。</p>
+
+<h4>操作</h4>
+<ul>
+  <li><strong>タップ</strong>：元画面にジャンプ</li>
+  <li><strong>長押し</strong>：削除確認ダイアログ（「「${ラベル}」を削除してよいですか？」）</li>
+</ul>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ブックマーク一覧</strong><code>bookmark_list.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ブックマーク一覧の空状態</strong><code>bookmark_empty.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ブックマーク削除確認ダイアログ</strong><code>bookmark_delete.png</code></div></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- スケジュール                                             -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="schedule">スケジュール</h2>
+
+<p>家づくりのマイルストーンをタイムラインで管理する機能です。ホーム画面のカウントダウンやホームウィジェットと連動します。</p>
+
+<h3>画面構成</h3>
+<ul>
+  <li><strong>AppBar</strong>：「スケジュール」＋右上ヘルプアイコン</li>
+  <li><strong>タイムライン</strong>：登録した予定を日付順に縦表示。過去・未来の境界に「今日ライン」が入る</li>
+  <li><strong>各アイテム</strong>：日付・タイトル・ピンアイコン</li>
+  <li><strong>FAB</strong>：右下の追加ボタン（茶色）</li>
+</ul>
+
+<h4>空状態</h4>
+<p>カレンダーアイコン＋「まだスケジュールがありません」＋「右下の＋ボタンからマイルストーンを追加できます」＋ヒントカード（4項目）</p>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>スケジュールの空状態</strong><code>schedule_empty.png</code></div></div>
+
+<h3 id="schedule-presets">プリセット12種</h3>
+<table>
+  <thead><tr><th>イベント種別</th><th>複数回登録</th></tr></thead>
+  <tbody>
+    <tr><td>仮契約</td><td>—</td></tr>
+    <tr><td>契約（工事請負）</td><td>—</td></tr>
+    <tr><td>打ち合わせ（初回）</td><td>✅</td></tr>
+    <tr><td>打ち合わせ（間取り）</td><td>✅</td></tr>
+    <tr><td>打ち合わせ（電気）</td><td>✅</td></tr>
+    <tr><td>最終仕様確認</td><td>✅</td></tr>
+    <tr><td>着手承諾</td><td>—</td></tr>
+    <tr><td>地鎮祭</td><td>—</td></tr>
+    <tr><td>着工</td><td>—</td></tr>
+    <tr><td>上棟</td><td>—</td></tr>
+    <tr><td>引き渡し</td><td>—</td></tr>
+    <tr><td>引っ越し</td><td>—</td></tr>
+  </tbody>
+</table>
+<p>この12種に加えて、<strong>「自由入力」</strong> チップを選ぶと任意のタイトルで追加できます。「複数回登録」が ✅ の種別は何件でも登録でき、第N回の番号が自動で付きます（後述）。</p>
+
+<h3 id="schedule-add">追加・編集ダイアログ</h3>
+<p>FAB（＋）をタップすると追加ダイアログが開きます。</p>
+
+<h4>入力項目</h4>
+<ol>
+  <li><strong>イベント種別</strong>：プリセット12種＋「自由入力」チップ（新規追加時のみ。編集時は変更不可）</li>
+  <li><strong>タイトル</strong>：
+    <ul>
+      <li>プリセット選択時は自動生成（読み取り専用）。例：「第3回 打ち合わせ（間取り）」</li>
+      <li>自由入力時はテキスト入力欄（最大50文字）</li>
+    </ul>
+  </li>
+  <li><strong>日付</strong>：タップで日付ピッカー（2010年〜2040年）</li>
+  <li><strong>メモ（任意）</strong>：2行まで、最大200文字</li>
+</ol>
+
+<p>ボタン：<strong>キャンセル</strong> ／ <strong>追加</strong>（編集時は<strong>更新</strong>）。日付と種別が未選択の間は「追加」は無効化。</p>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>既存アイテムを開いた編集ダイアログ</strong><code>schedule_edit.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>スケジュール削除確認ダイアログ</strong><code>schedule_delete.png</code></div></div>
+</div>
+
+<h3 id="schedule-pin">ピン留めとホーム表示</h3>
+<p>各アイテムの左側のピンアイコンをタップ。</p>
+<ul>
+  <li>ピン留めされていないとき：グレーのピン（<kbd>push_pin_outlined</kbd>）</li>
+  <li>ピン留め中：塗りつぶしピン（<kbd>push_pin</kbd>）</li>
+  <li>SnackBar通知：「「${タイトル}」をホーム画面に表示します」／「ホーム画面の表示を解除しました」</li>
+</ul>
+
+<div class="callout info">
+  <p>ピン留めは <strong>1つだけ</strong>。他のアイテムをピン留めすると、前のピンは自動で外れます。未ピンの場合、ホームには「次の未来イベント」が自動表示されます。</p>
+</div>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ピン留め中と未ピンのアイコン比較</strong><code>schedule_pin_state.png</code></div></div>
+
+<h3 id="schedule-today">今日ライン</h3>
+<p>タイムラインの過去と未来の境界に、「今日」の赤いラインが挿入されます。今日が該当イベントの日に一致する場合はライン表示はせず、イベント自体をハイライト。</p>
+
+<h3 id="schedule-meeting">打ち合わせ「第N回」の自動振り直し</h3>
+<p>「打ち合わせ（初回）」「打ち合わせ（間取り）」「打ち合わせ（電気）」は、<strong>3種類を横断カウント</strong>して「第N回」のナンバリングを自動で行います。</p>
+
+<p>例：</p>
+<ol>
+  <li>打ち合わせ（初回） → 「第1回 打ち合わせ（初回）」</li>
+  <li>打ち合わせ（間取り） → 「第2回 打ち合わせ（間取り）」</li>
+  <li>打ち合わせ（電気） → 「第3回 打ち合わせ（電気）」</li>
+  <li>打ち合わせ（間取り） → 「第4回 打ち合わせ（間取り）」</li>
+</ol>
+
+<p>間にある予定を削除したり、日付を入れ替えたりすると、自動的に再採番されます。</p>
+
+<h3 id="schedule-display-option">新居生活カウンターの表示オプション</h3>
+<p>引き渡し or 引っ越しをピン留めしていると、予定日を過ぎたあとにホーム画面のカウントダウンが新居生活の経過表示に自動で切り替わります。</p>
+<p>細かい日数まで出したくないときは <strong>設定 → 表示 → 新居生活カウンターの日を非表示</strong> をON。年・ヶ月までの表示になります。</p>
+
+<div class="callout tip">
+  <p>このほか、家づくりの節目や季節の区切りで、ホーム画面にちょっとした文言が現れることがあります。育てながら見つけてみてください🎁</p>
+</div>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>スケジュール一覧（タイムライン＋今日ライン）</strong><code>schedule_timeline.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>スケジュール追加ダイアログ（プリセット選択）</strong><code>schedule_add_preset.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>スケジュール追加ダイアログ（自由入力）</strong><code>schedule_add_custom.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ヘルプBottomSheet</strong><code>schedule_help.png</code></div></div>
+</div>
+
+<div class="action-box">
+  <h5>スケジュール 操作リファレンス</h5>
+  <div class="action-row"><strong>FAB（＋）タップ</strong><span>スケジュール追加ダイアログ</span></div>
+  <div class="action-row"><strong>アイテムタップ</strong><span>編集ダイアログ</span></div>
+  <div class="action-row"><strong>アイテム長押し</strong><span>削除確認ダイアログ</span></div>
+  <div class="action-row"><strong>ピンアイコンタップ</strong><span>ホーム画面表示の切替</span></div>
+  <div class="action-row"><strong>右上ヘルプアイコン</strong><span>使い方のBottomSheet</span></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ウィジェット                                             -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="widget">ホームウィジェット</h2>
+
+<p>端末のホーム画面に、スケジュールのカウントダウンを表示するウィジェットです。ピン留めしたイベントがそのまま反映されます。</p>
+
+<h3 id="widget-android">Android追加手順</h3>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="switchTab(event,'wadd-android')">🤖 Android</button>
+  <button class="tab-btn" onclick="switchTab(event,'wadd-ios')">🍎 iOS</button>
+</div>
+
+<div id="wadd-android" class="tab-content active">
+  <ol class="steps">
+    <li><strong>ホーム画面の空きスペースを長押し</strong></li>
+    <li><strong>「ウィジェット」を選択</strong></li>
+    <li><strong>「ICHIJO施主手帳」を探す</strong><p>ウィジェット一覧をスクロールしてアプリ名を探します。</p></li>
+    <li><strong>サイズとテーマを選ぶ</strong><p>全8種類：<br>- <code>2×1</code>（横長・小）<br>- <code>2×2</code>（正方形）<br>- <code>4×1</code>（横長・大）<br>- <code>4×2</code>（大）<br>× ライト／ダーク</p></li>
+    <li><strong>ホーム画面にドラッグ</strong></li>
+  </ol>
+
+  <h4>更新タイミング（Android）</h4>
+  <ul>
+    <li>毎日深夜0時過ぎにAlarmManagerで自動更新</li>
+    <li>アプリ内でスケジュールが変わったら即時更新</li>
+    <li>端末再起動／タイムゾーン変更時に再登録</li>
+  </ul>
+  <div class="callout warn">
+    <p>バッテリー最適化が厳しい端末では深夜更新が遅延します。<strong>設定アプリ → アプリ → ICHIJO施主手帳 → バッテリー → 最適化から除外</strong> を推奨。</p>
+  </div>
+</div>
+
+<div id="wadd-ios" class="tab-content">
+  <ol class="steps">
+    <li><strong>ホーム画面を長押し</strong><p>編集モードに入ります。</p></li>
+    <li><strong>左上の「＋」をタップ</strong></li>
+    <li><strong>「ICHIJO施主手帳」を検索／選択</strong></li>
+    <li><strong>サイズを選ぶ</strong><p>2種類：<br>- Small（正方形）<br>- Medium（横長）<br>ダーク／ライトは端末のシステムテーマに追従。</p></li>
+    <li><strong>「ウィジェットを追加」をタップ</strong></li>
+  </ol>
+
+  <h4>更新タイミング（iOS）</h4>
+  <ul>
+    <li>WidgetKitのTimelineProviderにより、翌日以降に順次更新</li>
+    <li>アプリを開いた時にも更新が走る</li>
+    <li>OSが適切なタイミングでリロード</li>
+  </ul>
+</div>
+
+<h3 id="widget-patterns">表示パターン</h3>
+
+<table>
+  <thead><tr><th>状態</th><th>表示内容</th><th>色味</th></tr></thead>
+  <tbody>
+    <tr><td>カウントダウン</td><td>イベント名＋「あと${N}日」</td><td>通常</td></tr>
+    <tr><td>今日</td><td>イベント名＋「今日です！」</td><td>ゴールド</td></tr>
+    <tr><td>新居生活カウンター</td><td>🏠「新居生活 ${X}年${Y}ヶ月${Z}日」</td><td>通常</td></tr>
+    <tr><td>過去イベント</td><td>「${N}日経過」</td><td>グレー</td></tr>
+    <tr><td>空状態</td><td>「スケジュールを追加してください」</td><td>通常</td></tr>
+  </tbody>
+</table>
+
+<div class="callout tip">
+  <p>イベント当日や新居生活の節目には、ウィジェット側でも特別な表示が切り替わります。お楽しみに🎁</p>
+</div>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>Androidウィジェット全8種</strong><code>widget_android_2x1_light.png</code> / <code>2x1_dark.png</code> / <code>2x2_light.png</code> / <code>2x2_dark.png</code> / <code>4x1_light.png</code> / <code>4x1_dark.png</code> / <code>4x2_light.png</code> / <code>4x2_dark.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>iOSウィジェット2種</strong><code>widget_ios_small.png</code> / <code>widget_ios_medium.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ウィジェット表示パターン</strong><code>widget_countdown.png</code> / <code>widget_today.png</code> / <code>widget_life_counter.png</code> / <code>widget_past.png</code> / <code>widget_empty.png</code></div></div>
+</div>
+
+<p>ウィジェットをタップするとアプリが起動し、スケジュール画面に遷移します。</p>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- でんき通信簿                                             -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="electricity">でんき通信簿</h2>
+
+<p>太陽光・蓄電池の経済効果を、パワーモニターのCSVを取り込むだけで可視化する機能です。</p>
+
+<div class="callout info">
+  <p>でんき通信簿は <strong>暮らしモード</strong> のホーム画面で前面に出てきますが、家づくりモードからも <strong>設定 → モード切替</strong> で切り替えればアクセスできます。</p>
+</div>
+
+<h3>画面構成</h3>
+<ul>
+  <li><strong>AppBar</strong>：「でんき通信簿」＋右上に PopupMenuButton（設定・再計算・共有）</li>
+  <li><strong>セグメント</strong>：<strong>月次 / 年間 / 通算</strong>（SegmentedButton）</li>
+  <li><strong>月／年ナビ</strong>：セグメントに応じて年月 or 年のセレクター</li>
+  <li><strong>メインコンテンツ</strong>：セグメントごとに異なるカード／グラフ</li>
+  <li><strong>バナー広告</strong>（画面下部）</li>
+</ul>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>でんき通信簿 初回・データ未取り込みの空状態</strong><code>electricity_empty.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>右上メニュー展開（CSV取り込み／プラン設定／再計算／共有）</strong><code>electricity_menu.png</code></div></div>
+</div>
+
+<h3 id="electricity-import">CSV取り込み</h3>
+
+<h4>パワモニ側のCSVエクスポート</h4>
+<p>一条のパワーモニターアプリから、1時間単位の実績をCSVエクスポート：</p>
+<ul>
+  <li>ヘッダー：<code>データ日時,発電量(kwh),消費量(kwh),売電量(kwh),買電量(kwh)</code></li>
+  <li>エンコーディング：BOM付きUTF-8または Shift-JIS（自動判定）</li>
+</ul>
+
+<h4>取り込み手順</h4>
+<ol class="steps">
+  <li><strong>でんき通信簿画面を開く</strong></li>
+  <li><strong>右上のメニューから「CSV取り込み」</strong></li>
+  <li><strong>ファイルピッカーでCSVを選択</strong></li>
+  <li><strong>取り込み進捗を確認</strong><p>ヘッダー検証→データパース→DB登録→月別キャッシュ生成 の順で進みます。</p></li>
+  <li><strong>完了メッセージ</strong><p>「N件を取り込みました」というSnackBar。画面が自動で最新月に更新されます。</p></li>
+</ol>
+
+<h4>バリデーションエラー</h4>
+<ul>
+  <li><strong>ヘッダー不一致</strong>：「CSVの形式が違います」エラー</li>
+  <li><strong>日付パース失敗</strong>：該当行をスキップしつつ件数をレポート</li>
+  <li><strong>既存データと重複</strong>：同じ日時のデータは上書き更新</li>
+</ul>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>CSV取り込みエラー表示</strong><code>electricity_csv_error.png</code></div></div>
+
+<h3 id="electricity-plan">料金プラン設定</h3>
+<p>計算のために契約している電力会社のプラン情報を登録します。</p>
+
+<h4 id="electricity-plan-preset">プリセット選択（9電力会社）</h4>
+<p>以下の9社分のプリセットを内蔵。電力会社を選ぶだけで、時間帯別単価・基本料金・燃料費調整の初期値が入ります。</p>
+<ul>
+  <li>北海道電力</li>
+  <li>東北電力</li>
+  <li>東京電力エナジーパートナー</li>
+  <li>中部電力ミライズ</li>
+  <li>北陸電力</li>
+  <li>関西電力</li>
+  <li>中国電力</li>
+  <li>四国電力</li>
+  <li>九州電力</li>
+</ul>
+<p>各社で複数プランが選べる場合があります（従量電灯B／スマートライフS／はぴeタイムR 等）。</p>
+
+<h4 id="electricity-plan-custom">カスタムプランの作成</h4>
+<p>プリセットに無いプランや新電力のプランは手動で作成できます。</p>
+
+<h5>入力項目</h5>
+<table>
+  <thead><tr><th>項目</th><th>説明</th></tr></thead>
+  <tbody>
+    <tr><td>プラン名</td><td>任意の表示名</td></tr>
+    <tr><td>契約開始日</td><td>このプランが適用開始する日</td></tr>
+    <tr><td>計算方式</td><td>固定単価／段階制／時間帯別 の3種から選択</td></tr>
+    <tr><td>時間帯別単価</td><td>例：6〜25時 ¥35.76／1〜6時 ¥27.86（平日／休日で別単価も可）</td></tr>
+    <tr><td>段階制</td><td>第1段階：120kWhまで ¥X、第2段階：300kWhまで ¥Y、等</td></tr>
+    <tr><td>基本料金</td><td>月額固定（アンペア数で変わる場合もあり）</td></tr>
+    <tr><td>売電単価</td><td>FIT／卒FIT／地域電力等の単価（期間指定で切替可能）</td></tr>
+    <tr><td>契約開始日</td><td>このプランが適用開始する日。途中でプランを切替えたときは前プランと自動で期間を連結</td></tr>
+  </tbody>
+</table>
+
+<h4 id="electricity-holidays">祝日管理画面</h4>
+<p>時間帯別プランの平日／休日判定に使う祝日データを管理します。</p>
+<ul>
+  <li>日本の祝日APIから自動同期（初回）</li>
+  <li>手動追加・削除可能</li>
+  <li>長押しで削除</li>
+</ul>
+
+<h4 id="electricity-special-days">特別日管理画面</h4>
+<p>電力会社の特別日（年末年始等、休日料金を適用する日）を管理します。</p>
+
+<h4 id="electricity-fuel">燃料費調整管理画面</h4>
+<p>月別の燃料費調整額（¥/kWh）を登録・編集。プリセットプランには過去実績が入っています。</p>
+
+<h4 id="electricity-renewable">再エネ賦課金管理画面</h4>
+<p>年度ごとの再エネ賦課金単価を登録・編集。</p>
+
+<h4 id="electricity-subsidy">補助金管理画面</h4>
+<p>政府・自治体の電気代補助金を登録。月別に反映され、トータル収支に加算されます。</p>
+
+<div class="callout tip">
+  <p><strong>プラン変更時の再計算：</strong> プランを変更するたびに再計算ボタンひとつで過去データに遡って全期間を再集計できます。</p>
+</div>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>でんき通信簿メイン（セグメント3種）</strong><code>electricity_monthly.png</code> / <code>electricity_annual.png</code> / <code>electricity_total.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>CSV取り込み画面</strong><code>electricity_csv.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>料金プラン設定（プリセット選択）</strong><code>electricity_plan_preset.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>料金プラン設定（カスタム）</strong><code>electricity_plan_custom.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>祝日管理画面</strong><code>electricity_holidays.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>特別日管理画面</strong><code>electricity_special_days.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>燃料費調整管理画面</strong><code>electricity_fuel.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>再エネ賦課金管理画面</strong><code>electricity_renewable.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>補助金管理画面</strong><code>electricity_subsidy.png</code></div></div>
+</div>
+
+<h3 id="electricity-monthly">月次レポート</h3>
+
+<h4>表示される要素（上から順）</h4>
+<ol>
+  <li><strong>月選択バー</strong>：← [YYYY年MM月] → で月を切替</li>
+  <li><strong>トータル収支カード</strong>：当月の合計金額（大きく表示）</li>
+  <li><strong>収支の内訳</strong>：
+    <ul>
+      <li>売電収入 ¥XX,XXX</li>
+      <li>太陽光自家消費による節約 ¥XX,XXX</li>
+      <li>蓄電池による節約 ¥XX,XXX</li>
+      <li>基本料金 ▲¥X,XXX</li>
+      <li>買電コスト ▲¥XX,XXX</li>
+    </ul>
+  </li>
+  <li><strong>蓄電池効率カード</strong>：充電量・放電量・効率%</li>
+  <li><strong>日別収支ヒートマップ</strong>：カレンダー形式、正の収支日のみ色表示</li>
+  <li><strong>日別収支TOP5</strong>：ベスト5日</li>
+  <li><strong>月内ハイライト</strong>：最高発電日、買電ゼロ日数 等</li>
+</ol>
+
+<h4>月選択ナビゲーションの挙動</h4>
+<ul>
+  <li>データの無い月は左右矢印がグレーアウト</li>
+  <li>月名をタップすると年月ピッカーが開く</li>
+  <li>最新データの月を開くのは右上「最新月」ボタン</li>
+</ul>
+
+<h3 id="electricity-annual">年間レポート</h3>
+<ul>
+  <li>年選択バー（← [YYYY年] →）</li>
+  <li>年サマリーカード（年間総収支）</li>
+  <li>月別棒グラフ：収益（緑）／コスト（赤）の積み重ね</li>
+  <li>年間ハイライト（ベスト月、ワースト月、最高収支日）</li>
+  <li>月タップで月次レポートへジャンプ</li>
+</ul>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>月次レポート全体（縦長スクロール）</strong><code>electricity_monthly_full.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>収支の内訳カード拡大</strong><code>electricity_monthly_breakdown.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>日別収支ヒートマップ拡大</strong><code>electricity_monthly_heatmap.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>日別収支TOP5カード</strong><code>electricity_monthly_top5.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>月内ハイライト（最高発電日・買電ゼロ日数等）</strong><code>electricity_monthly_highlights.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>年間レポート（積み上げ棒グラフ）</strong><code>electricity_annual_chart.png</code></div></div>
+</div>
+
+<h3 id="electricity-best">通算（マイベスト）</h3>
+<p>導入から今までの全データを横断した累計ビュー。</p>
+
+<h4 id="electricity-recovery">投資回収ゴール</h4>
+<ul>
+  <li><strong>ゴール額設定</strong>：蓄電池・太陽光の初期投資額</li>
+  <li><strong>現在の累計収支</strong>と進捗率（%）</li>
+  <li><strong>回収予測グラフ</strong>：過去実績の傾向から将来の回収時期を予測（売電単価変更も考慮した時系列）</li>
+</ul>
+
+<h4 id="electricity-records">ベスト記録（8項目 × 3粒度）</h4>
+<table>
+  <thead><tr><th>項目</th><th>日別</th><th>月別</th><th>年別</th></tr></thead>
+  <tbody>
+    <tr><td>最大発電量</td><td>○</td><td>○</td><td>○</td></tr>
+    <tr><td>最大売電量</td><td>○</td><td>○</td><td>○</td></tr>
+    <tr><td>最低買電量</td><td>○</td><td>○</td><td>○</td></tr>
+    <tr><td>最高収支</td><td>○</td><td>○</td><td>○</td></tr>
+    <tr><td>最低コスト</td><td>○</td><td>○</td><td>○</td></tr>
+    <tr><td>最高自給率</td><td>○</td><td>○</td><td>○</td></tr>
+    <tr><td>最高蓄電池効率</td><td>○</td><td>○</td><td>○</td></tr>
+    <tr><td>最低消費量</td><td>○</td><td>○</td><td>○</td></tr>
+  </tbody>
+</table>
+
+<h4 id="electricity-badges">実績バッジ</h4>
+<ul>
+  <li><strong>買電ゼロ日数</strong>：電力会社から買わずに済んだ日の累計</li>
+  <li><strong>黒字日数</strong>：収支がプラスだった日の累計</li>
+  <li><strong>黒字月数</strong>：月トータルでプラスだった月の累計</li>
+</ul>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>投資回収ゴール＋回収予測グラフ</strong><code>electricity_recovery_chart.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>ベスト記録セクション</strong><code>electricity_best_records.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>実績バッジ</strong><code>electricity_badges.png</code></div></div>
+</div>
+
+<h3 id="electricity-share">SNS共有カード</h3>
+<p>月別・年間レポートは、画像として書き出してXやLINEで共有できます。</p>
+
+<h4>共有方法</h4>
+<ol class="steps">
+  <li><strong>月別 or 年間レポートを開く</strong></li>
+  <li><strong>右上のメニューから「画像として共有」</strong></li>
+  <li><strong>プレビューが表示される</strong><p>月の収支、主要な数字がカード化されます。</p></li>
+  <li><strong>「共有」をタップ</strong><p>OS標準の共有シートから送り先を選択。</p></li>
+</ol>
+
+<div class="callout tip">
+  <p>ハッシュタグ <code>#でんき通信簿</code> を付けて投稿いただけると、他のオーナーとの成績比較が楽しめます。</p>
+</div>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>SNS共有カード プレビュー</strong><code>electricity_share_card.png</code></div></div>
+
+<h4>計算ロジック（参考）</h4>
+<ul>
+  <li><strong>トータル収支</strong> = 売電収入 + 太陽光自家消費節約 + 蓄電池節約 − 基本料金 − 買電コスト + 補助金</li>
+  <li><strong>太陽光自家消費節約</strong> = 自家消費量(kWh) × その時刻の買電単価</li>
+  <li><strong>蓄電池節約</strong> = 放電量(kWh) × その時刻の買電単価 − 充電時のオポチュニティコスト</li>
+  <li><strong>自給率</strong> = (発電量 − 売電量) / 消費量 × 100%</li>
+  <li><strong>充放電効率</strong> = 放電量 / 充電量 × 100%</li>
+</ul>
+
+<div class="action-box">
+  <h5>でんき通信簿 操作リファレンス</h5>
+  <div class="action-row"><strong>セグメント</strong><span>月次／年間／通算 切替</span></div>
+  <div class="action-row"><strong>← / →</strong><span>月／年ナビゲーション</span></div>
+  <div class="action-row"><strong>日付タップ（ヒートマップ）</strong><span>その日の詳細ポップアップ</span></div>
+  <div class="action-row"><strong>右上メニュー</strong><span>CSV取り込み／料金プラン／再計算／画像共有</span></div>
+  <div class="action-row"><strong>月棒グラフタップ（年間）</strong><span>月次レポートへ</span></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 便利ツール                                               -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="tools">便利ツール</h2>
+
+<p>家づくり・暮らしで使える小さな便利ツール集です。</p>
+
+<h3 id="tools-list">ツール一覧画面</h3>
+<ul>
+  <li>湿度計算ツール</li>
+  <li>一条工務店公式サイト（外部ブラウザ）</li>
+  <li>iサポ（外部ブラウザ）</li>
+  <li>noteの関連記事一覧（外部ブラウザ）</li>
+  <li>XアカウントFollow（外部ブラウザ）</li>
+</ul>
+
+<h3 id="humidity">湿度計算ツール</h3>
+<p>温度・相対湿度・絶対湿度・露点温度の相互変換ツール。全館空調を運用している一条オーナーに便利。</p>
+
+<h4>使い方</h4>
+<ol>
+  <li>どれか2つの値を入力</li>
+  <li>残りの2つが自動計算</li>
+  <li>温度単位切替（℃／℉）</li>
+</ol>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>便利ツール一覧</strong><code>tools_list.png</code></div></div>
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>湿度計算ツール</strong><code>humidity_calc.png</code></div></div>
+
+<h3 id="iedukuri-record">家づくり記録（暮らしモード専用）</h3>
+<p>入居後、家づくり中の書類をアーカイブとして振り返る画面。ドキュメント・見積り・仕様書の数が集計表示されます。</p>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>家づくり記録</strong><code>iedukuri_record.png</code></div></div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 設定                                                     -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="settings">設定</h2>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>設定画面（全セクション）</strong><code>settings.png</code></div></div>
+
+<p>設定画面はセクション区切りで以下の項目が並びます。</p>
+
+<h3 id="settings-backup">バックアップ</h3>
+<table>
+  <thead><tr><th>項目</th><th>動作</th></tr></thead>
+  <tbody>
+    <tr><td>バックアップ作成</td><td>PDFとデータベースをまとめてZipファイルに保存。共有メニューから保存先（クラウド・他端末等）を選択できます。破損検知の仕組み付き。</td></tr>
+    <tr><td>バックアップ復元</td><td>Zipファイル選択 → 確認ダイアログ → 復元処理 → アプリ終了案内（iOSは手動終了）</td></tr>
+  </tbody>
+</table>
+
+<h4>復元の流れ（ステージング方式）</h4>
+<p>安全のため、復元は <strong>tmp領域への展開 → 整合性検証 → 最終コピー</strong> の3段階で行われます。検証に失敗した場合は、現在の端末内データには一切手を付けずに処理が中断されます。</p>
+<ul>
+  <li><strong>整合性OK</strong>：そのまま復元を実行し、完了後に再起動を案内</li>
+  <li><strong>バックアップのバージョンが新しすぎる</strong>：旧バージョンのアプリで未来のバックアップは開けないため、アプリを最新版にアップデート後に再試行</li>
+  <li><strong>ファイルが壊れている</strong>：転送中にZipが破損した可能性。バックアップ元からコピーし直してください</li>
+  <li><strong>Zipの構造が壊れている</strong>：正しいバックアップファイルか確認</li>
+</ul>
+
+<div class="callout danger">
+  <p><strong>⚠️ 復元は既存データを完全に上書きします。</strong> 復元前に、念のため現在のデータをバックアップすることを推奨します。</p>
+</div>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>バックアップ復元前の警告ダイアログ</strong><code>settings_restore_confirm.png</code></div></div>
+
+<h3 id="settings-rebuild">データ管理</h3>
+<table>
+  <thead><tr><th>項目</th><th>動作</th></tr></thead>
+  <tbody>
+    <tr><td>見積りデータ再構築</td><td>全見積りPDFを再パースしてDBを更新。パーサーのアップデート後に実行すると最新の解析結果に更新されます。</td></tr>
+    <tr><td>仕様書データ再構築</td><td>同上、仕様書に対して実行。</td></tr>
+  </tbody>
+</table>
+
+<h3 id="settings-mode">モード切替</h3>
+<p>家づくりモード ↔ 暮らしモードを切り替えるSwitchListTile。</p>
+
+<h3 id="settings-display">表示</h3>
+<ul>
+  <li><strong>新居生活カウンターの日を非表示</strong>：ON にすると「新居生活 X年Yヶ月Z日」が「新居生活 X年Yヶ月」になります（ホーム・ウィジェット両方）。</li>
+</ul>
+
+<h3 id="settings-theme">テーマ</h3>
+<p>ライト／ダーク／システム追従 の3択。</p>
+
+<h3 id="settings-demo">デモモード</h3>
+<p>SwitchListTileでON／OFF。ONにするとダミーデータが投入され、OFFに戻すと削除されます。</p>
+
+<h4>含まれるデモデータ</h4>
+<ul>
+  <li>サンプル図面（CAD ×数版、電気 ×数版）</li>
+  <li>サンプル見積り（複数版、推移表が楽しめる内容）</li>
+  <li>サンプル仕様書</li>
+  <li>サンプルメモ</li>
+  <li>スケジュール（仮契約〜引き渡しまでの想定）</li>
+  <li>でんき通信簿のダミーデータ（1年分）</li>
+</ul>
+
+<div class="callout warn">
+  <p>デモモードは <strong>完全に独立した別DBと別ファイル領域</strong> に切り替わります。本番データ（取り込んだPDF、メモ、でんき通信簿のCSV等）には一切触れず、OFFに戻すと元のデータがそのまま戻ります。お試し用途や他人への説明用に安全にお使いください。</p>
+</div>
+
+<div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>デモモード切替時の確認ダイアログ</strong><code>settings_demo_confirm.png</code></div></div>
+
+<h3>アプリ情報</h3>
+<ul>
+  <li><strong>チュートリアルを再表示</strong>：オンボーディング画面を再表示</li>
+  <li><strong>バージョン</strong>：現在のアプリバージョン（タップに反応）</li>
+  <li><strong>アップデートの確認</strong>（Android・非ストア版のみ）：新バージョンのチェック</li>
+</ul>
+
+<h3 id="settings-tutorial">チュートリアルを再表示</h3>
+<p>タップで <a href="#onboarding">オンボーディング</a>（5ページチュートリアル）に遷移。</p>
+
+<h3 id="settings-devmode">開発者モード（隠しモード）</h3>
+<p>設定画面のバージョン行を <strong>1秒以内で7回連続タップ</strong> すると、開発者モードが有効化されます。</p>
+
+<h4>追加される項目</h4>
+<ul>
+  <li><strong>開発者モード</strong>スイッチ（OFFに戻せる）</li>
+  <li><strong>パース失敗ダンプ</strong>：PDFパース失敗時のデバッグ情報を保持（直近件数表示）</li>
+  <li>タップすると内容確認ダイアログ → JSONとしてエクスポート（トラブルシューティングに使用）</li>
+</ul>
+
+<div class="callout note">
+  <p>開発者モードをOFFにすると、保持されているダンプは自動削除されます（プライバシー配慮）。</p>
+</div>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>開発者モード有効化後のメニュー</strong><code>settings_devmode.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>パース失敗ダンプ内容ダイアログ</strong><code>settings_parse_dump.png</code></div></div>
+</div>
+
+<div class="gallery">
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>バックアップセクション拡大</strong><code>settings_backup.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>データ管理セクション</strong><code>settings_data.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>モード切替セクション</strong><code>settings_mode.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>テーマ選択</strong><code>settings_theme.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>デモモードトグル</strong><code>settings_demo.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>アプリ情報セクション</strong><code>settings_info.png</code></div></div>
+  <div class="placeholder"><span class="placeholder-icon">📸</span><div><strong>バックアップ復元完了ダイアログ</strong><code>settings_restore_done.png</code></div></div>
+</div>
+
+<div class="action-box">
+  <h5>設定 操作リファレンス</h5>
+  <div class="action-row"><strong>バックアップ作成タップ</strong><span>Zip作成→共有シート</span></div>
+  <div class="action-row"><strong>バックアップ復元タップ</strong><span>ファイル選択→確認→復元→アプリ終了</span></div>
+  <div class="action-row"><strong>再構築タップ</strong><span>確認→全PDFを再パース</span></div>
+  <div class="action-row"><strong>モード切替トグル</strong><span>家づくり↔暮らし</span></div>
+  <div class="action-row"><strong>テーマ選択</strong><span>ラジオボタンから選択</span></div>
+  <div class="action-row"><strong>デモモードトグル</strong><span>ダミーデータ投入/削除</span></div>
+  <div class="action-row"><strong>バージョン行7タップ</strong><span>開発者モード有効化</span></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- トラブルシューティング                                   -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="troubleshooting">困ったときは</h2>
+
+<h3>PDFの取り込みができない・うまく認識されない</h3>
+<ul>
+  <li>パスワード保護されたPDFには対応していません。保護を解除してから取り込んでください</li>
+  <li>取り込みはできたが図面番号・種別が自動検出されない場合は、<strong>ドキュメント管理 → ファイル長押し → ファイル情報を編集</strong> から手動で設定できます</li>
+  <li>どうしても取り込めないPDFに遭遇したら、お問い合わせ先からご連絡ください</li>
+</ul>
+
+<h3>図面の差分がズレている</h3>
+<ul>
+  <li>差分結果画面 AppBar の位置合わせアイコンから手動調整できます</li>
+  <li>スキャンノイズが多いPDFはノイズ除去フィルタを「ざっくり」以上にすると見やすくなります</li>
+  <li>位置合わせの結果はページ単位で保存され、他のページには影響しません</li>
+</ul>
+
+<h3>見積りの検算でズレが出る</h3>
+<ul>
+  <li>新しいフォーマットの見積書ではパースが追い付いていない場合があります。<strong>設定 → 見積りデータ再構築</strong> でパーサーを最新化してから再試行してください</li>
+  <li>それでも解消しない場合は、開発者モードを有効化して「パース失敗ダンプ」をお送りいただけると修正が進みます</li>
+</ul>
+
+<h3>でんき通信簿の数値が実際の電気代と合わない</h3>
+<ul>
+  <li>料金プラン設定を確認してください（特に燃料費調整、再エネ賦課金、基本料金、プランの適用期間）</li>
+  <li>プランの設定を変更した後は、右上メニューの <strong>再計算</strong> で全期間の再集計が必要です</li>
+  <li>電力会社の検針日と月境界のズレによって、月別の合計に差異が出ることがあります</li>
+</ul>
+
+<h3>ウィジェットが更新されない</h3>
+<ul>
+  <li><strong>Android</strong>：バッテリー最適化から除外してください（設定 → アプリ → ICHIJO施主手帳 → バッテリー → 最適化しない）</li>
+  <li><strong>iOS</strong>：WidgetKit が OS のタイミングで更新を行います。手動で最新化したい場合はアプリを一度起動してください</li>
+</ul>
+
+<h3>データが消えたように見える</h3>
+<ul>
+  <li>まずデモモードが ON のままになっていないか確認してください（設定画面）。OFFに戻すと本番データに戻ります</li>
+  <li>バックアップZipがあれば <strong>設定 → バックアップ復元</strong> で戻せます</li>
+</ul>
+
+<h2 id="privacy">プライバシー</h2>
+<p>取り込んだPDF・解析結果・メモ・でんき通信簿のデータは、すべて端末内のみに保管されます。外部に送信されることはありません。詳細は <a href="https://smartolio.jp/privacy/ichijo-unofficial-app/" target="_blank" rel="noopener">プライバシーポリシー全文</a> をご確認ください。</p>
+
+<h2 id="contact">お問い合わせ</h2>
+<p>バグ報告・要望・質問などは、以下の窓口へ。</p>
+<ul>
+  <li>𝕏（Twitter）: <a href="https://x.com/masa_iot" target="_blank" rel="noopener">@masa_iot</a></li>
+  <li>note: <a href="https://note.com/masa_iot" target="_blank" rel="noopener">note.com/masa_iot</a></li>
+</ul>
+
+<div class="callout note">
+  <p><strong>このマニュアルについて：</strong> 機能追加・変更に合わせて随時更新します。ご意見・指摘はいつでも歓迎です。</p>
+</div>
+
+<p style="margin-top:40px;text-align:center">
+  <a href="index.html" style="display:inline-block;padding:12px 28px;background:#6BA3D6;color:#fff;border-radius:10px;font-weight:600">← LPトップへ戻る</a>
+</p>
+
+</main>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="imgModal" onclick="closeModal()">
+  <button class="modal-close" aria-label="閉じる">×</button>
+  <img id="modalImg" src="" alt="">
+</div>
+
+<script>
+function switchTab(e, tabId){
+  const buttons = e.currentTarget.parentElement.querySelectorAll('.tab-btn');
+  buttons.forEach(b => b.classList.remove('active'));
+  e.currentTarget.classList.add('active');
+  const parent = e.currentTarget.parentElement.parentElement;
+  parent.querySelectorAll(':scope > .tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+}
+
+document.querySelectorAll('figure img').forEach(img => {
+  img.addEventListener('click', () => {
+    const modal = document.getElementById('imgModal');
+    document.getElementById('modalImg').src = img.src;
+    modal.classList.add('open');
+  });
+});
+function closeModal(){
+  document.getElementById('imgModal').classList.remove('open');
+}
+
+const tocLinks = document.querySelectorAll('.sidebar a');
+const sections = [];
+tocLinks.forEach(link => {
+  const id = link.getAttribute('href').substring(1);
+  const sec = document.getElementById(id);
+  if(sec) sections.push({link, sec});
+});
+
+function updateActiveTOC(){
+  const scrollY = window.scrollY + 80;
+  let active = null;
+  for(const {link, sec} of sections){
+    if(sec.offsetTop <= scrollY) active = link;
+  }
+  tocLinks.forEach(l => l.classList.remove('active'));
+  if(active){
+    active.classList.add('active');
+    // Scroll sidebar so the active link stays visible
+    const sidebar = document.querySelector('.sidebar');
+    const rect = active.getBoundingClientRect();
+    if(rect.top < 100 || rect.bottom > window.innerHeight - 40){
+      active.scrollIntoView({block:'nearest'});
+    }
+  }
+}
+window.addEventListener('scroll', updateActiveTOC, {passive:true});
+updateActiveTOC();
+
+document.querySelectorAll('.sidebar a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.querySelector('.sidebar').classList.remove('open');
+  });
+});
+
+/* ========== 検索機能 ==========
+   Features:
+   - スペース区切りAND検索: 複数語を全部含むブロックのみヒット
+   - ひらがな/カタカナあいまい一致: "でんき" ↔ "デンキ" を同一視
+   - 見出しマッチ優先: h1〜h5内のヒットを navigation 順序で先頭に
+============================================= */
+(function(){
+  const input = document.getElementById('manual-search');
+  const countEl = document.getElementById('search-count');
+  const prevBtn = document.getElementById('search-prev');
+  const nextBtn = document.getElementById('search-next');
+  const clearBtn = document.getElementById('search-clear');
+  const shortcutKbd = document.querySelector('.search-shortcut');
+  const main = document.querySelector('main');
+  if(!input || !main) return;
+
+  const BLOCK_SELECTOR =
+    'h1,h2,h3,h4,h5,h6,p,li,td,th,figcaption,summary,dd,dt,blockquote,' +
+    '.callout,.placeholder,.action-box .action-row,.quick-jump,.intro';
+  const HEADING_SELECTOR = 'h1,h2,h3,h4,h5';
+
+  let hits = [];
+  let currentIdx = -1;
+  let debounceTimer = null;
+
+  function escapeRegExp(s){return s.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}
+
+  /* ひら/カタカナあいまい一致用のパターン生成 */
+  function kanaExpandPattern(term){
+    let out = '';
+    for(const ch of term){
+      const code = ch.codePointAt(0);
+      if(code >= 0x3041 && code <= 0x3096){
+        // ひらがな → [ひら|カタ]
+        const kata = String.fromCodePoint(code + 0x60);
+        out += '[' + escapeRegExp(ch) + escapeRegExp(kata) + ']';
+      } else if(code >= 0x30A1 && code <= 0x30F6){
+        // カタカナ → [カタ|ひら]
+        const hira = String.fromCodePoint(code - 0x60);
+        out += '[' + escapeRegExp(ch) + escapeRegExp(hira) + ']';
+      } else {
+        out += escapeRegExp(ch);
+      }
+    }
+    return out;
+  }
+
+  function clearHighlights(){
+    document.querySelectorAll('mark.search-hit').forEach(m => {
+      const parent = m.parentNode;
+      parent.replaceChild(document.createTextNode(m.textContent), m);
+      parent.normalize();
+    });
+    hits = [];
+    currentIdx = -1;
+  }
+
+  /* 1 語だけハイライトして、各 mark に data-term を付ける */
+  function highlightTerm(term, termIdx){
+    const pattern = kanaExpandPattern(term);
+    if(!pattern) return;
+    const re = new RegExp(pattern, 'gi');
+    const walker = document.createTreeWalker(main, NodeFilter.SHOW_TEXT, {
+      acceptNode(node){
+        if(!node.textContent.trim()) return NodeFilter.FILTER_REJECT;
+        const p = node.parentElement;
+        if(!p) return NodeFilter.FILTER_REJECT;
+        if(p.closest('script,style,mark,code,.placeholder code')) return NodeFilter.FILTER_REJECT;
+        re.lastIndex = 0;
+        return re.test(node.textContent) ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT;
+      }
+    });
+    const nodes = [];
+    let n;
+    while((n = walker.nextNode())) nodes.push(n);
+    for(const node of nodes){
+      const text = node.textContent;
+      const frag = document.createDocumentFragment();
+      const re2 = new RegExp(pattern, 'gi');
+      let last = 0, m, any = false;
+      while((m = re2.exec(text))){
+        any = true;
+        if(m.index > last) frag.appendChild(document.createTextNode(text.slice(last, m.index)));
+        const mark = document.createElement('mark');
+        mark.className = 'search-hit';
+        mark.dataset.term = String(termIdx);
+        mark.textContent = m[0];
+        frag.appendChild(mark);
+        last = m.index + m[0].length;
+        if(m.index === re2.lastIndex) re2.lastIndex++;
+      }
+      if(!any) continue;
+      if(last < text.length) frag.appendChild(document.createTextNode(text.slice(last)));
+      node.parentNode.replaceChild(frag, node);
+    }
+  }
+
+  /* 各 mark の近接ブロックを見て、全 term がそのブロック内に揃っていなければ
+     mark を削除（= AND 条件を満たさないヒットを除外） */
+  function filterAND(termCount){
+    const allMarks = Array.from(document.querySelectorAll('mark.search-hit'));
+    if(termCount <= 1) return allMarks;
+    // group marks by block ancestor
+    const groups = new Map();
+    for(const mark of allMarks){
+      const block = mark.closest(BLOCK_SELECTOR) || mark.parentElement;
+      if(!groups.has(block)) groups.set(block, []);
+      groups.get(block).push(mark);
+    }
+    const keep = new Set();
+    for(const [, marks] of groups){
+      const present = new Set(marks.map(m => m.dataset.term));
+      if(present.size >= termCount){
+        marks.forEach(m => keep.add(m));
+      }
+    }
+    // unwrap marks not in keep
+    for(const mark of allMarks){
+      if(keep.has(mark)) continue;
+      const parent = mark.parentNode;
+      parent.replaceChild(document.createTextNode(mark.textContent), mark);
+      parent.normalize();
+    }
+    return Array.from(document.querySelectorAll('mark.search-hit'));
+  }
+
+  /* 見出し内のヒットを先頭に、各グループ内は document 順 */
+  function sortByPriority(marks){
+    const withOrder = marks.map((m, i) => ({
+      mark: m,
+      isHeading: !!m.closest(HEADING_SELECTOR),
+      order: i
+    }));
+    withOrder.sort((a, b) => {
+      if(a.isHeading !== b.isHeading) return a.isHeading ? -1 : 1;
+      return a.order - b.order;
+    });
+    return withOrder.map(x => x.mark);
+  }
+
+  function setCurrent(idx){
+    if(hits.length === 0) return;
+    if(idx < 0) idx = hits.length - 1;
+    if(idx >= hits.length) idx = 0;
+    hits.forEach(m => m.classList.remove('current'));
+    currentIdx = idx;
+    const el = hits[idx];
+    el.classList.add('current');
+    el.scrollIntoView({behavior:'smooth', block:'center'});
+    updateCount();
+  }
+
+  function updateCount(){
+    if(!countEl) return;
+    const q = input.value.trim();
+    countEl.classList.remove('empty');
+    if(!q){countEl.textContent = ''; prevBtn.disabled = nextBtn.disabled = true; return;}
+    if(hits.length === 0){
+      countEl.textContent = '0 件';
+      countEl.classList.add('empty');
+    } else {
+      const headingCount = hits.filter(m => m.closest(HEADING_SELECTOR)).length;
+      const base = `${currentIdx+1} / ${hits.length}`;
+      countEl.textContent = headingCount > 0 ? `${base}（見出し ${headingCount}）` : base;
+    }
+    prevBtn.disabled = hits.length === 0;
+    nextBtn.disabled = hits.length === 0;
+  }
+
+  function performSearch(){
+    clearHighlights();
+    const q = input.value.trim();
+    const hasQuery = q.length > 0;
+    clearBtn.style.display = hasQuery ? '' : 'none';
+    if(shortcutKbd) shortcutKbd.style.display = hasQuery ? 'none' : '';
+    if(!hasQuery){updateCount(); return;}
+
+    const terms = q.split(/\s+/).filter(t => t.length > 0);
+    if(terms.length === 0){updateCount(); return;}
+
+    terms.forEach((t, i) => highlightTerm(t, i));
+    const afterFilter = filterAND(terms.length);
+    hits = sortByPriority(afterFilter);
+
+    if(hits.length > 0) setCurrent(0);
+    else updateCount();
+  }
+
+  input.addEventListener('input', () => {
+    clearTimeout(debounceTimer);
+    debounceTimer = setTimeout(performSearch, 180);
+  });
+  input.addEventListener('keydown', (e) => {
+    if(e.key === 'Enter'){
+      e.preventDefault();
+      if(hits.length > 0) setCurrent(currentIdx + (e.shiftKey ? -1 : 1));
+    } else if(e.key === 'Escape'){
+      input.value = '';
+      performSearch();
+      input.blur();
+    }
+  });
+  prevBtn.addEventListener('click', () => setCurrent(currentIdx - 1));
+  nextBtn.addEventListener('click', () => setCurrent(currentIdx + 1));
+  clearBtn.addEventListener('click', () => {
+    input.value = '';
+    performSearch();
+    input.focus();
+  });
+
+  /* Keyboard shortcut: '/' to focus search when not already typing */
+  document.addEventListener('keydown', (e) => {
+    if(e.key === '/' && document.activeElement !== input){
+      const tag = (document.activeElement || {}).tagName;
+      if(tag === 'INPUT' || tag === 'TEXTAREA') return;
+      e.preventDefault();
+      input.focus();
+      input.select();
+    }
+  });
+})();
+</script>
+</body>
+</html>
