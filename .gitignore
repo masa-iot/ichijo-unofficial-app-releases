@@ -1,1 +1,5 @@
 .DS_Store
+
+# 原寸スクショ（個人情報含む可能性あり）— 公開対象は docs/images/*.webp のみ
+docs/images/_raw/
+docs/images/_unused/
