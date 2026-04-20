@@ -12,7 +12,7 @@
     font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
     color:#333;background:#fafafa;line-height:1.7;
   }
-  a{color:#6BA3D6;text-decoration:none}
+  a{color:#2F6EA5;text-decoration:none}
   a:hover{text-decoration:underline}
 
   /* ---- Header ---- */
@@ -29,12 +29,12 @@
   .header-nav a{
     margin-left:20px;font-size:.875rem;color:#555;
   }
-  .header-nav a:hover{color:#6BA3D6;text-decoration:none}
+  .header-nav a:hover{color:#2F6EA5;text-decoration:none}
 
   /* ---- Hero ---- */
   .hero{
     padding:140px 20px 80px;text-align:center;
-    background:linear-gradient(135deg,#6BA3D6 0%,#8EC5E8 50%,#B8D8F0 100%);
+    background:linear-gradient(135deg,#2F6EA5 0%,#8EC5E8 50%,#B8D8F0 100%);
     color:#fff;
   }
   .hero-icon{
@@ -52,7 +52,7 @@
     padding:4px 14px;border-radius:20px;font-size:.8rem;margin-bottom:24px;
   }
   .btn-primary{
-    display:inline-block;background:#fff;color:#6BA3D6;
+    display:inline-block;background:#fff;color:#2F6EA5;
     padding:14px 36px;border-radius:12px;font-size:1rem;font-weight:700;
     box-shadow:0 4px 16px rgba(0,0,0,.12);transition:transform .15s,box-shadow .15s;
   }
@@ -122,12 +122,18 @@
   .gallery::-webkit-scrollbar{height:6px}
   .gallery::-webkit-scrollbar-thumb{background:#ccc;border-radius:3px}
   .gallery-item{
-    flex:0 0 auto;height:420px;
-    background:#fff;border:1px solid #ddd;border-radius:14px;
+    flex:0 0 auto;height:460px;
     display:flex;align-items:center;justify-content:center;
-    overflow:hidden;scroll-snap-align:start;
+    scroll-snap-align:start;padding:8px;
   }
-  .gallery-item img{height:100%;width:auto;border-radius:14px}
+  /* スマホ画面スクショはフレーム風（黒ベゼル + 角丸 + 影） */
+  .gallery-item img{
+    height:100%;width:auto;
+    border-radius:24px;
+    border:5px solid #1a1a1a;
+    box-shadow:0 8px 28px rgba(0,0,0,.16);
+    background:#000;
+  }
 
   /* ---- Download ---- */
   .download{background:#fff}
@@ -139,7 +145,7 @@
   .download-card h3{font-size:1.2rem;margin-bottom:12px}
   .download-card p{font-size:.9rem;color:#666;margin-bottom:20px;text-align:left}
   .btn-download{
-    display:inline-block;background:#6BA3D6;color:#fff;
+    display:inline-block;background:#2F6EA5;color:#fff;
     padding:12px 28px;border-radius:10px;font-weight:700;font-size:.95rem;
     transition:background .15s;
   }
@@ -168,7 +174,7 @@
     padding:8px 18px;border-radius:8px;font-size:.85rem;font-weight:600;
     background:#fff;border:1px solid #ddd;color:#555;transition:border-color .15s;
   }
-  .social-links a:hover{border-color:#6BA3D6;color:#6BA3D6;text-decoration:none}
+  .social-links a:hover{border-color:#2F6EA5;color:#2F6EA5;text-decoration:none}
 
   /* ---- Privacy ---- */
   .privacy{background:#fff}
@@ -201,7 +207,7 @@
     border-bottom:1px solid #f0f0f0;
   }
   .mobile-nav a:last-child{border-bottom:none}
-  .mobile-nav a:hover{color:#6BA3D6;text-decoration:none}
+  .mobile-nav a:hover{color:#2F6EA5;text-decoration:none}
 
   /* ---- Responsive ---- */
   @media(max-width:600px){
@@ -232,9 +238,9 @@
       <a href="#about">概要</a>
       <a href="#privacy">プライバシー</a>
     </nav>
-    <button class="hamburger" onclick="document.querySelector('.mobile-nav').classList.toggle('open')" aria-label="メニュー">☰</button>
+    <button class="hamburger" onclick="(function(b){var n=document.querySelector('.mobile-nav');n.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open'));})(this)" aria-label="メニュー" aria-controls="mobile-nav" aria-expanded="false">☰</button>
   </div>
-  <nav class="mobile-nav">
+  <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルメニュー">
     <a href="#features" onclick="document.querySelector('.mobile-nav').classList.remove('open')">機能</a>
     <a href="#screenshots" onclick="document.querySelector('.mobile-nav').classList.remove('open')">画面</a>
     <a href="#download" onclick="document.querySelector('.mobile-nav').classList.remove('open')">ダウンロード</a>
@@ -248,7 +254,7 @@
 <!-- Hero -->
 <section class="hero">
   <div class="hero-icon">
-    <img src="images/icon.webp" alt="アプリアイコン" onerror="this.style.display='none';this.parentElement.textContent='📋'">
+    <img src="images/icon.webp" alt="アプリアイコン" width="720" height="720" decoding="async" onerror="this.style.display='none';this.parentElement.textContent='📋'">
   </div>
   <div class="badge">非公式アプリ</div>
   <h1>ICHIJO施主手帳【非公式】</h1>
@@ -402,7 +408,7 @@
     <h2 class="section-title">What's New</h2>
     <div style="max-width:720px;margin:0 auto">
       <div style="padding:24px;background:#fafafa;border:1px solid #eee;border-radius:16px;margin-bottom:16px">
-        <h3 style="margin:0 0 12px;color:#6BA3D6">v1.2.0 — でんき通信簿 追加 <span style="font-size:.75rem;background:#E8F5E9;color:#4CAF50;padding:2px 8px;border-radius:4px;margin-left:8px">NEW</span></h3>
+        <h3 style="margin:0 0 12px;color:#2F6EA5">v1.2.0 — でんき通信簿 追加 <span style="font-size:.75rem;background:#E8F5E9;color:#4CAF50;padding:2px 8px;border-radius:4px;margin-left:8px">NEW</span></h3>
         <ul style="font-size:.85rem;color:#666;margin:0 0 8px 1.2em;line-height:1.8">
           <li><strong>でんき通信簿</strong> — 太陽光・蓄電池の"得した合計"を、iサポのCSVを取り込むだけで見える化</li>
           <li><strong>暮らしモード</strong> — 入居後向け、よりシンプルなホーム画面に切替可能</li>
@@ -410,12 +416,12 @@
         </ul>
       </div>
       <div style="padding:24px;background:#fafafa;border:1px solid #eee;border-radius:16px;margin-bottom:16px">
-        <h3 style="margin:0 0 12px;color:#6BA3D6">🍎 iOS App Store 公開</h3>
+        <h3 style="margin:0 0 12px;color:#2F6EA5">🍎 iOS App Store 公開</h3>
         <p style="font-size:.9rem;color:#666;margin:0 0 12px">App Store で正式公開しました。Android / iOS 両対応になりました。</p>
         <p style="font-size:.8rem;color:#999;margin:0">TestFlight版をご利用の方はApp Storeから上書きインストールできます。データはそのまま引き継がれます。</p>
       </div>
       <div style="padding:24px;background:#fafafa;border:1px solid #eee;border-radius:16px;margin-bottom:16px">
-        <h3 style="margin:0 0 12px;color:#6BA3D6">v1.1.0</h3>
+        <h3 style="margin:0 0 12px;color:#2F6EA5">v1.1.0</h3>
         <ul style="font-size:.85rem;color:#666;margin:0 0 8px 1.2em;line-height:1.8">
           <li><strong>ノイズ除去フィルタ</strong> — 図面チェックに4段階のフィルタを追加。細かなズレを除去して大きな変更点だけを見やすく表示します</li>
           <li><strong>位置合わせ精度の向上</strong> — 図面の自動位置合わせがより正確になりました</li>
@@ -423,7 +429,7 @@
         </ul>
       </div>
       <div style="padding:24px;background:#fafafa;border:1px solid #eee;border-radius:16px;margin-bottom:16px">
-        <h3 style="margin:0 0 12px;color:#6BA3D6">v1.0.0 — Google Play ストア公開</h3>
+        <h3 style="margin:0 0 12px;color:#2F6EA5">v1.0.0 — Google Play ストア公開</h3>
         <p style="font-size:.9rem;color:#666;margin:0 0 12px">Google Play ストアで正式公開。3つの新機能を追加しました。</p>
         <ul style="font-size:.85rem;color:#666;margin:0 0 8px 1.2em;line-height:1.8">
           <li><strong>ブックマーク</strong> — 図面・CAD差分・見積り・仕様書をブックマークしてワンタップアクセス</li>
@@ -457,24 +463,24 @@
     <h2 class="section-title">アプリ画面</h2>
     <p class="section-subtitle">主要な画面のスクリーンショット</p>
     <div class="gallery">
-      <div class="gallery-item"><img src="images/home_ieduzukuri.webp" alt="ホーム画面"></div>
-      <div class="gallery-item"><img src="images/import_preview_list.webp" alt="PDF取り込み"></div>
-      <div class="gallery-item"><img src="images/doc_list.webp" alt="ドキュメント一覧"></div>
-      <div class="gallery-item"><img src="images/doc_group.webp" alt="図面番号グループ"></div>
-      <div class="gallery-item"><img src="images/diff_select.webp" alt="図面チェック選択"></div>
-      <div class="gallery-item"><img src="images/diff_result.webp" alt="図面差分結果"></div>
-      <div class="gallery-item"><img src="images/diff_align.webp" alt="位置合わせ"></div>
-      <div class="gallery-item"><img src="images/estimate_list.webp" alt="見積り管理"></div>
-      <div class="gallery-item"><img src="images/estimate_detail.webp" alt="見積り詳細"></div>
-      <div class="gallery-item"><img src="images/estimate_diff.webp" alt="見積り比較"></div>
-      <div class="gallery-item"><img src="images/estimate_trend.webp" alt="見積り推移表"></div>
-      <div class="gallery-item"><img src="images/memo_list.webp" alt="ウチメモ+"></div>
-      <div class="gallery-item"><img src="images/memo_on_diff.webp" alt="図面上メモ"></div>
-      <div class="gallery-item"><img src="images/memo_on_estimate.webp" alt="見積り上メモ"></div>
-      <div class="gallery-item"><img src="images/settings.webp" alt="設定"></div>
+      <div class="gallery-item"><img src="images/home_ieduzukuri.webp" alt="ホーム画面" width="720" height="1564" loading="lazy" decoding="async"></div>
+      <div class="gallery-item"><img src="images/import_preview_list.webp" alt="PDF取り込み" width="720" height="1564" loading="lazy" decoding="async"></div>
+      <div class="gallery-item"><img src="images/doc_list.webp" alt="ドキュメント一覧" width="720" height="1564" loading="lazy" decoding="async"></div>
+      <div class="gallery-item"><img src="images/doc_group.webp" alt="図面番号グループ" width="720" height="1564" loading="lazy" decoding="async"></div>
+      <div class="gallery-item"><img src="images/diff_select.webp" alt="図面チェック選択" width="720" height="1564" loading="lazy" decoding="async"></div>
+      <div class="gallery-item"><img src="images/diff_result.webp" alt="図面差分結果" width="720" height="1564" loading="lazy" decoding="async"></div>
+      <div class="gallery-item"><img src="images/diff_align.webp" alt="位置合わせ" width="720" height="1564" loading="lazy" decoding="async"></div>
+      <div class="gallery-item"><img src="images/estimate_list.webp" alt="見積り管理" width="720" height="1564" loading="lazy" decoding="async"></div>
+      <div class="gallery-item"><img src="images/estimate_detail.webp" alt="見積り詳細" width="720" height="1564" loading="lazy" decoding="async"></div>
+      <div class="gallery-item"><img src="images/estimate_diff.webp" alt="見積り比較" width="720" height="1564" loading="lazy" decoding="async"></div>
+      <div class="gallery-item"><img src="images/estimate_trend.webp" alt="見積り推移表" width="720" height="1564" loading="lazy" decoding="async"></div>
+      <div class="gallery-item"><img src="images/memo_list.webp" alt="ウチメモ+" width="720" height="1564" loading="lazy" decoding="async"></div>
+      <div class="gallery-item"><img src="images/memo_on_diff.webp" alt="図面上メモ" width="720" height="1564" loading="lazy" decoding="async"></div>
+      <div class="gallery-item"><img src="images/memo_on_estimate.webp" alt="見積り上メモ" width="720" height="1564" loading="lazy" decoding="async"></div>
+      <div class="gallery-item"><img src="images/settings.webp" alt="設定" width="720" height="1564" loading="lazy" decoding="async"></div>
     </div>
     <p style="margin-top:32px;text-align:center">
-      <a href="manual.html" style="display:inline-block;padding:14px 32px;background:#6BA3D6;color:#fff;border-radius:10px;font-weight:600;text-decoration:none">📖 詳しい使い方をマニュアルで見る →</a>
+      <a href="manual.html" style="display:inline-block;padding:14px 32px;background:#2F6EA5;color:#fff;border-radius:10px;font-weight:600;text-decoration:none">📖 詳しい使い方をマニュアルで見る →</a>
     </p>
   </div>
 </section>
@@ -566,7 +572,7 @@
 
     </div>
     <p style="margin-top:32px;text-align:center;color:#888;font-size:.9rem">
-      その他の使い方・機能は <a href="manual.html" style="color:#6BA3D6;font-weight:600">📖 ユーザーマニュアル</a> をご覧ください
+      その他の使い方・機能は <a href="manual.html" style="color:#2F6EA5;font-weight:600">📖 ユーザーマニュアル</a> をご覧ください
     </p>
   </div>
 </section>
@@ -582,7 +588,7 @@
         一条工務店とは一切の関係がありません。
       </div>
       <div class="developer">
-        <img src="images/masa_iot.webp" alt="masa_iot" style="width:56px;height:56px;border-radius:50%;vertical-align:middle;margin-right:10px">
+        <img src="images/masa_iot.webp" alt="開発者 masa_iot のプロフィール画像" width="56" height="56" loading="lazy" decoding="async" style="border-radius:50%;vertical-align:middle;margin-right:10px">
         <span>開発者: <strong>masa_iot</strong>（一条工務店 施主）</span>
       </div>
       <div class="social-links">
