@@ -196,6 +196,7 @@
   /* スマホ画面の縦長スクショ（フル・タイル・ダイアログ）にフレーム風装飾 */
   figure.shot-phone img[height="1564"],
   figure.shot-phone img[height="1600"],
+  figure.shot-phone img[height="1557"],
   figure.shot-phone img[height="1523"],
   figure.shot-phone img[height="1378"],
   figure.shot-phone img[height="903"]{
@@ -2375,7 +2376,38 @@
 <h3 id="electricity-import">CSV取り込み</h3>
 
 <h4>iサポ側のCSVエクスポート</h4>
-<p>一条の施主向けポータル「iサポ」から、1時間単位の実績をCSV形式で書き出せます。ファイルはそのまま本アプリに取り込めます。</p>
+<p>一条の施主向けポータル「iサポ」から、1時間単位の実績をCSV形式で書き出せます。ファイルはそのまま本アプリに取り込めます。手順は 5 ステップ。</p>
+
+<ol class="steps">
+  <li><strong>iサポアプリのトップで「本日の発電量」タイルをタップ</strong></li>
+  <li><strong>太陽光発電画面の右上のダウンロードアイコン（⬇️）をタップ</strong></li>
+  <li><strong>「データ出力依頼」ダイアログで期間と送付先メールアドレスを確認して OK</strong><p>期間は最大 1 年分まで指定可能。送付先は iサポに登録済みのメールアドレスです。</p></li>
+  <li><strong>送付先メールに「【一条工務店アプリ】発電データ送付のご案内」が届く</strong><p>送信元は app-support。<code>dataOutput.csv</code> が添付されています。</p></li>
+  <li><strong>添付 CSV をスマホに保存</strong><p>保存先から本アプリの取り込みに使います。</p></li>
+</ol>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/isapo_home.webp" width="720" height="1557" alt="iサポのトップ画面で「本日の発電量」タイルを強調" loading="lazy" decoding="async">
+    <figcaption>① 「本日の発電量」タイルをタップ</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/isapo_solar_download.webp" width="720" height="1557" alt="太陽光発電画面の右上のダウンロードアイコンを強調" loading="lazy" decoding="async">
+    <figcaption>② 右上のダウンロードアイコンをタップ</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/isapo_data_request.webp" width="720" height="1557" alt="データ出力依頼ダイアログ（期間・送付先メール・OK）" loading="lazy" decoding="async">
+    <figcaption>③ 期間確認して OK</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/isapo_mail_header.webp" width="720" height="1557" alt="届いたメール上部（件名・送信元 app-support）" loading="lazy" decoding="async">
+    <figcaption>④ メール上部（件名・送信元）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/isapo_mail_body.webp" width="720" height="1557" alt="メール本文・dataOutput.csv 添付" loading="lazy" decoding="async">
+    <figcaption>④ メール本文＋添付 CSV</figcaption>
+  </figure>
+</div>
 
 <h4>取り込み手順</h4>
 <ol class="steps">
