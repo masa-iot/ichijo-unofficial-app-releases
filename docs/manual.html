@@ -524,7 +524,7 @@
     <li><a href="#import">書類の取り込み</a></li>
     <li class="sub"><a href="#import-from-app">アプリから取りに行く</a></li>
     <li class="sub"><a href="#import-from-outside">外から送り込む</a></li>
-    <!-- <li class="sub"><a href="#import-edit">取り込み後の修正</a></li> 未ローンチ機能のため非表示 -->
+    <li class="sub"><a href="#import-edit">取り込み後の修正</a></li>
     <li class="sub"><a href="#import-dedupe">重複チェック</a></li>
     <li class="sub"><a href="#import-actions">操作リファレンス</a></li>
   </ul>
@@ -535,6 +535,7 @@
     <li class="sub"><a href="#doc-list">図面番号一覧</a></li>
     <li class="sub"><a href="#doc-group">グループ詳細</a></li>
     <li class="sub2"><a href="#doc-file-action">長押しメニュー</a></li>
+    <li class="sub"><a href="#doc-metadata-edit">ファイル情報の編集</a></li>
     <li class="sub"><a href="#doc-delete">削除操作</a></li>
     <li><a href="#pdf-viewer">PDFビューア</a></li>
     <li class="sub"><a href="#doc-actions">操作リファレンス</a></li>
@@ -643,6 +644,21 @@
     <li class="sub"><a href="#electricity-actions">操作リファレンス</a></li>
   </ul>
 
+  <h4>マイページ</h4>
+  <ul>
+    <li><a href="#mypage">マイページ</a></li>
+    <li class="sub"><a href="#mypage-entry">入り口（設定 / ホームバナー）</a></li>
+    <li class="sub"><a href="#mypage-banner">ホームバナーの中身</a></li>
+    <li class="sub"><a href="#mypage-view">マイページ画面（閲覧）</a></li>
+    <li class="sub"><a href="#mypage-edit">プロフィールを編集</a></li>
+    <li class="sub"><a href="#mypage-cards">マイホームカード（見栄え編集 + シェア）</a></li>
+    <li class="sub2"><a href="#mypage-cards-home">ホームタブ</a></li>
+    <li class="sub2"><a href="#mypage-cards-share">シェアタブ（PHOTO / CARD）</a></li>
+    <li class="sub2"><a href="#mypage-cards-image">背景画像</a></li>
+    <li class="sub2"><a href="#mypage-cards-chips">chip エディタとスタイル</a></li>
+    <li class="sub"><a href="#mypage-actions">操作リファレンス</a></li>
+  </ul>
+
   <h4>便利ツール</h4>
   <ul>
     <li><a href="#tools">便利ツール</a></li>
@@ -686,9 +702,11 @@
   <a href="#import" style="--tile-color:#D87BA2"><div class="fmap-icon">📥</div><strong>書類取り込み</strong><small>iサポから数タップで</small></a>
   <a href="#diff" style="--tile-color:#D4A843"><div class="fmap-icon">🔍</div><strong>図面チェック</strong><small>赤青の差分表示</small></a>
   <a href="#estimate" style="--tile-color:#5CAD6F"><div class="fmap-icon">💰</div><strong>見積り管理</strong><small>2版比較・推移表</small></a>
+  <a href="#spec" style="--tile-color:#7B6FB0"><div class="fmap-icon">📋</div><strong>仕様書チェック</strong><small>セクション別の差分</small></a>
   <a href="#memo" style="--tile-color:#E07B54"><div class="fmap-icon">📝</div><strong>ウチメモ+</strong><small>画面に直接ピンメモ</small></a>
   <a href="#schedule" style="--tile-color:#8B6F47"><div class="fmap-icon">📅</div><strong>スケジュール</strong><small>家づくり工程をカウントダウン</small></a>
   <a href="#electricity" style="--tile-color:#E8B931"><div class="fmap-icon">⚡</div><strong>でんき通信簿</strong><small>太陽光・蓄電池の通信簿</small></a>
+  <a href="#mypage" style="--tile-color:#4A6FA5"><div class="fmap-icon">👤</div><strong>マイページ</strong><small>家のスペック・SNSシェア</small></a>
 </div>
 
 <div class="callout info">
@@ -1013,17 +1031,8 @@
   <p>どちらのルートでも、取り込み時に端末内へ PDF のコピーが作られます。元の PDF はそのまま残るので、誤って削除する心配はありません。</p>
 </div>
 
-<!--
 <h3 id="import-edit">取り込み後の修正</h3>
-<p>取り込み時に検出ミスがあった場合は、以下の項目を後から修正できます。</p>
-<ul>
-  <li><strong>図面番号</strong></li>
-  <li><strong>種別</strong>（CAD / 電気 / 仕様書 / 見積り / その他）</li>
-  <li><strong>改訂日付</strong></li>
-  <li><strong>ファイル表示名</strong></li>
-</ul>
-<p>修正方法：<strong>ドキュメント管理 → 該当ファイル長押し → ファイル情報を編集</strong>。</p>
--->
+<p>取り込み時に検出ミスがあっても、後から <strong>ファイル名・図面番号・種別</strong> を修正できます。詳しい操作とエントリポイント（ファイル長押し / PDFビューア / 見積り詳細 / 仕様書詳細）は <a href="#doc-metadata-edit">ドキュメント管理 → ファイル情報の編集</a> を参照してください。</p>
 
 <h3 id="import-dedupe">重複チェック</h3>
 <p>同じPDFを2回取り込もうとすると、自動で重複検知されて「既に取り込み済み」の警告が出ます。バックアップから復元した直後など、同じPDFを再取り込みしようとしたときに便利です。</p>
@@ -1105,20 +1114,98 @@
 <h4 id="doc-file-action">ファイルの長押しメニュー</h4>
 <p>グループ内のファイルを長押しすると、下からせり上がるメニューで操作を選べます。</p>
 <ol>
+  <li><strong>ファイル情報を編集</strong> — ファイル名・図面番号・種別を修正するダイアログを開きます。詳細は <a href="#doc-metadata-edit">ファイル情報の編集</a></li>
   <li><strong>削除</strong>（赤） — 確認ダイアログの後、ファイル単独で削除。空になったリビジョンは自動でクリーンアップされます。</li>
 </ol>
 
 <figure class="shot-phone">
-  <img src="images/doc_file_longpress.webp" width="720" height="1564" alt="ファイル長押しで出る選択メニュー" loading="lazy" decoding="async">
+  <img src="images/doc_file_longpress.webp" width="720" height="1564" alt="ファイル長押しで出る選択メニュー（編集／削除）" loading="lazy" decoding="async">
   <figcaption>ファイル長押しで出る選択メニュー</figcaption>
 </figure>
 
-<!-- ファイル情報編集ダイアログ（PR #19 ファイル名編集 Phase 1）は次回リリース後に復活予定
+<h3 id="doc-metadata-edit">ファイル情報の編集</h3>
+<p>取り込み済みのファイルについて、以下の3項目を後から修正できます。</p>
+<ul>
+  <li><strong>ファイル名</strong>（一覧やメニューに表示される名前）</li>
+  <li><strong>図面番号</strong>（グループの基準）</li>
+  <li><strong>種別</strong>（CAD図面 / 電気図面 / 見積り / 設備仕様書 / その他）</li>
+</ul>
+
+<h4 id="doc-metadata-edit-entry">編集を開く 4 つの場所</h4>
+<ol>
+  <li><strong>ドキュメント管理 → グループ詳細 → ファイル長押し → 「ファイル情報を編集」</strong></li>
+  <li><strong>PDFビューア</strong>：画面上部のバーの ✏️ アイコン</li>
+  <li><strong>見積り詳細画面</strong>：画面上部のバーの ✏️ アイコン</li>
+  <li><strong>設備仕様書詳細画面</strong>：画面上部のバーの ✏️ アイコン</li>
+</ol>
+<p>どの入口から開いても、同じダイアログが表示されます。</p>
+
 <figure class="shot-phone">
-  <img src="images/doc_file_edit_dialog.webp" width="720" height="1564" alt="ファイル情報編集ダイアログ" loading="lazy" decoding="async">
-  <figcaption>ファイル情報編集ダイアログ</figcaption>
+  <img src="images/doc_file_edit_dialog.webp" width="720" height="1564" alt="ファイル情報の編集ダイアログ（ファイル名・図面番号・種別）" loading="lazy" decoding="async">
+  <figcaption>ファイル情報の編集ダイアログ（3項目）</figcaption>
 </figure>
--->
+
+<h4>変更したときの挙動</h4>
+<table>
+  <thead><tr><th>変更内容</th><th>保存後の動き</th></tr></thead>
+  <tbody>
+    <tr>
+      <td>ファイル名のみ</td>
+      <td>即時反映、画面はそのまま。「ファイル情報を更新しました」と画面下部に通知が出ます。</td>
+    </tr>
+    <tr>
+      <td>図面番号</td>
+      <td>PDFが新しい図面番号グループに移動します。詳細画面（PDFビューア / 見積り詳細 / 仕様書詳細）から開いた場合は自動で一覧に戻ります（開いていたファイルが別グループに振り替わるため）。</td>
+    </tr>
+    <tr>
+      <td>種別</td>
+      <td>保存先フォルダが新しい種別に変わります。見積り詳細・仕様書詳細から開いた場合は自動で戻ります（詳細画面のコンテキストが変わるため）。</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="callout info">
+  <p><strong>図面番号と種別の同時変更はできません。</strong> 両方変更したい場合は、まず片方を保存→もう一度ダイアログを開いてもう片方を保存、という二段階で行ってください。同時に変更しようとした場合は両フィールドが赤く表示され、「種別と図面番号は同時に変更できません」とエラーが出ます。</p>
+</div>
+
+<figure class="shot-phone">
+  <img src="images/doc_file_edit_dialog_simultaneous_error.webp" width="720" height="1564" alt="図面番号と種別を同時変更しようとしたときのエラー表示" loading="lazy" decoding="async">
+  <figcaption>同時変更を試みたときのエラー表示</figcaption>
+</figure>
+
+<h4>図面番号を変更するときの確認</h4>
+<p>変更しようとしているファイルが、すでに <strong>2版比較・単独解析</strong>などで他のファイルと参照関係を持っている場合に限り、変更前に確認ダイアログが出ます。新しい図面番号グループへ持っていけない参照を整理するためです。</p>
+<ul>
+  <li>{種別}の比較履歴 / 単独解析</li>
+  <li>その比較・単独解析に紐づくメモ・ブックマーク</li>
+  <li>見積りの場合は「マッチング修正」</li>
+</ul>
+<p>これらは変更時に削除されます。<strong>ファイル本体・パース項目・このファイル単体に付けたメモ／ブックマークはそのまま保持</strong>されます。比較や単独解析を一度もしていないファイルでは、確認ダイアログは出ず即時反映されます。</p>
+<p>変更先の図面番号で同名ファイルが既に存在する等、衝突が発生する場合は別エラー「図面番号を変更できません」が表示されて中断します。</p>
+
+<figure class="shot-phone">
+  <img src="images/doc_file_edit_dialog_drawing_warning.webp" width="720" height="1564" alt="図面番号変更時の確認ダイアログ" loading="lazy" decoding="async">
+  <figcaption>図面番号変更時の確認ダイアログ</figcaption>
+</figure>
+
+<h4>種別を変更するときの確認</h4>
+<p>種別変更でも、参照関係（比較履歴・詳細画面メモ／ブックマーク等）がある場合は同様の確認が出ます。さらに、<strong>見積り・設備仕様書から別の種別へ変更する場合は、パース項目が必ず削除される</strong>ため、件数によらず必ず確認ダイアログが表示されます。</p>
+<p>新しい種別が見積り／設備仕様書で、その PDF を解析できなかった場合は「このPDFは{種別}として認識できませんでした」と画面下部に通知が出て中断します。同名ファイルが既にある場合は別エラーで中断します。</p>
+
+<figure class="shot-phone">
+  <img src="images/doc_file_edit_dialog_filetype_warning.webp" width="720" height="1564" alt="種別変更時の確認ダイアログ" loading="lazy" decoding="async">
+  <figcaption>種別変更時の確認ダイアログ</figcaption>
+</figure>
+
+<div class="callout info">
+  <p>確認ダイアログで <strong>キャンセル</strong>を選んだ場合、データには一切書き込まれません（ファイル名だけ先に保存されることもありません）。</p>
+</div>
+
+<h4>入力できる文字</h4>
+<ul>
+  <li><strong>ファイル名</strong>：100 バイト以内（日本語約 33 文字、ASCII 約 100 文字）。<code>/</code> <code>\</code>、単独の <code>..</code>、制御文字は使えません。</li>
+  <li><strong>図面番号</strong>：50 バイト以内。<code>/</code> <code>\</code>、単独の <code>..</code>、制御文字は使えません。</li>
+</ul>
 
 <h3 id="doc-delete">削除操作のまとめ</h3>
 <table>
@@ -1156,6 +1243,7 @@
   <li><strong>画面上部のタイトル</strong>：現在のページ番号と総ページ数（例：「3 / 12 ページ」）</li>
   <li><strong>画面上部の右上アクション</strong>：
     <ul>
+      <li>✏️ <strong>編集</strong>：このファイルの情報（ファイル名・図面番号・種別）を編集（詳細は <a href="#doc-metadata-edit">ファイル情報の編集</a>）</li>
       <li>🔖 <strong>ブックマーク</strong>：このPDFをブックマーク登録／解除（トグル）</li>
       <li>📝 <strong>ページメモバッジ</strong>：このページにメモが1件以上あるときのみ表示。タップで当該ページのメモ一覧</li>
     </ul>
@@ -1189,12 +1277,10 @@
     <img src="images/pdf_viewer_add_memo.webp" width="720" height="1564" alt="右下の丸ボタンから開くメモ追加ダイアログ" loading="lazy" decoding="async">
     <figcaption>右下の丸ボタンから開くメモ追加ダイアログ</figcaption>
   </figure>
-  <!-- ファイル情報編集ダイアログ（PR #19）は次回リリース後に復活予定
   <figure class="shot-phone">
-    <img src="images/pdf_viewer_edit.webp" width="720" height="1564" alt="ファイル情報編集ダイアログ（PDFビューアから）" loading="lazy" decoding="async">
-    <figcaption>ファイル情報編集ダイアログ（PDFビューアから）</figcaption>
+    <img src="images/pdf_viewer_edit.webp" width="720" height="1564" alt="PDFビューアから ✏️ で開いたファイル情報の編集ダイアログ" loading="lazy" decoding="async">
+    <figcaption>PDFビューアから ✏️ で開いた編集ダイアログ</figcaption>
   </figure>
-  -->
 </div>
 
 <h3 id="doc-actions">操作リファレンス</h3>
@@ -1202,10 +1288,12 @@
   <div class="action-row"><strong>グループタップ</strong><span>グループ詳細（ファイル一覧）へ</span></div>
   <div class="action-row"><strong>グループ長押し</strong><span>図面番号ごと全削除（確認あり）</span></div>
   <div class="action-row"><strong>タイルタップ（詳細内）</strong><span>PDFビューアへ</span></div>
-  <div class="action-row"><strong>タイル長押し（詳細内）</strong><span>削除の選択メニュー</span></div>
+  <div class="action-row"><strong>タイル長押し（詳細内）</strong><span>「ファイル情報を編集／削除」の選択メニュー</span></div>
+  <div class="action-row"><strong>長押しメニューの「ファイル情報を編集」</strong><span>ファイル名・図面番号・種別を修正するダイアログ</span></div>
   <div class="action-row"><strong>PDFビューアで左右スワイプ</strong><span>ページ送り</span></div>
   <div class="action-row"><strong>PDFビューア右下の丸ボタン</strong><span>現在ページへメモ追加</span></div>
   <div class="action-row"><strong>PDFビューアのページメモバッジ</strong><span>当該ページのメモ一覧を表示</span></div>
+  <div class="action-row"><strong>PDFビューアの ✏️ アイコン</strong><span>ファイル情報の編集ダイアログを開く</span></div>
   <div class="action-row"><strong>PDFビューアのブックマークアイコン</strong><span>登録／解除トグル</span></div>
 </div>
 
@@ -1593,10 +1681,16 @@
 <h4>画面上部のバー</h4>
 <ul>
   <li><strong>タイトル</strong>：「{見積作成日} (No.{通し番号})」を表示（例：「2026年4月17日 (No.049)」）</li>
+  <li><strong>✏️ 編集</strong>：この見積りのファイル情報（ファイル名・図面番号・種別）を編集（詳細は <a href="#doc-metadata-edit">ファイル情報の編集</a>）</li>
   <li><strong>🔖 ブックマーク</strong>：この見積り詳細をブックマーク登録／解除</li>
   <li><strong>⬇️ CSV出力</strong>：項目一覧を CSV ファイルで保存／共有（Excel互換）</li>
   <li><strong>「PDF」ボタン</strong>：取り込み元のPDFをビューアで開く</li>
 </ul>
+
+<figure class="shot-phone">
+  <img src="images/estimate_detail_edit.webp" width="720" height="1564" alt="見積り詳細から ✏️ で開いたファイル情報の編集ダイアログ" loading="lazy" decoding="async">
+  <figcaption>見積り詳細から ✏️ で開いた編集ダイアログ</figcaption>
+</figure>
 
 <h3 id="estimate-diff">2版比較</h3>
 <div class="shot-grid">
@@ -1692,6 +1786,7 @@
   <div class="action-row"><strong>一覧カードタップ</strong><span>詳細画面へ</span></div>
   <div class="action-row"><strong>一覧カード長押し</strong><span>削除確認ダイアログ</span></div>
   <div class="action-row"><strong>詳細：項目長押し</strong><span>メモ追加 or 既存メモの詳細表示</span></div>
+  <div class="action-row"><strong>詳細：✏️ アイコン</strong><span>ファイル情報の編集ダイアログを開く</span></div>
   <div class="action-row"><strong>詳細：ブックマーク</strong><span>登録／解除</span></div>
   <div class="action-row"><strong>詳細：CSV出力</strong><span>項目一覧をCSVで保存／共有（Excel互換）</span></div>
   <div class="action-row"><strong>詳細：「PDF」ボタン</strong><span>取り込み元のPDFをビューアで開く</span></div>
@@ -1785,10 +1880,16 @@
 <h4>画面上部のバー</h4>
 <ul>
   <li><strong>タイトル</strong>：「{図面番号} (仕様書No.{番号})」を表示（例：「2-7 (仕様書No.1)」）</li>
+  <li><strong>✏️ 編集</strong>：この仕様書のファイル情報（ファイル名・図面番号・種別）を編集（詳細は <a href="#doc-metadata-edit">ファイル情報の編集</a>）</li>
   <li><strong>🔖 ブックマーク</strong>：この仕様書詳細をブックマーク登録／解除</li>
   <li><strong>⬇️ CSV出力</strong>：項目一覧を CSV ファイルで保存／共有（Excel互換）</li>
   <li><strong>📄 PDFアイコン</strong>：取り込み元のPDFをビューアで開く</li>
 </ul>
+
+<figure class="shot-phone">
+  <img src="images/spec_detail_edit.webp" width="720" height="1564" alt="設備仕様書詳細から ✏️ で開いたファイル情報の編集ダイアログ" loading="lazy" decoding="async">
+  <figcaption>設備仕様書詳細から ✏️ で開いた編集ダイアログ</figcaption>
+</figure>
 
 <h3 id="spec-diff">2版比較</h3>
 <div class="shot-grid">
@@ -1848,6 +1949,7 @@
   <div class="action-row"><strong>一覧カード長押し</strong><span>削除確認ダイアログ</span></div>
   <div class="action-row"><strong>詳細：セクションタップ</strong><span>展開／折りたたみ</span></div>
   <div class="action-row"><strong>詳細：項目長押し</strong><span>メモ追加 or 既存メモの詳細表示</span></div>
+  <div class="action-row"><strong>詳細：✏️ アイコン</strong><span>ファイル情報の編集ダイアログを開く</span></div>
   <div class="action-row"><strong>詳細：ブックマーク</strong><span>登録／解除</span></div>
   <div class="action-row"><strong>詳細：CSV出力</strong><span>項目一覧をCSVで保存／共有（Excel互換）</span></div>
   <div class="action-row"><strong>詳細：PDFアイコン</strong><span>取り込み元のPDFをビューアで開く</span></div>
@@ -2815,6 +2917,241 @@
   <div class="action-row"><strong>右上 CSVエクスポート</strong><span>月次／年間レポートを CSV で書き出し</span></div>
   <div class="action-row"><strong>右上メニュー</strong><span>CSVインポート／料金プラン設定／再計算</span></div>
   <div class="action-row"><strong>「目標金額を設定」ボタン</strong><span>投資回収ゴールを設定／変更／解除</span></div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- 便利ツール                                               -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- マイページ                                               -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="mypage">マイページ</h2>
+
+<p>家のスペック・家族構成・家づくりの歩み・でんき実績・アプリの利用状況を 1 画面にまとめる、施主のためのプロフィール画面です。「ホームバナー」と「マイホームカード（SNS シェア用画像）」もここから設計します。</p>
+
+<h3 id="mypage-entry">入り口（設定 / ホームバナー）</h3>
+<p>マイページに入る経路は 2 つあります。</p>
+<ol>
+  <li><strong>設定 &gt; マイページ</strong> — いつでもアクセスできる、確実な入口</li>
+  <li><strong>ホーム画面のホームバナーをタップ</strong> — プロフィールに 1 つでも入力があり、設定で「ホームにバナーを表示」が ON のときに表示される</li>
+</ol>
+
+<figure class="shot-phone">
+  <img src="images/settings_show_home_banner.webp" width="720" height="1564" alt="設定画面のマイページセクション（マイページ項目とホームバナー表示スイッチ）" loading="lazy" decoding="async">
+  <figcaption>設定画面 マイページセクション（マイページ項目 + バナー表示スイッチ）</figcaption>
+</figure>
+
+<div class="callout info">
+  <p><strong>初回はホーム画面にバナーが出ません。</strong> プロフィールがすべて未入力の状態ではホームバナーは表示されないので、最初は設定 &gt; マイページから入って中身を編集してください。1 つでも入力するとホームバナーが自動表示されます（設定の「ホームにバナーを表示」が ON の場合）。</p>
+</div>
+
+<figure class="shot-phone">
+  <img src="images/home_with_banner.webp" width="720" height="1564" alt="ホーム画面上部にホームバナーが表示されている状態" loading="lazy" decoding="async">
+  <figcaption>プロフィール入力後のホーム画面（ホームバナー表示）</figcaption>
+</figure>
+
+<h3 id="mypage-banner">ホームバナーの中身</h3>
+<p>ホームバナーは「マイページの抜粋」を表示する横長カードで、<strong>ホーム画面の上部とマイページの上部にほぼ同じ見た目で表示</strong>されます。マイホームカード画面のホームタブで内容を編集すると、両画面のバナーが同時に更新されます。</p>
+<ul>
+  <li>背景画像（横長 9:4、未設定時はグラデーションフォールバック）</li>
+  <li>アバター（絵文字プリセット or アップロード写真）</li>
+  <li>商品プランの英字ラベル（GRAND SAISON など）</li>
+  <li>ニックネーム（未設定時は「マイホーム」）</li>
+  <li>任意の <strong>chip 群</strong>（地域・延床・蓄電池容量・累計お得など、マイホームカード画面で配置）</li>
+</ul>
+
+<h3 id="mypage-view">マイページ画面（閲覧）</h3>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/mypage_view_empty.webp" width="720" height="1564" alt="マイページ閲覧画面（プロフィール未入力の状態）" loading="lazy" decoding="async">
+    <figcaption>プロフィール未入力（フォールバック表示）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/mypage_view_top.webp" width="720" height="1564" alt="マイページ閲覧画面（入力済・上部）" loading="lazy" decoding="async">
+    <figcaption>入力済 上部（バナー / 住まい / 家族 / 歩み）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/mypage_view_bottom.webp" width="720" height="1564" alt="マイページ閲覧画面（入力済・下部）" loading="lazy" decoding="async">
+    <figcaption>入力済 下部（歩み / でんき / アプリ利用 / シェアボタン）</figcaption>
+  </figure>
+</div>
+
+<h4>画面構成</h4>
+<ul>
+  <li><strong>画面上部のバー</strong>：「マイページ」、右に <strong>「✏️ プロフィールを編集」</strong> ボタン</li>
+  <li><strong>画面上部のバナー</strong>：ホームバナーがそのまま表示される領域。右上の ✏️ アイコンから「マイホームカード画面」へ（見栄え系の編集）</li>
+  <li><strong>セクション一覧（上から）</strong>：
+    <ol>
+      <li><strong>住まいスペック</strong> — 階数 / 延床 / 地域 / 太陽光 / 蓄電池 / 空調・換気</li>
+      <li><strong>家族構成</strong> — 大人 / 子ども / ペットの人数</li>
+      <li><strong>家づくりの歩み</strong>（スケジュール連携） — 住んで・打ち合わせ N回・マイルストーン N件・工期 N日・家づくり期間 N日・予定 N件のうち、値があるものだけを表示</li>
+      <li><strong>でんき実績</strong>（でんき通信簿連携） — 累計お得 / 記録期間。値があれば表示</li>
+      <li><strong>アプリ利用</strong> — 取り込み件数（書類）／ メモ件数 ／ ブックマーク件数</li>
+    </ol>
+  </li>
+  <li><strong>マイホームをシェア</strong>カード — タップでマイホームカード画面のシェアタブを開く</li>
+</ul>
+
+<div class="callout info">
+  <p><strong>編集動線は 2 つに分かれています。</strong>「中身データ」は画面上部の「プロフィールを編集」ボタンから、「見栄え（バナーの背景画像・chip・シェアカード）」はバナー右上の ✏️ から開きます。</p>
+</div>
+
+<h3 id="mypage-edit">プロフィールを編集（中身データ）</h3>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/mypage_edit_empty_top.webp" width="720" height="1564" alt="プロフィール編集画面（未入力・上部）" loading="lazy" decoding="async">
+    <figcaption>未入力 上部（基本情報 / 間取り）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/mypage_edit_filled_top.webp" width="720" height="1564" alt="プロフィール編集画面（入力済・上部）" loading="lazy" decoding="async">
+    <figcaption>入力済 上部</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/mypage_edit_empty_bottom.webp" width="720" height="1564" alt="プロフィール編集画面（未入力・下部）" loading="lazy" decoding="async">
+    <figcaption>未入力 下部（設備 / 家族 / 見た目）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/mypage_edit_appearance.webp" width="720" height="1564" alt="プロフィール編集画面 マイページの見た目セクション" loading="lazy" decoding="async">
+    <figcaption>マイページの見た目セクション</figcaption>
+  </figure>
+</div>
+
+<h4>5 つのセクション</h4>
+<ol>
+  <li><strong>基本情報</strong> — アバター（絵文字プリセット or 写真アップロード） / ニックネーム / 商品プラン / 都道府県 / 断熱地域区分 / シェア時の表記（都道府県 ⇄ 断熱地域区分）</li>
+  <li><strong>間取り・構造</strong> — 階数（平屋 / 2階建て / 3階建て / 二世帯 / その他自由入力） / 延床面積（坪）</li>
+  <li><strong>設備</strong> — 太陽光発電（kW） / 蓄電池（容量と台数） / 空調・換気タイプ</li>
+  <li><strong>家族構成</strong> — 大人 / 子ども / ペットを ± ボタンで増減</li>
+  <li><strong>マイページの見た目</strong> — ホームバナーの縮小プレビュー + マイホームカード画面のホームタブ／シェアタブへの 2 入口（ここでは見栄え自体は編集せず、マイホームカード画面に誘導）</li>
+</ol>
+
+<h4>未保存ガード</h4>
+<p>変更を加えたまま戻ろうとすると、「未保存の変更があります」ダイアログが出て、誤操作で入力を捨てるのを防ぎます。</p>
+
+<figure class="shot-phone">
+  <img src="images/mypage_edit_unsaved_dialog.webp" width="720" height="1564" alt="未保存の変更があるときに戻ろうとして出るダイアログ" loading="lazy" decoding="async">
+  <figcaption>未保存ガードのダイアログ</figcaption>
+</figure>
+
+<h3 id="mypage-cards">マイホームカード（見栄え編集 + シェア）</h3>
+
+<p>ホームバナーの見栄え（背景画像・chip 配置・chip スタイル）と、SNS シェア用の <strong>マイホームカード</strong> を 1 つの画面にまとめて編集します。プロフィールの中身（ニックネーム・商品プラン・住まいスペック等）はここでは扱いません（プロフィール編集側で）。</p>
+
+<h4 id="mypage-cards-home">ホームタブ（🏠）</h4>
+<p>ホームバナーをそのまま編集するタブです。画面上部に縮小プレビューが固定表示され、その下で背景画像・chip スタイル・chip 配置を編集します。</p>
+
+<figure class="shot-phone">
+  <img src="images/mypage_cards_home_tab.webp" width="720" height="1564" alt="マイホームカード画面 ホームタブ（プレビューと編集 UI）" loading="lazy" decoding="async">
+  <figcaption>ホームタブ（プレビューと編集 UI）</figcaption>
+</figure>
+
+<h4 id="mypage-cards-share">シェアタブ（🎴）</h4>
+<p>SNS にシェアする画像を作成するタブです。プレビュー部分は横スワイプで <strong>PHOTO</strong> ↔ <strong>CARD</strong> の 2 種類のスタイルを切り替えられます（左右の矢印と現在位置を示す丸いマーカー付き）。</p>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/mypage_cards_share_photo.webp" width="720" height="1564" alt="マイホームカード シェアタブ PHOTO スタイル" loading="lazy" decoding="async">
+    <figcaption>シェア PHOTO（背景写真の上に chip）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/mypage_cards_share_card.webp" width="720" height="1564" alt="マイホームカード シェアタブ CARD スタイル" loading="lazy" decoding="async">
+    <figcaption>シェア CARD（カード型の表組レイアウト）</figcaption>
+  </figure>
+</div>
+
+<p>シェアタブには専用のアクションがあります：</p>
+<ul>
+  <li><strong>「共有 / 保存」</strong>（タブ下部）：現在表示中のスタイルを画像にして「保存」（端末に保存）または「共有」（他のアプリへ送信）</li>
+  <li>画面上部の「保存」は別物で、編集中の chip 配置・背景画像・スタイルをマイページ全体に保存します</li>
+</ul>
+
+<figure class="shot-phone">
+  <img src="images/mypage_cards_share_export.webp" width="720" height="1564" alt="シェアタブの「共有 / 保存」 下からせり上がるメニュー" loading="lazy" decoding="async">
+  <figcaption>シェア用の「保存 / 共有」下からせり上がるメニュー</figcaption>
+</figure>
+
+<h4 id="mypage-cards-image">背景画像</h4>
+<p>背景画像は形状ごとに 2 種類を別々に管理します（同じ写真を引き伸ばさず、用途に合った構図を選べる）。</p>
+<ul>
+  <li><strong>長方形（9:4）</strong> — ホームバナー / シェア CARD で使用</li>
+  <li><strong>正方形（1:1）</strong> — シェア PHOTO で使用</li>
+</ul>
+<p>「追加 / 変更」をタップして端末の写真から選択します。設定済の画像は <strong>変更 / 削除</strong> 下からせり上がるメニュー から差し替えできます。</p>
+
+<figure class="shot-phone">
+  <img src="images/mypage_cards_image_menu.webp" width="720" height="1564" alt="背景画像の変更／削除 下からせり上がるメニュー" loading="lazy" decoding="async">
+  <figcaption>背景画像の変更 / 削除メニュー</figcaption>
+</figure>
+
+<h4 id="mypage-cards-chips">chip エディタとスタイル</h4>
+<p>下部の <strong>chip エディタ</strong> で、バナー／シェアに表示する項目を選んで配置します。</p>
+<ul>
+  <li><strong>候補一覧</strong> から chip をタップでスロットに追加。すでに使用中の chip はグレー＋取り消し線で「使用中」表示されます</li>
+  <li>追加済 chip は ↑↓ で並び替え、× で削除</li>
+  <li>シェア PHOTO は <strong>大スロット</strong>（既定 7 個まで） と <strong>小スロット</strong>（既定 5 個まで）に分かれていて、追加先を切替できます</li>
+</ul>
+
+<figure class="shot-phone">
+  <img src="images/mypage_cards_candidate_used.webp" width="720" height="1564" alt="候補一覧で使用中の chip がグレーアウトしている状態" loading="lazy" decoding="async">
+  <figcaption>候補一覧（使用中はグレー＋取り消し線）</figcaption>
+</figure>
+
+<p><strong>chip スタイルの切替</strong>（ホームバナー / シェア PHOTO のみ。シェア CARD は対象外）：</p>
+<ul>
+  <li>ダーク（既定）／ ライト ／ アクセント ／ アウトライン の 4 種類</li>
+  <li>「chip スタイル: {現在}」ボタンから 下からせり上がるメニュー で切替</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/mypage_cards_chip_style_select.webp" width="720" height="1564" alt="chip スタイル選択 下からせり上がるメニュー（4 種類）" loading="lazy" decoding="async">
+    <figcaption>chip スタイル選択（4 種類）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/mypage_cards_chip_style_light.webp" width="720" height="1564" alt="シェア PHOTO chip スタイル ライト" loading="lazy" decoding="async">
+    <figcaption>chip スタイル：ライト</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/mypage_cards_chip_style_accent.webp" width="720" height="1564" alt="シェア PHOTO chip スタイル アクセント" loading="lazy" decoding="async">
+    <figcaption>chip スタイル：アクセント</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/mypage_cards_chip_style_outline.webp" width="720" height="1564" alt="シェア PHOTO chip スタイル アウトライン" loading="lazy" decoding="async">
+    <figcaption>chip スタイル：アウトライン</figcaption>
+  </figure>
+</div>
+
+<h4>他のスタイルから取り込む</h4>
+<p>「📋 他のスタイルから取り込む」を押すと、別スタイルで設定済みの chip 配置を 下からせり上がるメニュー で選んで取り込めます（一方向）。</p>
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/mypage_cards_import_select.webp" width="720" height="1564" alt="他のスタイルから取り込む元を選択する 下からせり上がるメニュー" loading="lazy" decoding="async">
+    <figcaption>取り込み元を選択</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/mypage_cards_import_confirm.webp" width="720" height="1564" alt="現在の chip を上書きするか確認するダイアログ" loading="lazy" decoding="async">
+    <figcaption>現在の chip を上書き確認</figcaption>
+  </figure>
+</div>
+
+<h3 id="mypage-actions">操作リファレンス</h3>
+<div class="action-box">
+  <div class="action-row"><strong>設定 &gt; マイページ</strong><span>マイページ閲覧画面へ（常時利用可）</span></div>
+  <div class="action-row"><strong>ホームバナータップ</strong><span>マイページ閲覧画面へ（プロフィールに入力があるときのみ表示）</span></div>
+  <div class="action-row"><strong>マイページ画面上部の「プロフィールを編集」</strong><span>中身データ編集画面へ</span></div>
+  <div class="action-row"><strong>マイページ バナー右上 ✏️</strong><span>マイホームカード画面（ホームタブ）へ</span></div>
+  <div class="action-row"><strong>マイページの「マイホームをシェア」</strong><span>マイホームカード画面（シェアタブ）へ</span></div>
+  <div class="action-row"><strong>マイホームカード画面 上部のタブ</strong><span>ホーム / シェア の切替</span></div>
+  <div class="action-row"><strong>シェアタブ プレビュー横スワイプ</strong><span>PHOTO ⇄ CARD スタイル切替</span></div>
+  <div class="action-row"><strong>背景画像「追加」「変更」</strong><span>端末の写真ライブラリから選択</span></div>
+  <div class="action-row"><strong>「chip スタイル: {現在}」ボタン</strong><span>4 種類から切替</span></div>
+  <div class="action-row"><strong>候補一覧の chip タップ</strong><span>スロットに追加</span></div>
+  <div class="action-row"><strong>「📋 他のスタイルから取り込む」</strong><span>別スタイルの chip 配置を流用</span></div>
+  <div class="action-row"><strong>シェアタブ下部の「共有 / 保存」</strong><span>現在表示中のスタイルを画像化して保存／共有</span></div>
+  <div class="action-row"><strong>画面上部「保存」</strong><span>編集内容（chip / 背景画像 / スタイル）をマイページに保存</span></div>
+  <div class="action-row"><strong>設定 &gt; 「ホームにバナーを表示」</strong><span>ホームバナーの ON/OFF</span></div>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
