@@ -1,0 +1,470 @@
+{
+  "schemaVersion": 1,
+  "publishedAt": "2026-04-25",
+  "items": [
+    {
+      "companyKey": "hepco",
+      "month": 1,
+      "day": 2,
+      "name": "年始（1/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "hepco",
+      "month": 1,
+      "day": 3,
+      "name": "年始（1/3）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "hepco",
+      "month": 4,
+      "day": 30,
+      "name": "GW（4/30）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "hepco",
+      "month": 5,
+      "day": 1,
+      "name": "GW（5/1）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "hepco",
+      "month": 5,
+      "day": 2,
+      "name": "GW（5/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "hepco",
+      "month": 12,
+      "day": 30,
+      "name": "年末（12/30）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "hepco",
+      "month": 12,
+      "day": 31,
+      "name": "年末（12/31）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "month": 1,
+      "day": 2,
+      "name": "年始（1/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "month": 1,
+      "day": 3,
+      "name": "年始（1/3）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "month": 1,
+      "day": 4,
+      "name": "年始（1/4）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "month": 4,
+      "day": 30,
+      "name": "GW（4/30）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "month": 5,
+      "day": 1,
+      "name": "GW（5/1）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "month": 5,
+      "day": 2,
+      "name": "GW（5/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "month": 12,
+      "day": 29,
+      "name": "年末（12/29）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "month": 12,
+      "day": 30,
+      "name": "年末（12/30）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "month": 12,
+      "day": 31,
+      "name": "年末（12/31）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "month": 1,
+      "day": 2,
+      "name": "年始（1/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "month": 1,
+      "day": 3,
+      "name": "年始（1/3）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "month": 4,
+      "day": 30,
+      "name": "GW（4/30）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "month": 5,
+      "day": 1,
+      "name": "GW（5/1）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "month": 5,
+      "day": 2,
+      "name": "GW（5/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "month": 12,
+      "day": 30,
+      "name": "年末（12/30）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "month": 12,
+      "day": 31,
+      "name": "年末（12/31）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "rikuden",
+      "month": 1,
+      "day": 2,
+      "name": "年始（1/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "rikuden",
+      "month": 1,
+      "day": 3,
+      "name": "年始（1/3）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "rikuden",
+      "month": 1,
+      "day": 4,
+      "name": "年始（1/4）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "rikuden",
+      "month": 5,
+      "day": 1,
+      "name": "GW（5/1）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "rikuden",
+      "month": 5,
+      "day": 2,
+      "name": "GW（5/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "rikuden",
+      "month": 12,
+      "day": 30,
+      "name": "年末（12/30）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "rikuden",
+      "month": 12,
+      "day": 31,
+      "name": "年末（12/31）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "kepco",
+      "month": 1,
+      "day": 2,
+      "name": "年始（1/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "kepco",
+      "month": 1,
+      "day": 3,
+      "name": "年始（1/3）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "kepco",
+      "month": 4,
+      "day": 30,
+      "name": "GW（4/30）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "kepco",
+      "month": 5,
+      "day": 1,
+      "name": "GW（5/1）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "kepco",
+      "month": 5,
+      "day": 2,
+      "name": "GW（5/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "kepco",
+      "month": 12,
+      "day": 30,
+      "name": "年末（12/30）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "kepco",
+      "month": 12,
+      "day": 31,
+      "name": "年末（12/31）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "energia",
+      "month": 1,
+      "day": 2,
+      "name": "年始（1/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "energia",
+      "month": 1,
+      "day": 3,
+      "name": "年始（1/3）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "energia",
+      "month": 1,
+      "day": 4,
+      "name": "年始（1/4）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "energia",
+      "month": 5,
+      "day": 1,
+      "name": "GW（5/1）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "energia",
+      "month": 5,
+      "day": 2,
+      "name": "GW（5/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "energia",
+      "month": 12,
+      "day": 30,
+      "name": "年末（12/30）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "energia",
+      "month": 12,
+      "day": 31,
+      "name": "年末（12/31）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "yonden",
+      "month": 1,
+      "day": 2,
+      "name": "年始（1/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "yonden",
+      "month": 1,
+      "day": 3,
+      "name": "年始（1/3）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "yonden",
+      "month": 4,
+      "day": 30,
+      "name": "GW（4/30）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "yonden",
+      "month": 5,
+      "day": 1,
+      "name": "GW（5/1）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "yonden",
+      "month": 5,
+      "day": 2,
+      "name": "GW（5/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "yonden",
+      "month": 12,
+      "day": 30,
+      "name": "年末（12/30）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "yonden",
+      "month": 12,
+      "day": 31,
+      "name": "年末（12/31）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "kyuden",
+      "month": 1,
+      "day": 2,
+      "name": "年始（1/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "kyuden",
+      "month": 1,
+      "day": 3,
+      "name": "年始（1/3）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "kyuden",
+      "month": 4,
+      "day": 30,
+      "name": "GW（4/30）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "kyuden",
+      "month": 5,
+      "day": 1,
+      "name": "GW（5/1）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "kyuden",
+      "month": 5,
+      "day": 2,
+      "name": "GW（5/2）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "kyuden",
+      "month": 12,
+      "day": 30,
+      "name": "年末（12/30）",
+      "startYear": null,
+      "endYear": null
+    },
+    {
+      "companyKey": "kyuden",
+      "month": 12,
+      "day": 31,
+      "name": "年末（12/31）",
+      "startYear": null,
+      "endYear": null
+    }
+  ]
+}

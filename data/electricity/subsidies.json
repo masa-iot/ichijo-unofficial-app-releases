@@ -1,0 +1,238 @@
+{
+  "schemaVersion": 1,
+  "publishedAt": "2026-04-25",
+  "items": [
+    {
+      "subsidyKey": "gov_2023_02",
+      "year": 2023,
+      "month": 2,
+      "rate": -7.0,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2023-02-01"
+    },
+    {
+      "subsidyKey": "gov_2023_03",
+      "year": 2023,
+      "month": 3,
+      "rate": -7.0,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2023-03-01"
+    },
+    {
+      "subsidyKey": "gov_2023_04",
+      "year": 2023,
+      "month": 4,
+      "rate": -7.0,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2023-04-01"
+    },
+    {
+      "subsidyKey": "gov_2023_05",
+      "year": 2023,
+      "month": 5,
+      "rate": -7.0,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2023-05-01"
+    },
+    {
+      "subsidyKey": "gov_2023_06",
+      "year": 2023,
+      "month": 6,
+      "rate": -7.0,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2023-06-01"
+    },
+    {
+      "subsidyKey": "gov_2023_07",
+      "year": 2023,
+      "month": 7,
+      "rate": -7.0,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2023-07-01"
+    },
+    {
+      "subsidyKey": "gov_2023_08",
+      "year": 2023,
+      "month": 8,
+      "rate": -7.0,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2023-08-01"
+    },
+    {
+      "subsidyKey": "gov_2023_09",
+      "year": 2023,
+      "month": 9,
+      "rate": -7.0,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2023-09-01"
+    },
+    {
+      "subsidyKey": "gov_2023_10",
+      "year": 2023,
+      "month": 10,
+      "rate": -3.5,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2023-10-01"
+    },
+    {
+      "subsidyKey": "gov_2023_11",
+      "year": 2023,
+      "month": 11,
+      "rate": -3.5,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2023-11-01"
+    },
+    {
+      "subsidyKey": "gov_2023_12",
+      "year": 2023,
+      "month": 12,
+      "rate": -3.5,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2023-12-01"
+    },
+    {
+      "subsidyKey": "gov_2024_01",
+      "year": 2024,
+      "month": 1,
+      "rate": -3.5,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2024-01-01"
+    },
+    {
+      "subsidyKey": "gov_2024_02",
+      "year": 2024,
+      "month": 2,
+      "rate": -3.5,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2024-02-01"
+    },
+    {
+      "subsidyKey": "gov_2024_03",
+      "year": 2024,
+      "month": 3,
+      "rate": -3.5,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2024-03-01"
+    },
+    {
+      "subsidyKey": "gov_2024_04",
+      "year": 2024,
+      "month": 4,
+      "rate": -3.5,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2024-04-01"
+    },
+    {
+      "subsidyKey": "gov_2024_05",
+      "year": 2024,
+      "month": 5,
+      "rate": -3.5,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2024-05-01"
+    },
+    {
+      "subsidyKey": "gov_2024_06",
+      "year": 2024,
+      "month": 6,
+      "rate": -1.8,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2024-06-01"
+    },
+    {
+      "subsidyKey": "gov_2024_09",
+      "year": 2024,
+      "month": 9,
+      "rate": -4.0,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2024-09-01"
+    },
+    {
+      "subsidyKey": "gov_2024_10",
+      "year": 2024,
+      "month": 10,
+      "rate": -4.0,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2024-10-01"
+    },
+    {
+      "subsidyKey": "gov_2024_11",
+      "year": 2024,
+      "month": 11,
+      "rate": -2.5,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2024-11-01"
+    },
+    {
+      "subsidyKey": "gov_2025_02",
+      "year": 2025,
+      "month": 2,
+      "rate": -2.5,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2025-02-01"
+    },
+    {
+      "subsidyKey": "gov_2025_03",
+      "year": 2025,
+      "month": 3,
+      "rate": -2.5,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2025-03-01"
+    },
+    {
+      "subsidyKey": "gov_2025_04",
+      "year": 2025,
+      "month": 4,
+      "rate": -1.3,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2025-04-01"
+    },
+    {
+      "subsidyKey": "gov_2025_08",
+      "year": 2025,
+      "month": 8,
+      "rate": -2.0,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2025-08-01"
+    },
+    {
+      "subsidyKey": "gov_2025_09",
+      "year": 2025,
+      "month": 9,
+      "rate": -2.4,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2025-09-01"
+    },
+    {
+      "subsidyKey": "gov_2025_10",
+      "year": 2025,
+      "month": 10,
+      "rate": -2.0,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2025-10-01"
+    },
+    {
+      "subsidyKey": "gov_2026_02",
+      "year": 2026,
+      "month": 2,
+      "rate": -4.5,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2026-02-01"
+    },
+    {
+      "subsidyKey": "gov_2026_03",
+      "year": 2026,
+      "month": 3,
+      "rate": -4.5,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2026-03-01"
+    },
+    {
+      "subsidyKey": "gov_2026_04",
+      "year": 2026,
+      "month": 4,
+      "rate": -1.5,
+      "note": "電気・ガス価格激変緩和対策事業（再構築）",
+      "publishedAt": "2026-04-01"
+    }
+  ]
+}

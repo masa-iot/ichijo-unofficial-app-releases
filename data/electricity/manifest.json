@@ -1,0 +1,13 @@
+{
+  "manifestVersion": 1,
+  "publishedAt": "2026-04-25T00:00:00Z",
+  "minAppVersion": "1.3.0",
+  "files": {
+    "companies":            { "path": "companies.json",            "schemaVersion": 1, "lastUpdated": "2026-04-25T00:00:00Z" },
+    "plans":                { "path": "plans.json",                "schemaVersion": 1, "lastUpdated": "2026-04-25T00:00:00Z" },
+    "fuel_adjustments":     { "path": "fuel_adjustments.json",     "schemaVersion": 1, "lastUpdated": "2026-04-25T00:00:00Z" },
+    "subsidies":            { "path": "subsidies.json",            "schemaVersion": 1, "lastUpdated": "2026-04-25T00:00:00Z" },
+    "renewable_surcharges": { "path": "renewable_surcharges.json", "schemaVersion": 1, "lastUpdated": "2026-04-25T00:00:00Z" },
+    "special_days":         { "path": "special_days.json",         "schemaVersion": 1, "lastUpdated": "2026-04-25T00:00:00Z" }
+  }
+}

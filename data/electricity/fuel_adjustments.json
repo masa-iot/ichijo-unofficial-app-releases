@@ -1,0 +1,4182 @@
+{
+  "schemaVersion": 1,
+  "publishedAt": "2026-04-25",
+  "items": [
+    {
+      "companyKey": "hepco",
+      "year": 2021,
+      "month": 8,
+      "freeRate": -1.6,
+      "regulatedRate": -1.6,
+      "publishedAt": "2021-08-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2021,
+      "month": 9,
+      "freeRate": -1.28,
+      "regulatedRate": -1.28,
+      "publishedAt": "2021-09-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2021,
+      "month": 10,
+      "freeRate": -0.99,
+      "regulatedRate": -0.99,
+      "publishedAt": "2021-10-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2021,
+      "month": 11,
+      "freeRate": -0.59,
+      "regulatedRate": -0.59,
+      "publishedAt": "2021-11-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2021,
+      "month": 12,
+      "freeRate": -0.28,
+      "regulatedRate": -0.28,
+      "publishedAt": "2021-12-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2022,
+      "month": 1,
+      "freeRate": 0.06,
+      "regulatedRate": 0.06,
+      "publishedAt": "2022-01-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2022,
+      "month": 2,
+      "freeRate": 0.63,
+      "regulatedRate": 0.63,
+      "publishedAt": "2022-02-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2022,
+      "month": 3,
+      "freeRate": 1.16,
+      "regulatedRate": 1.16,
+      "publishedAt": "2022-03-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2022,
+      "month": 4,
+      "freeRate": 1.4,
+      "regulatedRate": 1.4,
+      "publishedAt": "2022-04-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2022,
+      "month": 5,
+      "freeRate": 1.56,
+      "regulatedRate": 1.56,
+      "publishedAt": "2022-05-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2022,
+      "month": 6,
+      "freeRate": 1.93,
+      "regulatedRate": 1.93,
+      "publishedAt": "2022-06-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2022,
+      "month": 7,
+      "freeRate": 3.23,
+      "regulatedRate": 3.23,
+      "publishedAt": "2022-07-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2022,
+      "month": 8,
+      "freeRate": 4.75,
+      "regulatedRate": 3.66,
+      "publishedAt": "2022-08-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2022,
+      "month": 9,
+      "freeRate": 6.82,
+      "regulatedRate": 3.66,
+      "publishedAt": "2022-09-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2022,
+      "month": 10,
+      "freeRate": 3.66,
+      "regulatedRate": 3.66,
+      "publishedAt": "2022-10-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2022,
+      "month": 11,
+      "freeRate": 3.66,
+      "regulatedRate": 3.66,
+      "publishedAt": "2022-11-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2022,
+      "month": 12,
+      "freeRate": 9.75,
+      "regulatedRate": 3.66,
+      "publishedAt": "2022-12-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2023,
+      "month": 1,
+      "freeRate": 9.91,
+      "regulatedRate": 3.66,
+      "publishedAt": "2023-01-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2023,
+      "month": 2,
+      "freeRate": 10.26,
+      "regulatedRate": 3.66,
+      "publishedAt": "2023-02-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2023,
+      "month": 3,
+      "freeRate": 9.69,
+      "regulatedRate": 3.66,
+      "publishedAt": "2023-03-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2023,
+      "month": 4,
+      "freeRate": 8.57,
+      "regulatedRate": 3.66,
+      "publishedAt": "2023-04-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2023,
+      "month": 5,
+      "freeRate": 7.43,
+      "regulatedRate": 3.66,
+      "publishedAt": "2023-05-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2023,
+      "month": 6,
+      "freeRate": -1.64,
+      "regulatedRate": -1.64,
+      "publishedAt": "2023-06-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2023,
+      "month": 7,
+      "freeRate": -2.41,
+      "regulatedRate": -2.41,
+      "publishedAt": "2023-07-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2023,
+      "month": 8,
+      "freeRate": -3.33,
+      "regulatedRate": -3.33,
+      "publishedAt": "2023-08-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2023,
+      "month": 9,
+      "freeRate": -4.25,
+      "regulatedRate": -4.25,
+      "publishedAt": "2023-09-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2023,
+      "month": 10,
+      "freeRate": -4.82,
+      "regulatedRate": -4.82,
+      "publishedAt": "2023-10-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2023,
+      "month": 11,
+      "freeRate": -5.15,
+      "regulatedRate": -5.15,
+      "publishedAt": "2023-11-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2023,
+      "month": 12,
+      "freeRate": -5.36,
+      "regulatedRate": -5.36,
+      "publishedAt": "2023-12-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2024,
+      "month": 1,
+      "freeRate": -5.26,
+      "regulatedRate": -5.26,
+      "publishedAt": "2024-01-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2024,
+      "month": 2,
+      "freeRate": -5.09,
+      "regulatedRate": -5.09,
+      "publishedAt": "2024-02-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2024,
+      "month": 3,
+      "freeRate": -5.06,
+      "regulatedRate": -5.06,
+      "publishedAt": "2024-03-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2024,
+      "month": 4,
+      "freeRate": -5.35,
+      "regulatedRate": -5.35,
+      "publishedAt": "2024-04-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2024,
+      "month": 5,
+      "freeRate": -5.52,
+      "regulatedRate": -5.52,
+      "publishedAt": "2024-05-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2024,
+      "month": 6,
+      "freeRate": -5.67,
+      "regulatedRate": -5.67,
+      "publishedAt": "2024-06-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2024,
+      "month": 7,
+      "freeRate": -5.69,
+      "regulatedRate": -5.69,
+      "publishedAt": "2024-07-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2024,
+      "month": 8,
+      "freeRate": -5.69,
+      "regulatedRate": -5.69,
+      "publishedAt": "2024-08-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2024,
+      "month": 9,
+      "freeRate": -5.6,
+      "regulatedRate": -5.6,
+      "publishedAt": "2024-09-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2024,
+      "month": 10,
+      "freeRate": -5.47,
+      "regulatedRate": -5.47,
+      "publishedAt": "2024-10-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2024,
+      "month": 11,
+      "freeRate": -5.56,
+      "regulatedRate": -5.56,
+      "publishedAt": "2024-11-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2024,
+      "month": 12,
+      "freeRate": -5.83,
+      "regulatedRate": -5.83,
+      "publishedAt": "2024-12-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2025,
+      "month": 1,
+      "freeRate": -6.12,
+      "regulatedRate": -6.12,
+      "publishedAt": "2025-01-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2025,
+      "month": 2,
+      "freeRate": -6.19,
+      "regulatedRate": -6.19,
+      "publishedAt": "2025-02-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2025,
+      "month": 3,
+      "freeRate": -6.1,
+      "regulatedRate": -6.1,
+      "publishedAt": "2025-03-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2025,
+      "month": 4,
+      "freeRate": -5.99,
+      "regulatedRate": -5.99,
+      "publishedAt": "2025-04-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2025,
+      "month": 5,
+      "freeRate": -6.07,
+      "regulatedRate": -6.07,
+      "publishedAt": "2025-05-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2025,
+      "month": 6,
+      "freeRate": -6.26,
+      "regulatedRate": -6.26,
+      "publishedAt": "2025-06-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2025,
+      "month": 7,
+      "freeRate": -6.66,
+      "regulatedRate": -6.66,
+      "publishedAt": "2025-07-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2025,
+      "month": 8,
+      "freeRate": -7.07,
+      "regulatedRate": -7.07,
+      "publishedAt": "2025-08-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2025,
+      "month": 9,
+      "freeRate": -7.36,
+      "regulatedRate": -7.36,
+      "publishedAt": "2025-09-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2025,
+      "month": 10,
+      "freeRate": -7.57,
+      "regulatedRate": -7.57,
+      "publishedAt": "2025-10-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2025,
+      "month": 11,
+      "freeRate": -7.54,
+      "regulatedRate": -7.54,
+      "publishedAt": "2025-11-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2025,
+      "month": 12,
+      "freeRate": -7.47,
+      "regulatedRate": -7.47,
+      "publishedAt": "2025-12-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2026,
+      "month": 1,
+      "freeRate": -7.36,
+      "regulatedRate": -7.36,
+      "publishedAt": "2026-01-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2026,
+      "month": 2,
+      "freeRate": -7.33,
+      "regulatedRate": -7.33,
+      "publishedAt": "2026-02-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2026,
+      "month": 3,
+      "freeRate": -7.26,
+      "regulatedRate": -7.26,
+      "publishedAt": "2026-03-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2026,
+      "month": 4,
+      "freeRate": -7.22,
+      "regulatedRate": -7.22,
+      "publishedAt": "2026-04-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2026,
+      "month": 5,
+      "freeRate": -7.21,
+      "regulatedRate": -7.21,
+      "publishedAt": "2026-05-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2021,
+      "month": 8,
+      "freeRate": -1.44,
+      "regulatedRate": -1.44,
+      "publishedAt": "2021-08-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2021,
+      "month": 9,
+      "freeRate": -1.04,
+      "regulatedRate": -1.04,
+      "publishedAt": "2021-09-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2021,
+      "month": 10,
+      "freeRate": -0.6,
+      "regulatedRate": -0.6,
+      "publishedAt": "2021-10-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2021,
+      "month": 11,
+      "freeRate": -0.11,
+      "regulatedRate": -0.11,
+      "publishedAt": "2021-11-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2021,
+      "month": 12,
+      "freeRate": 0.31,
+      "regulatedRate": 0.31,
+      "publishedAt": "2021-12-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2022,
+      "month": 1,
+      "freeRate": 0.82,
+      "regulatedRate": 0.82,
+      "publishedAt": "2022-01-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2022,
+      "month": 2,
+      "freeRate": 1.83,
+      "regulatedRate": 1.83,
+      "publishedAt": "2022-02-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2022,
+      "month": 3,
+      "freeRate": 2.67,
+      "regulatedRate": 2.67,
+      "publishedAt": "2022-03-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2022,
+      "month": 4,
+      "freeRate": 3.05,
+      "regulatedRate": 3.05,
+      "publishedAt": "2022-04-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2022,
+      "month": 5,
+      "freeRate": 3.36,
+      "regulatedRate": 3.36,
+      "publishedAt": "2022-05-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2022,
+      "month": 6,
+      "freeRate": 3.47,
+      "regulatedRate": 3.47,
+      "publishedAt": "2022-06-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2022,
+      "month": 7,
+      "freeRate": 3.47,
+      "regulatedRate": 3.47,
+      "publishedAt": "2022-07-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2022,
+      "month": 8,
+      "freeRate": 3.47,
+      "regulatedRate": 3.47,
+      "publishedAt": "2022-08-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2022,
+      "month": 9,
+      "freeRate": 3.47,
+      "regulatedRate": 3.47,
+      "publishedAt": "2022-09-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2022,
+      "month": 10,
+      "freeRate": 3.47,
+      "regulatedRate": 3.47,
+      "publishedAt": "2022-10-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2022,
+      "month": 11,
+      "freeRate": 3.47,
+      "regulatedRate": 3.47,
+      "publishedAt": "2022-11-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2022,
+      "month": 12,
+      "freeRate": 12.57,
+      "regulatedRate": 3.47,
+      "publishedAt": "2022-12-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2023,
+      "month": 1,
+      "freeRate": 13.41,
+      "regulatedRate": 3.47,
+      "publishedAt": "2023-01-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2023,
+      "month": 2,
+      "freeRate": 13.81,
+      "regulatedRate": 3.47,
+      "publishedAt": "2023-02-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2023,
+      "month": 3,
+      "freeRate": 12.99,
+      "regulatedRate": 3.47,
+      "publishedAt": "2023-03-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2023,
+      "month": 4,
+      "freeRate": 11.8,
+      "regulatedRate": 3.47,
+      "publishedAt": "2023-04-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2023,
+      "month": 5,
+      "freeRate": 10.74,
+      "regulatedRate": 3.47,
+      "publishedAt": "2023-05-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2023,
+      "month": 6,
+      "freeRate": -1.87,
+      "regulatedRate": -1.87,
+      "publishedAt": "2023-06-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2023,
+      "month": 7,
+      "freeRate": -3.01,
+      "regulatedRate": -3.01,
+      "publishedAt": "2023-07-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2023,
+      "month": 8,
+      "freeRate": -4.31,
+      "regulatedRate": -4.31,
+      "publishedAt": "2023-08-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2023,
+      "month": 9,
+      "freeRate": -5.46,
+      "regulatedRate": -5.46,
+      "publishedAt": "2023-09-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2023,
+      "month": 10,
+      "freeRate": -6.11,
+      "regulatedRate": -6.11,
+      "publishedAt": "2023-10-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2023,
+      "month": 11,
+      "freeRate": -6.46,
+      "regulatedRate": -6.46,
+      "publishedAt": "2023-11-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2023,
+      "month": 12,
+      "freeRate": -6.74,
+      "regulatedRate": -6.74,
+      "publishedAt": "2023-12-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2024,
+      "month": 1,
+      "freeRate": -6.74,
+      "regulatedRate": -6.74,
+      "publishedAt": "2024-01-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2024,
+      "month": 2,
+      "freeRate": -6.68,
+      "regulatedRate": -6.68,
+      "publishedAt": "2024-02-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2024,
+      "month": 3,
+      "freeRate": -6.5,
+      "regulatedRate": -6.5,
+      "publishedAt": "2024-03-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2024,
+      "month": 4,
+      "freeRate": -6.6,
+      "regulatedRate": -6.6,
+      "publishedAt": "2024-04-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2024,
+      "month": 5,
+      "freeRate": -6.6,
+      "regulatedRate": -6.6,
+      "publishedAt": "2024-05-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2024,
+      "month": 6,
+      "freeRate": -6.76,
+      "regulatedRate": -6.76,
+      "publishedAt": "2024-06-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2024,
+      "month": 7,
+      "freeRate": -6.95,
+      "regulatedRate": -6.95,
+      "publishedAt": "2024-07-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2024,
+      "month": 8,
+      "freeRate": -7.13,
+      "regulatedRate": -7.13,
+      "publishedAt": "2024-08-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2024,
+      "month": 9,
+      "freeRate": -7.14,
+      "regulatedRate": -7.14,
+      "publishedAt": "2024-09-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2024,
+      "month": 10,
+      "freeRate": -7.0,
+      "regulatedRate": -7.0,
+      "publishedAt": "2024-10-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2024,
+      "month": 11,
+      "freeRate": -7.03,
+      "regulatedRate": -7.03,
+      "publishedAt": "2024-11-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2024,
+      "month": 12,
+      "freeRate": -7.23,
+      "regulatedRate": -7.23,
+      "publishedAt": "2024-12-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2025,
+      "month": 1,
+      "freeRate": -7.43,
+      "regulatedRate": -7.43,
+      "publishedAt": "2025-01-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2025,
+      "month": 2,
+      "freeRate": -7.43,
+      "regulatedRate": -7.43,
+      "publishedAt": "2025-02-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2025,
+      "month": 3,
+      "freeRate": -7.27,
+      "regulatedRate": -7.27,
+      "publishedAt": "2025-03-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2025,
+      "month": 4,
+      "freeRate": -7.07,
+      "regulatedRate": -7.07,
+      "publishedAt": "2025-04-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2025,
+      "month": 5,
+      "freeRate": -7.19,
+      "regulatedRate": -7.19,
+      "publishedAt": "2025-05-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2025,
+      "month": 6,
+      "freeRate": -7.43,
+      "regulatedRate": -7.43,
+      "publishedAt": "2025-06-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2025,
+      "month": 7,
+      "freeRate": -7.96,
+      "regulatedRate": -7.96,
+      "publishedAt": "2025-07-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2025,
+      "month": 8,
+      "freeRate": -8.36,
+      "regulatedRate": -8.36,
+      "publishedAt": "2025-08-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2025,
+      "month": 9,
+      "freeRate": -8.64,
+      "regulatedRate": -8.64,
+      "publishedAt": "2025-09-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2025,
+      "month": 10,
+      "freeRate": -8.8,
+      "regulatedRate": -8.8,
+      "publishedAt": "2025-10-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2025,
+      "month": 11,
+      "freeRate": -8.8,
+      "regulatedRate": -8.8,
+      "publishedAt": "2025-11-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2025,
+      "month": 12,
+      "freeRate": -8.8,
+      "regulatedRate": -8.8,
+      "publishedAt": "2025-12-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2026,
+      "month": 1,
+      "freeRate": -8.76,
+      "regulatedRate": -8.76,
+      "publishedAt": "2026-01-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2026,
+      "month": 2,
+      "freeRate": -8.76,
+      "regulatedRate": -8.76,
+      "publishedAt": "2026-02-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2026,
+      "month": 3,
+      "freeRate": -8.64,
+      "regulatedRate": -8.64,
+      "publishedAt": "2026-03-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2026,
+      "month": 4,
+      "freeRate": -8.5,
+      "regulatedRate": -8.5,
+      "publishedAt": "2026-04-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2026,
+      "month": 5,
+      "freeRate": -8.42,
+      "regulatedRate": -8.42,
+      "publishedAt": "2026-05-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2021,
+      "month": 8,
+      "freeRate": -3.11,
+      "regulatedRate": -3.11,
+      "publishedAt": "2021-08-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2021,
+      "month": 9,
+      "freeRate": -2.58,
+      "regulatedRate": -2.58,
+      "publishedAt": "2021-09-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2021,
+      "month": 10,
+      "freeRate": -2.04,
+      "regulatedRate": -2.04,
+      "publishedAt": "2021-10-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2021,
+      "month": 11,
+      "freeRate": -1.53,
+      "regulatedRate": -1.53,
+      "publishedAt": "2021-11-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2021,
+      "month": 12,
+      "freeRate": -1.09,
+      "regulatedRate": -1.09,
+      "publishedAt": "2021-12-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2022,
+      "month": 1,
+      "freeRate": -0.53,
+      "regulatedRate": -0.53,
+      "publishedAt": "2022-01-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2022,
+      "month": 2,
+      "freeRate": 0.74,
+      "regulatedRate": 0.74,
+      "publishedAt": "2022-02-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2022,
+      "month": 3,
+      "freeRate": 1.83,
+      "regulatedRate": 1.83,
+      "publishedAt": "2022-03-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2022,
+      "month": 4,
+      "freeRate": 2.27,
+      "regulatedRate": 2.27,
+      "publishedAt": "2022-04-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2022,
+      "month": 5,
+      "freeRate": 2.74,
+      "regulatedRate": 2.74,
+      "publishedAt": "2022-05-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2022,
+      "month": 6,
+      "freeRate": 2.97,
+      "regulatedRate": 2.97,
+      "publishedAt": "2022-06-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2022,
+      "month": 7,
+      "freeRate": 4.15,
+      "regulatedRate": 4.15,
+      "publishedAt": "2022-07-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2022,
+      "month": 8,
+      "freeRate": 5.1,
+      "regulatedRate": 5.1,
+      "publishedAt": "2022-08-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2022,
+      "month": 9,
+      "freeRate": 6.5,
+      "regulatedRate": 5.13,
+      "publishedAt": "2022-09-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2022,
+      "month": 10,
+      "freeRate": 8.07,
+      "regulatedRate": 5.13,
+      "publishedAt": "2022-10-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2022,
+      "month": 11,
+      "freeRate": 9.72,
+      "regulatedRate": 5.13,
+      "publishedAt": "2022-11-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2022,
+      "month": 12,
+      "freeRate": 11.92,
+      "regulatedRate": 5.13,
+      "publishedAt": "2022-12-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2023,
+      "month": 1,
+      "freeRate": 12.99,
+      "regulatedRate": 5.13,
+      "publishedAt": "2023-01-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2023,
+      "month": 2,
+      "freeRate": 13.04,
+      "regulatedRate": 5.13,
+      "publishedAt": "2023-02-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2023,
+      "month": 3,
+      "freeRate": 11.69,
+      "regulatedRate": 5.13,
+      "publishedAt": "2023-03-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2023,
+      "month": 4,
+      "freeRate": 10.25,
+      "regulatedRate": 5.13,
+      "publishedAt": "2023-04-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2023,
+      "month": 5,
+      "freeRate": 9.21,
+      "regulatedRate": 5.13,
+      "publishedAt": "2023-05-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2023,
+      "month": 6,
+      "freeRate": 7.91,
+      "regulatedRate": -1.78,
+      "publishedAt": "2023-06-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2023,
+      "month": 7,
+      "freeRate": 6.54,
+      "regulatedRate": -2.95,
+      "publishedAt": "2023-07-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2023,
+      "month": 8,
+      "freeRate": -4.21,
+      "regulatedRate": -4.21,
+      "publishedAt": "2023-08-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2023,
+      "month": 9,
+      "freeRate": -5.22,
+      "regulatedRate": -5.22,
+      "publishedAt": "2023-09-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2023,
+      "month": 10,
+      "freeRate": -5.73,
+      "regulatedRate": -5.73,
+      "publishedAt": "2023-10-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2023,
+      "month": 11,
+      "freeRate": -5.97,
+      "regulatedRate": -5.97,
+      "publishedAt": "2023-11-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2023,
+      "month": 12,
+      "freeRate": -6.17,
+      "regulatedRate": -6.17,
+      "publishedAt": "2023-12-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2024,
+      "month": 1,
+      "freeRate": -6.15,
+      "regulatedRate": -6.15,
+      "publishedAt": "2024-01-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2024,
+      "month": 2,
+      "freeRate": -6.06,
+      "regulatedRate": -6.06,
+      "publishedAt": "2024-02-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2024,
+      "month": 3,
+      "freeRate": -5.78,
+      "regulatedRate": -5.78,
+      "publishedAt": "2024-03-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2024,
+      "month": 4,
+      "freeRate": -5.71,
+      "regulatedRate": -5.71,
+      "publishedAt": "2024-04-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2024,
+      "month": 5,
+      "freeRate": -5.63,
+      "regulatedRate": -5.63,
+      "publishedAt": "2024-05-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2024,
+      "month": 6,
+      "freeRate": -5.8,
+      "regulatedRate": -5.8,
+      "publishedAt": "2024-06-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2024,
+      "month": 7,
+      "freeRate": -6.09,
+      "regulatedRate": -6.09,
+      "publishedAt": "2024-07-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2024,
+      "month": 8,
+      "freeRate": -6.31,
+      "regulatedRate": -6.31,
+      "publishedAt": "2024-08-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2024,
+      "month": 9,
+      "freeRate": -6.37,
+      "regulatedRate": -6.37,
+      "publishedAt": "2024-09-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2024,
+      "month": 10,
+      "freeRate": -6.19,
+      "regulatedRate": -6.19,
+      "publishedAt": "2024-10-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2024,
+      "month": 11,
+      "freeRate": -6.17,
+      "regulatedRate": -6.17,
+      "publishedAt": "2024-11-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2024,
+      "month": 12,
+      "freeRate": -6.33,
+      "regulatedRate": -6.33,
+      "publishedAt": "2024-12-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2025,
+      "month": 1,
+      "freeRate": -6.51,
+      "regulatedRate": -6.51,
+      "publishedAt": "2025-01-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2025,
+      "month": 2,
+      "freeRate": -6.5,
+      "regulatedRate": -6.5,
+      "publishedAt": "2025-02-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2025,
+      "month": 3,
+      "freeRate": -6.33,
+      "regulatedRate": -6.33,
+      "publishedAt": "2025-03-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2025,
+      "month": 4,
+      "freeRate": -6.08,
+      "regulatedRate": -6.08,
+      "publishedAt": "2025-04-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2025,
+      "month": 5,
+      "freeRate": -6.19,
+      "regulatedRate": -6.19,
+      "publishedAt": "2025-05-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2025,
+      "month": 6,
+      "freeRate": -6.39,
+      "regulatedRate": -6.39,
+      "publishedAt": "2025-06-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2025,
+      "month": 7,
+      "freeRate": -6.88,
+      "regulatedRate": -6.88,
+      "publishedAt": "2025-07-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2025,
+      "month": 8,
+      "freeRate": -7.25,
+      "regulatedRate": -7.25,
+      "publishedAt": "2025-08-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2025,
+      "month": 9,
+      "freeRate": -7.5,
+      "regulatedRate": -7.5,
+      "publishedAt": "2025-09-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2025,
+      "month": 10,
+      "freeRate": -7.65,
+      "regulatedRate": -7.65,
+      "publishedAt": "2025-10-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2025,
+      "month": 11,
+      "freeRate": -7.65,
+      "regulatedRate": -7.65,
+      "publishedAt": "2025-11-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2025,
+      "month": 12,
+      "freeRate": -7.7,
+      "regulatedRate": -7.7,
+      "publishedAt": "2025-12-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2026,
+      "month": 1,
+      "freeRate": -7.72,
+      "regulatedRate": -7.72,
+      "publishedAt": "2026-01-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2026,
+      "month": 2,
+      "freeRate": -7.72,
+      "regulatedRate": -7.72,
+      "publishedAt": "2026-02-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2026,
+      "month": 3,
+      "freeRate": -7.59,
+      "regulatedRate": -7.59,
+      "publishedAt": "2026-03-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2026,
+      "month": 4,
+      "freeRate": -7.43,
+      "regulatedRate": -7.43,
+      "publishedAt": "2026-04-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2026,
+      "month": 5,
+      "freeRate": -7.37,
+      "regulatedRate": -7.37,
+      "publishedAt": "2026-05-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2021,
+      "month": 8,
+      "freeRate": -4.45,
+      "regulatedRate": -4.45,
+      "publishedAt": "2021-08-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2021,
+      "month": 9,
+      "freeRate": -3.94,
+      "regulatedRate": -3.94,
+      "publishedAt": "2021-09-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2021,
+      "month": 10,
+      "freeRate": -3.38,
+      "regulatedRate": -3.38,
+      "publishedAt": "2021-10-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2021,
+      "month": 11,
+      "freeRate": -2.87,
+      "regulatedRate": -2.87,
+      "publishedAt": "2021-11-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2021,
+      "month": 12,
+      "freeRate": -2.38,
+      "regulatedRate": -2.38,
+      "publishedAt": "2021-12-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2022,
+      "month": 1,
+      "freeRate": -1.79,
+      "regulatedRate": -1.79,
+      "publishedAt": "2022-01-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2022,
+      "month": 2,
+      "freeRate": -0.44,
+      "regulatedRate": -0.44,
+      "publishedAt": "2022-02-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2022,
+      "month": 3,
+      "freeRate": 0.68,
+      "regulatedRate": 0.68,
+      "publishedAt": "2022-03-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2022,
+      "month": 4,
+      "freeRate": 1.17,
+      "regulatedRate": 1.17,
+      "publishedAt": "2022-04-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2022,
+      "month": 5,
+      "freeRate": 1.61,
+      "regulatedRate": 1.61,
+      "publishedAt": "2022-05-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2022,
+      "month": 6,
+      "freeRate": 1.77,
+      "regulatedRate": 1.77,
+      "publishedAt": "2022-06-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2022,
+      "month": 7,
+      "freeRate": 2.77,
+      "regulatedRate": 2.77,
+      "publishedAt": "2022-07-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2022,
+      "month": 8,
+      "freeRate": 3.66,
+      "regulatedRate": 3.66,
+      "publishedAt": "2022-08-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2022,
+      "month": 9,
+      "freeRate": 5.06,
+      "regulatedRate": 5.06,
+      "publishedAt": "2022-09-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2022,
+      "month": 10,
+      "freeRate": 5.36,
+      "regulatedRate": 5.36,
+      "publishedAt": "2022-10-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2022,
+      "month": 11,
+      "freeRate": 5.36,
+      "regulatedRate": 5.36,
+      "publishedAt": "2022-11-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2022,
+      "month": 12,
+      "freeRate": 11.04,
+      "regulatedRate": 5.36,
+      "publishedAt": "2022-12-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2023,
+      "month": 1,
+      "freeRate": 12.3,
+      "regulatedRate": 5.36,
+      "publishedAt": "2023-01-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2023,
+      "month": 2,
+      "freeRate": 12.51,
+      "regulatedRate": 5.36,
+      "publishedAt": "2023-02-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2023,
+      "month": 3,
+      "freeRate": 11.28,
+      "regulatedRate": 5.36,
+      "publishedAt": "2023-03-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2023,
+      "month": 4,
+      "freeRate": 9.93,
+      "regulatedRate": 5.36,
+      "publishedAt": "2023-04-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2023,
+      "month": 5,
+      "freeRate": 8.95,
+      "regulatedRate": 5.36,
+      "publishedAt": "2023-05-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2023,
+      "month": 6,
+      "freeRate": 7.6,
+      "regulatedRate": 5.36,
+      "publishedAt": "2023-06-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2023,
+      "month": 7,
+      "freeRate": 6.06,
+      "regulatedRate": 5.36,
+      "publishedAt": "2023-07-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2023,
+      "month": 8,
+      "freeRate": 4.43,
+      "regulatedRate": 4.43,
+      "publishedAt": "2023-08-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2023,
+      "month": 9,
+      "freeRate": 3.26,
+      "regulatedRate": 3.26,
+      "publishedAt": "2023-09-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2023,
+      "month": 10,
+      "freeRate": 2.77,
+      "regulatedRate": 2.77,
+      "publishedAt": "2023-10-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2023,
+      "month": 11,
+      "freeRate": 2.54,
+      "regulatedRate": 2.54,
+      "publishedAt": "2023-11-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2023,
+      "month": 12,
+      "freeRate": 2.4,
+      "regulatedRate": 2.4,
+      "publishedAt": "2023-12-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2024,
+      "month": 1,
+      "freeRate": 2.49,
+      "regulatedRate": 2.49,
+      "publishedAt": "2024-01-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2024,
+      "month": 2,
+      "freeRate": 2.68,
+      "regulatedRate": 2.68,
+      "publishedAt": "2024-02-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2024,
+      "month": 3,
+      "freeRate": 3.19,
+      "regulatedRate": 3.19,
+      "publishedAt": "2024-03-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2024,
+      "month": 4,
+      "freeRate": 3.4,
+      "regulatedRate": 3.4,
+      "publishedAt": "2024-04-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2024,
+      "month": 5,
+      "freeRate": 3.54,
+      "regulatedRate": 3.54,
+      "publishedAt": "2024-05-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2024,
+      "month": 6,
+      "freeRate": 3.31,
+      "regulatedRate": 3.31,
+      "publishedAt": "2024-06-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2024,
+      "month": 7,
+      "freeRate": 2.84,
+      "regulatedRate": 2.84,
+      "publishedAt": "2024-07-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2024,
+      "month": 8,
+      "freeRate": 2.54,
+      "regulatedRate": 2.54,
+      "publishedAt": "2024-08-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2024,
+      "month": 9,
+      "freeRate": 2.45,
+      "regulatedRate": 2.45,
+      "publishedAt": "2024-09-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2024,
+      "month": 10,
+      "freeRate": 2.75,
+      "regulatedRate": 2.75,
+      "publishedAt": "2024-10-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2024,
+      "month": 11,
+      "freeRate": 2.8,
+      "regulatedRate": 2.8,
+      "publishedAt": "2024-11-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2024,
+      "month": 12,
+      "freeRate": 2.59,
+      "regulatedRate": 2.59,
+      "publishedAt": "2024-12-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2025,
+      "month": 1,
+      "freeRate": 2.33,
+      "regulatedRate": 2.33,
+      "publishedAt": "2025-01-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2025,
+      "month": 2,
+      "freeRate": 2.35,
+      "regulatedRate": 2.35,
+      "publishedAt": "2025-02-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2025,
+      "month": 3,
+      "freeRate": 2.56,
+      "regulatedRate": 2.56,
+      "publishedAt": "2025-03-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2025,
+      "month": 4,
+      "freeRate": 2.94,
+      "regulatedRate": 2.94,
+      "publishedAt": "2025-04-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2025,
+      "month": 5,
+      "freeRate": 2.84,
+      "regulatedRate": 2.84,
+      "publishedAt": "2025-05-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2025,
+      "month": 6,
+      "freeRate": 2.63,
+      "regulatedRate": 2.63,
+      "publishedAt": "2025-06-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2025,
+      "month": 7,
+      "freeRate": 1.98,
+      "regulatedRate": 1.98,
+      "publishedAt": "2025-07-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2025,
+      "month": 8,
+      "freeRate": 1.51,
+      "regulatedRate": 1.51,
+      "publishedAt": "2025-08-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2025,
+      "month": 9,
+      "freeRate": 1.19,
+      "regulatedRate": 1.19,
+      "publishedAt": "2025-09-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2025,
+      "month": 10,
+      "freeRate": 0.98,
+      "regulatedRate": 0.98,
+      "publishedAt": "2025-10-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2025,
+      "month": 11,
+      "freeRate": 0.93,
+      "regulatedRate": 0.93,
+      "publishedAt": "2025-11-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2025,
+      "month": 12,
+      "freeRate": 0.86,
+      "regulatedRate": 0.86,
+      "publishedAt": "2025-12-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2026,
+      "month": 1,
+      "freeRate": 0.79,
+      "regulatedRate": 0.79,
+      "publishedAt": "2026-01-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2026,
+      "month": 2,
+      "freeRate": 0.77,
+      "regulatedRate": 0.77,
+      "publishedAt": "2026-02-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2026,
+      "month": 3,
+      "freeRate": 0.96,
+      "regulatedRate": 0.96,
+      "publishedAt": "2026-03-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2026,
+      "month": 4,
+      "freeRate": 1.19,
+      "regulatedRate": 1.19,
+      "publishedAt": "2026-04-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2026,
+      "month": 5,
+      "freeRate": 1.26,
+      "regulatedRate": 1.26,
+      "publishedAt": "2026-05-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2021,
+      "month": 8,
+      "freeRate": 0.08,
+      "regulatedRate": 0.08,
+      "publishedAt": "2021-08-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2021,
+      "month": 9,
+      "freeRate": 0.29,
+      "regulatedRate": 0.29,
+      "publishedAt": "2021-09-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2021,
+      "month": 10,
+      "freeRate": 0.53,
+      "regulatedRate": 0.53,
+      "publishedAt": "2021-10-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2021,
+      "month": 11,
+      "freeRate": 0.87,
+      "regulatedRate": 0.87,
+      "publishedAt": "2021-11-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2021,
+      "month": 12,
+      "freeRate": 1.14,
+      "regulatedRate": 1.14,
+      "publishedAt": "2021-12-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2022,
+      "month": 1,
+      "freeRate": 1.47,
+      "regulatedRate": 1.47,
+      "publishedAt": "2022-01-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2022,
+      "month": 2,
+      "freeRate": 1.96,
+      "regulatedRate": 1.77,
+      "publishedAt": "2022-02-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2022,
+      "month": 3,
+      "freeRate": 2.37,
+      "regulatedRate": 1.77,
+      "publishedAt": "2022-03-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2022,
+      "month": 4,
+      "freeRate": 2.58,
+      "regulatedRate": 1.77,
+      "publishedAt": "2022-04-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2022,
+      "month": 5,
+      "freeRate": 2.67,
+      "regulatedRate": 1.77,
+      "publishedAt": "2022-05-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2022,
+      "month": 6,
+      "freeRate": 2.91,
+      "regulatedRate": 1.77,
+      "publishedAt": "2022-06-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2022,
+      "month": 7,
+      "freeRate": 3.8,
+      "regulatedRate": 1.77,
+      "publishedAt": "2022-07-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2022,
+      "month": 8,
+      "freeRate": 5.02,
+      "regulatedRate": 1.77,
+      "publishedAt": "2022-08-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2022,
+      "month": 9,
+      "freeRate": 6.81,
+      "regulatedRate": 1.77,
+      "publishedAt": "2022-09-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2022,
+      "month": 10,
+      "freeRate": 8.28,
+      "regulatedRate": 1.77,
+      "publishedAt": "2022-10-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2022,
+      "month": 11,
+      "freeRate": 9.18,
+      "regulatedRate": 1.77,
+      "publishedAt": "2022-11-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2022,
+      "month": 12,
+      "freeRate": 9.64,
+      "regulatedRate": 1.77,
+      "publishedAt": "2022-12-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2023,
+      "month": 1,
+      "freeRate": 9.9,
+      "regulatedRate": 1.77,
+      "publishedAt": "2023-01-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2023,
+      "month": 2,
+      "freeRate": 10.4,
+      "regulatedRate": 1.77,
+      "publishedAt": "2023-02-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2023,
+      "month": 3,
+      "freeRate": 10.13,
+      "regulatedRate": 1.77,
+      "publishedAt": "2023-03-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2023,
+      "month": 4,
+      "freeRate": 0.07,
+      "regulatedRate": 1.77,
+      "publishedAt": "2023-04-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2023,
+      "month": 5,
+      "freeRate": 0.87,
+      "regulatedRate": 1.77,
+      "publishedAt": "2023-05-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2023,
+      "month": 6,
+      "freeRate": -1.66,
+      "regulatedRate": -1.53,
+      "publishedAt": "2023-06-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2023,
+      "month": 7,
+      "freeRate": -2.57,
+      "regulatedRate": -2.34,
+      "publishedAt": "2023-07-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2023,
+      "month": 8,
+      "freeRate": -3.38,
+      "regulatedRate": -3.38,
+      "publishedAt": "2023-08-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2023,
+      "month": 9,
+      "freeRate": -4.42,
+      "regulatedRate": -4.42,
+      "publishedAt": "2023-09-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2023,
+      "month": 10,
+      "freeRate": -5.13,
+      "regulatedRate": -5.13,
+      "publishedAt": "2023-10-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2023,
+      "month": 11,
+      "freeRate": -5.51,
+      "regulatedRate": -5.51,
+      "publishedAt": "2023-11-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2023,
+      "month": 12,
+      "freeRate": -5.86,
+      "regulatedRate": -5.86,
+      "publishedAt": "2023-12-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2024,
+      "month": 1,
+      "freeRate": -5.89,
+      "regulatedRate": -5.89,
+      "publishedAt": "2024-01-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2024,
+      "month": 2,
+      "freeRate": -5.87,
+      "regulatedRate": -5.87,
+      "publishedAt": "2024-02-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2024,
+      "month": 3,
+      "freeRate": -5.92,
+      "regulatedRate": -5.92,
+      "publishedAt": "2024-03-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2024,
+      "month": 4,
+      "freeRate": -6.17,
+      "regulatedRate": -6.17,
+      "publishedAt": "2024-04-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2024,
+      "month": 5,
+      "freeRate": -6.27,
+      "regulatedRate": -6.27,
+      "publishedAt": "2024-05-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2024,
+      "month": 6,
+      "freeRate": -6.37,
+      "regulatedRate": -6.37,
+      "publishedAt": "2024-06-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2024,
+      "month": 7,
+      "freeRate": -6.42,
+      "regulatedRate": -6.42,
+      "publishedAt": "2024-07-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2024,
+      "month": 8,
+      "freeRate": -6.5,
+      "regulatedRate": -6.5,
+      "publishedAt": "2024-08-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2024,
+      "month": 9,
+      "freeRate": -6.47,
+      "regulatedRate": -6.47,
+      "publishedAt": "2024-09-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2024,
+      "month": 10,
+      "freeRate": -6.42,
+      "regulatedRate": -6.42,
+      "publishedAt": "2024-10-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2024,
+      "month": 11,
+      "freeRate": -6.47,
+      "regulatedRate": -6.47,
+      "publishedAt": "2024-11-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2024,
+      "month": 12,
+      "freeRate": -6.67,
+      "regulatedRate": -6.67,
+      "publishedAt": "2024-12-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2025,
+      "month": 1,
+      "freeRate": -6.85,
+      "regulatedRate": -6.85,
+      "publishedAt": "2025-01-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2025,
+      "month": 2,
+      "freeRate": -6.85,
+      "regulatedRate": -6.85,
+      "publishedAt": "2025-02-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2025,
+      "month": 3,
+      "freeRate": -6.73,
+      "regulatedRate": -6.73,
+      "publishedAt": "2025-03-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2025,
+      "month": 4,
+      "freeRate": -6.65,
+      "regulatedRate": -6.65,
+      "publishedAt": "2025-04-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2025,
+      "month": 5,
+      "freeRate": -6.67,
+      "regulatedRate": -6.67,
+      "publishedAt": "2025-05-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2025,
+      "month": 6,
+      "freeRate": -7.0,
+      "regulatedRate": -7.0,
+      "publishedAt": "2025-06-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2025,
+      "month": 7,
+      "freeRate": -7.43,
+      "regulatedRate": -7.43,
+      "publishedAt": "2025-07-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2025,
+      "month": 8,
+      "freeRate": -7.77,
+      "regulatedRate": -7.77,
+      "publishedAt": "2025-08-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2025,
+      "month": 9,
+      "freeRate": -8.02,
+      "regulatedRate": -8.02,
+      "publishedAt": "2025-09-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2025,
+      "month": 10,
+      "freeRate": -8.15,
+      "regulatedRate": -8.15,
+      "publishedAt": "2025-10-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2025,
+      "month": 11,
+      "freeRate": -8.1,
+      "regulatedRate": -8.1,
+      "publishedAt": "2025-11-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2025,
+      "month": 12,
+      "freeRate": -8.05,
+      "regulatedRate": -8.05,
+      "publishedAt": "2025-12-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2026,
+      "month": 1,
+      "freeRate": -7.95,
+      "regulatedRate": -7.95,
+      "publishedAt": "2026-01-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2026,
+      "month": 2,
+      "freeRate": -7.95,
+      "regulatedRate": -7.95,
+      "publishedAt": "2026-02-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2026,
+      "month": 3,
+      "freeRate": -7.87,
+      "regulatedRate": -7.87,
+      "publishedAt": "2026-03-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2026,
+      "month": 4,
+      "freeRate": -7.79,
+      "regulatedRate": -7.79,
+      "publishedAt": "2026-04-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2026,
+      "month": 5,
+      "freeRate": -7.74,
+      "regulatedRate": -7.74,
+      "publishedAt": "2026-05-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2021,
+      "month": 8,
+      "freeRate": -0.58,
+      "regulatedRate": -0.58,
+      "publishedAt": "2021-08-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2021,
+      "month": 9,
+      "freeRate": -0.25,
+      "regulatedRate": -0.25,
+      "publishedAt": "2021-09-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2021,
+      "month": 10,
+      "freeRate": 0.1,
+      "regulatedRate": 0.1,
+      "publishedAt": "2021-10-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2021,
+      "month": 11,
+      "freeRate": 0.45,
+      "regulatedRate": 0.45,
+      "publishedAt": "2021-11-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2021,
+      "month": 12,
+      "freeRate": 0.79,
+      "regulatedRate": 0.79,
+      "publishedAt": "2021-12-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2022,
+      "month": 1,
+      "freeRate": 1.2,
+      "regulatedRate": 1.2,
+      "publishedAt": "2022-01-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2022,
+      "month": 2,
+      "freeRate": 2.03,
+      "regulatedRate": 2.03,
+      "publishedAt": "2022-02-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2022,
+      "month": 3,
+      "freeRate": 2.24,
+      "regulatedRate": 2.24,
+      "publishedAt": "2022-03-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2022,
+      "month": 4,
+      "freeRate": 3.02,
+      "regulatedRate": 2.24,
+      "publishedAt": "2022-04-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2022,
+      "month": 5,
+      "freeRate": 3.27,
+      "regulatedRate": 2.24,
+      "publishedAt": "2022-05-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2022,
+      "month": 6,
+      "freeRate": 3.42,
+      "regulatedRate": 2.24,
+      "publishedAt": "2022-06-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2022,
+      "month": 7,
+      "freeRate": 4.13,
+      "regulatedRate": 2.24,
+      "publishedAt": "2022-07-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2022,
+      "month": 8,
+      "freeRate": 4.9,
+      "regulatedRate": 2.24,
+      "publishedAt": "2022-08-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2022,
+      "month": 9,
+      "freeRate": 6.14,
+      "regulatedRate": 2.24,
+      "publishedAt": "2022-09-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2022,
+      "month": 10,
+      "freeRate": 7.47,
+      "regulatedRate": 2.24,
+      "publishedAt": "2022-10-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2022,
+      "month": 11,
+      "freeRate": 8.71,
+      "regulatedRate": 2.24,
+      "publishedAt": "2022-11-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2022,
+      "month": 12,
+      "freeRate": 10.15,
+      "regulatedRate": 2.24,
+      "publishedAt": "2022-12-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2023,
+      "month": 1,
+      "freeRate": 10.91,
+      "regulatedRate": 2.24,
+      "publishedAt": "2023-01-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2023,
+      "month": 2,
+      "freeRate": 11.2,
+      "regulatedRate": 2.24,
+      "publishedAt": "2023-02-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2023,
+      "month": 3,
+      "freeRate": 10.54,
+      "regulatedRate": 2.24,
+      "publishedAt": "2023-03-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2023,
+      "month": 4,
+      "freeRate": 9.67,
+      "regulatedRate": 2.24,
+      "publishedAt": "2023-04-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2023,
+      "month": 5,
+      "freeRate": 8.94,
+      "regulatedRate": 2.24,
+      "publishedAt": "2023-05-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2023,
+      "month": 6,
+      "freeRate": 8.07,
+      "regulatedRate": 2.24,
+      "publishedAt": "2023-06-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2023,
+      "month": 7,
+      "freeRate": 7.05,
+      "regulatedRate": 2.24,
+      "publishedAt": "2023-07-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2023,
+      "month": 8,
+      "freeRate": 5.92,
+      "regulatedRate": 2.24,
+      "publishedAt": "2023-08-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2023,
+      "month": 9,
+      "freeRate": 5.0,
+      "regulatedRate": 2.24,
+      "publishedAt": "2023-09-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2023,
+      "month": 10,
+      "freeRate": 4.52,
+      "regulatedRate": 2.24,
+      "publishedAt": "2023-10-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2023,
+      "month": 11,
+      "freeRate": 4.27,
+      "regulatedRate": 2.24,
+      "publishedAt": "2023-11-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2023,
+      "month": 12,
+      "freeRate": 4.08,
+      "regulatedRate": 2.24,
+      "publishedAt": "2023-12-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2024,
+      "month": 1,
+      "freeRate": 4.09,
+      "regulatedRate": 2.24,
+      "publishedAt": "2024-01-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2024,
+      "month": 2,
+      "freeRate": 4.17,
+      "regulatedRate": 2.24,
+      "publishedAt": "2024-02-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2024,
+      "month": 3,
+      "freeRate": 4.39,
+      "regulatedRate": 2.24,
+      "publishedAt": "2024-03-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2024,
+      "month": 4,
+      "freeRate": 4.42,
+      "regulatedRate": 2.24,
+      "publishedAt": "2024-04-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2024,
+      "month": 5,
+      "freeRate": 4.46,
+      "regulatedRate": 2.24,
+      "publishedAt": "2024-05-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2024,
+      "month": 6,
+      "freeRate": 4.32,
+      "regulatedRate": 2.24,
+      "publishedAt": "2024-06-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2024,
+      "month": 7,
+      "freeRate": 4.08,
+      "regulatedRate": 2.24,
+      "publishedAt": "2024-07-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2024,
+      "month": 8,
+      "freeRate": 3.89,
+      "regulatedRate": 2.24,
+      "publishedAt": "2024-08-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2024,
+      "month": 9,
+      "freeRate": 3.86,
+      "regulatedRate": 2.24,
+      "publishedAt": "2024-09-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2024,
+      "month": 10,
+      "freeRate": 4.01,
+      "regulatedRate": 2.24,
+      "publishedAt": "2024-10-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2024,
+      "month": 11,
+      "freeRate": 4.03,
+      "regulatedRate": 2.24,
+      "publishedAt": "2024-11-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2024,
+      "month": 12,
+      "freeRate": 3.86,
+      "regulatedRate": 2.24,
+      "publishedAt": "2024-12-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2025,
+      "month": 1,
+      "freeRate": 3.7,
+      "regulatedRate": 2.24,
+      "publishedAt": "2025-01-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2025,
+      "month": 2,
+      "freeRate": 3.71,
+      "regulatedRate": 2.24,
+      "publishedAt": "2025-02-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2025,
+      "month": 3,
+      "freeRate": 3.86,
+      "regulatedRate": 2.24,
+      "publishedAt": "2025-03-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2025,
+      "month": 4,
+      "freeRate": 4.06,
+      "regulatedRate": 2.24,
+      "publishedAt": "2025-04-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2025,
+      "month": 5,
+      "freeRate": 3.96,
+      "regulatedRate": 2.24,
+      "publishedAt": "2025-05-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2025,
+      "month": 6,
+      "freeRate": 3.78,
+      "regulatedRate": 2.24,
+      "publishedAt": "2025-06-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2025,
+      "month": 7,
+      "freeRate": 3.33,
+      "regulatedRate": 2.24,
+      "publishedAt": "2025-07-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2025,
+      "month": 8,
+      "freeRate": 3.0,
+      "regulatedRate": 2.24,
+      "publishedAt": "2025-08-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2025,
+      "month": 9,
+      "freeRate": 2.77,
+      "regulatedRate": 2.24,
+      "publishedAt": "2025-09-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2025,
+      "month": 10,
+      "freeRate": 2.64,
+      "regulatedRate": 2.24,
+      "publishedAt": "2025-10-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2025,
+      "month": 11,
+      "freeRate": 2.62,
+      "regulatedRate": 2.62,
+      "publishedAt": "2025-11-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2025,
+      "month": 12,
+      "freeRate": 2.61,
+      "regulatedRate": 2.24,
+      "publishedAt": "2025-12-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2026,
+      "month": 1,
+      "freeRate": 2.61,
+      "regulatedRate": 2.24,
+      "publishedAt": "2026-01-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2026,
+      "month": 2,
+      "freeRate": 2.59,
+      "regulatedRate": 2.24,
+      "publishedAt": "2026-02-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2026,
+      "month": 3,
+      "freeRate": 2.71,
+      "regulatedRate": 2.24,
+      "publishedAt": "2026-03-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2026,
+      "month": 4,
+      "freeRate": 2.85,
+      "regulatedRate": 2.24,
+      "publishedAt": "2026-04-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2026,
+      "month": 5,
+      "freeRate": 2.90,
+      "regulatedRate": 2.24,
+      "publishedAt": "2026-05-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2021,
+      "month": 8,
+      "freeRate": -0.74,
+      "regulatedRate": -0.74,
+      "publishedAt": "2021-08-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2021,
+      "month": 9,
+      "freeRate": -0.34,
+      "regulatedRate": -0.34,
+      "publishedAt": "2021-09-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2021,
+      "month": 10,
+      "freeRate": 0.07,
+      "regulatedRate": 0.07,
+      "publishedAt": "2021-10-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2021,
+      "month": 11,
+      "freeRate": 0.59,
+      "regulatedRate": 0.59,
+      "publishedAt": "2021-11-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2021,
+      "month": 12,
+      "freeRate": 1.05,
+      "regulatedRate": 1.05,
+      "publishedAt": "2021-12-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2022,
+      "month": 1,
+      "freeRate": 1.59,
+      "regulatedRate": 1.59,
+      "publishedAt": "2022-01-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2022,
+      "month": 2,
+      "freeRate": 2.52,
+      "regulatedRate": 2.52,
+      "publishedAt": "2022-02-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2022,
+      "month": 3,
+      "freeRate": 3.28,
+      "regulatedRate": 3.19,
+      "publishedAt": "2022-03-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2022,
+      "month": 4,
+      "freeRate": 3.65,
+      "regulatedRate": 3.19,
+      "publishedAt": "2022-04-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2022,
+      "month": 5,
+      "freeRate": 3.9,
+      "regulatedRate": 3.19,
+      "publishedAt": "2022-05-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2022,
+      "month": 6,
+      "freeRate": 4.21,
+      "regulatedRate": 3.19,
+      "publishedAt": "2022-06-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2022,
+      "month": 7,
+      "freeRate": 5.46,
+      "regulatedRate": 3.19,
+      "publishedAt": "2022-07-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2022,
+      "month": 8,
+      "freeRate": 7.03,
+      "regulatedRate": 3.19,
+      "publishedAt": "2022-08-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2022,
+      "month": 9,
+      "freeRate": 9.43,
+      "regulatedRate": 3.19,
+      "publishedAt": "2022-09-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2022,
+      "month": 10,
+      "freeRate": 11.56,
+      "regulatedRate": 3.19,
+      "publishedAt": "2022-10-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2022,
+      "month": 11,
+      "freeRate": 13.11,
+      "regulatedRate": 3.19,
+      "publishedAt": "2022-11-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2022,
+      "month": 12,
+      "freeRate": 14.36,
+      "regulatedRate": 3.19,
+      "publishedAt": "2022-12-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2023,
+      "month": 1,
+      "freeRate": 15.02,
+      "regulatedRate": 3.19,
+      "publishedAt": "2023-01-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2023,
+      "month": 2,
+      "freeRate": 15.63,
+      "regulatedRate": 3.19,
+      "publishedAt": "2023-02-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2023,
+      "month": 3,
+      "freeRate": 14.99,
+      "regulatedRate": 3.19,
+      "publishedAt": "2023-03-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2023,
+      "month": 4,
+      "freeRate": 0.0,
+      "regulatedRate": 3.19,
+      "publishedAt": "2023-04-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2023,
+      "month": 5,
+      "freeRate": -1.08,
+      "regulatedRate": 3.19,
+      "publishedAt": "2023-05-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2023,
+      "month": 6,
+      "freeRate": -1.97,
+      "regulatedRate": -1.97,
+      "publishedAt": "2023-06-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2023,
+      "month": 7,
+      "freeRate": -3.03,
+      "regulatedRate": -3.03,
+      "publishedAt": "2023-07-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2023,
+      "month": 8,
+      "freeRate": -4.39,
+      "regulatedRate": -4.39,
+      "publishedAt": "2023-08-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2023,
+      "month": 9,
+      "freeRate": -5.7,
+      "regulatedRate": -5.7,
+      "publishedAt": "2023-09-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2023,
+      "month": 10,
+      "freeRate": -6.57,
+      "regulatedRate": -6.57,
+      "publishedAt": "2023-10-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2023,
+      "month": 11,
+      "freeRate": -7.06,
+      "regulatedRate": -7.06,
+      "publishedAt": "2023-11-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2023,
+      "month": 12,
+      "freeRate": -7.48,
+      "regulatedRate": -7.48,
+      "publishedAt": "2023-12-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2024,
+      "month": 1,
+      "freeRate": -7.53,
+      "regulatedRate": -7.53,
+      "publishedAt": "2024-01-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2024,
+      "month": 2,
+      "freeRate": -7.48,
+      "regulatedRate": -7.48,
+      "publishedAt": "2024-02-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2024,
+      "month": 3,
+      "freeRate": -7.5,
+      "regulatedRate": -7.5,
+      "publishedAt": "2024-03-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2024,
+      "month": 4,
+      "freeRate": -7.8,
+      "regulatedRate": -7.8,
+      "publishedAt": "2024-04-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2024,
+      "month": 5,
+      "freeRate": -7.91,
+      "regulatedRate": -7.91,
+      "publishedAt": "2024-05-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2024,
+      "month": 6,
+      "freeRate": -8.06,
+      "regulatedRate": -8.06,
+      "publishedAt": "2024-06-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2024,
+      "month": 7,
+      "freeRate": -8.12,
+      "regulatedRate": -8.12,
+      "publishedAt": "2024-07-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2024,
+      "month": 8,
+      "freeRate": -8.25,
+      "regulatedRate": -8.25,
+      "publishedAt": "2024-08-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2024,
+      "month": 9,
+      "freeRate": -8.19,
+      "regulatedRate": -8.19,
+      "publishedAt": "2024-09-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2024,
+      "month": 10,
+      "freeRate": -8.13,
+      "regulatedRate": -8.13,
+      "publishedAt": "2024-10-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2024,
+      "month": 11,
+      "freeRate": -8.19,
+      "regulatedRate": -8.19,
+      "publishedAt": "2024-11-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2024,
+      "month": 12,
+      "freeRate": -8.44,
+      "regulatedRate": -8.44,
+      "publishedAt": "2024-12-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2025,
+      "month": 1,
+      "freeRate": -8.67,
+      "regulatedRate": -8.67,
+      "publishedAt": "2025-01-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2025,
+      "month": 2,
+      "freeRate": -8.67,
+      "regulatedRate": -8.67,
+      "publishedAt": "2025-02-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2025,
+      "month": 3,
+      "freeRate": -8.52,
+      "regulatedRate": -8.52,
+      "publishedAt": "2025-03-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2025,
+      "month": 4,
+      "freeRate": -8.4,
+      "regulatedRate": -8.4,
+      "publishedAt": "2025-04-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2025,
+      "month": 5,
+      "freeRate": -8.54,
+      "regulatedRate": -8.54,
+      "publishedAt": "2025-05-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2025,
+      "month": 6,
+      "freeRate": -8.84,
+      "regulatedRate": -8.84,
+      "publishedAt": "2025-06-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2025,
+      "month": 7,
+      "freeRate": -9.39,
+      "regulatedRate": -9.39,
+      "publishedAt": "2025-07-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2025,
+      "month": 8,
+      "freeRate": -9.85,
+      "regulatedRate": -9.85,
+      "publishedAt": "2025-08-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2025,
+      "month": 9,
+      "freeRate": -10.16,
+      "regulatedRate": -10.16,
+      "publishedAt": "2025-09-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2025,
+      "month": 10,
+      "freeRate": -10.33,
+      "regulatedRate": -10.33,
+      "publishedAt": "2025-10-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2025,
+      "month": 11,
+      "freeRate": -10.27,
+      "regulatedRate": -10.27,
+      "publishedAt": "2025-11-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2025,
+      "month": 12,
+      "freeRate": -10.23,
+      "regulatedRate": -10.23,
+      "publishedAt": "2025-12-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2026,
+      "month": 1,
+      "freeRate": -10.12,
+      "regulatedRate": -10.12,
+      "publishedAt": "2026-01-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2026,
+      "month": 2,
+      "freeRate": -10.1,
+      "regulatedRate": -10.1,
+      "publishedAt": "2026-02-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2026,
+      "month": 3,
+      "freeRate": -10.0,
+      "regulatedRate": -10.0,
+      "publishedAt": "2026-03-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2026,
+      "month": 4,
+      "freeRate": -9.89,
+      "regulatedRate": -9.89,
+      "publishedAt": "2026-04-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2026,
+      "month": 5,
+      "freeRate": -9.83,
+      "regulatedRate": -9.83,
+      "publishedAt": "2026-05-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2021,
+      "month": 8,
+      "freeRate": -0.61,
+      "regulatedRate": -0.61,
+      "publishedAt": "2021-08-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2021,
+      "month": 9,
+      "freeRate": -0.31,
+      "regulatedRate": -0.31,
+      "publishedAt": "2021-09-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2021,
+      "month": 10,
+      "freeRate": 0.0,
+      "regulatedRate": 0.0,
+      "publishedAt": "2021-10-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2021,
+      "month": 11,
+      "freeRate": 0.41,
+      "regulatedRate": 0.41,
+      "publishedAt": "2021-11-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2021,
+      "month": 12,
+      "freeRate": 0.76,
+      "regulatedRate": 0.76,
+      "publishedAt": "2021-12-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2022,
+      "month": 1,
+      "freeRate": 1.16,
+      "regulatedRate": 1.16,
+      "publishedAt": "2022-01-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2022,
+      "month": 2,
+      "freeRate": 1.82,
+      "regulatedRate": 1.82,
+      "publishedAt": "2022-02-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2022,
+      "month": 3,
+      "freeRate": 2.35,
+      "regulatedRate": 2.35,
+      "publishedAt": "2022-03-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2022,
+      "month": 4,
+      "freeRate": 2.55,
+      "regulatedRate": 2.55,
+      "publishedAt": "2022-04-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2022,
+      "month": 5,
+      "freeRate": 2.55,
+      "regulatedRate": 2.55,
+      "publishedAt": "2022-05-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2022,
+      "month": 6,
+      "freeRate": 2.55,
+      "regulatedRate": 2.55,
+      "publishedAt": "2022-06-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2022,
+      "month": 7,
+      "freeRate": 2.55,
+      "regulatedRate": 2.55,
+      "publishedAt": "2022-07-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2022,
+      "month": 8,
+      "freeRate": 2.55,
+      "regulatedRate": 2.55,
+      "publishedAt": "2022-08-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2022,
+      "month": 9,
+      "freeRate": 2.55,
+      "regulatedRate": 2.55,
+      "publishedAt": "2022-09-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2022,
+      "month": 10,
+      "freeRate": 2.55,
+      "regulatedRate": 2.55,
+      "publishedAt": "2022-10-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2022,
+      "month": 11,
+      "freeRate": 10.47,
+      "regulatedRate": 2.55,
+      "publishedAt": "2022-11-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2022,
+      "month": 12,
+      "freeRate": 11.21,
+      "regulatedRate": 2.55,
+      "publishedAt": "2022-12-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2023,
+      "month": 1,
+      "freeRate": 11.6,
+      "regulatedRate": 2.55,
+      "publishedAt": "2023-01-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2023,
+      "month": 2,
+      "freeRate": 12.15,
+      "regulatedRate": 2.55,
+      "publishedAt": "2023-02-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2023,
+      "month": 3,
+      "freeRate": 11.74,
+      "regulatedRate": 2.55,
+      "publishedAt": "2023-03-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2023,
+      "month": 4,
+      "freeRate": 10.76,
+      "regulatedRate": 2.55,
+      "publishedAt": "2023-04-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2023,
+      "month": 5,
+      "freeRate": 9.7,
+      "regulatedRate": 2.55,
+      "publishedAt": "2023-05-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2023,
+      "month": 6,
+      "freeRate": 8.9,
+      "regulatedRate": -1.43,
+      "publishedAt": "2023-06-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2023,
+      "month": 7,
+      "freeRate": -2.16,
+      "regulatedRate": -2.16,
+      "publishedAt": "2023-07-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2023,
+      "month": 8,
+      "freeRate": -3.08,
+      "regulatedRate": -3.08,
+      "publishedAt": "2023-08-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2023,
+      "month": 9,
+      "freeRate": -4.0,
+      "regulatedRate": -4.0,
+      "publishedAt": "2023-09-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2023,
+      "month": 10,
+      "freeRate": -4.62,
+      "regulatedRate": -4.62,
+      "publishedAt": "2023-10-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2023,
+      "month": 11,
+      "freeRate": -4.96,
+      "regulatedRate": -4.96,
+      "publishedAt": "2023-11-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2023,
+      "month": 12,
+      "freeRate": -5.24,
+      "regulatedRate": -5.24,
+      "publishedAt": "2023-12-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2024,
+      "month": 1,
+      "freeRate": -5.24,
+      "regulatedRate": -5.24,
+      "publishedAt": "2024-01-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2024,
+      "month": 2,
+      "freeRate": -5.19,
+      "regulatedRate": -5.19,
+      "publishedAt": "2024-02-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2024,
+      "month": 3,
+      "freeRate": -5.21,
+      "regulatedRate": -5.21,
+      "publishedAt": "2024-03-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2024,
+      "month": 4,
+      "freeRate": -5.44,
+      "regulatedRate": -5.44,
+      "publishedAt": "2024-04-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2024,
+      "month": 5,
+      "freeRate": -5.56,
+      "regulatedRate": -5.56,
+      "publishedAt": "2024-05-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2024,
+      "month": 6,
+      "freeRate": -5.67,
+      "regulatedRate": -5.67,
+      "publishedAt": "2024-06-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2024,
+      "month": 7,
+      "freeRate": -5.7,
+      "regulatedRate": -5.7,
+      "publishedAt": "2024-07-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2024,
+      "month": 8,
+      "freeRate": -5.76,
+      "regulatedRate": -5.76,
+      "publishedAt": "2024-08-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2024,
+      "month": 9,
+      "freeRate": -5.7,
+      "regulatedRate": -5.7,
+      "publishedAt": "2024-09-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2024,
+      "month": 10,
+      "freeRate": -5.64,
+      "regulatedRate": -5.64,
+      "publishedAt": "2024-10-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2024,
+      "month": 11,
+      "freeRate": -5.7,
+      "regulatedRate": -5.7,
+      "publishedAt": "2024-11-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2024,
+      "month": 12,
+      "freeRate": -5.9,
+      "regulatedRate": -5.9,
+      "publishedAt": "2024-12-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2025,
+      "month": 1,
+      "freeRate": -6.1,
+      "regulatedRate": -6.1,
+      "publishedAt": "2025-01-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2025,
+      "month": 2,
+      "freeRate": -6.11,
+      "regulatedRate": -6.11,
+      "publishedAt": "2025-02-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2025,
+      "month": 3,
+      "freeRate": -6.01,
+      "regulatedRate": -6.01,
+      "publishedAt": "2025-03-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2025,
+      "month": 4,
+      "freeRate": -5.93,
+      "regulatedRate": -5.93,
+      "publishedAt": "2025-04-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2025,
+      "month": 5,
+      "freeRate": -6.02,
+      "regulatedRate": -6.02,
+      "publishedAt": "2025-05-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2025,
+      "month": 6,
+      "freeRate": -6.22,
+      "regulatedRate": -6.22,
+      "publishedAt": "2025-06-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2025,
+      "month": 7,
+      "freeRate": -6.22,
+      "regulatedRate": -6.22,
+      "publishedAt": "2025-07-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2025,
+      "month": 8,
+      "freeRate": -6.95,
+      "regulatedRate": -6.95,
+      "publishedAt": "2025-08-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2025,
+      "month": 9,
+      "freeRate": -7.19,
+      "regulatedRate": -7.19,
+      "publishedAt": "2025-09-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2025,
+      "month": 10,
+      "freeRate": -7.33,
+      "regulatedRate": -7.33,
+      "publishedAt": "2025-10-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2025,
+      "month": 11,
+      "freeRate": -7.28,
+      "regulatedRate": -7.28,
+      "publishedAt": "2025-11-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2025,
+      "month": 12,
+      "freeRate": -7.24,
+      "regulatedRate": -7.24,
+      "publishedAt": "2025-12-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2026,
+      "month": 1,
+      "freeRate": -7.15,
+      "regulatedRate": -7.15,
+      "publishedAt": "2026-01-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2026,
+      "month": 2,
+      "freeRate": -7.13,
+      "regulatedRate": -7.13,
+      "publishedAt": "2026-02-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2026,
+      "month": 3,
+      "freeRate": -7.05,
+      "regulatedRate": -7.05,
+      "publishedAt": "2026-03-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2026,
+      "month": 4,
+      "freeRate": -7.01,
+      "regulatedRate": -7.01,
+      "publishedAt": "2026-04-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2026,
+      "month": 5,
+      "freeRate": -6.96,
+      "regulatedRate": -6.96,
+      "publishedAt": "2026-05-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2021,
+      "month": 8,
+      "freeRate": -1.02,
+      "regulatedRate": -1.02,
+      "publishedAt": "2021-08-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2021,
+      "month": 9,
+      "freeRate": -0.8,
+      "regulatedRate": -0.8,
+      "publishedAt": "2021-09-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2021,
+      "month": 10,
+      "freeRate": -0.56,
+      "regulatedRate": -0.56,
+      "publishedAt": "2021-10-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2021,
+      "month": 11,
+      "freeRate": -0.27,
+      "regulatedRate": -0.27,
+      "publishedAt": "2021-11-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2021,
+      "month": 12,
+      "freeRate": 0.0,
+      "regulatedRate": 0.0,
+      "publishedAt": "2021-12-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2022,
+      "month": 1,
+      "freeRate": 0.33,
+      "regulatedRate": 0.33,
+      "publishedAt": "2022-01-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2022,
+      "month": 2,
+      "freeRate": 0.88,
+      "regulatedRate": 0.88,
+      "publishedAt": "2022-02-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2022,
+      "month": 3,
+      "freeRate": 1.33,
+      "regulatedRate": 1.33,
+      "publishedAt": "2022-03-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2022,
+      "month": 4,
+      "freeRate": 1.55,
+      "regulatedRate": 1.55,
+      "publishedAt": "2022-04-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2022,
+      "month": 5,
+      "freeRate": 1.7,
+      "regulatedRate": 1.7,
+      "publishedAt": "2022-05-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2022,
+      "month": 6,
+      "freeRate": 1.82,
+      "regulatedRate": 1.82,
+      "publishedAt": "2022-06-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2022,
+      "month": 7,
+      "freeRate": 2.42,
+      "regulatedRate": 1.86,
+      "publishedAt": "2022-07-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2022,
+      "month": 8,
+      "freeRate": 3.24,
+      "regulatedRate": 1.86,
+      "publishedAt": "2022-08-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2022,
+      "month": 9,
+      "freeRate": 4.5,
+      "regulatedRate": 1.86,
+      "publishedAt": "2022-09-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2022,
+      "month": 10,
+      "freeRate": 5.74,
+      "regulatedRate": 1.86,
+      "publishedAt": "2022-10-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2022,
+      "month": 11,
+      "freeRate": 6.69,
+      "regulatedRate": 1.86,
+      "publishedAt": "2022-11-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2022,
+      "month": 12,
+      "freeRate": 7.55,
+      "regulatedRate": 1.86,
+      "publishedAt": "2022-12-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2023,
+      "month": 1,
+      "freeRate": 8.04,
+      "regulatedRate": 1.86,
+      "publishedAt": "2023-01-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2023,
+      "month": 2,
+      "freeRate": 8.43,
+      "regulatedRate": 1.86,
+      "publishedAt": "2023-02-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2023,
+      "month": 3,
+      "freeRate": 8.11,
+      "regulatedRate": 1.86,
+      "publishedAt": "2023-03-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2023,
+      "month": 4,
+      "freeRate": 7.47,
+      "regulatedRate": 1.86,
+      "publishedAt": "2023-04-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2023,
+      "month": 5,
+      "freeRate": 6.81,
+      "regulatedRate": 1.86,
+      "publishedAt": "2023-05-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2023,
+      "month": 6,
+      "freeRate": 6.19,
+      "regulatedRate": 1.86,
+      "publishedAt": "2023-06-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2023,
+      "month": 7,
+      "freeRate": 5.43,
+      "regulatedRate": 1.86,
+      "publishedAt": "2023-07-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2023,
+      "month": 8,
+      "freeRate": 4.52,
+      "regulatedRate": 1.86,
+      "publishedAt": "2023-08-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2023,
+      "month": 9,
+      "freeRate": 3.67,
+      "regulatedRate": 1.86,
+      "publishedAt": "2023-09-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2023,
+      "month": 10,
+      "freeRate": 3.14,
+      "regulatedRate": 1.86,
+      "publishedAt": "2023-10-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2023,
+      "month": 11,
+      "freeRate": 2.87,
+      "regulatedRate": 1.86,
+      "publishedAt": "2023-11-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2023,
+      "month": 12,
+      "freeRate": 2.61,
+      "regulatedRate": 1.86,
+      "publishedAt": "2023-12-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2024,
+      "month": 1,
+      "freeRate": 2.58,
+      "regulatedRate": 1.86,
+      "publishedAt": "2024-01-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2024,
+      "month": 2,
+      "freeRate": 2.6,
+      "regulatedRate": 1.86,
+      "publishedAt": "2024-02-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2024,
+      "month": 3,
+      "freeRate": 2.65,
+      "regulatedRate": 1.86,
+      "publishedAt": "2024-03-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2024,
+      "month": 4,
+      "freeRate": 2.53,
+      "regulatedRate": 1.86,
+      "publishedAt": "2024-04-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2024,
+      "month": 5,
+      "freeRate": 2.5,
+      "regulatedRate": 1.86,
+      "publishedAt": "2024-05-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2024,
+      "month": 6,
+      "freeRate": 2.41,
+      "regulatedRate": 1.86,
+      "publishedAt": "2024-06-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2024,
+      "month": 7,
+      "freeRate": 2.31,
+      "regulatedRate": 1.86,
+      "publishedAt": "2024-07-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2024,
+      "month": 8,
+      "freeRate": 2.19,
+      "regulatedRate": 1.86,
+      "publishedAt": "2024-08-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2024,
+      "month": 9,
+      "freeRate": 2.19,
+      "regulatedRate": 1.86,
+      "publishedAt": "2024-09-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2024,
+      "month": 10,
+      "freeRate": 2.26,
+      "regulatedRate": 1.86,
+      "publishedAt": "2024-10-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2024,
+      "month": 11,
+      "freeRate": 2.23,
+      "regulatedRate": 1.86,
+      "publishedAt": "2024-11-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2024,
+      "month": 12,
+      "freeRate": 2.09,
+      "regulatedRate": 1.86,
+      "publishedAt": "2024-12-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2025,
+      "month": 1,
+      "freeRate": 1.97,
+      "regulatedRate": 1.86,
+      "publishedAt": "2025-01-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2025,
+      "month": 2,
+      "freeRate": 1.99,
+      "regulatedRate": 1.86,
+      "publishedAt": "2025-02-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2025,
+      "month": 3,
+      "freeRate": 2.09,
+      "regulatedRate": 1.86,
+      "publishedAt": "2025-03-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2025,
+      "month": 4,
+      "freeRate": 2.2,
+      "regulatedRate": 1.86,
+      "publishedAt": "2025-04-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2025,
+      "month": 5,
+      "freeRate": 2.11,
+      "regulatedRate": 1.86,
+      "publishedAt": "2025-05-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2025,
+      "month": 6,
+      "freeRate": 1.92,
+      "regulatedRate": 1.86,
+      "publishedAt": "2025-06-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2025,
+      "month": 7,
+      "freeRate": 1.54,
+      "regulatedRate": 1.54,
+      "publishedAt": "2025-07-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2025,
+      "month": 8,
+      "freeRate": 1.28,
+      "regulatedRate": 1.28,
+      "publishedAt": "2025-08-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2025,
+      "month": 9,
+      "freeRate": 1.09,
+      "regulatedRate": 1.09,
+      "publishedAt": "2025-09-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2025,
+      "month": 10,
+      "freeRate": 0.98,
+      "regulatedRate": 0.98,
+      "publishedAt": "2025-10-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2025,
+      "month": 11,
+      "freeRate": 1.1,
+      "regulatedRate": 1.01,
+      "publishedAt": "2025-11-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2025,
+      "month": 12,
+      "freeRate": 0.98,
+      "regulatedRate": 0.98,
+      "publishedAt": "2025-12-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2026,
+      "month": 1,
+      "freeRate": 1.03,
+      "regulatedRate": 1.03,
+      "publishedAt": "2026-01-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2026,
+      "month": 2,
+      "freeRate": 1.03,
+      "regulatedRate": 1.03,
+      "publishedAt": "2026-02-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2026,
+      "month": 3,
+      "freeRate": 1.11,
+      "regulatedRate": 1.11,
+      "publishedAt": "2026-03-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2026,
+      "month": 4,
+      "freeRate": 1.2,
+      "regulatedRate": 1.2,
+      "publishedAt": "2026-04-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2026,
+      "month": 5,
+      "freeRate": 1.28,
+      "regulatedRate": 1.28,
+      "publishedAt": "2026-05-01"
+    }
+  ]
+}

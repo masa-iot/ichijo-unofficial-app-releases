@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "publishedAt": "2026-04-25",
+  "items": [
+    {
+      "companyKey": "hepco",
+      "name": "北海道電力",
+      "area": "北海道",
+      "url": "https://www.hepco.co.jp/home/price/ratemenu/enetoku_smart.html",
+      "isMarketAdjustmentIncluded": true,
+      "note": "",
+      "deprecatedAt": null
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "name": "東北電力",
+      "area": "東北",
+      "url": "https://www.tohoku-epco.co.jp/dprivate/plan/home/yorisou_smart/",
+      "isMarketAdjustmentIncluded": true,
+      "note": "",
+      "deprecatedAt": null
+    },
+    {
+      "companyKey": "tepco",
+      "name": "東京電力エナジーパートナー",
+      "area": "東京",
+      "url": "https://www.tepco.co.jp/ep/private/plan/smartlife/index-j.html",
+      "isMarketAdjustmentIncluded": false,
+      "note": "",
+      "deprecatedAt": null
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "name": "中部電力ミライズ",
+      "area": "中部",
+      "url": "https://miraiz.chuden.co.jp/home/electric/menu/basic/smart/",
+      "isMarketAdjustmentIncluded": false,
+      "note": "",
+      "deprecatedAt": null
+    },
+    {
+      "companyKey": "rikuden",
+      "name": "北陸電力",
+      "area": "北陸",
+      "url": "https://www.rikuden.co.jp/ryokinmenu/kutsuroginight.html",
+      "isMarketAdjustmentIncluded": true,
+      "note": "",
+      "deprecatedAt": null
+    },
+    {
+      "companyKey": "kepco",
+      "name": "関西電力",
+      "area": "関西",
+      "url": "https://kepco.jp/ryokin/menu/hapie_r/",
+      "isMarketAdjustmentIncluded": false,
+      "note": "",
+      "deprecatedAt": null
+    },
+    {
+      "companyKey": "energia",
+      "name": "中国電力",
+      "area": "中国",
+      "url": "https://www.energia-support.com/pricemenu/denka.html",
+      "isMarketAdjustmentIncluded": true,
+      "note": "",
+      "deprecatedAt": null
+    },
+    {
+      "companyKey": "yonden",
+      "name": "四国電力",
+      "area": "四国",
+      "url": "https://www.yonden.co.jp/customer/price/plan/denka_e.html",
+      "isMarketAdjustmentIncluded": false,
+      "note": "",
+      "deprecatedAt": null
+    },
+    {
+      "companyKey": "kyuden",
+      "name": "九州電力",
+      "area": "九州",
+      "url": "https://customer.kyuden.co.jp/ja/electricity/home-plan/denka-de-night.html",
+      "isMarketAdjustmentIncluded": false,
+      "note": "",
+      "deprecatedAt": null
+    }
+  ]
+}

@@ -1,0 +1,1341 @@
+{
+  "schemaVersion": 1,
+  "publishedAt": "2026-04-25",
+  "items": [
+    {
+      "planKey": "hepco_enetoku_smart_202404",
+      "companyKey": "hepco",
+      "displayName": "エネとくスマートプラン",
+      "displayVersion": "2024年4月版",
+      "asOf": "2024-04-01",
+      "deprecatedAt": null,
+      "supersededBy": null,
+      "companyName": "北海道電力",
+      "planName": "エネとくスマートプラン",
+      "area": "北海道",
+      "url": "https://www.hepco.co.jp/home/price/ratemenu/enetoku_smart.html",
+      "note": "実量制（30分ごとの最大需要電力）。土曜日は平日扱い、日曜・祝日のみ終日夜間・日祝料金。basicChargeは10kW契約相当の試算値",
+      "basicChargeStructure": {
+        "unit": "kW",
+        "tiers": [
+          {
+            "upTo": null,
+            "ratePerUnit": 486.2
+          }
+        ]
+      },
+      "config": {
+        "dayTypes": [
+          {
+            "name": "平日（含土曜）",
+            "weekdays": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "includesHoliday": false,
+            "includesSpecialDay": false
+          },
+          {
+            "name": "日曜・祝日",
+            "weekdays": [
+              7
+            ],
+            "includesHoliday": true,
+            "includesSpecialDay": true
+          }
+        ],
+        "rateSchedules": [
+          {
+            "dayType": 0,
+            "season": null,
+            "timeOfUse": [
+              {
+                "startHour": 8,
+                "endHour": 22,
+                "rate": 38.22
+              },
+              {
+                "startHour": 22,
+                "endHour": 8,
+                "rate": 29.44
+              }
+            ]
+          },
+          {
+            "dayType": 1,
+            "season": null,
+            "buyRate": 29.44
+          }
+        ]
+      }
+    },
+    {
+      "planKey": "tohoku_epco_yorisou_smart_time_202404",
+      "companyKey": "tohoku_epco",
+      "displayName": "よりそう+スマートタイム",
+      "displayVersion": "2024年4月版",
+      "asOf": "2024-04-01",
+      "deprecatedAt": null,
+      "supersededBy": null,
+      "companyName": "東北電力",
+      "planName": "よりそう+スマートタイム",
+      "area": "東北",
+      "url": "https://www.tohoku-epco.co.jp/dprivate/plan/home/yorisou_smart/",
+      "note": "実量契約。土曜は休日扱い。主開閉器契約の場合は別途構造（6kVA以下1,667.60円/6-10kVA 2,376円/10kVA超369.60円/kVA）",
+      "basicChargeStructure": {
+        "unit": "kW",
+        "tiers": [
+          {
+            "upTo": 10,
+            "amount": 4356.0
+          },
+          {
+            "upTo": null,
+            "ratePerUnit": 435.6
+          }
+        ]
+      },
+      "config": {
+        "dayTypes": [
+          {
+            "name": "平日",
+            "weekdays": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "includesHoliday": false,
+            "includesSpecialDay": false
+          },
+          {
+            "name": "休日",
+            "weekdays": [
+              6,
+              7
+            ],
+            "includesHoliday": true,
+            "includesSpecialDay": true
+          }
+        ],
+        "rateSchedules": [
+          {
+            "dayType": 0,
+            "season": null,
+            "timeOfUse": [
+              {
+                "startHour": 8,
+                "endHour": 22,
+                "rate": 36.86
+              },
+              {
+                "startHour": 22,
+                "endHour": 8,
+                "rate": 29.86
+              }
+            ]
+          },
+          {
+            "dayType": 1,
+            "season": null,
+            "buyRate": 29.86
+          }
+        ]
+      }
+    },
+    {
+      "planKey": "tepco_smart_life_s_202404",
+      "companyKey": "tepco",
+      "displayName": "スマートライフS",
+      "displayVersion": "2024年4月版",
+      "asOf": "2024-04-01",
+      "deprecatedAt": null,
+      "supersededBy": null,
+      "companyName": "東京電力エナジーパートナー",
+      "planName": "スマートライフS",
+      "area": "東京",
+      "url": "https://www.tepco.co.jp/ep/private/plan/smartlife/index-j.html",
+      "note": "60A契約の月額（31.175円×60）。実際は10A刻み（10/15/20/30/40/50/60A）。平日/休日の区別なし、時間帯のみ",
+      "basicChargeStructure": {
+        "unit": "A",
+        "tiers": [
+          {
+            "upTo": null,
+            "ratePerUnit": 31.175
+          }
+        ]
+      },
+      "config": {
+        "timeOfUse": [
+          {
+            "startHour": 6,
+            "endHour": 1,
+            "rate": 35.76
+          },
+          {
+            "startHour": 1,
+            "endHour": 6,
+            "rate": 27.86
+          }
+        ]
+      }
+    },
+    {
+      "planKey": "tepco_smart_life_l_202404",
+      "companyKey": "tepco",
+      "displayName": "スマートライフL",
+      "displayVersion": "2024年4月版",
+      "asOf": "2024-04-01",
+      "deprecatedAt": null,
+      "supersededBy": null,
+      "companyName": "東京電力エナジーパートナー",
+      "planName": "スマートライフL",
+      "area": "東京",
+      "url": "https://www.tepco.co.jp/ep/private/plan/smartlife/index-j.html",
+      "note": "10kVA契約の月額。一条工務店オール電化の定番プラン",
+      "basicChargeStructure": {
+        "unit": "kVA",
+        "tiers": [
+          {
+            "upTo": null,
+            "ratePerUnit": 311.75
+          }
+        ]
+      },
+      "config": {
+        "timeOfUse": [
+          {
+            "startHour": 6,
+            "endHour": 1,
+            "rate": 35.76
+          },
+          {
+            "startHour": 1,
+            "endHour": 6,
+            "rate": 27.86
+          }
+        ]
+      }
+    },
+    {
+      "planKey": "chuden_miraiz_smart_life_22_8_202404",
+      "companyKey": "chuden_miraiz",
+      "displayName": "スマートライフプラン（22-8時）",
+      "displayVersion": "2024年4月版",
+      "asOf": "2024-04-01",
+      "deprecatedAt": null,
+      "supersededBy": null,
+      "companyName": "中部電力ミライズ",
+      "planName": "スマートライフプラン（22-8時）",
+      "area": "中部",
+      "url": "https://miraiz.chuden.co.jp/home/electric/menu/basic/smart/",
+      "note": "土曜は休日扱い（デイタイムなし）",
+      "basicChargeStructure": {
+        "unit": "kVA",
+        "tiers": [
+          {
+            "upTo": 10,
+            "amount": 1838.44
+          },
+          {
+            "upTo": null,
+            "ratePerUnit": 321.14
+          }
+        ]
+      },
+      "config": {
+        "dayTypes": [
+          {
+            "name": "平日",
+            "weekdays": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "includesHoliday": false,
+            "includesSpecialDay": false
+          },
+          {
+            "name": "休日",
+            "weekdays": [
+              6,
+              7
+            ],
+            "includesHoliday": true,
+            "includesSpecialDay": true
+          }
+        ],
+        "rateSchedules": [
+          {
+            "dayType": 0,
+            "season": null,
+            "timeOfUse": [
+              {
+                "startHour": 22,
+                "endHour": 8,
+                "rate": 16.52
+              },
+              {
+                "startHour": 8,
+                "endHour": 10,
+                "rate": 28.61
+              },
+              {
+                "startHour": 10,
+                "endHour": 17,
+                "rate": 38.8
+              },
+              {
+                "startHour": 17,
+                "endHour": 22,
+                "rate": 28.61
+              }
+            ]
+          },
+          {
+            "dayType": 1,
+            "season": null,
+            "timeOfUse": [
+              {
+                "startHour": 22,
+                "endHour": 8,
+                "rate": 16.52
+              },
+              {
+                "startHour": 8,
+                "endHour": 22,
+                "rate": 28.61
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "planKey": "chuden_miraiz_smart_life_21_7_202404",
+      "companyKey": "chuden_miraiz",
+      "displayName": "スマートライフプラン（夜とく21-7時）",
+      "displayVersion": "2024年4月版",
+      "asOf": "2024-04-01",
+      "deprecatedAt": null,
+      "supersededBy": null,
+      "companyName": "中部電力ミライズ",
+      "planName": "スマートライフプラン（夜とく21-7時）",
+      "area": "中部",
+      "url": "https://miraiz.chuden.co.jp/home/electric/menu/basic/smart/",
+      "note": "ナイトタイムを21-7時に設定したバリエーション",
+      "basicChargeStructure": {
+        "unit": "kVA",
+        "tiers": [
+          {
+            "upTo": 10,
+            "amount": 1838.44
+          },
+          {
+            "upTo": null,
+            "ratePerUnit": 321.14
+          }
+        ]
+      },
+      "config": {
+        "dayTypes": [
+          {
+            "name": "平日",
+            "weekdays": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "includesHoliday": false,
+            "includesSpecialDay": false
+          },
+          {
+            "name": "休日",
+            "weekdays": [
+              6,
+              7
+            ],
+            "includesHoliday": true,
+            "includesSpecialDay": true
+          }
+        ],
+        "rateSchedules": [
+          {
+            "dayType": 0,
+            "season": null,
+            "timeOfUse": [
+              {
+                "startHour": 21,
+                "endHour": 7,
+                "rate": 16.52
+              },
+              {
+                "startHour": 7,
+                "endHour": 10,
+                "rate": 28.61
+              },
+              {
+                "startHour": 10,
+                "endHour": 17,
+                "rate": 38.8
+              },
+              {
+                "startHour": 17,
+                "endHour": 21,
+                "rate": 28.61
+              }
+            ]
+          },
+          {
+            "dayType": 1,
+            "season": null,
+            "timeOfUse": [
+              {
+                "startHour": 21,
+                "endHour": 7,
+                "rate": 16.52
+              },
+              {
+                "startHour": 7,
+                "endHour": 21,
+                "rate": 28.61
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "planKey": "chuden_miraiz_smart_life_23_9_202404",
+      "companyKey": "chuden_miraiz",
+      "displayName": "スマートライフプラン（朝とく23-9時）",
+      "displayVersion": "2024年4月版",
+      "asOf": "2024-04-01",
+      "deprecatedAt": null,
+      "supersededBy": null,
+      "companyName": "中部電力ミライズ",
+      "planName": "スマートライフプラン（朝とく23-9時）",
+      "area": "中部",
+      "url": "https://miraiz.chuden.co.jp/home/electric/menu/basic/smart/",
+      "note": "ナイトタイムを23-9時に設定したバリエーション",
+      "basicChargeStructure": {
+        "unit": "kVA",
+        "tiers": [
+          {
+            "upTo": 10,
+            "amount": 1838.44
+          },
+          {
+            "upTo": null,
+            "ratePerUnit": 321.14
+          }
+        ]
+      },
+      "config": {
+        "dayTypes": [
+          {
+            "name": "平日",
+            "weekdays": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "includesHoliday": false,
+            "includesSpecialDay": false
+          },
+          {
+            "name": "休日",
+            "weekdays": [
+              6,
+              7
+            ],
+            "includesHoliday": true,
+            "includesSpecialDay": true
+          }
+        ],
+        "rateSchedules": [
+          {
+            "dayType": 0,
+            "season": null,
+            "timeOfUse": [
+              {
+                "startHour": 23,
+                "endHour": 9,
+                "rate": 16.52
+              },
+              {
+                "startHour": 9,
+                "endHour": 10,
+                "rate": 28.61
+              },
+              {
+                "startHour": 10,
+                "endHour": 17,
+                "rate": 38.8
+              },
+              {
+                "startHour": 17,
+                "endHour": 23,
+                "rate": 28.61
+              }
+            ]
+          },
+          {
+            "dayType": 1,
+            "season": null,
+            "timeOfUse": [
+              {
+                "startHour": 23,
+                "endHour": 9,
+                "rate": 16.52
+              },
+              {
+                "startHour": 9,
+                "endHour": 23,
+                "rate": 28.61
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "planKey": "rikuden_kutsurogi_night12_202408",
+      "companyKey": "rikuden",
+      "displayName": "くつろぎナイト12",
+      "displayVersion": "2024年8月版",
+      "asOf": "2024-08-01",
+      "deprecatedAt": null,
+      "supersededBy": null,
+      "companyName": "北陸電力",
+      "planName": "くつろぎナイト12",
+      "area": "北陸",
+      "url": "https://www.rikuden.co.jp/ryokinmenu/kutsuroginight.html",
+      "note": "昼間時間は夏季/その他季で同額（39.87円）。土曜は休日扱い（ウィークエンド料金）。北陸電力は4/30を含まないのが他社との違い",
+      "basicChargeStructure": {
+        "unit": "kVA",
+        "tiers": [
+          {
+            "upTo": 10,
+            "amount": 2255.0
+          },
+          {
+            "upTo": null,
+            "ratePerUnit": 302.5
+          }
+        ]
+      },
+      "config": {
+        "dayTypes": [
+          {
+            "name": "平日",
+            "weekdays": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "includesHoliday": false,
+            "includesSpecialDay": false
+          },
+          {
+            "name": "休日",
+            "weekdays": [
+              6,
+              7
+            ],
+            "includesHoliday": true,
+            "includesSpecialDay": true
+          }
+        ],
+        "rateSchedules": [
+          {
+            "dayType": 0,
+            "season": null,
+            "timeOfUse": [
+              {
+                "startHour": 8,
+                "endHour": 20,
+                "rate": 39.87
+              },
+              {
+                "startHour": 20,
+                "endHour": 8,
+                "rate": 26.98
+              }
+            ]
+          },
+          {
+            "dayType": 1,
+            "season": null,
+            "timeOfUse": [
+              {
+                "startHour": 8,
+                "endHour": 20,
+                "rate": 33.8
+              },
+              {
+                "startHour": 20,
+                "endHour": 8,
+                "rate": 26.98
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "planKey": "kepco_hapie_time_r_202404",
+      "companyKey": "kepco",
+      "displayName": "はぴeタイムR",
+      "displayVersion": "2024年4月版",
+      "asOf": "2024-04-01",
+      "deprecatedAt": null,
+      "supersededBy": null,
+      "companyName": "関西電力",
+      "planName": "はぴeタイムR",
+      "area": "関西",
+      "url": "https://kepco.jp/ryokin/menu/hapie_r/",
+      "note": "実量制。土曜は休日扱い。電化割引(IH+エコキュート5%OFF)別途",
+      "basicChargeStructure": {
+        "unit": "kW",
+        "tiers": [
+          {
+            "upTo": 10,
+            "amount": 2409.4
+          },
+          {
+            "upTo": null,
+            "ratePerUnit": 416.94
+          }
+        ]
+      },
+      "config": {
+        "dayTypes": [
+          {
+            "name": "平日",
+            "weekdays": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "includesHoliday": false,
+            "includesSpecialDay": false
+          },
+          {
+            "name": "休日",
+            "weekdays": [
+              6,
+              7
+            ],
+            "includesHoliday": true,
+            "includesSpecialDay": true
+          }
+        ],
+        "seasons": [
+          {
+            "name": "夏季",
+            "months": [
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "name": "その他季",
+            "months": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              10,
+              11,
+              12
+            ]
+          }
+        ],
+        "rateSchedules": [
+          {
+            "dayType": 0,
+            "season": 0,
+            "timeOfUse": [
+              {
+                "startHour": 23,
+                "endHour": 7,
+                "rate": 15.37
+              },
+              {
+                "startHour": 7,
+                "endHour": 10,
+                "rate": 22.8
+              },
+              {
+                "startHour": 10,
+                "endHour": 17,
+                "rate": 28.87
+              },
+              {
+                "startHour": 17,
+                "endHour": 23,
+                "rate": 22.8
+              }
+            ]
+          },
+          {
+            "dayType": 0,
+            "season": 1,
+            "timeOfUse": [
+              {
+                "startHour": 23,
+                "endHour": 7,
+                "rate": 15.37
+              },
+              {
+                "startHour": 7,
+                "endHour": 10,
+                "rate": 22.8
+              },
+              {
+                "startHour": 10,
+                "endHour": 17,
+                "rate": 26.24
+              },
+              {
+                "startHour": 17,
+                "endHour": 23,
+                "rate": 22.8
+              }
+            ]
+          },
+          {
+            "dayType": 1,
+            "season": null,
+            "timeOfUse": [
+              {
+                "startHour": 23,
+                "endHour": 7,
+                "rate": 15.37
+              },
+              {
+                "startHour": 7,
+                "endHour": 23,
+                "rate": 22.8
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "planKey": "energia_denka_style_202404",
+      "companyKey": "energia",
+      "displayName": "電化Styleコース",
+      "displayVersion": "2024年4月版",
+      "asOf": "2024-04-01",
+      "deprecatedAt": null,
+      "supersededBy": null,
+      "companyName": "中国電力",
+      "planName": "電化Styleコース",
+      "area": "中国",
+      "url": "https://www.energia-support.com/pricemenu/denka.html",
+      "note": "実量制。土曜は休日扱い（ホリデータイム）。中国電力は4/30を含まない",
+      "basicChargeStructure": {
+        "unit": "kW",
+        "tiers": [
+          {
+            "upTo": 10,
+            "amount": 2018.72
+          },
+          {
+            "upTo": null,
+            "ratePerUnit": 480.37
+          }
+        ]
+      },
+      "config": {
+        "dayTypes": [
+          {
+            "name": "平日",
+            "weekdays": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "includesHoliday": false,
+            "includesSpecialDay": false
+          },
+          {
+            "name": "休日",
+            "weekdays": [
+              6,
+              7
+            ],
+            "includesHoliday": true,
+            "includesSpecialDay": true
+          }
+        ],
+        "seasons": [
+          {
+            "name": "夏季",
+            "months": [
+              7,
+              8,
+              9
+            ]
+          },
+          {
+            "name": "その他季",
+            "months": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              10,
+              11,
+              12
+            ]
+          }
+        ],
+        "rateSchedules": [
+          {
+            "dayType": 0,
+            "season": 0,
+            "timeOfUse": [
+              {
+                "startHour": 9,
+                "endHour": 21,
+                "rate": 46.46
+              },
+              {
+                "startHour": 21,
+                "endHour": 9,
+                "rate": 30.35
+              }
+            ]
+          },
+          {
+            "dayType": 0,
+            "season": 1,
+            "timeOfUse": [
+              {
+                "startHour": 9,
+                "endHour": 21,
+                "rate": 44.4
+              },
+              {
+                "startHour": 21,
+                "endHour": 9,
+                "rate": 30.35
+              }
+            ]
+          },
+          {
+            "dayType": 1,
+            "season": null,
+            "buyRate": 30.35
+          }
+        ]
+      }
+    },
+    {
+      "planKey": "yonden_otoku_e_202404",
+      "companyKey": "yonden",
+      "displayName": "おトクeプラン",
+      "displayVersion": "2024年4月版",
+      "asOf": "2024-04-01",
+      "deprecatedAt": null,
+      "supersededBy": null,
+      "companyName": "四国電力",
+      "planName": "おトクeプラン",
+      "area": "四国",
+      "url": "https://www.yonden.co.jp/customer/price/plan/otoku_e.html",
+      "note": "",
+      "basicChargeStructure": {
+        "unit": "fixed",
+        "tiers": [
+          {
+            "upTo": null,
+            "amount": 666.89
+          }
+        ]
+      },
+      "config": {
+        "tieredRates": [
+          {
+            "upTo": 11,
+            "rate": 0
+          },
+          {
+            "upTo": 120,
+            "rate": 30.65
+          },
+          {
+            "upTo": 300,
+            "rate": 37.27
+          },
+          {
+            "rate": 38.58
+          }
+        ]
+      }
+    },
+    {
+      "planKey": "kyuden_denka_de_night_21_202404",
+      "companyKey": "kyuden",
+      "displayName": "電化でナイト・セレクト21",
+      "displayVersion": "2024年4月版",
+      "asOf": "2024-04-01",
+      "deprecatedAt": null,
+      "supersededBy": null,
+      "companyName": "九州電力",
+      "planName": "電化でナイト・セレクト21",
+      "area": "九州",
+      "url": "https://customer.kyuden.co.jp/ja/electricity/home-plan/denka-de-night.html",
+      "note": "実量制。21-7時を夜間とするバリエーション。基本料金は3段階構造（10kW以下/11-15kW固定/15kW超単位料金）。土曜は休日扱い",
+      "basicChargeStructure": {
+        "unit": "kW",
+        "tiers": [
+          {
+            "upTo": 10,
+            "amount": 1888.8
+          },
+          {
+            "upTo": 15,
+            "amount": 4758.2
+          },
+          {
+            "upTo": null,
+            "ratePerUnit": 573.88
+          }
+        ]
+      },
+      "config": {
+        "dayTypes": [
+          {
+            "name": "平日",
+            "weekdays": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "includesHoliday": false,
+            "includesSpecialDay": false
+          },
+          {
+            "name": "休日",
+            "weekdays": [
+              6,
+              7
+            ],
+            "includesHoliday": true,
+            "includesSpecialDay": true
+          }
+        ],
+        "seasons": [
+          {
+            "name": "夏冬",
+            "months": [
+              1,
+              2,
+              7,
+              8,
+              9,
+              12
+            ]
+          },
+          {
+            "name": "春秋",
+            "months": [
+              3,
+              4,
+              5,
+              6,
+              10,
+              11
+            ]
+          }
+        ],
+        "rateSchedules": [
+          {
+            "dayType": 0,
+            "season": 0,
+            "timeOfUse": [
+              {
+                "startHour": 7,
+                "endHour": 21,
+                "rate": 27.63
+              },
+              {
+                "startHour": 21,
+                "endHour": 7,
+                "rate": 14.59
+              }
+            ]
+          },
+          {
+            "dayType": 0,
+            "season": 1,
+            "timeOfUse": [
+              {
+                "startHour": 7,
+                "endHour": 21,
+                "rate": 24.74
+              },
+              {
+                "startHour": 21,
+                "endHour": 7,
+                "rate": 14.59
+              }
+            ]
+          },
+          {
+            "dayType": 1,
+            "season": 0,
+            "timeOfUse": [
+              {
+                "startHour": 7,
+                "endHour": 21,
+                "rate": 22.01
+              },
+              {
+                "startHour": 21,
+                "endHour": 7,
+                "rate": 14.59
+              }
+            ]
+          },
+          {
+            "dayType": 1,
+            "season": 1,
+            "timeOfUse": [
+              {
+                "startHour": 7,
+                "endHour": 21,
+                "rate": 18.61
+              },
+              {
+                "startHour": 21,
+                "endHour": 7,
+                "rate": 14.59
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "planKey": "kyuden_denka_de_night_22_202404",
+      "companyKey": "kyuden",
+      "displayName": "電化でナイト・セレクト22",
+      "displayVersion": "2024年4月版",
+      "asOf": "2024-04-01",
+      "deprecatedAt": null,
+      "supersededBy": null,
+      "companyName": "九州電力",
+      "planName": "電化でナイト・セレクト22",
+      "area": "九州",
+      "url": "https://customer.kyuden.co.jp/ja/electricity/home-plan/denka-de-night.html",
+      "note": "実量制。22-8時を夜間とするバリエーション（標準）",
+      "basicChargeStructure": {
+        "unit": "kW",
+        "tiers": [
+          {
+            "upTo": 10,
+            "amount": 1888.8
+          },
+          {
+            "upTo": 15,
+            "amount": 4758.2
+          },
+          {
+            "upTo": null,
+            "ratePerUnit": 573.88
+          }
+        ]
+      },
+      "config": {
+        "dayTypes": [
+          {
+            "name": "平日",
+            "weekdays": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "includesHoliday": false,
+            "includesSpecialDay": false
+          },
+          {
+            "name": "休日",
+            "weekdays": [
+              6,
+              7
+            ],
+            "includesHoliday": true,
+            "includesSpecialDay": true
+          }
+        ],
+        "seasons": [
+          {
+            "name": "夏冬",
+            "months": [
+              1,
+              2,
+              7,
+              8,
+              9,
+              12
+            ]
+          },
+          {
+            "name": "春秋",
+            "months": [
+              3,
+              4,
+              5,
+              6,
+              10,
+              11
+            ]
+          }
+        ],
+        "rateSchedules": [
+          {
+            "dayType": 0,
+            "season": 0,
+            "timeOfUse": [
+              {
+                "startHour": 8,
+                "endHour": 22,
+                "rate": 27.63
+              },
+              {
+                "startHour": 22,
+                "endHour": 8,
+                "rate": 14.59
+              }
+            ]
+          },
+          {
+            "dayType": 0,
+            "season": 1,
+            "timeOfUse": [
+              {
+                "startHour": 8,
+                "endHour": 22,
+                "rate": 24.74
+              },
+              {
+                "startHour": 22,
+                "endHour": 8,
+                "rate": 14.59
+              }
+            ]
+          },
+          {
+            "dayType": 1,
+            "season": 0,
+            "timeOfUse": [
+              {
+                "startHour": 8,
+                "endHour": 22,
+                "rate": 22.01
+              },
+              {
+                "startHour": 22,
+                "endHour": 8,
+                "rate": 14.59
+              }
+            ]
+          },
+          {
+            "dayType": 1,
+            "season": 1,
+            "timeOfUse": [
+              {
+                "startHour": 8,
+                "endHour": 22,
+                "rate": 18.61
+              },
+              {
+                "startHour": 22,
+                "endHour": 8,
+                "rate": 14.59
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "planKey": "kyuden_denka_de_night_23_202404",
+      "companyKey": "kyuden",
+      "displayName": "電化でナイト・セレクト23",
+      "displayVersion": "2024年4月版",
+      "asOf": "2024-04-01",
+      "deprecatedAt": null,
+      "supersededBy": null,
+      "companyName": "九州電力",
+      "planName": "電化でナイト・セレクト23",
+      "area": "九州",
+      "url": "https://customer.kyuden.co.jp/ja/electricity/home-plan/denka-de-night.html",
+      "note": "実量制。23-9時を夜間とするバリエーション",
+      "basicChargeStructure": {
+        "unit": "kW",
+        "tiers": [
+          {
+            "upTo": 10,
+            "amount": 1888.8
+          },
+          {
+            "upTo": 15,
+            "amount": 4758.2
+          },
+          {
+            "upTo": null,
+            "ratePerUnit": 573.88
+          }
+        ]
+      },
+      "config": {
+        "dayTypes": [
+          {
+            "name": "平日",
+            "weekdays": [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            "includesHoliday": false,
+            "includesSpecialDay": false
+          },
+          {
+            "name": "休日",
+            "weekdays": [
+              6,
+              7
+            ],
+            "includesHoliday": true,
+            "includesSpecialDay": true
+          }
+        ],
+        "seasons": [
+          {
+            "name": "夏冬",
+            "months": [
+              1,
+              2,
+              7,
+              8,
+              9,
+              12
+            ]
+          },
+          {
+            "name": "春秋",
+            "months": [
+              3,
+              4,
+              5,
+              6,
+              10,
+              11
+            ]
+          }
+        ],
+        "rateSchedules": [
+          {
+            "dayType": 0,
+            "season": 0,
+            "timeOfUse": [
+              {
+                "startHour": 9,
+                "endHour": 23,
+                "rate": 27.63
+              },
+              {
+                "startHour": 23,
+                "endHour": 9,
+                "rate": 14.59
+              }
+            ]
+          },
+          {
+            "dayType": 0,
+            "season": 1,
+            "timeOfUse": [
+              {
+                "startHour": 9,
+                "endHour": 23,
+                "rate": 24.74
+              },
+              {
+                "startHour": 23,
+                "endHour": 9,
+                "rate": 14.59
+              }
+            ]
+          },
+          {
+            "dayType": 1,
+            "season": 0,
+            "timeOfUse": [
+              {
+                "startHour": 9,
+                "endHour": 23,
+                "rate": 22.01
+              },
+              {
+                "startHour": 23,
+                "endHour": 9,
+                "rate": 14.59
+              }
+            ]
+          },
+          {
+            "dayType": 1,
+            "season": 1,
+            "timeOfUse": [
+              {
+                "startHour": 9,
+                "endHour": 23,
+                "rate": 18.61
+              },
+              {
+                "startHour": 23,
+                "endHour": 9,
+                "rate": 14.59
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
