@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-04-25",
+  "publishedAt": "2026-05-04",
   "items": [
     {
       "companyKey": "hepco",
@@ -3630,8 +3630,8 @@
       "companyKey": "yonden",
       "year": 2025,
       "month": 7,
-      "freeRate": -6.22,
-      "regulatedRate": -6.22,
+      "freeRate": -6.62,
+      "regulatedRate": -6.62,
       "publishedAt": "2025-07-01"
     },
     {
@@ -4102,32 +4102,32 @@
       "companyKey": "kyuden",
       "year": 2025,
       "month": 8,
-      "freeRate": 1.28,
-      "regulatedRate": 1.28,
+      "freeRate": 1.26,
+      "regulatedRate": 1.26,
       "publishedAt": "2025-08-01"
     },
     {
       "companyKey": "kyuden",
       "year": 2025,
       "month": 9,
-      "freeRate": 1.09,
-      "regulatedRate": 1.09,
+      "freeRate": 1.06,
+      "regulatedRate": 1.06,
       "publishedAt": "2025-09-01"
     },
     {
       "companyKey": "kyuden",
       "year": 2025,
       "month": 10,
-      "freeRate": 0.98,
-      "regulatedRate": 0.98,
+      "freeRate": 0.94,
+      "regulatedRate": 0.94,
       "publishedAt": "2025-10-01"
     },
     {
       "companyKey": "kyuden",
       "year": 2025,
       "month": 11,
-      "freeRate": 1.1,
-      "regulatedRate": 1.01,
+      "freeRate": 0.97,
+      "regulatedRate": 0.97,
       "publishedAt": "2025-11-01"
     },
     {
@@ -4174,8 +4174,8 @@
       "companyKey": "kyuden",
       "year": 2026,
       "month": 5,
-      "freeRate": 1.28,
-      "regulatedRate": 1.28,
+      "freeRate": 1.24,
+      "regulatedRate": 1.24,
       "publishedAt": "2026-05-01"
     }
   ]
