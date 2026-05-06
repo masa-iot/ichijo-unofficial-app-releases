@@ -555,6 +555,7 @@
     <li class="sub2"><a href="#diff-zoom">ズーム・パン</a></li>
     <li class="sub2"><a href="#diff-export">画像エクスポート</a></li>
     <li><a href="#alignment">位置合わせ画面</a></li>
+    <li><a href="#size-alignment">サイズ合わせ画面</a></li>
     <li class="sub"><a href="#diff-actions">操作リファレンス</a></li>
   </ul>
 
@@ -1398,7 +1399,7 @@
   </figure>
   <figure class="shot-phone">
     <img src="images/diff_result.webp" width="720" height="1564" alt="差分結果画面（位置がずれた状態）" loading="lazy" decoding="async">
-    <figcaption>位置がずれている例：図面全体がずれていると、本来の変更箇所以外にも赤青がたくさん出てしまいます。こんな見え方になったら <a href="#alignment">「位置調整」機能</a> で揃えましょう</figcaption>
+    <figcaption>位置がずれている例：図面全体がずれていると、本来の変更箇所以外にも赤青がたくさん出てしまいます。こんな見え方になったら <a href="#alignment">「位置合わせ」機能</a> や <a href="#size-alignment">「サイズ合わせ」機能</a> で揃えましょう</figcaption>
   </figure>
 </div>
 
@@ -1422,7 +1423,7 @@
   <li><strong>タイトル</strong>：図面番号の旧→新（例：2-6 → 2-7）、単独モード時はファイル名</li>
   <li><strong>メモアイコン</strong>：このページのメモ一覧</li>
   <li><strong>🔖 ブックマーク</strong>：この比較結果を登録／解除</li>
-  <li><strong>位置合わせ（手動調整）アイコン</strong>：<a href="#alignment">位置合わせ画面</a>へ</li>
+  <li><strong>「調整 ▾」メニュー</strong>：<a href="#alignment">位置合わせ画面</a> または <a href="#size-alignment">サイズ合わせ画面</a> を選択</li>
   <li><strong>エクスポートアイコン</strong>：画像保存／共有</li>
 </ul>
 
@@ -1478,7 +1479,7 @@
 </div>
 
 <h4 id="diff-adjusted">調整済 / 元の差分 切替</h4>
-<p>手動で位置合わせを行ったページでは、画面右上に「調整済 / 元の差分」の切替スイッチが表示されます。調整結果を適用した差分と、自動位置合わせ時の差分を比較できます。</p>
+<p>位置合わせ または サイズ合わせ を適用したページでは、画面右上に「調整済 / 元の差分」の切替スイッチが表示されます。調整結果を適用した差分と、自動位置合わせ時の差分を比較できます。</p>
 <p>※フィルタレベルが「しっかり」以外の場合、このスイッチは無効になります（常に調整済を表示）。</p>
 
 <figure class="shot-phone">
@@ -1526,7 +1527,12 @@
 <p>差分結果画面の気になる位置を長押しすると、その座標にピンが立ち、メモを残せます。詳細は <a href="#memo-on-diff">ウチメモ+ ＞ CAD差分画面のピンメモ</a> を参照。</p>
 
 <h3 id="alignment">位置合わせ画面</h3>
-<p>差分結果でズレが大きいときに、手動で旧図の位置を調整する画面です。差分結果の画面上部のボタンから遷移します。</p>
+<p>差分結果で位置がずれているときに、手動で旧図の位置を調整する画面です。差分結果画面の右上「<strong>調整 ▾</strong>」メニュー → 「位置合わせ」を選んで遷移します。</p>
+
+<figure class="shot-phone">
+  <img src="images/cad_adjust_menu.webp" width="720" height="1564" alt="「調整 ▾」メニュー（位置合わせ / サイズ合わせ）" loading="lazy" decoding="async">
+  <figcaption>「調整 ▾」メニュー：位置合わせ / サイズ合わせ の 2 種を選べる</figcaption>
+</figure>
 
 <p>画面上部のヘルプバナーに、以下の3ステップが表示されます。</p>
 <ol>
@@ -1572,6 +1578,48 @@
   <p>調整した結果は <strong>ページ単位</strong> で保存されます。ほかのページには影響しません。</p>
 </div>
 
+<h3 id="size-alignment">サイズ合わせ画面</h3>
+<p>旧版と新版で印刷のスケール（縮尺）が違うときに、図面の大きさを揃えるための画面です。差分結果画面の右上「<strong>調整 ▾</strong>」メニュー → 「サイズ合わせ」を選んで遷移します。</p>
+
+<div class="callout tip">
+  <p>普段は <a href="#alignment">位置合わせ</a> だけで十分です。図面のスケールが版間で変わってしまった場合に限ってこの機能を使ってください。</p>
+</div>
+
+<p>画面には旧版と新版が並んで表示され、各図面に①②の枠を配置して<strong>同じ場所を 2 ヶ所マーク</strong>することで、新版と旧版の大きさの比を算出します。</p>
+
+<h4>操作の流れ</h4>
+<ol>
+  <li>①②の枠を、それぞれの図面で<strong>同じ場所</strong>にドラッグして配置</li>
+  <li>枠が点線（グリッド線）の交わる場所に重なると、「<strong>検出OK</strong>」と緑のバッジが表示されます</li>
+  <li>4 ヶ所すべて検出できたら、画面下の「<strong>サイズを比較</strong>」を押します</li>
+  <li>「<strong>比較結果：新版は旧版の XX%</strong>」が表示されます</li>
+  <li>右上の「<strong>適用</strong>」を押すと、差分結果画面で大きさを揃え直して再計算します</li>
+</ol>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/cad_size_detected.webp" width="720" height="1564" alt="サイズ合わせ画面：4 ヶ所すべて「検出OK」状態" loading="lazy" decoding="async">
+    <figcaption>4 ヶ所すべて「検出OK」になった状態：「サイズを比較」が押せる</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/cad_size_result.webp" width="720" height="1564" alt="サイズ合わせ画面：比較結果（新版は旧版の 100%）" loading="lazy" decoding="async">
+    <figcaption>比較完了：新版と旧版の大きさの比が表示される</figcaption>
+  </figure>
+</div>
+
+<h4>操作方法</h4>
+<ul>
+  <li><strong>①②の枠（緑・オレンジ）のドラッグ</strong>：枠を画面内で移動・サイズ変更</li>
+  <li><strong>「+」 / 「−」ボタン</strong>（各図面の右下）：図面の拡大 / 縮小</li>
+  <li><strong>「①②をここに置き直す」</strong>：現在の表示位置に①②をリセット配置</li>
+  <li><strong>「サイズを比較」 / 「もう一度比較」</strong>（画面下）：4 ヶ所の枠の位置から大きさの比を計算</li>
+  <li><strong>右上「適用」</strong>：算出した大きさを差分画面に反映</li>
+</ul>
+
+<div class="callout note">
+  <p>サイズ合わせの結果は<strong>ページ単位</strong>で保存されます。同じ比較を再度開いたときは前回の結果がそのまま反映されます。</p>
+</div>
+
 <h3 id="diff-actions">操作リファレンス</h3>
 <div class="action-box">
   <div class="action-row"><strong>種別セグメント</strong><span>CAD図面 / 電気図面 切替</span></div>
@@ -1587,7 +1635,10 @@
   <div class="action-row"><strong>ピンチ・ダブルタップ</strong><span>最大8倍ズーム</span></div>
   <div class="action-row"><strong>画面長押し</strong><span>その位置にメモを追加（ピンメモ）</span></div>
   <div class="action-row"><strong>エクスポートアイコン</strong><span>現在の1枚 or 3枚まとめ</span></div>
-  <div class="action-row"><strong>位置合わせアイコン</strong><span>手動調整画面へ</span></div>
+  <div class="action-row"><strong>「調整 ▾」メニュー</strong><span>位置合わせ / サイズ合わせ を選択</span></div>
+  <div class="action-row"><strong>サイズ合わせ：枠ドラッグ</strong><span>①②を点線（グリッド線）の交わる場所に配置</span></div>
+  <div class="action-row"><strong>サイズ合わせ：「サイズを比較」</strong><span>4 ヶ所から大きさの比を算出</span></div>
+  <div class="action-row"><strong>サイズ合わせ：「適用」</strong><span>差分結果画面に反映</span></div>
   <div class="action-row"><strong>ブックマークアイコン</strong><span>登録／解除</span></div>
 </div>
 
