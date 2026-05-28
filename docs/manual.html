@@ -671,13 +671,15 @@
   <h4>設定</h4>
   <ul>
     <li><a href="#settings">設定</a></li>
+    <li class="sub"><a href="#settings-premium">プレミアム</a></li>
     <li class="sub"><a href="#settings-backup">バックアップ</a></li>
     <li class="sub"><a href="#settings-rebuild">データ管理</a></li>
     <li class="sub"><a href="#settings-mode">モード切替</a></li>
     <li class="sub"><a href="#settings-display">表示</a></li>
     <li class="sub"><a href="#settings-theme">テーマ</a></li>
+    <li class="sub"><a href="#settings-language">言語</a></li>
     <li class="sub"><a href="#settings-demo">デモモード</a></li>
-    <li class="sub"><a href="#settings-info">アプリ情報</a></li>
+    <li class="sub"><a href="#settings-info">アプリ</a></li>
     <li class="sub"><a href="#settings-devmode">開発者モード</a></li>
     <li class="sub"><a href="#settings-actions">操作リファレンス</a></li>
   </ul>
@@ -1247,6 +1249,7 @@
       <li>✏️ <strong>編集</strong>：このファイルの情報（ファイル名・図面番号・種別）を編集（詳細は <a href="#doc-metadata-edit">ファイル情報の編集</a>）</li>
       <li>🔖 <strong>ブックマーク</strong>：このPDFをブックマーク登録／解除（トグル）</li>
       <li>📝 <strong>ページメモバッジ</strong>：このページにメモが1件以上あるときのみ表示。タップで当該ページのメモ一覧</li>
+      <li>↗️ <strong>他のアプリで開く</strong>：共有メニューを表示し、Adobe Reader 等の外部アプリでPDFを開けます</li>
     </ul>
   </li>
   <li><strong>画面右下の丸ボタン（オレンジ）</strong>：現在ページへのメモを追加</li>
@@ -1259,6 +1262,7 @@
   <li><strong>ピンチズーム</strong>：拡大縮小</li>
   <li><strong>右下の丸ボタンのタップ</strong>：現在ページにメモを追加</li>
   <li><strong>ブックマークアイコン</strong>：登録／解除トグル</li>
+  <li><strong>↗️ アイコン</strong>：他のアプリで開く（共有メニュー経由）</li>
 </ul>
 
 <div class="gallery">
@@ -1296,6 +1300,7 @@
   <div class="action-row"><strong>PDFビューアのページメモバッジ</strong><span>当該ページのメモ一覧を表示</span></div>
   <div class="action-row"><strong>PDFビューアの ✏️ アイコン</strong><span>ファイル情報の編集ダイアログを開く</span></div>
   <div class="action-row"><strong>PDFビューアのブックマークアイコン</strong><span>登録／解除トグル</span></div>
+  <div class="action-row"><strong>PDFビューアの ↗️ アイコン</strong><span>他のアプリで開く（共有メニュー）</span></div>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
@@ -2908,20 +2913,21 @@
 </ol>
 
 <h5 id="electricity-recovery">投資回収ゴール</h5>
-<p>太陽光・蓄電池の初期投資額を目標金額として設定すると、現在の回収進捗と将来予測が表示されます。</p>
+<p>太陽光パネルや蓄電池などの初期投資額を目標金額として設定すると、現在の回収進捗と将来予測が表示されます。目標は<strong>最大5件まで</strong>登録でき、それぞれ名前・金額・色を設定してグラフ上に色分け表示されます。</p>
 <ul>
-  <li><strong>目標金額</strong>：「目標金額を設定」ボタンから円単位で入力（後から変更／解除可能）</li>
-  <li><strong>回収率</strong>：累計の得した合計 ÷ 目標金額 × 100%。プログレスバーで視覚化</li>
-  <li><strong>回収予測グラフ</strong>：過去実績の傾向から、目標到達時期を時系列で予測。FIT → 卒FIT の売電単価変動も織り込み</li>
+  <li><strong>目標金額</strong>：「目標金額を変更」ボタンから追加・編集・削除。目標ごとに名前と金額（円単位）を入力</li>
+  <li><strong>回収率</strong>：目標ごとに、累計の得した合計 ÷ 目標金額 × 100%。プログレスバーに色付きマーカーで表示</li>
+  <li><strong>回収予測グラフ</strong>：過去実績の傾向から、目標到達時期を時系列で予測。FIT → 卒FIT の売電単価変動も織り込み。目標ごとに色分けされた破線で表示</li>
+  <li><strong>表示期間</strong>：グラフ上部のセグメントで 5年／10年／15年／20年／自動 を切り替え可能。「自動」は目標到達予想に応じた最適な期間を選択</li>
 </ul>
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/electricity_target_dialog.webp" width="720" height="1564" alt="目標金額の設定ダイアログ" loading="lazy" decoding="async">
-    <figcaption>目標金額を入力</figcaption>
+    <img src="images/electricity_target_dialog.webp" width="720" height="1564" alt="目標金額の追加ダイアログ（複数目標＋名前・金額入力）" loading="lazy" decoding="async">
+    <figcaption>目標の追加（名前と金額を入力）</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/electricity_recovery_chart.webp" width="720" height="1564" alt="投資回収ゴール＋回収予測グラフ" loading="lazy" decoding="async">
-    <figcaption>回収率バー＋回収予測グラフ</figcaption>
+    <img src="images/electricity_recovery_chart.webp" width="720" height="1564" alt="回収予測グラフ（複数目標の色分け表示＋期間セレクタ）" loading="lazy" decoding="async">
+    <figcaption>回収予測グラフ（複数目標＋期間切替）</figcaption>
   </figure>
 </div>
 
@@ -2966,8 +2972,10 @@
   <div class="action-row"><strong>日付タップ（ヒートマップ）</strong><span>その日の時間別詳細をボトムシートで表示</span></div>
   <div class="action-row"><strong>月タップ（年間：月別一覧）</strong><span>月次レポートへジャンプ</span></div>
   <div class="action-row"><strong>右上 CSVエクスポート</strong><span>月次／年間レポートを CSV で書き出し</span></div>
-  <div class="action-row"><strong>右上メニュー</strong><span>CSVインポート／料金プラン設定／再計算</span></div>
-  <div class="action-row"><strong>「目標金額を設定」ボタン</strong><span>投資回収ゴールを設定／変更／解除</span></div>
+  <div class="action-row"><strong>右上メニュー</strong><span>CSVインポート／料金プラン設定／再計算／実績データ削除</span></div>
+  <div class="action-row"><strong>「目標金額を変更」ボタン</strong><span>投資回収ゴールの追加・編集・削除（最大5件）</span></div>
+  <div class="action-row"><strong>期間セレクタ（5年/10年/15年/20年/自動）</strong><span>回収予測グラフの表示期間を切替</span></div>
+  <div class="action-row"><strong>実績データ削除（右上メニュー）</strong><span>月次：当月／年次：当年／通算：年＋月ツリーピッカーで選択削除</span></div>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
@@ -3289,16 +3297,53 @@
     <figcaption>ホームから「設定」タイルをタップ</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/settings.webp" width="720" height="1564" alt="設定画面（上半分：バックアップ／データ管理／モード切替／表示）" loading="lazy" decoding="async">
+    <img src="images/settings.webp" width="720" height="1564" alt="設定画面（上半分：個人設定／プレミアム／データ管理）" loading="lazy" decoding="async">
     <figcaption>設定 上半分</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/settings_scroll.webp" width="720" height="1564" alt="設定画面（下半分：テーマ／デモモード／アプリ情報）" loading="lazy" decoding="async">
+    <img src="images/settings_scroll.webp" width="720" height="1564" alt="設定画面（下半分：表示／アプリ）" loading="lazy" decoding="async">
     <figcaption>設定 下半分</figcaption>
   </figure>
 </div>
 
-<p>設定画面はセクション区切りで以下の項目が並びます。</p>
+<p>設定画面は 5 つのセクションで構成されています。</p>
+<ol>
+  <li><strong>個人設定</strong>：マイページ、ホームバナー表示</li>
+  <li><strong>プレミアム</strong>：広告非表示の購入・復元</li>
+  <li><strong>データ管理</strong>：バックアップ、復元、データ再構築、デモモード</li>
+  <li><strong>表示</strong>：モード切替、カウンター表示、テーマ、言語</li>
+  <li><strong>アプリ</strong>：レビュー、フィードバック、チュートリアル、マニュアル、バージョン、ライセンス</li>
+</ol>
+
+<h3 id="settings-premium">プレミアム（広告なし）</h3>
+<p>買い切り型の課金で、アプリ内の広告バナーを非表示にできます。購入すると設定画面のプレミアムカードが「有効」表示に切り替わり、ホーム画面の AppBar に「Premium」バッジが表示されます。</p>
+<ul>
+  <li><strong>購入ボタン</strong>：タップすると確認ダイアログ → ストアの購入フローへ</li>
+  <li><strong>機種変更などで購入を復元</strong>：同じ Apple ID／Google アカウントで再インストールした場合、タップで購入状態を復元</li>
+</ul>
+
+<div class="callout info">
+  <p>デモモード中はプレミアムセクションが非表示になります（デモでは常に広告なし）。</p>
+</div>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/settings_premium.webp" width="720" height="682" alt="プレミアム購入カード（未購入状態）" loading="lazy" decoding="async">
+    <figcaption>未購入状態</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/settings_premium_confirm.webp" width="720" height="885" alt="プレミアム購入確認ダイアログ" loading="lazy" decoding="async">
+    <figcaption>購入確認ダイアログ</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/settings_premium_active.webp" width="720" height="507" alt="プレミアム有効状態（購入済み）" loading="lazy" decoding="async">
+    <figcaption>購入済み（有効）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/home_premium_badge.webp" width="720" height="653" alt="ホーム画面の Premium バッジ" loading="lazy" decoding="async">
+    <figcaption>ホームの Premium バッジ</figcaption>
+  </figure>
+</div>
 
 <h3 id="settings-backup">バックアップ</h3>
 <table>
@@ -3374,9 +3419,17 @@
   <li><strong>ダーク</strong>：黒基調の固定</li>
 </ul>
 <figure class="shot-phone">
-  <img src="images/settings_theme.webp" width="720" height="1564" alt="テーマ選択セグメント" loading="lazy" decoding="async">
-  <figcaption>テーマ選択</figcaption>
+  <img src="images/settings_theme.webp" width="720" height="1564" alt="ダークモード選択時の設定画面（テーマ＋言語切替）" loading="lazy" decoding="async">
+  <figcaption>テーマ選択（ダークモード表示例）</figcaption>
 </figure>
+
+<h3 id="settings-language">言語</h3>
+<p>アプリの表示言語を切り替えます。</p>
+<ul>
+  <li><strong>日本語</strong>：日本語表示（デフォルト）</li>
+  <li><strong>English</strong>：英語表示</li>
+</ul>
+<p>初回起動時は端末の OS 言語設定に自動追従します。手動で切り替えた場合はその選択が優先されます。</p>
 
 <h3 id="settings-demo">デモモード</h3>
 <p>トグルスイッチでON／OFF。ONにするとダミーデータが投入され、OFFに戻すと削除されます。<strong>切替時は一度アプリを再起動する必要があります</strong>。</p>
@@ -3414,11 +3467,14 @@
   </figure>
 </div>
 
-<h3 id="settings-info">アプリ情報</h3>
+<h3 id="settings-info">アプリ</h3>
 <ul>
+  <li><strong>アプリをレビューする</strong>：ストアの評価画面を開きます</li>
+  <li><strong>ご意見・不具合の報告</strong>：メールで開発者にフィードバックを送信（端末情報が自動で添付されます）</li>
   <li><strong id="settings-tutorial">チュートリアルを再表示</strong>：タップで <a href="#onboarding">オンボーディング</a>（5ページチュートリアル）に遷移します</li>
+  <li><strong>ユーザーマニュアル</strong>：このマニュアルをブラウザで開きます</li>
   <li><strong>バージョン</strong>：現在のアプリバージョン（タップに反応 — 7回連続タップで開発者モード有効化）</li>
-  <li><strong>アップデートの確認</strong>（Android・非ストア版のみ）：新バージョンのチェック</li>
+  <li><strong>オープンソースライセンス</strong>：使用している OSS／フォントのライセンス一覧を表示</li>
 </ul>
 
 <h3 id="settings-devmode">開発者モード（隠しモード）</h3>
@@ -3448,12 +3504,17 @@
 
 <h3 id="settings-actions">操作リファレンス</h3>
 <div class="action-box">
+  <div class="action-row"><strong>プレミアム購入ボタン</strong><span>広告非表示を購入（買い切り）</span></div>
+  <div class="action-row"><strong>購入を復元</strong><span>機種変更後に購入状態を復元</span></div>
   <div class="action-row"><strong>バックアップ作成タップ</strong><span>Zip作成→共有メニュー</span></div>
   <div class="action-row"><strong>バックアップ復元タップ</strong><span>ファイル選択→確認→復元→再起動（iOSは手動終了）</span></div>
   <div class="action-row"><strong>再構築タップ</strong><span>確認→全PDFを再パース</span></div>
   <div class="action-row"><strong>モード切替トグル</strong><span>家づくり↔暮らし</span></div>
-  <div class="action-row"><strong>テーマ選択</strong><span>ラジオボタンから選択</span></div>
+  <div class="action-row"><strong>テーマ選択</strong><span>セグメントから選択</span></div>
+  <div class="action-row"><strong>言語選択</strong><span>日本語／English 切替</span></div>
   <div class="action-row"><strong>デモモードトグル</strong><span>ダミーデータ投入/削除</span></div>
+  <div class="action-row"><strong>アプリをレビューする</strong><span>ストアの評価画面へ</span></div>
+  <div class="action-row"><strong>ご意見・不具合の報告</strong><span>メールでフィードバック送信</span></div>
   <div class="action-row"><strong>バージョン行7タップ</strong><span>開発者モード有効化</span></div>
 </div>
 
