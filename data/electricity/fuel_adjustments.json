@@ -2875,6 +2875,14 @@
       "publishedAt": "2026-06-01"
     },
     {
+      "companyKey": "kepco",
+      "year": 2026,
+      "month": 7,
+      "freeRate": 3.07,
+      "regulatedRate": 2.24,
+      "publishedAt": "2026-07-01"
+    },
+    {
       "companyKey": "energia",
       "year": 2021,
       "month": 8,
