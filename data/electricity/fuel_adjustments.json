@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-05-04",
+  "publishedAt": "2026-05-31",
   "items": [
     {
       "companyKey": "hepco",
@@ -467,6 +467,22 @@
       "publishedAt": "2026-05-01"
     },
     {
+      "companyKey": "hepco",
+      "year": 2026,
+      "month": 6,
+      "freeRate": -7.17,
+      "regulatedRate": -7.17,
+      "publishedAt": "2026-06-01"
+    },
+    {
+      "companyKey": "hepco",
+      "year": 2026,
+      "month": 7,
+      "freeRate": -6.88,
+      "regulatedRate": -6.88,
+      "publishedAt": "2026-07-01"
+    },
+    {
       "companyKey": "tohoku_epco",
       "year": 2021,
       "month": 8,
@@ -929,6 +945,22 @@
       "freeRate": -8.42,
       "regulatedRate": -8.42,
       "publishedAt": "2026-05-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2026,
+      "month": 6,
+      "freeRate": -8.36,
+      "regulatedRate": -8.36,
+      "publishedAt": "2026-06-01"
+    },
+    {
+      "companyKey": "tohoku_epco",
+      "year": 2026,
+      "month": 7,
+      "freeRate": -8.22,
+      "regulatedRate": -8.22,
+      "publishedAt": "2026-07-01"
     },
     {
       "companyKey": "tepco",
@@ -1395,6 +1427,22 @@
       "publishedAt": "2026-05-01"
     },
     {
+      "companyKey": "tepco",
+      "year": 2026,
+      "month": 6,
+      "freeRate": -7.3,
+      "regulatedRate": -7.3,
+      "publishedAt": "2026-06-01"
+    },
+    {
+      "companyKey": "tepco",
+      "year": 2026,
+      "month": 7,
+      "freeRate": -7.19,
+      "regulatedRate": -7.19,
+      "publishedAt": "2026-07-01"
+    },
+    {
       "companyKey": "chuden_miraiz",
       "year": 2021,
       "month": 8,
@@ -1857,6 +1905,22 @@
       "freeRate": 1.26,
       "regulatedRate": 1.26,
       "publishedAt": "2026-05-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2026,
+      "month": 6,
+      "freeRate": 1.35,
+      "regulatedRate": 1.35,
+      "publishedAt": "2026-06-01"
+    },
+    {
+      "companyKey": "chuden_miraiz",
+      "year": 2026,
+      "month": 7,
+      "freeRate": 1.49,
+      "regulatedRate": 1.49,
+      "publishedAt": "2026-07-01"
     },
     {
       "companyKey": "rikuden",
@@ -2323,6 +2387,22 @@
       "publishedAt": "2026-05-01"
     },
     {
+      "companyKey": "rikuden",
+      "year": 2026,
+      "month": 6,
+      "freeRate": -7.69,
+      "regulatedRate": -7.69,
+      "publishedAt": "2026-06-01"
+    },
+    {
+      "companyKey": "rikuden",
+      "year": 2026,
+      "month": 7,
+      "freeRate": -7.54,
+      "regulatedRate": -7.54,
+      "publishedAt": "2026-07-01"
+    },
+    {
       "companyKey": "kepco",
       "year": 2021,
       "month": 8,
@@ -2782,9 +2862,17 @@
       "companyKey": "kepco",
       "year": 2026,
       "month": 5,
-      "freeRate": 2.90,
+      "freeRate": 2.9,
       "regulatedRate": 2.24,
       "publishedAt": "2026-05-01"
+    },
+    {
+      "companyKey": "kepco",
+      "year": 2026,
+      "month": 6,
+      "freeRate": 2.97,
+      "regulatedRate": 2.24,
+      "publishedAt": "2026-06-01"
     },
     {
       "companyKey": "energia",
@@ -3251,6 +3339,22 @@
       "publishedAt": "2026-05-01"
     },
     {
+      "companyKey": "energia",
+      "year": 2026,
+      "month": 6,
+      "freeRate": -9.76,
+      "regulatedRate": -9.76,
+      "publishedAt": "2026-06-01"
+    },
+    {
+      "companyKey": "energia",
+      "year": 2026,
+      "month": 7,
+      "freeRate": -9.57,
+      "regulatedRate": -9.57,
+      "publishedAt": "2026-07-01"
+    },
+    {
       "companyKey": "yonden",
       "year": 2021,
       "month": 8,
@@ -3715,6 +3819,22 @@
       "publishedAt": "2026-05-01"
     },
     {
+      "companyKey": "yonden",
+      "year": 2026,
+      "month": 6,
+      "freeRate": -6.93,
+      "regulatedRate": -6.93,
+      "publishedAt": "2026-06-01"
+    },
+    {
+      "companyKey": "yonden",
+      "year": 2026,
+      "month": 7,
+      "freeRate": -6.75,
+      "regulatedRate": -6.75,
+      "publishedAt": "2026-07-01"
+    },
+    {
       "companyKey": "kyuden",
       "year": 2021,
       "month": 8,
@@ -4177,6 +4297,22 @@
       "freeRate": 1.24,
       "regulatedRate": 1.24,
       "publishedAt": "2026-05-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2026,
+      "month": 6,
+      "freeRate": 1.29,
+      "regulatedRate": 1.29,
+      "publishedAt": "2026-06-01"
+    },
+    {
+      "companyKey": "kyuden",
+      "year": 2026,
+      "month": 7,
+      "freeRate": 1.39,
+      "regulatedRate": 1.39,
+      "publishedAt": "2026-07-01"
     }
   ]
 }

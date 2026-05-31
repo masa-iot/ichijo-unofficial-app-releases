@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-04-25",
+  "publishedAt": "2026-05-31",
   "items": [
     {
       "subsidyKey": "gov_2023_02",
@@ -233,6 +233,30 @@
       "rate": -1.5,
       "note": "電気・ガス価格激変緩和対策事業（再構築）",
       "publishedAt": "2026-04-01"
+    },
+    {
+      "subsidyKey": "gov_2026_08",
+      "year": 2026,
+      "month": 8,
+      "rate": -3.5,
+      "note": "電気・ガス料金支援（2026年7月使用分）",
+      "publishedAt": "2026-08-01"
+    },
+    {
+      "subsidyKey": "gov_2026_09",
+      "year": 2026,
+      "month": 9,
+      "rate": -4.5,
+      "note": "電気・ガス料金支援（2026年8月使用分）",
+      "publishedAt": "2026-09-01"
+    },
+    {
+      "subsidyKey": "gov_2026_10",
+      "year": 2026,
+      "month": 10,
+      "rate": -3.5,
+      "note": "電気・ガス料金支援（2026年9月使用分）",
+      "publishedAt": "2026-10-01"
     }
   ]
 }
