@@ -645,6 +645,20 @@
     <li class="sub"><a href="#electricity-actions">操作リファレンス</a></li>
   </ul>
 
+  <h4>お手入れ当番表</h4>
+  <ul>
+    <li><a href="#maintenance">お手入れ当番表</a></li>
+    <li class="sub"><a href="#maintenance-overview">画面構成</a></li>
+    <li class="sub"><a href="#maintenance-add">お手入れの追加</a></li>
+    <li class="sub"><a href="#maintenance-done">実施の記録（消し込み）</a></li>
+    <li class="sub"><a href="#maintenance-detail">詳細シート</a></li>
+    <li class="sub"><a href="#maintenance-edit">編集画面</a></li>
+    <li class="sub"><a href="#maintenance-rooms">部屋の管理</a></li>
+    <li class="sub"><a href="#maintenance-consumables">消耗品と在庫</a></li>
+    <li class="sub"><a href="#maintenance-notifications">通知</a></li>
+    <li class="sub"><a href="#maintenance-actions">操作リファレンス</a></li>
+  </ul>
+
   <h4>マイページ</h4>
   <ul>
     <li><a href="#mypage">マイページ</a></li>
@@ -709,6 +723,7 @@
   <a href="#memo" style="--tile-color:#E07B54"><div class="fmap-icon">📝</div><strong>ウチメモ+</strong><small>画面に直接ピンメモ</small></a>
   <a href="#schedule" style="--tile-color:#8B6F47"><div class="fmap-icon">📅</div><strong>スケジュール</strong><small>家づくり工程をカウントダウン</small></a>
   <a href="#electricity" style="--tile-color:#E8B931"><div class="fmap-icon">⚡</div><strong>でんき通信簿</strong><small>太陽光・蓄電池の通信簿</small></a>
+  <a href="#maintenance" style="--tile-color:#4DB6AC"><div class="fmap-icon">🧹</div><strong>お手入れ当番表</strong><small>定期お手入れの消し込み</small></a>
   <a href="#mypage" style="--tile-color:#4A6FA5"><div class="fmap-icon">👤</div><strong>マイページ</strong><small>家のスペック・SNSシェア</small></a>
 </div>
 
@@ -722,7 +737,7 @@
 <h2 id="getting-started">はじめに</h2>
 
 <h3 id="overview">このアプリについて</h3>
-<p><strong>ICHIJO施主手帳（非公式）</strong>は、一条工務店の施主が自分の打ち合わせを効率化するために作った非公式アプリです。一条公式「iサポ」で届くPDFを取り込むだけで、以下のことが片手でできます。打ち合わせ中はもちろん、入居後にも便利な機能（でんき通信簿・新居生活カウンター等）を順次拡充中です。</p>
+<p><strong>ICHIJO施主手帳（非公式）</strong>は、一条工務店の施主が自分の打ち合わせを効率化するために作った非公式アプリです。一条公式「iサポ」で届くPDFを取り込むだけで、以下のことが片手でできます。打ち合わせ中はもちろん、入居後にも便利な機能（でんき通信簿・お手入れ当番表・新居生活カウンター等）を順次拡充中です。</p>
 <ul>
   <li><strong>ドキュメント管理</strong>：図面番号ベースでグループ化</li>
   <li><strong>図面チェック</strong>：CAD・電気図面のピクセル差分を色分け表示</li>
@@ -733,6 +748,7 @@
   <li><strong>スケジュール</strong>：家づくり工程のタイムライン＆カウントダウン</li>
   <li><strong>ホームウィジェット</strong>：端末ホーム画面にカウントダウン表示</li>
   <li><strong>でんき通信簿</strong>（入居後）：太陽光・蓄電池の経済効果を可視化</li>
+  <li><strong>お手入れ当番表</strong>（入居後）：定期お手入れの消し込み管理・消耗品在庫・通知</li>
   <li><strong>便利ツール</strong>：湿度計算、外部リンク集など</li>
 </ul>
 
@@ -835,12 +851,13 @@
   </tbody>
 </table>
 
-<h3 id="home-living">暮らしモード（6タイル）</h3>
+<h3 id="home-living">暮らしモード（7タイル）</h3>
 <p>入居後のオーナー向けに、打ち合わせ系機能を隠した簡潔なレイアウト。</p>
 <table>
   <thead><tr><th>色</th><th>タイル</th><th>遷移先</th></tr></thead>
   <tbody>
     <tr><td style="color:#E8B931">●</td><td><a href="#electricity">でんき通信簿</a></td><td>でんき通信簿</td></tr>
+    <tr><td style="color:#4DB6AC">●</td><td><a href="#maintenance">お手入れ当番表</a></td><td>お手入れ当番表</td></tr>
     <tr><td style="color:#8B6F47">●</td><td><a href="#schedule">スケジュール</a></td><td>スケジュール一覧</td></tr>
     <tr><td style="color:#DEB896">●</td><td><a href="#bookmark">ブックマーク</a></td><td>ブックマーク一覧</td></tr>
     <tr><td style="color:#5CABB5">●</td><td><a href="#tools">便利ツール</a></td><td>ツール一覧</td></tr>
@@ -887,7 +904,7 @@
 <ul>
   <li>ヘッダー：アプリ名＋バージョン番号＋アイコン</li>
   <li>メニュー（家づくりモード時）：ドキュメント管理／PDF取り込み／見積り管理／図面チェック／仕様書チェック／ウチメモ+／ブックマーク／スケジュール／便利ツール／設定</li>
-  <li>メニュー（暮らしモード時）：でんき通信簿／スケジュール／ブックマーク／便利ツール／家づくり記録／設定</li>
+  <li>メニュー（暮らしモード時）：でんき通信簿／お手入れ当番表／スケジュール／ブックマーク／便利ツール／家づくり記録／設定</li>
 </ul>
 
 <div class="shot-grid">
@@ -2979,8 +2996,204 @@
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- 便利ツール                                               -->
+<!-- お手入れ当番表                                           -->
 <!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="maintenance">お手入れ当番表</h2>
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/home_highlight_maintenance.webp" alt="ホーム画面でお手入れ当番表タイルを選択" width="720" height="1378" loading="lazy" decoding="async">
+    <figcaption>ホーム（暮らしモード）から「お手入れ当番表」タイルをタップ</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/maintenance_list.webp" width="720" height="1564" alt="お手入れ当番表 一覧（緊急度ビュー）" loading="lazy" decoding="async">
+    <figcaption>一覧画面（緊急度ビュー）</figcaption>
+  </figure>
+</div>
+
+<p>換気フィルターやレンジフードなど、忘れがちなおうちの定期お手入れをワンタップで記録できる機能です。よくあるお手入れ42項目をプリセット収録。消耗品の在庫管理と、お手入れ時期の通知にも対応しています。</p>
+
+<div class="callout info">
+  <p>お手入れ当番表は <strong>暮らしモード</strong> のホーム画面で前面に出てきますが、家づくりモードでは <strong>便利ツール</strong> 画面からアクセスできます。</p>
+</div>
+
+<h3 id="maintenance-overview">画面構成</h3>
+<ul>
+  <li><strong>ダッシュボード（上部）</strong>：「今すぐ」（期日が今日・期日超過）と「在庫わずか」の件数。タップするとその条件で一覧を絞り込みます（もう一度タップ、またはバナーの「解除」で戻る）</li>
+  <li><strong>ビュー切替</strong>：<strong>緊急度 / 部屋ごと</strong> の2種類</li>
+  <li><strong>緊急度ビュー</strong>：「今日実施」「今すぐ」「もうすぐ」「余裕あり」のセクションに自動分類。「もうすぐ」に入るタイミングは項目の周期に応じて自動で変わります（周期が短い項目ほど直前に表示）</li>
+  <li><strong>部屋ごとビュー</strong>：割り当てた部屋単位のグループ表示</li>
+</ul>
+
+<h4>カードの見方</h4>
+<ul>
+  <li><strong>左端のストライプ色</strong>：緊急度（赤=今すぐ／オレンジ=もうすぐ／緑=余裕あり／青緑=今日実施）</li>
+  <li><strong>右上のピル</strong>：「今日」「あと◯日」「◯日超過」の残日数</li>
+  <li><strong>チップ</strong>：割り当てた部屋と消耗品の在庫数。在庫が「残りわずかの目安」以下になると赤く表示されます</li>
+  <li><strong>下部のバー</strong>：次回予定日までの進み具合＋右端に予定日</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/maintenance_list_rooms.webp" width="720" height="1564" alt="お手入れ当番表 一覧（部屋ごとビュー）" loading="lazy" decoding="async">
+    <figcaption>部屋ごとビュー</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/maintenance_menu.webp" width="720" height="1564" alt="右上メニュー（部屋を管理／消耗品を管理／通知時刻）" loading="lazy" decoding="async">
+    <figcaption>右上メニュー</figcaption>
+  </figure>
+</div>
+
+<h3 id="maintenance-add">お手入れの追加</h3>
+<p>一覧右下の <strong>＋</strong> ボタンから追加します。カテゴリ → 項目の2段階で選ぶプリセット（42項目）と、自由入力の「カスタムを追加」が選べます。</p>
+<ul>
+  <li>プリセットの周期はあくまで目安です。追加するときに自由に変更できます</li>
+  <li>項目を選ぶと編集画面が開き、周期・前回実施日・場所・通知などをその場で設定して保存します</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/maintenance_preset_categories.webp" width="720" height="1564" alt="お手入れを追加（カテゴリ選択）" loading="lazy" decoding="async">
+    <figcaption>カテゴリ選択（10カテゴリ＋カスタム）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/maintenance_preset_items.webp" width="720" height="1564" alt="お手入れを追加（換気・空調の項目一覧）" loading="lazy" decoding="async">
+    <figcaption>項目選択（例：換気・空調）</figcaption>
+  </figure>
+</div>
+
+<div class="callout info">
+  <p>同じ場所に同じ項目を複数追加すると、「RA排気口フィルター 交換①②」のように自動で番号が付きます。</p>
+</div>
+
+<h3 id="maintenance-done">実施の記録（消し込み）</h3>
+<ul>
+  <li><strong>カードを左にスワイプ</strong>すると「実施した」ボタンが現れます。タップすると今日の日付で記録され、次回予定日が自動計算されます</li>
+  <li>消耗品をリンクした項目は、<strong>在庫も自動で消費</strong>されます（項目ごとに設定した消費数だけ減ります）</li>
+  <li>実施直後に表示されるメッセージの<strong>「取り消す」</strong>で元に戻せます（消費した在庫も戻ります）</li>
+  <li>同じ日に2回目の「実施した」をすると確認ダイアログが出ます。本当に2回実施した場合だけ記録してください</li>
+  <li>今日実施した項目は、緊急度ビュー先頭の「今日実施」セクションに集まります</li>
+</ul>
+
+<h3 id="maintenance-detail">詳細シート</h3>
+<p>カードをタップすると、画面下から詳細シートが開きます。</p>
+<ul>
+  <li><strong>タイトル右のアイコン</strong>：編集（鉛筆）／削除（ゴミ箱）。項目を削除すると実施記録も一緒に消えます（共有している消耗品の在庫は残ります）</li>
+  <li><strong>カウントダウンピル</strong>：次回予定日と残日数</li>
+  <li><strong>消耗品・在庫</strong>：−／＋で在庫を補充・修正できます。「実施した」での自動消費とは別に、買い足したときなどに使います</li>
+  <li><strong>購入ページを開く</strong>：消耗品に<a href="#maintenance-consumables">購入リンク</a>を設定しておくと、ここからブラウザで購入ページを開けます。在庫が切れたらその場で買い足せます</li>
+  <li><strong>下部の「実施した」</strong>：スワイプと同じ消し込み操作</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/maintenance_detail_sheet.webp" width="720" height="1564" alt="お手入れ詳細シート（在庫±・購入ページを開く・実施した）" loading="lazy" decoding="async">
+    <figcaption>詳細シート（在庫±・購入リンク・実施した）</figcaption>
+  </figure>
+</div>
+
+<h3 id="maintenance-edit">編集画面</h3>
+<p>項目の設定をまとめて変更できます。上部に「次回は ◯◯ ごろ」のプレビューが表示され、周期や前回実施日を変えるとすぐ反映されます。</p>
+<ul>
+  <li><strong>場所</strong>：部屋を割り当てます（指定しない／既存の部屋／新しく作成）</li>
+  <li><strong>周期</strong>：数値＋単位（週／ヶ月／年）</li>
+  <li><strong>前回実施日</strong>：分かれば入力。未設定なら登録日を起点に次回を計算します</li>
+  <li><strong>通知</strong>：しつこく通知／1回通知／通知オフ（詳しくは<a href="#maintenance-notifications">通知</a>へ）</li>
+  <li><strong>予定日の寄せ方</strong>：次回予定日を指定の曜日や土日・祝日に寄せられます（なし／指定曜日／土日祝）</li>
+  <li><strong>消耗品・在庫</strong>：項目で使う消耗品をリンクし、1回の実施で消費する数（×N）を設定。新規の消耗品は「いまある在庫」も入力できます</li>
+  <li><strong>メモ</strong>：自由記入（品番や購入先のひかえなどに）</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/maintenance_edit_top.webp" width="720" height="1564" alt="お手入れ編集画面（上部：プレビュー・場所・周期・前回実施日・通知）" loading="lazy" decoding="async">
+    <figcaption>編集画面（上：場所・周期・通知）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/maintenance_edit_bottom.webp" width="720" height="1564" alt="お手入れ編集画面（下部：予定日の寄せ方・消耗品・メモ）" loading="lazy" decoding="async">
+    <figcaption>編集画面（下：寄せ方・消耗品・メモ）</figcaption>
+  </figure>
+</div>
+
+<div class="callout info">
+  <p>プリセット項目は名前とカテゴリが固定です（カスタム項目のみ変更できます）。</p>
+</div>
+
+<h3 id="maintenance-rooms">部屋の管理</h3>
+<p>右上メニューの「部屋を管理」から。プリセット25種（玄関〜庭）＋フロア（1〜3階）＋自由入力で部屋を登録し、お手入れ項目に割り当てられます。</p>
+<ul>
+  <li>同じフロアに同じ部屋を複数作ると「洋室①②」のように自動で番号が付きます</li>
+  <li><strong>タップで編集、長押しで削除</strong>。部屋を削除しても項目は消えず、場所が「指定なし」に戻ります</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/maintenance_room_manage.webp" width="720" height="1564" alt="部屋を管理（フロア別一覧・割当件数つき）" loading="lazy" decoding="async">
+    <figcaption>部屋を管理（フロア別・割当件数つき）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/maintenance_room_add.webp" width="720" height="1564" alt="部屋を追加（フロア＋部屋チップ）" loading="lazy" decoding="async">
+    <figcaption>部屋を追加</figcaption>
+  </figure>
+</div>
+
+<h3 id="maintenance-consumables">消耗品と在庫</h3>
+<p>フィルターなどの消耗品は、<strong>在庫がアプリ全体で共有</strong>されます。同じ消耗品を複数の項目にリンクすると、どの項目で実施しても同じ在庫から減ります。</p>
+<ul>
+  <li><strong>消耗品を管理</strong>（右上メニュー）：全消耗品の在庫を一覧し、−／＋でクイック補充。タップで編集、長押しで削除</li>
+  <li><strong>残りわずかの目安</strong>：在庫がこの数以下になると赤く表示され、ダッシュボードの「在庫わずか」に数えられます（はじめは 1、変更できます）</li>
+  <li><strong>購入リンク（任意）</strong>：消耗品の編集画面に通販サイト等の URL を控えておくと、<a href="#maintenance-detail">詳細シート</a>に「購入ページを開く」ボタンが表示されます</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/maintenance_consumable_manage.webp" width="720" height="1564" alt="消耗品を管理（在庫一覧・在庫わずかは赤字）" loading="lazy" decoding="async">
+    <figcaption>消耗品を管理（在庫わずかは赤字）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/maintenance_consumable_edit.webp" width="720" height="1564" alt="消耗品を編集（在庫数・残りわずかの目安・購入リンク）" loading="lazy" decoding="async">
+    <figcaption>消耗品を編集（在庫数・目安・購入リンク）</figcaption>
+  </figure>
+</div>
+
+<h3 id="maintenance-notifications">通知</h3>
+<p>お手入れ時期を端末の通知でお知らせします。項目ごとに編集画面で設定します。</p>
+<ul>
+  <li><strong>しつこく通知</strong>：実施を記録するまで、毎日通知します（最大14日間）</li>
+  <li><strong>1回通知</strong>：1回だけ通知します</li>
+  <li><strong>通知オフ</strong>：通知しません</li>
+  <li><strong>何日前に通知</strong>：通知が始まる日を予定日の◯日前にずらせます（0 なら予定日当日から）</li>
+  <li><strong>通知時刻</strong>：すべての項目で共通です。右上メニューの「通知時刻」または編集画面から変更できます（はじめは 9:00）</li>
+  <li><strong>通知をタップ</strong>すると、その項目の詳細シートが直接開きます</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/maintenance_notification.webp" width="720" height="1564" alt="お手入れ通知の例（項目名と場所が表示される）" loading="lazy" decoding="async">
+    <figcaption>通知の例（項目名＋場所）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/maintenance_notif_time.webp" width="720" height="1564" alt="通知時刻の変更（タイムピッカー）" loading="lazy" decoding="async">
+    <figcaption>通知時刻の変更（全項目共通）</figcaption>
+  </figure>
+</div>
+
+<div class="callout warn">
+  <p>通知の許可（OSのダイアログ）は、通知をオンにした項目を保存したときや、通知時刻を変更したときに表示されます。許可しなかった場合も、あとからアプリ内の案内で端末の設定画面を開いて変更できます。なお、省電力の仕組みの都合で、通知は設定時刻から数分前後することがあります。</p>
+</div>
+
+<h3 id="maintenance-actions">操作リファレンス</h3>
+<div class="action-box">
+  <div class="action-row"><strong>カードを左にスワイプ</strong><span>「実施した」で消し込み（在庫も自動消費）</span></div>
+  <div class="action-row"><strong>カードをタップ</strong><span>詳細シートを開く</span></div>
+  <div class="action-row"><strong>カードを長押し</strong><span>項目を削除（確認ダイアログ）</span></div>
+  <div class="action-row"><strong>ダッシュボードをタップ</strong><span>「今すぐ」「在庫わずか」で絞り込み（再タップで解除）</span></div>
+  <div class="action-row"><strong>緊急度／部屋ごと</strong><span>一覧の表示切替</span></div>
+  <div class="action-row"><strong>＋ボタン</strong><span>お手入れの追加（プリセット／カスタム）</span></div>
+  <div class="action-row"><strong>右上メニュー</strong><span>部屋を管理／消耗品を管理／通知時刻</span></div>
+  <div class="action-row"><strong>シートのタイトル右アイコン</strong><span>編集（鉛筆）／削除（ゴミ箱）</span></div>
+  <div class="action-row"><strong>部屋・消耗品の行</strong><span>タップで編集、長押しで削除</span></div>
+</div>
+
 <!-- ═══════════════════════════════════════════════════════ -->
 <!-- マイページ                                               -->
 <!-- ═══════════════════════════════════════════════════════ -->
@@ -3226,13 +3439,14 @@
 <h4>家づくりモード時</h4>
 <ul>
   <li><strong>でんき通信簿</strong>（アプリ内）</li>
+  <li><strong>お手入れ当番表</strong>（アプリ内）</li>
   <li><strong>湿度計算ツール</strong>（アプリ内）</li>
   <li><strong>熱負荷計算ツール</strong>（外部：UA値から熱負荷をシミュレーション）</li>
   <li><strong>エアコン仕様比較表</strong>（外部：一条で選べるエアコンのスペック一覧）</li>
 </ul>
 
 <h4>暮らしモード時</h4>
-<p>暮らしモードでは <strong>でんき通信簿</strong> がホーム画面のタイルとして前面に出るため、便利ツール一覧には含まれません。それ以外のツールは共通です。</p>
+<p>暮らしモードでは <strong>でんき通信簿</strong> と <strong>お手入れ当番表</strong> がホーム画面のタイルとして前面に出るため、便利ツール一覧には含まれません。それ以外のツールは共通です。</p>
 
 <div class="shot-grid">
   <figure class="shot-phone">
@@ -3241,11 +3455,11 @@
   </figure>
   <figure class="shot-phone">
     <img src="images/tools_list.webp" width="720" height="1564" alt="便利ツール一覧（家づくりモード）" loading="lazy" decoding="async">
-    <figcaption>家づくりモード版（でんき通信簿あり）</figcaption>
+    <figcaption>家づくりモード版（でんき通信簿・お手入れ当番表あり）</figcaption>
   </figure>
   <figure class="shot-phone">
     <img src="images/tools_list_living.webp" width="720" height="1564" alt="便利ツール一覧（暮らしモード）" loading="lazy" decoding="async">
-    <figcaption>暮らしモード版（でんき通信簿なし）</figcaption>
+    <figcaption>暮らしモード版（でんき通信簿・お手入れ当番表なし）</figcaption>
   </figure>
 </div>
 
@@ -3402,7 +3616,7 @@
 <p>家づくりモード ↔ 暮らしモードを切り替えるトグルスイッチ。切り替えるとホーム画面のタイル構成、サイドメニュー、便利ツール一覧が変わります。</p>
 <ul>
   <li><strong>家づくりモード</strong>（契約〜引き渡しまでの施主向け）：10タイル（ドキュメント管理・図面チェック・見積り管理 等を前面に）</li>
-  <li><strong>暮らしモード</strong>（入居後向け）：6タイル（でんき通信簿・スケジュール・家づくり記録 等を前面に、打ち合わせ系機能は非表示）</li>
+  <li><strong>暮らしモード</strong>（入居後向け）：7タイル（でんき通信簿・お手入れ当番表・スケジュール・家づくり記録 等を前面に、打ち合わせ系機能は非表示）</li>
 </ul>
 <p>詳細は <a href="#home-ieduzukuri">家づくりモード</a> ／ <a href="#home-living">暮らしモード</a> を参照。</p>
 
