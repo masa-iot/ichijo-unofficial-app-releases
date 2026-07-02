@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ichijo-unofficial.smartolio.jp/sitemap.xml
