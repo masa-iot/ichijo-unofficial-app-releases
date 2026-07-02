@@ -2,7 +2,7 @@
 
 家づくりも、入居後の暮らしも。一条工務店の施主のためのサポートアプリ
 
-**[アプリ紹介ページ](https://masa-iot.github.io/ichijo-unofficial-app-releases/)** / **[ユーザーマニュアル](https://masa-iot.github.io/ichijo-unofficial-app-releases/manual.html)**
+**[アプリ紹介ページ](https://ichijo-unofficial.smartolio.jp/)** / **[ユーザーマニュアル](https://ichijo-unofficial.smartolio.jp/manual.html)**
 
 ## ダウンロード
 
