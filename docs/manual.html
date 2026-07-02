@@ -5,6 +5,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ICHIJO施主手帳【非公式】ユーザーマニュアル</title>
 <meta name="description" content="ICHIJO施主手帳【非公式】のユーザーマニュアル。各画面と操作をスクリーンショット付きで紹介します。">
+<link rel="canonical" href="https://masa-iot.github.io/ichijo-unofficial-app-releases/manual.html">
+<meta name="theme-color" content="#2F6EA5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1a2027" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<!-- OGP -->
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://masa-iot.github.io/ichijo-unofficial-app-releases/manual.html">
+<meta property="og:site_name" content="ICHIJO施主手帳【非公式】">
+<meta property="og:title" content="ICHIJO施主手帳【非公式】ユーザーマニュアル">
+<meta property="og:description" content="各画面と操作をスクリーンショット付きで紹介するユーザーマニュアル。">
+<meta property="og:image" content="https://masa-iot.github.io/ichijo-unofficial-app-releases/images/ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@masa_iot">
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   html{scroll-padding-top:80px}
@@ -468,13 +486,167 @@
     .search-box{padding:2px 4px 2px 8px}
   }
   @media print{
-    header,.sidebar,.hamburger{display:none}
+    header,.sidebar,.hamburger,.back-to-top,.chapter-nav{display:none}
     .layout{grid-template-columns:1fr}
     main{max-width:none;padding:0}
     figure,.action-box{break-inside:avoid}
     h2{break-before:page}
   }
+
+  /* Chapter prev/next navigation (JSで章末に自動生成) */
+  .chapter-nav{
+    display:flex;justify-content:space-between;gap:12px;
+    margin:48px 0 8px;
+  }
+  .chapter-nav a{
+    flex:0 1 48%;
+    background:#fff;border:1px solid #eee;border-radius:10px;
+    padding:12px 16px;font-size:.85rem;line-height:1.5;color:#2F6EA5;
+    display:flex;flex-direction:column;gap:2px;
+  }
+  .chapter-nav a:hover{border-color:#2F6EA5;text-decoration:none}
+  .chapter-nav a.next{margin-left:auto;text-align:right;align-items:flex-end}
+  .chapter-nav a small{font-size:.72rem;color:#999}
+
+  /* Back to top button */
+  .back-to-top{
+    position:fixed;right:18px;bottom:18px;z-index:80;
+    width:44px;height:44px;border-radius:50%;
+    background:#fff;border:1px solid #d0d4d9;color:#555;
+    font-size:1.1rem;cursor:pointer;
+    box-shadow:0 4px 14px rgba(0,0,0,.15);
+    opacity:0;visibility:hidden;transform:translateY(8px);
+    transition:opacity .2s,transform .2s,visibility .2s;
+  }
+  .back-to-top.show{opacity:1;visibility:visible;transform:none}
+  .back-to-top:hover{color:#2F6EA5;border-color:#2F6EA5}
+
+  /* ---- Dark mode ----
+     html.dark クラスで有効化。初期値はOS設定に追従し、
+     ヘッダーの ☀️/🌙 ボタンで手動切替（localStorageに保存）。 */
+  html.dark{color-scheme:dark}
+  html.dark body{background:#14181d;color:#cfd6dd}
+  html.dark a{color:#7fb3dc}
+  html.dark kbd{background:#242c35;border-color:#3a444f;color:#cfd6dd}
+  html.dark header{background:#1a2027;border-bottom-color:#2a323c}
+  html.dark .header-logo{color:#e3e9ef}
+  html.dark .header-logo .home-link{color:#7fb3dc}
+  html.dark .header-nav a{color:#aab4be}
+  html.dark .header-nav a:hover{color:#7fb3dc}
+  html.dark .hamburger{color:#e3e9ef}
+  html.dark .search-box{background:#242c35;border-color:#3a444f}
+  html.dark .search-box:focus-within{border-color:#5890c0;box-shadow:0 0 0 2px rgba(88,144,192,.25)}
+  html.dark .search-box input{color:#e3e9ef}
+  html.dark .search-box input::placeholder{color:#78828c}
+  html.dark .search-count{color:#8a949e}
+  html.dark .search-count.empty{color:#e07575}
+  html.dark .search-btn{color:#8a949e}
+  html.dark .search-btn:hover{background:#313b46;color:#e3e9ef}
+  html.dark .search-btn:disabled:hover{background:none;color:#8a949e}
+  html.dark .search-shortcut{background:#1a2027;border-color:#3a444f;color:#78828c}
+  html.dark mark.search-hit{background:#8a6d00;color:#fff}
+  html.dark mark.search-hit.current{background:#ff9800;color:#1a1a1a}
+  html.dark .sidebar{border-right-color:#2a323c}
+  html.dark .sidebar h4{color:#78828c}
+  html.dark .sidebar li a{color:#aab4be}
+  html.dark .sidebar li a:hover{background:#1e2833;color:#8ec5e8}
+  html.dark .sidebar li a.active{background:#1e2f40;color:#8ec5e8;border-left-color:#5890c0}
+  html.dark .sidebar li.sub a{color:#96a0aa}
+  html.dark .sidebar li.sub2 a{color:#8a949e}
+  html.dark h1{color:#e8edf2}
+  html.dark h2{color:#e8edf2;border-bottom-color:#3d6c96}
+  html.dark h3{color:#9cc3e4;background:#1c2733;border-left-color:#4a80ad}
+  html.dark h4{color:#cfd6dd}
+  html.dark h5{color:#bac2ca}
+  html.dark p,html.dark ul,html.dark ol{color:#b8c0c8}
+  html.dark strong{color:#e8edf2}
+  html.dark .callout strong{color:inherit}
+  html.dark code{background:#242c35;color:#e58fa2}
+  html.dark .intro h1{color:#fff}
+  html.dark .intro p{color:rgba(255,255,255,.95)}
+  html.dark .breadcrumb{color:#78828c}
+  html.dark .steps{border-left-color:#2e3742}
+  html.dark .steps > li::before{border-color:#14181d;box-shadow:0 0 0 1px #3a444f}
+  html.dark .steps > li strong:first-of-type{color:#e3e9ef}
+  html.dark .steps > li p{color:#96a0aa}
+  html.dark .steps.substeps{border-left-color:#242d37}
+  html.dark figure{background:#1a2027;border-color:#2a323c}
+  html.dark figcaption{color:#8a949e}
+  html.dark .shot-grid::before{color:#6c7680}
+  html.dark .placeholder{background:repeating-linear-gradient(45deg,#1a2027,#1a2027 8px,#20272f 8px,#20272f 16px);border-color:#3a444f;color:#96a0aa}
+  html.dark .placeholder strong{color:#bac2ca}
+  html.dark .placeholder code{background:#242c35}
+  html.dark .gallery::before{color:#6c7680}
+  html.dark .gallery::-webkit-scrollbar-track{background:#1a2027}
+  html.dark .gallery::-webkit-scrollbar-thumb{background:#3a444f}
+  html.dark .gallery::-webkit-scrollbar-thumb:hover{background:#4a565f}
+  html.dark .callout.info{background:#152838;border-color:#4a80ad;color:#a8cbe8}
+  html.dark .callout.warn{background:#2e2510;border-color:#c79a2a;color:#e0c37c}
+  html.dark .callout.tip{background:#152a1a;border-color:#4e9e58;color:#a5d5ab}
+  html.dark .callout.note{background:#271831;border-color:#a75abf;color:#d3aee0}
+  html.dark .callout.danger{background:#301a1c;border-color:#d05252;color:#e8a2a2}
+  html.dark table{background:#1a2027;border-color:#2a323c}
+  html.dark th{background:#20272f;color:#e3e9ef}
+  html.dark th,html.dark td{border-bottom-color:#252d36}
+  html.dark .install-card{background:#1a2027;border-color:#2a323c}
+  html.dark .install-card h4{color:#7fb3dc}
+  html.dark .install-card p{color:#96a0aa}
+  html.dark .tabs{border-bottom-color:#2a323c}
+  html.dark .tab-btn{color:#8a949e}
+  html.dark .tab-btn:hover{color:#8ec5e8}
+  html.dark .tab-btn.active{color:#8ec5e8;border-bottom-color:#5890c0}
+  html.dark .feature-map a{background:#1a2027;border:1px solid #2a323c;border-left:4px solid var(--tile-color,#2F6EA5);color:#cfd6dd}
+  html.dark .feature-map a:hover{border-color:var(--tile-color,#2F6EA5)}
+  html.dark .feature-map .fmap-icon{background:color-mix(in srgb,var(--tile-color,#2F6EA5) 30%,#1a2027)}
+  html.dark .feature-map strong{color:#e3e9ef}
+  html.dark .feature-map small{color:#8a949e}
+  html.dark .action-box{background:#1a2027;border-color:#2a323c}
+  html.dark .action-box .action-row{border-bottom-color:#252d36}
+  html.dark .action-box .action-row > strong{color:#7fb3dc}
+  html.dark .quick-jump{background:#1c232b}
+  html.dark .quick-jump strong{color:#78828c}
+  html.dark .chapter-nav a{background:#1a2027;border-color:#2a323c;color:#8ec5e8}
+  html.dark .chapter-nav a:hover{border-color:#5890c0}
+  html.dark .chapter-nav a small{color:#78828c}
+  html.dark .back-to-top{background:#1a2027;border-color:#3a444f;color:#aab4be;box-shadow:0 4px 14px rgba(0,0,0,.4)}
+  html.dark .back-to-top:hover{color:#8ec5e8;border-color:#5890c0}
+  @media(max-width:900px){
+    html.dark .sidebar{background:#1a2027}
+    html.dark .feature-map a{border-left-width:3px}
+  }
+
+  /* Theme toggle switch (ライト=ノブ左/☀️、ダーク=ノブ右/🌙) */
+  .theme-toggle{
+    position:relative;width:56px;height:28px;border-radius:14px;
+    background:#dfe5ea;border:1px solid #cbd2d9;cursor:pointer;
+    padding:0;flex:0 0 auto;margin-left:10px;
+    transition:background .2s,border-color .2s;
+  }
+  .theme-toggle:hover{border-color:#2F6EA5}
+  .theme-toggle .tt-knob{
+    position:absolute;top:2px;left:2px;width:22px;height:22px;border-radius:50%;
+    background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.25);
+    display:flex;align-items:center;justify-content:center;
+    font-size:.7rem;line-height:1;
+    transition:transform .2s;
+  }
+  .theme-toggle .tt-moon{display:none}
+  html.dark .theme-toggle{background:#2f3a46;border-color:#3a444f}
+  html.dark .theme-toggle:hover{border-color:#5890c0}
+  html.dark .theme-toggle .tt-knob{transform:translateX(28px);background:#425060}
+  html.dark .theme-toggle .tt-sun{display:none}
+  html.dark .theme-toggle .tt-moon{display:block}
 </style>
+<script>
+/* ダークモード初期化: localStorage(手動切替) > OS設定。描画前に実行してチラつきを防ぐ */
+(function(){
+  try{
+    var t = localStorage.getItem('manual-theme');
+    var dark = t ? (t === 'dark') : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if(dark) document.documentElement.classList.add('dark');
+  }catch(e){}
+})();
+</script>
 </head>
 <body>
 
@@ -493,6 +665,9 @@
       <button class="search-btn" id="search-clear" aria-label="クリア" title="クリア (Esc)" style="display:none">✕</button>
       <kbd class="search-shortcut" aria-hidden="true">/</kbd>
     </div>
+    <button class="theme-toggle" id="themeToggle" role="switch" aria-checked="false" aria-label="ダークモード" title="ダークモード切替">
+      <span class="tt-knob"><span class="tt-sun">☀️</span><span class="tt-moon">🌙</span></span>
+    </button>
   </div>
 </header>
 
@@ -3819,6 +3994,8 @@
   <img id="modalImg" src="" alt="">
 </div>
 
+<button class="back-to-top" id="backToTop" aria-label="ページ上部へ戻る" title="ページ上部へ">↑</button>
+
 <script>
 function switchTab(e, tabId){
   const buttons = e.currentTarget.parentElement.querySelectorAll('.tab-btn');
@@ -3919,6 +4096,78 @@ document.querySelectorAll('.sidebar a').forEach(a => {
     document.querySelector('.sidebar').classList.remove('open');
   });
 });
+
+/* ========== 章末の前後ナビ（自動生成） ========== */
+(function(){
+  const chapters = Array.from(document.querySelectorAll('main h2[id]'));
+  const mainEl = document.querySelector('main');
+  if(!mainEl || chapters.length < 2) return;
+  function makeLink(target, cls, label){
+    const a = document.createElement('a');
+    a.href = '#' + target.id;
+    a.className = cls;
+    const small = document.createElement('small');
+    small.textContent = label;
+    a.appendChild(small);
+    a.appendChild(document.createTextNode(target.textContent));
+    return a;
+  }
+  function makeNav(prev, next){
+    const nav = document.createElement('nav');
+    nav.className = 'chapter-nav';
+    nav.setAttribute('aria-label', '前後の章へ');
+    if(prev) nav.appendChild(makeLink(prev, 'prev', '← 前の章'));
+    if(next) nav.appendChild(makeLink(next, 'next', '次の章 →'));
+    return nav;
+  }
+  // 各章の末尾（＝次章見出しの直前）に挿入
+  chapters.forEach((h2, i) => {
+    if(i === 0) return;
+    h2.parentNode.insertBefore(makeNav(i >= 2 ? chapters[i-2] : null, h2), h2);
+  });
+  // 最終章の末尾
+  mainEl.appendChild(makeNav(chapters[chapters.length-2], null));
+  rebuildCache();
+})();
+
+/* ========== ダークモード切替 ========== */
+(function(){
+  const btn = document.getElementById('themeToggle');
+  if(!btn) return;
+  const mql = window.matchMedia('(prefers-color-scheme: dark)');
+  function isDark(){ return document.documentElement.classList.contains('dark'); }
+  function apply(dark){
+    document.documentElement.classList.toggle('dark', dark);
+    btn.setAttribute('aria-checked', String(dark));
+    btn.title = dark ? 'ライトモードに切替' : 'ダークモードに切替';
+  }
+  apply(isDark());
+  btn.addEventListener('click', () => {
+    const next = !isDark();
+    try{ localStorage.setItem('manual-theme', next ? 'dark' : 'light'); }catch(e){}
+    apply(next);
+  });
+  // OS設定の変更に追従（手動切替済みの場合は無視）
+  mql.addEventListener('change', (e) => {
+    try{ if(localStorage.getItem('manual-theme')) return; }catch(err){}
+    apply(e.matches);
+  });
+})();
+
+/* ========== ページトップへ戻る ========== */
+(function(){
+  const btn = document.getElementById('backToTop');
+  if(!btn) return;
+  let visible = false;
+  window.addEventListener('scroll', () => {
+    const show = window.scrollY > 600;
+    if(show !== visible){
+      visible = show;
+      btn.classList.toggle('show', show);
+    }
+  }, {passive:true});
+  btn.addEventListener('click', () => window.scrollTo({top:0, behavior:'smooth'}));
+})();
 
 /* ========== 検索機能 ==========
    Features:
