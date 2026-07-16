@@ -1776,15 +1776,34 @@
 </div>
 
 <h3 id="size-alignment">サイズ合わせ画面</h3>
-<p>旧版と新版で印刷のスケール（縮尺）が違うときに、図面の大きさを揃えるための画面です。差分結果画面の右上「<strong>調整 ▾</strong>」メニュー → 「サイズ合わせ」を選んで遷移します。</p>
+<p>旧版と新版で印刷のスケール（縮尺）が違うときに、図面の大きさを揃えるための機能です。差分結果画面の右上「<strong>調整 ▾</strong>」メニュー → 「サイズ合わせ」を選ぶと、縮尺の入力ダイアログ「<strong>縮尺でサイズを合わせる</strong>」が開きます。</p>
 
 <div class="callout tip">
   <p>普段は <a href="#alignment">位置合わせ</a> だけで十分です。図面のスケールが版間で変わってしまった場合に限ってこの機能を使ってください。</p>
 </div>
 
-<p>画面には旧版と新版が並んで表示され、各図面に①②の枠を配置して<strong>同じ場所を 2 ヶ所マーク</strong>することで、新版と旧版の大きさの比を算出します。</p>
+<h4>縮尺を入力して合わせる（基本）</h4>
+<p>それぞれの図面に書かれている縮尺（例: 1/80）を入力するだけで、大きさの比が正確に決まります。</p>
+<ol>
+  <li>「<strong>旧図面の縮尺</strong>」「<strong>新図面の縮尺</strong>」に、それぞれの分母の数字を入力します（例: 旧 1/80 → 新 1/70 なら「80」と「70」）</li>
+  <li>「<strong>旧図面を XX% のサイズに変換します</strong>」と表示されたら「<strong>適用</strong>」を押します</li>
+  <li>自動で <a href="#alignment">位置合わせ画面</a> に移ります（初回は「サイズ変更した図面を準備しています…」と数秒待ちます）</li>
+  <li>位置を確認・調整して「<strong>適用</strong>」を押すと、サイズと位置がまとめて反映され、差分が再計算されます</li>
+</ol>
 
-<h4>操作の流れ</h4>
+<figure class="shot-phone">
+  <img src="images/cad_scale_ratio_dialog.webp" width="720" height="1600" alt="縮尺入力ダイアログ（旧 1/80 → 新 1/70 で変換率が表示された状態）" loading="lazy" decoding="async">
+  <figcaption>縮尺の分母を入れると変換率がその場で表示される（例: 旧 1/80 → 新 1/70）</figcaption>
+</figure>
+
+<div class="callout note">
+  <p>調整できる範囲は <strong>66.7%〜150%</strong> です。範囲を超える組み合わせはエラーが表示され、適用できません。また、移動先の位置合わせ画面で適用せずに戻ると、サイズ変更は破棄されます（確認ダイアログが出ます）。</p>
+</div>
+
+<h4>図面から測って合わせる（縮尺が分からないとき）</h4>
+<p>縮尺が図面から読み取れない場合は、ダイアログの「<strong>図面から測って合わせる</strong>」を押します。旧版と新版が並んだ計測画面が開き、各図面に①②の枠を配置して<strong>同じ場所を 2 ヶ所マーク</strong>することで、新版と旧版の大きさの比を算出します。</p>
+
+<h5>操作の流れ</h5>
 <ol>
   <li>①②の枠を、それぞれの図面で<strong>同じ場所</strong>にドラッグして配置</li>
   <li>枠が点線（グリッド線）の交わる場所に重なると、「<strong>検出OK</strong>」と緑のバッジが表示されます</li>
@@ -1804,7 +1823,7 @@
   </figure>
 </div>
 
-<h4>操作方法</h4>
+<h5>操作方法</h5>
 <ul>
   <li><strong>①②の枠（緑・オレンジ）のドラッグ</strong>：枠を画面内で移動・サイズ変更</li>
   <li><strong>「+」 / 「−」ボタン</strong>（各図面の右下）：図面の拡大 / 縮小</li>
@@ -1833,8 +1852,9 @@
   <div class="action-row"><strong>画面長押し</strong><span>その位置にメモを追加（ピンメモ）</span></div>
   <div class="action-row"><strong>エクスポートアイコン</strong><span>現在の1枚 or 3枚まとめ</span></div>
   <div class="action-row"><strong>「調整 ▾」メニュー</strong><span>位置合わせ / サイズ合わせ を選択</span></div>
-  <div class="action-row"><strong>サイズ合わせ：枠ドラッグ</strong><span>①②を点線（グリッド線）の交わる場所に配置</span></div>
-  <div class="action-row"><strong>サイズ合わせ：「サイズを比較」</strong><span>4 ヶ所から大きさの比を算出</span></div>
+  <div class="action-row"><strong>サイズ合わせ：縮尺を入力</strong><span>旧/新の縮尺（1/◯◯）から大きさの比を算出</span></div>
+  <div class="action-row"><strong>サイズ合わせ（計測）：枠ドラッグ</strong><span>①②を点線（グリッド線）の交わる場所に配置</span></div>
+  <div class="action-row"><strong>サイズ合わせ（計測）：「サイズを比較」</strong><span>4 ヶ所から大きさの比を算出</span></div>
   <div class="action-row"><strong>サイズ合わせ：「適用」</strong><span>差分結果画面に反映</span></div>
   <div class="action-row"><strong>ブックマークアイコン</strong><span>登録／解除</span></div>
 </div>
