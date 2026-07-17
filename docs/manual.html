@@ -817,6 +817,7 @@
     <li class="sub2"><a href="#electricity-monthly">月次レポート</a></li>
     <li class="sub2"><a href="#electricity-annual">年間レポート</a></li>
     <li class="sub2"><a href="#electricity-best">通算（マイベスト）</a></li>
+    <li class="sub"><a href="#electricity-share">シェア画像</a></li>
     <li class="sub"><a href="#electricity-actions">操作リファレンス</a></li>
   </ul>
 
@@ -3069,8 +3070,8 @@
   <li><strong>この月のハイライト</strong>：🏆 最も得した日 ／ 💰 最高売電収入日 ／ ⚡ 最大発電日 ／ 📊 最高自給率日 ／ 🔥 黒字日数 ／ 🌞 買電ゼロ日数</li>
 </ol>
 
-<h5>CSVエクスポート</h5>
-<p>画面上部の右上のダウンロードアイコンから、当月の日別詳細を CSV で書き出せます。</p>
+<h5>CSVエクスポート・シェア</h5>
+<p>画面上部の右上のダウンロードアイコンから、当月の日別詳細を CSV で書き出せます。右上のシェアアイコンからは、この月の実績を 1 枚にまとめた画像を作れます（<a href="#electricity-share">シェア画像</a> 参照）。</p>
 
 <div class="shot-grid">
   <figure class="shot-phone">
@@ -3177,12 +3178,52 @@
   <li><strong>黒字月数</strong>：1 ヶ月の収支がプラスだった月の累計</li>
 </ul>
 
+<h3 id="electricity-share">シェア画像（月次レポート）</h3>
+<p>月次レポートの実績を、SNS 投稿にそのまま使える縦長 1 枚の画像にまとめて書き出せます。月次画面の右上のシェアアイコンから開きます。</p>
+
+<h5>画像に入る内容（上から順）</h5>
+<ol>
+  <li><strong>得した合計</strong>（前年の同じ月と比べられる場合は前年比つき）</li>
+  <li><strong>内訳</strong>：売電収入／自家消費で買わなくて済んだ（全部売っていたら）／蓄電池から使って買わなくて済んだ（充電→放電・充放電効率・ロス）。締めに収支・自給率</li>
+  <li><strong>電力量</strong>：発電・消費・売電・買電（kWh）</li>
+  <li><strong>日別の得した額</strong>：ミニヒートマップ（いちばん得した日に 👑）</li>
+  <li><strong>この月のベスト</strong>：最も得した日／最大発電日／黒字日数／買電ゼロ日数</li>
+</ol>
+
+<h5>使い方</h5>
+<ol>
+  <li>月次画面の右上のシェアアイコンをタップ</li>
+  <li>プレビュー上部で配色を選択：<strong>サンライズ</strong>（明るいオレンジ）／<strong>ナイトグロー</strong>（深紺）。選んだ配色は次回も記憶されます</li>
+  <li>「共有」をタップ →「保存」か「共有」を選択。共有では対応アプリ（X など）に紹介文（ハッシュタグつき）も一緒に渡ります。Instagram のように画像だけを受け取るアプリもあります</li>
+</ol>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/electricity_share_dialog_sunrise.webp" width="720" height="1600" alt="シェア画像のプレビュー（サンライズ配色）" loading="lazy" decoding="async">
+    <figcaption>プレビュー：サンライズ配色</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/electricity_share_dialog_night.webp" width="720" height="1600" alt="シェア画像のプレビュー（ナイトグロー配色）" loading="lazy" decoding="async">
+    <figcaption>プレビュー：ナイトグロー配色</figcaption>
+  </figure>
+</div>
+
+<div class="shot-grid">
+  <figure>
+    <img src="images/electricity_share_card_example.webp" width="720" height="960" alt="書き出されるシェア画像の例（サンライズ配色）" loading="lazy" decoding="async">
+    <figcaption>書き出される画像の例（サンライズ配色・数値はサンプル）</figcaption>
+  </figure>
+</div>
+
+<p>CSV 取り込みでその月のデータが月末まで揃うと、取り込み完了の画面にも「◯年◯月をシェア」ボタンが表示され、その場でシェア画像を作れます。なお、料金プランが未設定の月や、プランの適用前の期間を含む月は、正しい金額にならないためシェア画像を作れません（設定を促すメッセージが表示されます）。</p>
+
 <h3 id="electricity-actions">操作リファレンス</h3>
 <div class="action-box">
   <div class="action-row"><strong>セグメント</strong><span>月次／年間／通算 切替</span></div>
   <div class="action-row"><strong>← / →</strong><span>月／年ナビゲーション</span></div>
   <div class="action-row"><strong>日付タップ（ヒートマップ）</strong><span>その日の時間別詳細をボトムシートで表示</span></div>
   <div class="action-row"><strong>月タップ（年間：月別一覧）</strong><span>月次レポートへジャンプ</span></div>
+  <div class="action-row"><strong>右上 シェア（月次のみ）</strong><span>月次レポートのシェア画像を作成（配色 2 種・保存/共有）</span></div>
   <div class="action-row"><strong>右上 CSVエクスポート</strong><span>月次／年間レポートを CSV で書き出し</span></div>
   <div class="action-row"><strong>右上メニュー</strong><span>CSVインポート／料金プラン設定／再計算／実績データ削除</span></div>
   <div class="action-row"><strong>「目標金額を変更」ボタン</strong><span>投資回収ゴールの追加・編集・削除（最大5件）</span></div>
