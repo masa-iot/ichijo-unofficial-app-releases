@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ぐらんちゃん - ICHIJO施主手帳【非公式】のキャラクター</title>
+<meta name="description" content="ICHIJO施主手帳【非公式】のアイコンキャラクター「ぐらんちゃん」の特設ページ。施主のオープンチャットで名づけられたシロクマの誕生ストーリーと、LINEスタンプ（第1弾・第2弾発売中）をご紹介します。">
+<link rel="canonical" href="https://ichijo-unofficial.smartolio.jp/granchan.html">
+<meta name="theme-color" content="#2F6EA5">
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<!-- OGP -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ichijo-unofficial.smartolio.jp/granchan.html">
+<meta property="og:site_name" content="ICHIJO施主手帳【非公式】">
+<meta property="og:title" content="ぐらんちゃん - ICHIJO施主手帳のキャラクター">
+<meta property="og:description" content="施主のオープンチャットで名づけられたシロクマ「ぐらんちゃん」。誕生ストーリーとLINEスタンプ（第1弾・第2弾発売中）をご紹介。">
+<meta property="og:image" content="https://ichijo-unofficial.smartolio.jp/images/granchan_ogp.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@masa_iot">
+<style>
+  :root{
+    --brand:#2F6EA5;
+    --brand-dark:#245a8a;
+    --ink:#333;
+    --muted:#666;
+    --faint:#999;
+    --bg:#fafafa;
+    --card:#fff;
+    --line:#e8e8e8;
+    --warm-ink:#4A3728;
+    --warm-muted:#8A6D4F;
+    --warm-bg:#FFF6E8;
+    --warm-card:#FFFdf7;
+    --warm-line:#F0E2CC;
+    --line-green:#06C755;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  section[id]{scroll-margin-top:64px}
+  body{
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+    color:var(--ink);background:var(--bg);line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--brand);text-decoration:none}
+  a:hover{text-decoration:underline}
+  img{max-width:100%}
+
+  /* ---- Header ---- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:rgba(255,255,255,.92);backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .header-inner{
+    max-width:1080px;margin:0 auto;padding:10px 20px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  .header-logo{
+    font-size:1rem;font-weight:700;color:var(--ink);
+    display:flex;align-items:center;gap:8px;
+  }
+  .header-logo img{width:26px;height:26px;border-radius:6px}
+  .header-nav a{margin-left:18px;font-size:.875rem;color:#555}
+  .header-nav a:hover{color:var(--brand);text-decoration:none}
+  .hamburger{
+    display:none;background:none;border:none;font-size:1.5rem;
+    cursor:pointer;padding:4px 8px;color:var(--ink);
+  }
+  .mobile-nav{
+    display:none;background:#fff;border-top:1px solid #eee;
+    padding:12px 20px;
+  }
+  .mobile-nav.open{display:block}
+  .mobile-nav a{
+    display:block;padding:10px 0;font-size:.95rem;color:#555;
+    border-bottom:1px solid #f0f0f0;
+  }
+  .mobile-nav a:last-child{border-bottom:none}
+  .mobile-nav a:hover{color:var(--brand);text-decoration:none}
+
+  /* ---- Hero ---- */
+  .gc-hero{
+    position:relative;
+    padding:130px 32px 76px;
+    background:linear-gradient(160deg,#FFF3DC 0%,#FFE7C2 60%,#FFDCA8 100%);
+    color:var(--warm-ink);overflow:hidden;
+  }
+  .gc-hero::before,.gc-hero::after{
+    content:'';position:absolute;border-radius:50%;
+    background:rgba(255,255,255,.35);pointer-events:none;
+  }
+  .gc-hero::before{width:240px;height:240px;left:-70px;bottom:-90px}
+  .gc-hero::after{width:120px;height:120px;right:6%;top:64px}
+  .gc-hero-inner{
+    max-width:880px;margin:0 auto;position:relative;
+    display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center;
+  }
+  .gc-hero-text{padding:12px 0}
+  .gc-hero .kicker{
+    display:inline-block;font-size:.85rem;font-weight:700;
+    background:rgba(255,255,255,.7);border-radius:999px;
+    padding:6px 16px;margin-bottom:18px;color:var(--warm-muted);
+  }
+  .gc-hero h1{font-size:2.6rem;font-weight:800;letter-spacing:.04em;line-height:1.25;margin-bottom:10px}
+  .gc-hero .tagline{font-size:1.15rem;font-weight:700;color:var(--warm-muted);margin-bottom:18px}
+  .gc-hero .lead{font-size:.95rem;color:#6d5237;margin-bottom:26px;max-width:30em}
+  .gc-hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-block;padding:12px 26px;border-radius:999px;
+    font-size:.95rem;font-weight:700;transition:opacity .15s;
+  }
+  .btn:hover{opacity:.88;text-decoration:none}
+  .btn-line{background:var(--line-green);color:#fff}
+  .btn-ghost{background:rgba(255,255,255,.85);color:var(--warm-ink);border:1px solid #E8D3B0}
+  .gc-hero-img{display:flex;justify-content:center}
+  .gc-hero-figure{
+    position:relative;width:min(400px,88%);aspect-ratio:1;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .gc-hero-figure::before{
+    content:'';position:absolute;inset:5%;
+    background:rgba(255,255,255,.55);border-radius:50%;
+  }
+  .gc-hero-figure img{
+    position:relative;width:86%;height:auto;
+    filter:drop-shadow(0 16px 32px rgba(122,84,32,.22));
+    animation:gc-float 5s ease-in-out infinite;
+  }
+  @keyframes gc-float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-9px)}
+  }
+  @media(prefers-reduced-motion:reduce){
+    .gc-hero-figure img{animation:none}
+  }
+
+  /* ---- Section common ---- */
+  section{padding:72px 20px}
+  .section-inner{max-width:1000px;margin:0 auto}
+  .section-title{
+    font-size:1.6rem;font-weight:800;text-align:center;margin-bottom:12px;color:var(--ink);
+  }
+  .section-subtitle{
+    text-align:center;color:#777;margin-bottom:40px;font-size:.95rem;
+  }
+
+  /* ---- Profile ---- */
+  .profile{background:#fff}
+  .profile-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:860px;margin:0 auto;
+  }
+  .profile-card{
+    background:var(--warm-card);border:1px solid var(--warm-line);border-radius:16px;
+    padding:22px 20px;text-align:center;
+  }
+  .profile-card .p-icon{font-size:1.6rem;display:block;margin-bottom:8px}
+  .profile-card h3{font-size:.85rem;color:var(--warm-muted);margin-bottom:6px;letter-spacing:.06em}
+  .profile-card p{font-size:.95rem;font-weight:700;color:var(--warm-ink);line-height:1.6;text-wrap:balance}
+  .profile-card small{display:block;font-size:.78rem;font-weight:400;color:#a58a68;margin-top:6px;text-wrap:balance}
+
+  /* ---- Story ---- */
+  .story{background:var(--warm-bg)}
+  .timeline{max-width:640px;margin:0 auto;position:relative;padding-left:28px}
+  .timeline::before{
+    content:'';position:absolute;left:9px;top:6px;bottom:6px;width:2px;
+    background:#EBD5B2;border-radius:1px;
+  }
+  .timeline-item{position:relative;padding:0 0 32px 20px}
+  .timeline-item:last-child{padding-bottom:0}
+  .timeline-item::before{
+    content:'';position:absolute;left:-25px;top:6px;width:14px;height:14px;
+    background:#fff;border:3px solid #E8965A;border-radius:50%;
+  }
+  .timeline-item .t-when{font-size:.8rem;font-weight:700;color:#E8965A;letter-spacing:.04em}
+  .timeline-item h3{font-size:1.05rem;color:var(--warm-ink);margin:2px 0 6px}
+  .timeline-item p{font-size:.9rem;color:#7a6248}
+
+  /* ---- Stickers ---- */
+  .stickers{background:#fff}
+  .sticker-card{
+    background:var(--warm-card);border:1px solid var(--warm-line);border-radius:20px;
+    padding:32px 28px;max-width:860px;margin:0 auto 28px;
+  }
+  .sticker-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+  .sticker-head h3{font-size:1.25rem;color:var(--warm-ink)}
+  .sticker-head .badge{
+    font-size:.72rem;font-weight:700;color:#fff;background:var(--line-green);
+    padding:3px 10px;border-radius:999px;
+  }
+  .sticker-card > p{font-size:.9rem;color:#7a6248;margin-bottom:20px}
+  .sticker-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px;
+  }
+  .sticker-grid figure{
+    background:#fff;border:1px solid #F3E8D5;border-radius:14px;
+    padding:12px 10px;text-align:center;
+    transition:transform .18s ease,box-shadow .18s ease;
+  }
+  .sticker-grid figure:hover{
+    transform:translateY(-4px) rotate(-1deg);
+    box-shadow:0 10px 22px rgba(122,84,32,.12);
+  }
+  .sticker-grid img{width:100%;max-width:150px;height:auto}
+  .sticker-foot{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .sticker-foot .price{font-size:.85rem;color:var(--warm-muted);font-weight:700}
+  .sticker-note{
+    text-align:center;font-size:.8rem;color:var(--faint);max-width:860px;margin:0 auto;
+  }
+  .sticker-card.coming{
+    text-align:center;padding:26px 28px;
+    background:#fff;border-style:dashed;border-color:#E5D5BC;
+  }
+  .sticker-card.coming h3{font-size:1.05rem;color:var(--warm-muted);margin-bottom:4px}
+  .sticker-card.coming p{margin:0;font-size:.85rem;color:#a58a68}
+
+  /* ---- In app ---- */
+  .inapp{background:#f5f7fa}
+  .inapp-content{
+    max-width:640px;margin:0 auto;text-align:center;
+  }
+  .inapp-content img{
+    width:96px;height:96px;border-radius:22px;
+    box-shadow:0 8px 24px rgba(0,0,0,.12);margin-bottom:20px;
+  }
+  .inapp-content p{font-size:.95rem;color:var(--muted);margin-bottom:24px}
+
+  /* ---- Disclaimer ---- */
+  .gc-about{background:#fff}
+  .disclaimer{
+    background:#FFF8E1;border:1px solid #FFE082;border-radius:12px;
+    padding:20px 24px;font-size:.9rem;color:#6D4C00;
+    max-width:640px;margin:0 auto;text-align:center;
+  }
+
+  /* ---- Footer ---- */
+  footer{
+    background:#333;color:#aaa;text-align:center;
+    padding:32px 20px;font-size:.8rem;
+  }
+  footer p{margin-bottom:6px}
+  footer .disclaimer-footer{font-size:.75rem;color:#888}
+  footer a{color:#ccc}
+
+  /* ---- Responsive ---- */
+  @media(max-width:840px){
+    .gc-hero-inner{grid-template-columns:1fr;gap:0}
+    .gc-hero-text{padding:12px 0 8px;text-align:center}
+    .gc-hero .lead{margin-left:auto;margin-right:auto}
+    .gc-hero-cta{justify-content:center}
+    .gc-hero-img{padding-top:28px}
+    .gc-hero-figure{width:min(300px,76%)}
+    .profile-grid{grid-template-columns:repeat(2,1fr)}
+  }
+  @media(max-width:600px){
+    .gc-hero{padding:96px 20px 56px}
+    .gc-hero h1{font-size:1.9rem}
+    .gc-hero .tagline{font-size:1rem}
+    .header-nav{display:none}
+    .hamburger{display:block}
+    section{padding:56px 16px}
+    .profile-grid{grid-template-columns:1fr 1fr;gap:12px}
+    .sticker-card{padding:24px 18px}
+    .sticker-grid{gap:10px}
+    .sticker-grid figure{padding:8px 6px;border-radius:10px}
+  }
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="header-inner">
+    <a class="header-logo" href="index.html">
+      <img src="images/favicon-32.png" alt="" width="32" height="32">
+      ICHIJO施主手帳
+    </a>
+    <nav class="header-nav">
+      <a href="#profile">プロフィール</a>
+      <a href="#story">ものがたり</a>
+      <a href="#stickers">LINEスタンプ</a>
+      <a href="index.html">アプリのページへ</a>
+    </nav>
+    <button class="hamburger" onclick="(function(b){var n=document.querySelector('.mobile-nav');n.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open'));})(this)" aria-label="メニュー" aria-controls="mobile-nav" aria-expanded="false">☰</button>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルメニュー">
+    <a href="#profile" onclick="document.querySelector('.mobile-nav').classList.remove('open')">プロフィール</a>
+    <a href="#story" onclick="document.querySelector('.mobile-nav').classList.remove('open')">ものがたり</a>
+    <a href="#stickers" onclick="document.querySelector('.mobile-nav').classList.remove('open')">LINEスタンプ</a>
+    <a href="index.html">アプリのページへ</a>
+  </nav>
+</header>
+
+<!-- Hero -->
+<section class="gc-hero">
+  <div class="gc-hero-inner">
+    <div class="gc-hero-text">
+      <span class="kicker">ICHIJO施主手帳のアイコンキャラクター</span>
+      <h1>ぐらんちゃん</h1>
+      <p class="tagline">非公式アプリの、公式キャラクター。</p>
+      <p class="lead">施主のオープンチャットで名前がついた、家づくり大好きなシロクマ。アプリのアイコンで毎日はたらきながら、LINEスタンプでも活躍中です。</p>
+      <div class="gc-hero-cta">
+        <a class="btn btn-line" href="#stickers">LINEスタンプを見る</a>
+        <a class="btn btn-ghost" href="index.html">アプリのページへ</a>
+      </div>
+    </div>
+    <div class="gc-hero-img">
+      <div class="gc-hero-figure">
+        <img src="images/granchan_hero.webp" alt="間取り図を眺めるぐらんちゃん" width="630" height="640" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Profile -->
+<section class="profile" id="profile">
+  <div class="section-inner">
+    <h2 class="section-title">プロフィール</h2>
+    <p class="section-subtitle">家づくりのことなら、ちょっとくわしいシロクマです</p>
+    <div class="profile-grid">
+      <div class="profile-card">
+        <span class="p-icon">🐻‍❄️</span>
+        <h3>なまえ</h3>
+        <p>ぐらんちゃん<small>施主にはおなじみの「グラン」にちなんで</small></p>
+      </div>
+      <div class="profile-card">
+        <span class="p-icon">📱</span>
+        <h3>うまれ</h3>
+        <p>アプリのアイコン<small>名前は施主のオープンチャットでつきました</small></p>
+      </div>
+      <div class="profile-card">
+        <span class="p-icon">🔥</span>
+        <h3>すきなこと</h3>
+        <p>床暖房の上でごろごろ<small>全館床暖房のぬくもりが大好物</small></p>
+      </div>
+      <div class="profile-card">
+        <span class="p-icon">📐</span>
+        <h3>しゅみ</h3>
+        <p>間取り図をながめること<small>気づけば何時間でも</small></p>
+      </div>
+      <div class="profile-card">
+        <span class="p-icon">☀️</span>
+        <h3>とくぎ</h3>
+        <p>売電日和の察知<small>快晴の朝はちょっとうれしい</small></p>
+      </div>
+      <div class="profile-card">
+        <span class="p-icon">💭</span>
+        <h3>ゆめ</h3>
+        <p><span style="white-space:nowrap">みんなの家づくりを</span><span style="white-space:nowrap">楽しくすること</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Story -->
+<section class="story" id="story">
+  <div class="section-inner">
+    <h2 class="section-title">ぐらんちゃん ものがたり</h2>
+    <p class="section-subtitle">施主コミュニティのみんなと一緒に生まれたキャラクターです</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="t-when">2026年4月</span>
+        <h3>アプリのアイコンとして登場</h3>
+        <p>ICHIJO施主手帳が正式リリース。現場ではたらく職人さんの熊に対して、「施主側のくま」としてシロクマがアイコンになりました。</p>
+      </div>
+      <div class="timeline-item">
+        <span class="t-when">2026年4月</span>
+        <h3>オープンチャットで名前がついた</h3>
+        <p>施主のオープンチャットに寄せられた「この子、名前あるんですか？」のひとことから名付けがスタート。施主にはおなじみの「グラン」にちなんで、「ぐらんちゃん」に決まりました。</p>
+      </div>
+      <div class="timeline-item">
+        <span class="t-when">2026年5月〜</span>
+        <h3>スタンププロジェクト始動</h3>
+        <p>オープンチャット発のスタンププロジェクトがわいわいとスタート。イラストやアイデアを寄せてくれる人が続々と集まりました。</p>
+      </div>
+      <div class="timeline-item">
+        <span class="t-when">2026年8月</span>
+        <h3>LINEスタンプ 第1弾・第2弾 発売</h3>
+        <p>家づくり中の施主のためのスタンプが2セット同時期にデビュー。打ち合わせや施主同士のやりとりで活躍中です。</p>
+      </div>
+      <div class="timeline-item">
+        <span class="t-when">これから</span>
+        <h3>第3弾、準備中…</h3>
+        <p>つぎのスタンプも鋭意制作中。アプリの中での活躍の場も、すこしずつ増えていく…かも？</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stickers -->
+<section class="stickers" id="stickers">
+  <div class="section-inner">
+    <h2 class="section-title">LINEスタンプ</h2>
+    <p class="section-subtitle">打ち合わせ・オプチャ・家族のトークで毎日使えます</p>
+
+    <div class="sticker-card">
+      <div class="sticker-head">
+        <h3>第1弾｜家づくり施主スタンプ</h3>
+        <span class="badge">発売中</span>
+      </div>
+      <p>あいさつや返事はもちろん、間取り・見積り・床暖房・売電まで。家づくり中の毎日で使えるスタンプ40種類。</p>
+      <div class="sticker-grid">
+        <figure><img src="images/granchan_s1_01.webp" alt="スタンプ「こんにちは」" width="370" height="320" loading="lazy"></figure>
+        <figure><img src="images/granchan_s1_03.webp" alt="スタンプ「ありがとうございます」" width="370" height="320" loading="lazy"></figure>
+        <figure><img src="images/granchan_s1_22.webp" alt="スタンプ「よかったぁ」" width="370" height="320" loading="lazy"></figure>
+        <figure><img src="images/granchan_s1_23.webp" alt="スタンプ「ええ！なんだってぇ!!」" width="370" height="320" loading="lazy"></figure>
+        <figure><img src="images/granchan_s1_33.webp" alt="スタンプ「間取りまだですか」" width="370" height="320" loading="lazy"></figure>
+        <figure><img src="images/granchan_s1_32.webp" alt="スタンプ「施主手帳アプリいれた？」" width="370" height="320" loading="lazy"></figure>
+      </div>
+      <div class="sticker-foot">
+        <a class="btn btn-line" href="https://line.me/S/sticker/35649689" target="_blank" rel="noopener">LINE STOREで見る</a>
+        <span class="price">40種類｜価格はLINE STOREでご確認ください</span>
+      </div>
+    </div>
+
+    <div class="sticker-card">
+      <div class="sticker-head">
+        <h3>第2弾｜家づくり施主スタンプ</h3>
+        <span class="badge">発売中</span>
+      </div>
+      <p>日常の返事に加えて、「断熱王」「売電王」などの王シリーズ、コンセント・仕様打ち合わせネタも。こだわり施主のためのスタンプ40種類。</p>
+      <div class="sticker-grid">
+        <figure><img src="images/granchan_s2_02.webp" alt="スタンプ「打ち合わせいってきます」" width="370" height="320" loading="lazy"></figure>
+        <figure><img src="images/granchan_s2_04.webp" alt="スタンプ「確認しました」" width="370" height="320" loading="lazy"></figure>
+        <figure><img src="images/granchan_s2_10.webp" alt="スタンプ「話は聞かせてもらった」" width="370" height="320" loading="lazy"></figure>
+        <figure><img src="images/granchan_s2_12.webp" alt="スタンプ「最高だわ」" width="370" height="320" loading="lazy"></figure>
+        <figure><img src="images/granchan_s2_16.webp" alt="スタンプ「コンセントマシマシで」" width="370" height="320" loading="lazy"></figure>
+        <figure><img src="images/granchan_s2_25.webp" alt="スタンプ「パネルはMAXのせてください！」" width="370" height="320" loading="lazy"></figure>
+      </div>
+      <div class="sticker-foot">
+        <a class="btn btn-line" href="https://line.me/S/sticker/35662408" target="_blank" rel="noopener">LINE STOREで見る</a>
+        <span class="price">40種類｜価格はLINE STOREでご確認ください</span>
+      </div>
+    </div>
+
+    <div class="sticker-card coming">
+      <h3>第3弾 準備中…</h3>
+      <p>つぎのぐらんちゃんも、ただいま鋭意制作中です。おたのしみに！</p>
+    </div>
+
+    <p class="sticker-note">※ 掲載しているのは各弾の一部です。全40種類はLINE STOREでご覧いただけます。</p>
+  </div>
+</section>
+
+<!-- In app -->
+<section class="inapp">
+  <div class="inapp-content">
+    <h2 class="section-title">アプリの中のぐらんちゃん</h2>
+    <img src="images/icon.webp" alt="ICHIJO施主手帳のアプリアイコン" width="720" height="720" loading="lazy">
+    <p>ふだんは「ICHIJO施主手帳」のアイコンとして、みなさんのホーム画面でお仕事中。<br>図面チェックから、でんき通信簿まで、家づくりと暮らしをそっとサポートしています。</p>
+    <a class="btn btn-ghost" href="index.html" style="border-color:#ccd8e4">アプリについてくわしく</a>
+  </div>
+</section>
+
+<!-- About / disclaimer -->
+<section class="gc-about">
+  <div class="section-inner">
+    <div class="disclaimer">
+      ⚠️ このページおよびアプリは一条工務店の公式のものではありません。<br>
+      「ぐらんちゃん」は、アプリ開発者が制作したオリジナルキャラクターです。<br>
+      一条工務店とは一切の関係がありません。
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2026 masa_iot. All rights reserved.</p>
+  <p class="disclaimer-footer">「ICHIJO施主手帳」および「ぐらんちゃん」は一条工務店とは一切関係のない、施主個人による非公式のアプリ・キャラクターです。</p>
+</footer>
+
+</body>
+</html>
