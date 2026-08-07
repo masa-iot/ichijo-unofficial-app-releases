@@ -4,10 +4,6 @@
 
 **[アプリ紹介ページ](https://ichijo-unofficial.smartolio.jp/)** / **[ユーザーマニュアル](https://ichijo-unofficial.smartolio.jp/manual.html)** / **[ぐらんちゃん特設ページ](https://ichijo-unofficial.smartolio.jp/granchan.html)**
 
-> キャラクター「ぐらんちゃん」のローマ字表記は `granchan`（dなし）。
-> ページ運用の詳細・スタンプ新弾発売時の更新手順は
-> `grandchan_stamp/引き継ぎ.md`（スタンプ制作リポジトリ）の「ぐらんちゃん特設ページ」の章を参照。
-
 ## ダウンロード
 
 - Android: [Google Play](https://play.google.com/store/apps/details?id=jp.smartolio.ichijo_unofficial)
