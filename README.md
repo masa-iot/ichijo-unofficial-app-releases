@@ -2,7 +2,11 @@
 
 家づくりも、入居後の暮らしも。一条工務店の施主のためのサポートアプリ
 
-**[アプリ紹介ページ](https://ichijo-unofficial.smartolio.jp/)** / **[ユーザーマニュアル](https://ichijo-unofficial.smartolio.jp/manual.html)**
+**[アプリ紹介ページ](https://ichijo-unofficial.smartolio.jp/)** / **[ユーザーマニュアル](https://ichijo-unofficial.smartolio.jp/manual.html)** / **[ぐらんちゃん特設ページ](https://ichijo-unofficial.smartolio.jp/granchan.html)**
+
+> キャラクター「ぐらんちゃん」のローマ字表記は `granchan`（dなし）。
+> ページ運用の詳細・スタンプ新弾発売時の更新手順は
+> `grandchan_stamp/引き継ぎ.md`（スタンプ制作リポジトリ）の「ぐらんちゃん特設ページ」の章を参照。
 
 ## ダウンロード
 
