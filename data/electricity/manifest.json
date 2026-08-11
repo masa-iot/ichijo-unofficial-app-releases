@@ -1,6 +1,6 @@
 {
   "manifestVersion": 1,
-  "publishedAt": "2026-05-31T00:00:00Z",
+  "publishedAt": "2026-08-11T00:00:00Z",
   "minAppVersion": "1.3.0",
   "files": {
     "companies": {
@@ -16,7 +16,7 @@
     "fuel_adjustments": {
       "path": "fuel_adjustments.json",
       "schemaVersion": 1,
-      "lastUpdated": "2026-05-31T00:00:00Z"
+      "lastUpdated": "2026-08-11T00:00:00Z"
     },
     "subsidies": {
       "path": "subsidies.json",
