@@ -731,6 +731,7 @@
     <li class="sub2"><a href="#diff-export">画像エクスポート</a></li>
     <li><a href="#alignment">位置合わせ画面</a></li>
     <li><a href="#size-alignment">サイズ合わせ画面</a></li>
+    <li><a href="#page-mapping">ページの組み合わせ</a></li>
     <li class="sub"><a href="#diff-actions">操作リファレンス</a></li>
   </ul>
 
@@ -1621,7 +1622,7 @@
   <li><strong>タイトル</strong>：図面番号の旧→新（例：2-6 → 2-7）、単独モード時はファイル名</li>
   <li><strong>メモアイコン</strong>：このページのメモ一覧</li>
   <li><strong>🔖 ブックマーク</strong>：この比較結果を登録／解除</li>
-  <li><strong>「調整 ▾」メニュー</strong>：<a href="#alignment">位置合わせ画面</a> または <a href="#size-alignment">サイズ合わせ画面</a> を選択</li>
+  <li><strong>「調整 ▾」メニュー</strong>：<a href="#alignment">位置合わせ画面</a>・<a href="#size-alignment">サイズ合わせ画面</a>・<a href="#page-mapping">ページの組み合わせ</a> を選択</li>
   <li><strong>エクスポートアイコン</strong>：画像保存／共有</li>
 </ul>
 
@@ -1728,21 +1729,21 @@
 <p>差分結果で位置がずれているときに、手動で旧図の位置を調整する画面です。差分結果画面の右上「<strong>調整 ▾</strong>」メニュー → 「位置合わせ」を選んで遷移します。</p>
 
 <figure class="shot-phone">
-  <img src="images/cad_adjust_menu.webp" width="720" height="1564" alt="「調整 ▾」メニュー（位置合わせ / サイズ合わせ）" loading="lazy" decoding="async">
-  <figcaption>「調整 ▾」メニュー：位置合わせ / サイズ合わせ の 2 種を選べる</figcaption>
+  <img src="images/cad_adjust_menu.webp" width="720" height="1564" alt="「調整 ▾」メニュー（位置合わせ / サイズ合わせ / ページの組み合わせ）" loading="lazy" decoding="async">
+  <figcaption>「調整 ▾」メニュー：位置合わせ / サイズ合わせ / <a href="#page-mapping">ページの組み合わせ</a> の 3 種を選べる</figcaption>
 </figure>
 
-<p>画面上部のヘルプバナーに、以下の3ステップが表示されます。</p>
+<p>画面上部の「位置合わせの手順」カードに、以下の3ステップが表示されます。</p>
 <ol>
-  <li>X/Yスライダーでざっくり位置を合わせる</li>
-  <li>選択枠（緑の枠）を外壁のカドなど特徴的な部分に移動・リサイズ</li>
-  <li>「ピタッと合わせる」ボタンで自動探索を実行（変化なしになるまで数回繰り返す）</li>
+  <li><strong>下準備</strong>：X/Yスライダーでおおまかに位置を合わせる（大きくずれているときだけでOK）</li>
+  <li><strong>目印</strong>：緑の枠を、外壁のカドなど「ずれが分かる場所」に移動・リサイズ</li>
+  <li><strong>仕上げ</strong>：「ピタッと合わせる」を押す（<strong>「変化なし」と出るまで数回くり返す</strong>のがコツ）</li>
 </ol>
 
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/diff_align.webp" width="720" height="1564" alt="位置合わせ初期画面（選択枠とX/Yスライダー）" loading="lazy" decoding="async">
-    <figcaption>初期画面（選択枠＋X/Yスライダー）</figcaption>
+    <img src="images/diff_align.webp" width="720" height="1564" alt="位置合わせ初期画面（手順カード・目印枠・下準備スライダー）" loading="lazy" decoding="async">
+    <figcaption>初期画面（手順カード＋目印枠＋下準備スライダー）</figcaption>
   </figure>
   <figure class="shot-phone">
     <img src="images/align_moved.webp" width="720" height="1564" alt="X/Yスライダーで位置を合わせ、選択枠も特徴部分に移動した状態（X:-80/Y:67）" loading="lazy" decoding="async">
@@ -1753,8 +1754,8 @@
     <figcaption>③ 「ピタッと合わせる」探索中</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/align_done.webp" width="720" height="1564" alt="位置合わせ完了" loading="lazy" decoding="async">
-    <figcaption>位置合わせ完了</figcaption>
+    <img src="images/align_done.webp" width="720" height="1564" alt="位置合わせ完了（変化なし表示と下準備の案内）" loading="lazy" decoding="async">
+    <figcaption>「変化なし」＝位置合わせ完了。ずれが残るときは下準備からやり直す案内が出る</figcaption>
   </figure>
   <figure class="shot-phone">
     <img src="images/align_discard_dialog.webp" width="720" height="1564" alt="位置合わせ破棄確認ダイアログ" loading="lazy" decoding="async">
@@ -1837,6 +1838,64 @@
   <p>サイズ合わせの結果は<strong>ページ単位</strong>で保存されます。同じ比較を再度開いたときは前回の結果がそのまま反映されます。</p>
 </div>
 
+<h3 id="page-mapping">ページの組み合わせ</h3>
+<p>旧版と新版で<strong>どのページ同士を比べるか</strong>を変更する機能です。版の途中でページが増えたり減ったりすると、標準の「同じページ番号同士」の比較ではページがずれてしまいます。そんなときに、差分結果画面の右上「<strong>調整 ▾</strong>」メニュー → 「<strong>ページの組み合わせ</strong>」から組み合わせを直せます。</p>
+
+<p>旧版と新版でページ数が違う場合は、比較を開いたときに案内バナーが表示されます。バナーの「<strong>ページの組み合わせ</strong>」ボタンからも直接開けます。</p>
+
+<figure class="shot-phone">
+  <img src="images/page_mapping_mismatch_banner.webp" width="720" height="1564" alt="ページ数が違うときの案内バナー（古い版は5ページ、新しい版は6ページです）" loading="lazy" decoding="async">
+  <figcaption>ページ数が違う 2 版を比べると案内バナーが出る</figcaption>
+</figure>
+
+<h4>一覧エディタの見かた</h4>
+<ul>
+  <li><strong>表示ページ</strong>：差分結果画面で何ページ目として表示されるか</li>
+  <li><strong>古い版 / 新しい版</strong>：そのページで比べる各版のページ（サムネイル付き）</li>
+  <li><strong>「いま表示中」</strong>：差分結果画面で開いていたページの行につく目印</li>
+  <li><strong>青い点</strong>：標準（同じページ番号同士）と違う組み合わせにした行の目印</li>
+  <li>使われていないページや、複数の行で使われているページがあると、一覧の上に<strong>お知らせ</strong>が表示されます（そのまま保存もできます）</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/page_mapping_editor.webp" width="720" height="1564" alt="ページの組み合わせ一覧エディタ（表示ページ・古い版・新しい版の列とサムネイル）" loading="lazy" decoding="async">
+    <figcaption>一覧エディタ：ずらした行に青い点、下端の行は「なし」になっている</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/page_mapping_picker.webp" width="720" height="1564" alt="ページ選択（下から出るサムネイル一覧。先頭に「なし」）" loading="lazy" decoding="async">
+    <figcaption>セルをタップするとサムネイル一覧からページを選べる。先頭の「なし」は「比べる相手のページはなし」</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/page_mapping_propagate.webp" width="720" height="1564" alt="「この後のページも同じだけずらす」ボタンが表示された状態" loading="lazy" decoding="async">
+    <figcaption>片側をずらすと「この後のページも同じだけずらす」が出て、以降の行をまとめて直せる</figcaption>
+  </figure>
+</div>
+
+<h4>操作の流れ</h4>
+<ol>
+  <li>直したい行の「古い版」または「新しい版」のセルをタップ</li>
+  <li>下から出るサムネイル一覧からページを選ぶ（「<strong>なし</strong>」を選ぶと、そのページは比較しない）</li>
+  <li>途中でページが 1 枚増えた／減っただけなら、ずらした行の下に出る「<strong>この後のページも同じだけずらす</strong>」を押すと以降がまとめて揃います</li>
+  <li>右上の「<strong>保存</strong>」で確定。組み合わせを変えたページだけ差分が再計算されます</li>
+</ol>
+
+<h4>操作方法</h4>
+<ul>
+  <li><strong>セルのタップ</strong>：そのページで比べる相手をサムネイル一覧から選ぶ</li>
+  <li><strong>行の「︙」メニュー</strong>：「このページを標準に戻す」</li>
+  <li><strong>右上の「︙」メニュー</strong>：「すべて標準に戻す」</li>
+  <li><strong>右上「保存」</strong>：変更を確定して差分を再計算</li>
+</ul>
+
+<div class="callout note">
+  <p>組み合わせを変えたページは、<a href="#alignment">位置合わせ</a>・<a href="#size-alignment">サイズ合わせ</a>の調整値が<strong>リセット</strong>されます（調整値はページの組み合わせごとに保存されているため）。また、相手を「なし」にしたページは、差分の代わりに「このページは古い版（新しい版）にのみあります」と表示されます。</p>
+</div>
+
+<div class="callout tip">
+  <p>組み合わせを変えるページに<a href="#memo-on-diff">ピンメモ</a>がある場合は、保存時にメモの扱いの確認が表示されます。</p>
+</div>
+
 <h3 id="diff-actions">操作リファレンス</h3>
 <div class="action-box">
   <div class="action-row"><strong>種別セグメント</strong><span>CAD図面 / 電気図面 切替</span></div>
@@ -1852,7 +1911,9 @@
   <div class="action-row"><strong>ピンチ・ダブルタップ</strong><span>最大8倍ズーム</span></div>
   <div class="action-row"><strong>画面長押し</strong><span>その位置にメモを追加（ピンメモ）</span></div>
   <div class="action-row"><strong>エクスポートアイコン</strong><span>現在の1枚 or 3枚まとめ</span></div>
-  <div class="action-row"><strong>「調整 ▾」メニュー</strong><span>位置合わせ / サイズ合わせ を選択</span></div>
+  <div class="action-row"><strong>「調整 ▾」メニュー</strong><span>位置合わせ / サイズ合わせ / ページの組み合わせ を選択</span></div>
+  <div class="action-row"><strong>ページの組み合わせ：セルタップ</strong><span>比べる相手のページを選ぶ（「なし」も可）</span></div>
+  <div class="action-row"><strong>ページの組み合わせ：「保存」</strong><span>変えたページだけ差分を再計算</span></div>
   <div class="action-row"><strong>サイズ合わせ：縮尺を入力</strong><span>旧/新の縮尺（1/◯◯）から大きさの比を算出</span></div>
   <div class="action-row"><strong>サイズ合わせ（計測）：枠ドラッグ</strong><span>①②を点線（グリッド線）の交わる場所に配置</span></div>
   <div class="action-row"><strong>サイズ合わせ（計測）：「サイズを比較」</strong><span>4 ヶ所から大きさの比を算出</span></div>
