@@ -365,8 +365,8 @@
   .install-card p{
     margin:0 0 14px;font-size:.86rem;color:#666;
   }
-  .install-card .badge-google{height:60px}
-  .install-card .badge-apple{height:44px}
+  .install-card .badge-google{height:60px;width:auto}
+  .install-card .badge-apple{height:44px;width:auto}
 
   .tabs{display:flex;gap:4px;margin:16px 0 0;border-bottom:1px solid #eee}
   .tab-btn{
@@ -941,14 +941,14 @@
     <h4>🤖 Android</h4>
     <p>Google Play ストアからインストールできます。</p>
     <a href="https://play.google.com/store/apps/details?id=jp.smartolio.ichijo_unofficial&referrer=utm_source%3Dwebsite%26utm_medium%3Dmanual%26utm_campaign%3Dinstall" target="_blank" rel="noopener">
-      <img alt="Google Play で手に入れよう" src="https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png" class="badge-google">
+      <img alt="Google Play で手に入れよう" src="https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png" class="badge-google" width="646" height="250">
     </a>
   </div>
   <div class="install-card">
     <h4>🍎 iOS</h4>
     <p>App Store からインストールできます。</p>
     <a href="https://apps.apple.com/jp/app/ichijo%E6%96%BD%E4%B8%BB%E6%89%8B%E5%B8%B3-%E9%9D%9E%E5%85%AC%E5%BC%8F/id6761674540" target="_blank" rel="noopener">
-      <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp" class="badge-apple">
+      <img alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp" class="badge-apple" width="109" height="40">
     </a>
   </div>
 </div>
@@ -4046,12 +4046,16 @@
   <li><strong>どうしても取り込めない</strong>：PDFの種類・エラー内容を添えてお問い合わせください</li>
 </ul>
 
-<h3>図面の差分がうまく出ない</h3>
+<h3 id="troubleshooting-diff">図面の差分がうまく出ない</h3>
+<p>変更していない場所まで赤・青になるときは、新旧の図面の<strong>位置・大きさ・ページの組み合わせ</strong>のどれかがずれています。差分結果画面の右上「調整 ▾」メニューから直せます。まず位置合わせ、それでも合わなければサイズ合わせ、ページ数が違うときはページの組み合わせ、の順に試してください。</p>
 <ul>
-  <li><strong>全体がずれて赤青だらけ</strong>：差分結果画面の上部バーにある<strong>位置合わせアイコン</strong>から手動調整できます。合わせた結果はページ単位で自動保存され、次回も同じ調整で開きます</li>
-  <li><strong>細かい赤青が出すぎる</strong>：右上のノイズ除去フィルタを「ややざっくり」〜「超ざっくり」にすると不要な差分が間引かれます（ページ別に保存されます）</li>
-  <li><strong>一部のページだけズレている</strong>：位置合わせはページ単位なので、該当ページに切り替えてから調整してください</li>
-  <li><strong>前回の調整結果にすぐ戻りたい</strong>：選択画面下部の<strong>比較履歴</strong>をタップするだけで即表示されます（調整値・フィルタレベルも復元）</li>
+  <li><strong>全体がずれて赤青だらけ</strong>：「調整 ▾」→「位置合わせ」で旧図の位置を合わせます。「下準備 → 目印 → 仕上げ」の3ステップで、最後は「ピタッと合わせる」が自動で追い込みます。結果はページ単位で保存され、次回も同じ調整で開きます → <a href="#alignment">位置合わせ画面</a></li>
+  <li><strong>片方の図面だけ大きい／小さい（重ねても輪郭が二重になる）</strong>：版の間で縮尺が変わっています。「調整 ▾」→「サイズ合わせ」で、図面に書かれている縮尺（例: 1/80）を入力すると大きさが揃います → <a href="#size-alignment">サイズ合わせ画面</a></li>
+  <li><strong>別のページ同士が比べられている／版の途中でページが増減した</strong>：「調整 ▾」→「ページの組み合わせ」で、旧版と新版のどのページ同士を比べるかを指定します。ページ数が違うときは案内が表示され、そこから直接開けます → <a href="#page-mapping">ページの組み合わせ</a></li>
+  <li><strong>細かい赤青が出すぎる</strong>：右上のノイズ除去フィルタを「ややざっくり」〜「超ざっくり」にすると、線の太さ程度の差分が間引かれます（ページ別に保存されます） → <a href="#diff-filter">ノイズ除去フィルタ</a></li>
+  <li><strong>一部のページだけズレている</strong>：位置合わせはページ単位です。画面下のバーで該当ページに切り替えてから調整してください → <a href="#diff-page">複数ページ操作</a></li>
+  <li><strong>調整の前後を見比べたい</strong>：「調整済 / 元」の切替で、調整前の差分にいつでも戻せます → <a href="#diff-adjusted">調整済 / 元の差分 切替</a></li>
+  <li><strong>前回の調整結果にすぐ戻りたい</strong>：選択画面下部の<strong>比較履歴</strong>をタップするだけで即表示されます（調整値・フィルタレベルも復元） → <a href="#diff-history">比較履歴</a></li>
 </ul>
 
 <h3>見積り・仕様書の解析結果がおかしい</h3>
