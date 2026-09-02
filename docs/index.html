@@ -7,6 +7,7 @@
 <meta name="description" content="一条工務店の施主のための非公式アプリ。図面チェック（CAD差分）・見積り比較・仕様書チェックから、でんき通信簿・お手入れ当番表まで。家づくりも入居後の暮らしもサポート。データはすべて端末内保存で安心。">
 <link rel="canonical" href="https://ichijo-unofficial.smartolio.jp/">
 <meta name="theme-color" content="#2F6EA5">
+<meta name="apple-itunes-app" content="app-id=6761674540">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
 <link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
@@ -33,7 +34,8 @@
   "url": "https://ichijo-unofficial.smartolio.jp/",
   "image": "https://ichijo-unofficial.smartolio.jp/images/ogp.jpg",
   "author": {"@type": "Person", "name": "masa_iot"},
-  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "JPY"}
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "JPY"},
+  "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.6", "ratingCount": "22", "bestRating": "5", "worstRating": "1"}
 }
 </script>
 <script type="application/ld+json">
@@ -121,6 +123,54 @@
   .store-badges img{display:block}
   .store-badges .badge-google{height:64px;margin:-4px}
   .store-badges .badge-apple{height:44px}
+  .stars{
+    display:inline-block;letter-spacing:1px;line-height:1;
+    background:linear-gradient(90deg,#FFC83D var(--p,100%),rgba(255,255,255,.35) var(--p,100%));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero-proof{display:flex;align-items:center;gap:18px;margin-top:22px;flex-wrap:wrap}
+  .hero-proof .pr{display:flex;align-items:center;gap:10px}
+  .hero-proof .stars{font-size:1.05rem}
+  .hero-proof .num{font-size:1.55rem;font-weight:800;line-height:1;letter-spacing:.01em}
+  .hero-proof .num small{font-size:.95rem;font-weight:700}
+  .hero-proof .lbl{font-size:.74rem;opacity:.88;line-height:1.25}
+  .hero-proof .sep{width:1px;height:30px;background:rgba(255,255,255,.35)}
+
+  /* ---- Voices / social proof ---- */
+  .voices{background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .stats{
+    display:grid;grid-template-columns:repeat(2,1fr);gap:16px;
+    max-width:560px;margin:0 auto 40px;
+  }
+  .stat{
+    text-align:center;padding:22px 12px;border-radius:14px;
+    background:var(--bg);border:1px solid var(--line);
+  }
+  .stat-num{font-size:2.2rem;font-weight:800;color:var(--brand);line-height:1.1;letter-spacing:.01em}
+  .stat-num small{font-size:1.1rem;font-weight:700}
+  .stat-num .stars{font-size:1rem;display:block;margin-top:4px;
+    background:linear-gradient(90deg,#F5B400 var(--p,100%),#dcdcdc var(--p,100%));
+    -webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat-lbl{font-size:.9rem;font-weight:700;color:var(--ink);margin-top:8px}
+  .stat-lbl small{display:block;font-size:.75rem;font-weight:400;color:var(--faint);margin-top:2px}
+  .voice-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .voice{
+    position:relative;margin:0;padding:24px 22px 18px;border-radius:14px;
+    background:var(--bg);border:1px solid var(--line);
+  }
+  .voice::before{
+    content:"\201C";position:absolute;top:6px;left:14px;
+    font-size:3rem;line-height:1;color:var(--brand-light);font-family:Georgia,serif;opacity:.7;
+  }
+  .voice blockquote{margin:0;font-size:.95rem;line-height:1.8;color:var(--ink);padding-left:6px}
+  .voice figcaption{
+    display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap;
+    margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);
+  }
+  .voice figcaption strong{font-size:.9rem;color:var(--brand-dark)}
+  .voice figcaption span{font-size:.75rem;color:var(--faint)}
+  .voice-hint{display:none;text-align:center;color:var(--faint);font-size:.78rem;margin-top:10px}
+  .voice-note{text-align:center;color:var(--faint);font-size:.78rem;margin-top:22px}
   .hero-manual-link{
     display:block;margin-top:16px;font-size:.88rem;color:#fff;
     text-decoration:underline;text-underline-offset:3px;opacity:.9;
@@ -138,6 +188,25 @@
     background:#000;display:inline-block;vertical-align:bottom;
     margin-bottom:-1px;
   }
+
+  /* ---- Sticky CTA (mobile) ---- */
+  .sticky-cta{
+    position:fixed;left:0;right:0;bottom:0;z-index:90;
+    display:none;align-items:center;gap:8px;
+    padding:10px 14px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(255,255,255,.96);backdrop-filter:blur(8px);
+    border-top:1px solid var(--line);box-shadow:0 -4px 16px rgba(0,0,0,.08);
+    transform:translateY(110%);transition:transform .25s ease;
+  }
+  .sticky-cta.show{transform:translateY(0)}
+  .sticky-cta .sc-text{flex:1 1 auto;min-width:0;font-size:.82rem;font-weight:700;color:var(--ink);line-height:1.3}
+  .sticky-cta .sc-text small{display:block;font-weight:400;color:var(--faint);font-size:.72rem}
+  .sticky-cta a{
+    flex:0 0 auto;display:inline-block;padding:10px 12px;border-radius:8px;
+    background:#1a1a1a;color:#fff;font-size:.8rem;font-weight:600;
+    text-decoration:none;white-space:nowrap;
+  }
+  .sticky-cta a:hover{text-decoration:none;background:#000}
 
   /* ---- Trust strip ---- */
   .trust-strip{background:#fff;border-bottom:1px solid var(--line)}
@@ -371,6 +440,21 @@
     .feature-media img{max-height:380px}
     .feature-media.dual img{max-height:300px}
     .subfeature-grid{grid-template-columns:repeat(2,1fr)}
+    .hero-proof{justify-content:center;gap:14px}
+    .stats{gap:10px}
+    .stat{padding:16px 8px}
+    .stat-num{font-size:1.7rem}
+    .voice-grid{
+      display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;
+      -webkit-overflow-scrolling:touch;scrollbar-width:none;
+      margin:0 -16px;padding:4px 16px 8px;
+    }
+    .voice-grid::-webkit-scrollbar{display:none}
+    .voice{flex:0 0 84%;scroll-snap-align:start}
+    .voice-hint{display:block}
+    .voice-note{margin-top:10px}
+    .sticky-cta{display:flex}
+    footer{padding-bottom:calc(84px + env(safe-area-inset-bottom))}
   }
   @media(max-width:600px){
     .hero{padding-top:96px}
@@ -400,6 +484,7 @@
       ICHIJO施主手帳
     </div>
     <nav class="header-nav">
+      <a href="#voices">施主の声</a>
       <a href="#features">機能</a>
       <a href="#screenshots">画面</a>
       <a href="#download">ダウンロード</a>
@@ -412,6 +497,7 @@
     <button class="hamburger" onclick="(function(b){var n=document.querySelector('.mobile-nav');n.classList.toggle('open');b.setAttribute('aria-expanded',n.classList.contains('open'));})(this)" aria-label="メニュー" aria-controls="mobile-nav" aria-expanded="false">☰</button>
   </div>
   <nav class="mobile-nav" id="mobile-nav" aria-label="モバイルメニュー">
+    <a href="#voices" onclick="document.querySelector('.mobile-nav').classList.remove('open')">施主の声</a>
     <a href="#features" onclick="document.querySelector('.mobile-nav').classList.remove('open')">機能</a>
     <a href="#screenshots" onclick="document.querySelector('.mobile-nav').classList.remove('open')">画面</a>
     <a href="#download" onclick="document.querySelector('.mobile-nav').classList.remove('open')">ダウンロード</a>
@@ -437,12 +523,23 @@
       <p class="tagline">家づくりも、入居後の暮らしも。<br>一条工務店の施主のためのサポートアプリ</p>
       <p class="privacy-note">🔒 図面・見積りのデータはスマホの中だけに保管。<br>インターネットに送られることはなく、開発者にも中身は見えません。</p>
       <div class="store-badges">
-        <a href="https://play.google.com/store/apps/details?id=jp.smartolio.ichijo_unofficial" target="_blank" rel="noopener">
+        <a href="https://play.google.com/store/apps/details?id=jp.smartolio.ichijo_unofficial&referrer=utm_source%3Dwebsite%26utm_medium%3Dlp%26utm_campaign%3Dhero" target="_blank" rel="noopener">
           <img class="badge-google" alt="Google Play で手に入れよう" src="https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png">
         </a>
         <a href="https://apps.apple.com/jp/app/ichijo%E6%96%BD%E4%B8%BB%E6%89%8B%E5%B8%B3-%E9%9D%9E%E5%85%AC%E5%BC%8F/id6761674540" target="_blank" rel="noopener">
           <img class="badge-apple" alt="Download on the App Store" src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/ja-jp">
         </a>
+      </div>
+      <!-- 実績表示: 数値は手動更新 (最終更新 2026-09: 両ストア合計 1,500DL / App Store 4.6★ 22件) -->
+      <div class="hero-proof" aria-label="実績">
+        <div class="pr">
+          <span class="stars" style="--p:92%" aria-hidden="true">★★★★★</span>
+          <div><div class="num">4.6</div><div class="lbl">App Store 評価</div></div>
+        </div>
+        <span class="sep" aria-hidden="true"></span>
+        <div class="pr">
+          <div><div class="num">1,500<small>+</small></div><div class="lbl">累計ダウンロード<br>Android + iOS</div></div>
+        </div>
       </div>
       <a class="hero-manual-link" href="manual.html">📖 詳しい使い方はユーザーマニュアルへ</a>
     </div>
@@ -469,6 +566,47 @@
     </div>
   </div>
 </div>
+
+<!-- Voices / social proof -->
+<section class="voices" id="voices">
+  <div class="section-inner">
+    <h2 class="section-title">施主の声</h2>
+    <p class="section-subtitle">公開から約5か月で累計1,500ダウンロード。App Store に寄せられたレビューから一部をご紹介します。</p>
+
+    <!-- 数値は手動更新 (最終更新 2026-09-02): 累計DL / App Store 評価・件数 -->
+    <div class="stats">
+      <div class="stat">
+        <div class="stat-num"><span data-count="1500">1,500</span><small>+</small></div>
+        <div class="stat-lbl">累計ダウンロード<small>Android + iOS 合計</small></div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">4.6<span class="stars" style="--p:92%" aria-hidden="true">★★★★★</span></div>
+        <div class="stat-lbl">App Store 評価<small>22件のレビュー</small></div>
+      </div>
+    </div>
+
+    <div class="voice-grid">
+      <figure class="voice">
+        <blockquote>いよいよ着手承諾、というタイミングでこちらのアプリを知り活用させていただきました。どこが変わったか一目瞭然で助かりました。プレッシャーと疲労で、もう図面を見るのも嫌になってなかなか腰が上がらない状態になっていたので、このアプリに本当に助けられました。</blockquote>
+        <figcaption><strong>「本当に便利」</strong><span>App Store レビュー・2026年6月</span></figcaption>
+      </figure>
+      <figure class="voice">
+        <blockquote>図面や見積りなど前回からの変更点がとてもわかりやすいので、サイレントフィリピンの防止にもなります。情報もアプリ内で完結しているので流出の心配もありません。引き渡し後の施主ですが、でんき通信簿で太陽光でどれだけ得したか、つい毎日開いてしまいます。</blockquote>
+        <figcaption><strong>「一条施主必須アプリです」</strong><span>App Store レビュー・2026年4月</span></figcaption>
+      </figure>
+      <figure class="voice">
+        <blockquote>CAD図面、電気図面、資金計画書、仕様書の新旧変更箇所を瞬時に確認できます。直前に届いた図面を十分チェックできないまま打ち合わせに臨む不安が解消されました。アプリ内で解析が完結し、流出するリスク不安がない安心感も大きいです。</blockquote>
+        <figcaption><strong>「一条施主の強い味方」</strong><span>App Store レビュー・2026年4月</span></figcaption>
+      </figure>
+      <figure class="voice">
+        <blockquote>非公式ならではの、入居者にとって便利な機能があります。太陽光発電、電気代の計算ツールもありがたい上に、入居後のフィルター交換・掃除推奨時期を自分で設定できたり、リマインダーがあり、助かります。</blockquote>
+        <figcaption><strong>「入居後のフィルターやそうじ管理までできます」</strong><span>App Store レビュー・2026年6月</span></figcaption>
+      </figure>
+    </div>
+    <p class="voice-hint" aria-hidden="true">← 横にスワイプで他の声も →</p>
+    <p class="voice-note">レビューは App Store の公開レビューから抜粋しています（一部省略）。</p>
+  </div>
+</section>
 
 <!-- Features -->
 <section class="features" id="features">
@@ -698,7 +836,7 @@
       <div class="download-card">
         <h3>🤖 Android</h3>
         <p>Google Play ストアからインストールできます。</p>
-        <a href="https://play.google.com/store/apps/details?id=jp.smartolio.ichijo_unofficial" target="_blank" rel="noopener">
+        <a href="https://play.google.com/store/apps/details?id=jp.smartolio.ichijo_unofficial&referrer=utm_source%3Dwebsite%26utm_medium%3Dlp%26utm_campaign%3Ddownload" target="_blank" rel="noopener">
           <img alt="Google Play で手に入れよう" src="https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png" style="height:60px">
         </a>
       </div>
@@ -957,6 +1095,7 @@
       <h2 class="section-title">プライバシーポリシー</h2>
       <p>プライバシーポリシーの全文は以下のリンクからご確認ください。</p>
       <p><a href="https://smartolio.jp/privacy/ichijo-unofficial-app/" target="_blank" rel="noopener" style="font-weight:600;font-size:1rem">プライバシーポリシー（smartolio.jp）</a></p>
+      <p style="margin-top:14px;font-size:.85rem;color:#777">このサイトでは、アクセス状況の把握のために Cloudflare Web Analytics を利用しています。Cookie や個人を特定する情報は使用しません。</p>
     </div>
   </div>
 </section>
@@ -967,6 +1106,12 @@
   <p class="disclaimer-footer">「ICHIJO施主手帳」は一条工務店の公式アプリではありません。一条工務店とは一切の関係がありません。</p>
 </footer>
 
+<!-- Sticky CTA (mobile only) -->
+<div class="sticky-cta" id="sticky-cta" aria-hidden="true">
+  <div class="sc-text">無料でインストール<small>登録不要・データは端末内のみ</small></div>
+  <a href="https://play.google.com/store/apps/details?id=jp.smartolio.ichijo_unofficial&referrer=utm_source%3Dwebsite%26utm_medium%3Dlp%26utm_campaign%3Dsticky" target="_blank" rel="noopener">Google Play</a>
+  <a href="https://apps.apple.com/jp/app/ichijo%E6%96%BD%E4%B8%BB%E6%89%8B%E5%B8%B3-%E9%9D%9E%E5%85%AC%E5%BC%8F/id6761674540" target="_blank" rel="noopener">App Store</a>
+</div>
 <!-- Lightbox -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="画像の拡大表示">
   <button class="lightbox-close" aria-label="閉じる">✕</button>
@@ -995,6 +1140,53 @@
     if(e.key === 'Escape' && lb.classList.contains('open')) close();
   });
 })();
+(function(){
+  var nums = document.querySelectorAll('.stat-num [data-count]');
+  if(!nums.length || !('IntersectionObserver' in window)) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var fmt = function(n){ return n.toLocaleString('ja-JP'); };
+  var io = new IntersectionObserver(function(es){
+    es.forEach(function(e){
+      if(!e.isIntersecting) return;
+      io.unobserve(e.target);
+      var el = e.target, target = parseInt(el.getAttribute('data-count'), 10);
+      if(reduce){ el.textContent = fmt(target); return; }
+      var t0 = null, dur = 1100;
+      function step(ts){
+        if(!t0) t0 = ts;
+        var p = Math.min((ts - t0) / dur, 1);
+        var eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = fmt(Math.round(target * eased));
+        if(p < 1) requestAnimationFrame(step);
+      }
+      el.textContent = '0';
+      requestAnimationFrame(step);
+    });
+  }, {threshold: 0.4});
+  nums.forEach(function(n){ io.observe(n); });
+})();
+(function(){
+  var bar = document.getElementById('sticky-cta');
+  var badges = document.querySelector('.hero .store-badges');
+  var dl = document.getElementById('download');
+  if(!bar || !badges || !dl || !('IntersectionObserver' in window)) return;
+  var heroPassed = false, dlVisible = false;
+  function update(){
+    var show = heroPassed && !dlVisible;
+    bar.classList.toggle('show', show);
+    bar.setAttribute('aria-hidden', show ? 'false' : 'true');
+  }
+  new IntersectionObserver(function(es){
+    var e = es[0];
+    heroPassed = !e.isIntersecting && e.boundingClientRect.top < 0;
+    update();
+  }).observe(badges);
+  new IntersectionObserver(function(es){
+    dlVisible = es[0].isIntersecting;
+    update();
+  }, {threshold: 0.15}).observe(dl);
+})();
 </script>
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "73d5f13377704e23a17468d3ed2185f7"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
