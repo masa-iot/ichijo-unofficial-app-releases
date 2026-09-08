@@ -214,6 +214,7 @@
   figure.shot-phone img{max-height:520px;width:auto;max-width:100%}
   /* スマホ画面の縦長スクショ（フル・タイル・ダイアログ）にフレーム風装飾 */
   figure.shot-phone img[height="1564"],
+  figure.shot-phone img[height="1565"],
   figure.shot-phone img[height="1600"],
   figure.shot-phone img[height="1557"],
   figure.shot-phone img[height="1523"],
@@ -960,25 +961,31 @@
 <p>初回起動時は、以下の順で画面が遷移します。</p>
 <ol class="steps">
   <li><strong>スプラッシュ画面</strong><p>アプリのロゴが表示されます。</p></li>
-  <li><strong>オンボーディング（チュートリアル）</strong><p>アプリの使い方を紹介する5ページのスライド。左右スワイプまたはページ下のドットで移動できます。各ページ下部に「スキップ」「次へ」ボタン、最終ページで「はじめる」をタップすると完了します。</p></li>
-  <li><strong>ホーム画面（家づくりモード）</strong><p>初期状態は家づくりモード。入居済みの方は設定画面から暮らしモードに切り替えてください。</p></li>
+  <li><strong>今の状況をたずねる画面</strong><p>「家づくり中」「入居後」のどちらかを選びます。選んだ内容に合わせてホーム画面の構成（家づくりモード／暮らしモード）が決まります。あとから設定でいつでも変更できます。</p></li>
+  <li><strong>オンボーディング（チュートリアル）</strong><p>アプリの使い方を紹介するスライド。左右スワイプまたはページ下のドットで移動できます。各ページ下部に「スキップ」「次へ」ボタン、最終ページで「はじめる」をタップすると完了します。</p></li>
+  <li><strong>ホーム画面</strong><p>選んだモードのホーム画面が開きます。モードは設定画面から切り替えられます。</p></li>
 </ol>
 
 <h3 id="onboarding">オンボーディング（チュートリアル）</h3>
-<p>5ページ構成のアプリ紹介スライドです。初回起動後に自動表示されるほか、<strong>設定 → チュートリアルを再表示</strong> からいつでも再確認できます。</p>
-<p>ページ構成：</p>
+<p>アプリ紹介のスライドです。初回起動後に自動表示されるほか、<strong>設定 → チュートリアルを再表示</strong> からいつでも再確認できます。最初に「今の状況を教えてください」で <strong>家づくり中</strong> か <strong>入居後</strong> を選び、選んだ内容に合わせて紹介するページが変わります。</p>
+<p><strong>「家づくり中」を選んだとき</strong>（5ページ）：</p>
 <ol>
   <li><strong>書類を取り込む</strong>：PDFの取り込みとドキュメント管理の紹介</li>
   <li><strong>図面をチェック</strong>：CAD差分の赤青色分けと位置合わせの紹介</li>
   <li><strong>見積り・仕様書を比較</strong>：推移表と2版比較の紹介</li>
   <li><strong>メモを残す</strong>：画面に直接ピン留めするウチメモ+の紹介</li>
-  <li><strong>プライバシーについて</strong>：書類データは端末内のみで扱い、「家族と共有」をはじめた場合のみ当番表や表示名など共有と通知に必要な情報が同期される、という説明</li>
+  <li><strong>はじめましょう</strong>：書類データは端末内のみで扱い、「家族と共有」をはじめた場合のみ、当番表や表示名など共有と通知に必要な情報が同期される、という説明</li>
 </ol>
+<p><strong>「入居後」を選んだとき</strong>（4ページ）：電気のお得が一目でわかる／お手入れを忘れない／予定や記念日を見逃さない／はじめましょう</p>
 
 <div class="shot-grid">
   <figure class="shot-phone">
     <img src="images/splash.webp" width="720" height="1564" alt="スプラッシュ画面" loading="lazy" decoding="async">
     <figcaption>起動時スプラッシュ</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/onboarding_00_mode.webp" width="720" height="1564" alt="今の状況を選ぶ画面（家づくり中／入居後）" loading="lazy" decoding="async">
+    <figcaption>今の状況を選ぶ</figcaption>
   </figure>
   <figure class="shot-phone">
     <img src="images/onboarding_01.webp" width="720" height="1564" alt="オンボーディング 1/5：書類を取り込む" loading="lazy" decoding="async">
@@ -997,8 +1004,8 @@
     <figcaption>4. メモを残す</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/onboarding_05.webp" width="720" height="1564" alt="オンボーディング 5/5：プライバシーについて" loading="lazy" decoding="async">
-    <figcaption>5. プライバシーについて</figcaption>
+    <img src="images/onboarding_05.webp" width="720" height="1565" alt="オンボーディング 5/5：はじめましょう（データの扱いの説明）" loading="lazy" decoding="async">
+    <figcaption>5. はじめましょう（データの扱い）</figcaption>
   </figure>
 </div>
 
@@ -3324,7 +3331,7 @@
   <li><strong>ビュー切替</strong>：<strong>緊急度 / 部屋ごと</strong> の2種類</li>
   <li><strong>緊急度ビュー</strong>：「今日実施」「今すぐ」「もうすぐ」「余裕あり」のセクションに自動分類。「もうすぐ」に入るタイミングは項目の周期に応じて自動で変わります（周期が短い項目ほど直前に表示）</li>
   <li><strong>部屋ごとビュー</strong>：割り当てた部屋単位のグループ表示</li>
-  <li><strong>一緒にお手入れする人（上部の帯）</strong>：<a href="#maintenance-family">家族と共有</a>中のときだけ表示。メンバー名が並び、タップすると共有の管理画面が開きます</li>
+  <li><strong>一緒にお手入れする人（上部の帯）</strong>：<a href="#maintenance-family">家族と共有</a>中のときだけ表示。メンバーのアイコンが並び、タップすると共有の管理画面が開きます</li>
 </ul>
 
 <h4>カードの見方</h4>
@@ -3341,7 +3348,7 @@
     <figcaption>部屋ごとビュー</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/maintenance_menu.webp" width="720" height="1564" alt="右上メニュー（部屋を管理／消耗品を管理／通知時刻）" loading="lazy" decoding="async">
+    <img src="images/maintenance_menu.webp" width="720" height="1565" alt="右上メニュー（部屋を管理／消耗品を管理／通知時刻／通知の範囲／家族と共有）" loading="lazy" decoding="async">
     <figcaption>右上メニュー</figcaption>
   </figure>
 </div>
@@ -3467,6 +3474,7 @@
   <li><strong>何日前に通知</strong>：通知が始まる日を予定日の◯日前にずらせます（0 なら予定日当日から）</li>
   <li><strong>通知時刻</strong>：すべての項目で共通です。右上メニューの「通知時刻」または編集画面から変更できます（はじめは 9:00）</li>
   <li><strong>通知をタップ</strong>すると、その項目の詳細シートが直接開きます</li>
+  <li><strong>通知の範囲</strong>：右上メニューの「通知の範囲」で、この端末に届く通知をまとめて切り替えられます。ふだんは「通知する」「通知しない」の 2 択で、<a href="#maintenance-family">家族と共有</a>中はここに「自分の担当だけ」が加わります（端末ごとの設定）</li>
 </ul>
 
 <div class="shot-grid">
@@ -3487,12 +3495,23 @@
 <h3 id="maintenance-family">家族と共有</h3>
 <p>お手入れ当番表のデータ（項目・部屋・消耗品と在庫・実施の記録・担当）を、家族やパートナーなど一緒に住まいをお手入れする人と同じ画面で使えます。参加した端末どうしで自動的に同期されます。</p>
 <ul>
-  <li><strong>入口は3つ</strong>：設定 &gt; 家族と共有 ／ お手入れ当番表の右上メニュー &gt; 家族と共有 ／ 共有中は一覧上部の帯（「一緒にお手入れする人: ◯◯」）をタップ</li>
-  <li><strong>共有をはじめる人（管理者）だけプレミアム（広告なし）が必要</strong>です。招待された人は購入しなくても参加できます</li>
+  <li><strong>入口は3つ</strong>：設定 &gt; 家族と共有 ／ お手入れ当番表の右上メニュー &gt; 家族と共有 ／ 共有中は一覧上部に出るメンバーのアイコンの帯をタップ</li>
+  <li><strong>共有をはじめる人（管理者）だけ<a href="#settings-premium">プレミアム</a>が必要</strong>です。招待された人は購入しなくても参加できます</li>
   <li><strong>最大 6 人</strong>まで参加できます</li>
   <li>同期されるのは、お手入れ当番表のデータと家族内の表示名・アイコンなど、共有と通知に必要な情報です。図面・見積り・メモなどほかのデータは端末内のままです。詳しくは <a href="https://smartolio.jp/privacy/ichijo-unofficial-app/" target="_blank" rel="noopener">プライバシーポリシー</a> をご覧ください</li>
   <li>デモモードでは使えません</li>
 </ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/family_share_off.webp" width="720" height="1565" alt="家族と共有の画面（共有していない状態。共有をはじめる／招待から参加の2択）" loading="lazy" decoding="async">
+    <figcaption>共有していない状態</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/family_share_on.webp" width="720" height="1565" alt="家族と共有の画面（共有中。メンバーのチップと操作メニュー）" loading="lazy" decoding="async">
+    <figcaption>共有中（2人で共有）</figcaption>
+  </figure>
+</div>
 
 <h4>はじめかた（管理者）</h4>
 <ol>
@@ -3502,6 +3521,17 @@
   <li>参加する人が申請すると、<strong>参加リクエストを確認</strong>に届きます（端末の通知でもお知らせします）。名前を確かめて<strong>承認する</strong>か<strong>断る</strong>を選びます</li>
 </ol>
 <p>招待コードの発行と参加リクエストの承認は、管理者に限らずメンバーの誰でもできます。</p>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/family_name_avatar.webp" width="720" height="1565" alt="家族内の表示名とアイコンを決める入力画面" loading="lazy" decoding="async">
+    <figcaption>表示名とアイコンを決める</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/family_invite_qr.webp" width="720" height="1565" alt="招待コードの画面。QRコードと有効期限、下に届いた参加リクエスト" loading="lazy" decoding="async">
+    <figcaption>招待コードの発行と、届いた参加リクエスト<br><small>（QR とコードは伏せています）</small></figcaption>
+  </figure>
+</div>
 
 <h4>参加のしかた（招待された人）</h4>
 <ol>
@@ -3514,14 +3544,40 @@
   <p><strong>参加すると、この端末のお手入れデータは家族の共有データに置き換わります。</strong>端末に入力済みの項目を残したいときは、その端末で「共有をはじめる」を選んで管理者になってください。</p>
 </div>
 
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/family_join_replace.webp" width="720" height="1564" alt="共有データへの置き換えを確認するダイアログ" loading="lazy" decoding="async">
+    <figcaption>参加の直前に出る確認</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/family_join_waiting.webp" width="720" height="1564" alt="参加の承認を待っている画面" loading="lazy" decoding="async">
+    <figcaption>承認待ちの画面</figcaption>
+  </figure>
+</div>
+
 <h4>共有中にできること</h4>
 <ul>
-  <li><strong>担当</strong>：項目の編集画面で「決めない」「いつも同じ人」「持ち回り」から選べます。持ち回りにすると、カードに「次は◯◯さん」と表示され、実施を記録するたびに次の人へ回ります</li>
-  <li><strong>通知の範囲</strong>：右上メニューの「通知の範囲」で、この端末に届く通知を「通知する」「自分の担当だけ」「通知しない」から選べます。端末ごとの設定です</li>
-  <li><strong>家族の更新のお知らせ</strong>：家族の誰かがお手入れの予定を変えた日は、その日の夜にまとめて 1 通お知らせします。アプリを開くと、この端末の通知が最新の予定に合わせて組み直されます</li>
+  <li><strong>担当</strong>：項目の編集画面に「担当」が増えます。「決めない」「いつも同じ人」「持ち回り」から選べます。持ち回りは、まわす順番にメンバーをタップして決めます。担当が決まった項目はカードに「次は◯◯さん」と表示され、実施を記録するたびに次の人へ回ります</li>
+  <li><strong>通知の範囲</strong>：右上メニューの「通知の範囲」で、この端末に届く通知を「すべての項目」「自分の担当だけ」「通知しない」から選べます。端末ごとの設定です</li>
+  <li><strong>家族の更新のお知らせ</strong>：家族の誰かがお手入れの予定を変えた日は、その日の夜（19時ごろ）にまとめて 1 通お知らせします。アプリを開くと、この端末の通知が最新の予定に合わせて組み直されます</li>
   <li><strong>参加・退出のお知らせ</strong>：メンバーが参加・退出したときに通知します。タップするとメンバー一覧が開きます</li>
   <li><strong>名前とアイコンを変える</strong>：共有画面から、自分の表示名とアイコンをいつでも変更できます</li>
 </ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/maintenance_family_band.webp" width="720" height="1565" alt="お手入れ当番表。上部にメンバーのアイコンの帯、カードに「次は◯◯さん」" loading="lazy" decoding="async">
+    <figcaption>共有中の一覧（上部の帯と担当の表示）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/maintenance_assignee.webp" width="720" height="1565" alt="項目の編集画面の担当。持ち回りでメンバーの順番を指定" loading="lazy" decoding="async">
+    <figcaption>担当を「持ち回り」にする</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/maintenance_notify_scope.webp" width="720" height="1565" alt="通知の範囲のダイアログ（すべての項目／自分の担当だけ／通知しない）" loading="lazy" decoding="async">
+    <figcaption>通知の範囲（端末ごと）</figcaption>
+  </figure>
+</div>
 
 <h4>メンバーの管理と共有の終了</h4>
 <ul>
@@ -3532,8 +3588,19 @@
   <li><strong>この端末の共有情報を破棄</strong>：停止中の端末で、再開用の情報を消して完全にオフに戻します</li>
 </ul>
 
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/family_members.webp" width="720" height="1565" alt="メンバー一覧。管理者/自分のラベルと、長押しの案内" loading="lazy" decoding="async">
+    <figcaption>メンバー一覧</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/family_kick_confirm.webp" width="720" height="1565" alt="メンバーを外す確認ダイアログ" loading="lazy" decoding="async">
+    <figcaption>名前を長押し → 外す</figcaption>
+  </figure>
+</div>
+
 <h3 id="maintenance-family-device-change">機種変更のとき</h3>
-<p>共有への参加は端末ごとに結びついているため、新しい端末には自動で引き継がれません。バックアップの復元でも共有は引き継がれず、「同期の再設定が必要です」の案内が出ます。その場合は「共有をオフにする」を選んでから、下の手順で参加し直してください。</p>
+<p>共有への参加は端末ごとに結びついているため、新しい端末には自動で引き継がれません。バックアップの復元でも共有は引き継がれず、「同期の再設定が必要です」の案内が出ます。その場合は「再設定」から「共有をオフにする」を選んでから、下の手順で参加し直してください。</p>
 <ul>
   <li><strong>メンバーの場合</strong>：旧端末で<strong>共有から退出</strong>してから、新端末で<strong>招待から参加</strong>します。旧端末で退出し忘れたときは、管理者に旧端末のメンバーを外してもらってください</li>
   <li><strong>管理者の場合</strong>：旧端末で<strong>全員を外して退出</strong>して共有をいったん終了し、新端末で<strong>共有をはじめる</strong>から作り直して、家族を招待し直してください。各メンバーのデータはそれぞれの端末に残ります</li>
@@ -3548,7 +3615,7 @@
   <div class="action-row"><strong>ダッシュボードをタップ</strong><span>「今すぐ」「在庫わずか」で絞り込み（再タップで解除）</span></div>
   <div class="action-row"><strong>緊急度／部屋ごと</strong><span>一覧の表示切替</span></div>
   <div class="action-row"><strong>＋ボタン</strong><span>お手入れの追加（プリセット／カスタム）</span></div>
-  <div class="action-row"><strong>右上メニュー</strong><span>部屋を管理／消耗品を管理／通知時刻／通知の範囲（共有中）／家族と共有</span></div>
+  <div class="action-row"><strong>右上メニュー</strong><span>部屋を管理／消耗品を管理／通知時刻／通知の範囲／家族と共有</span></div>
   <div class="action-row"><strong>一覧上部の帯をタップ</strong><span>（共有中）メンバーの管理画面を開く</span></div>
   <div class="action-row"><strong>メンバー名を長押し</strong><span>（管理者）メンバーを外す</span></div>
   <div class="action-row"><strong>シートのタイトル右アイコン</strong><span>編集（鉛筆）／削除（ゴミ箱）</span></div>
@@ -3570,7 +3637,7 @@
 </ol>
 
 <figure class="shot-phone">
-  <img src="images/settings_show_home_banner.webp" width="720" height="1564" alt="設定画面のマイページセクション（マイページ項目とホームバナー表示スイッチ）" loading="lazy" decoding="async">
+  <img src="images/settings_show_home_banner.webp" width="720" height="1565" alt="設定画面のマイページセクション（マイページ項目とホームバナー表示スイッチ）" loading="lazy" decoding="async">
   <figcaption>設定画面 マイページセクション（マイページ項目 + バナー表示スイッチ）</figcaption>
 </figure>
 
@@ -3872,7 +3939,7 @@
     <figcaption>ホームから「設定」タイルをタップ</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/settings.webp" width="720" height="1564" alt="設定画面（上半分：個人設定／プレミアム／データ管理）" loading="lazy" decoding="async">
+    <img src="images/settings.webp" width="720" height="1565" alt="設定画面（上半分：個人設定／プレミアム／データ管理）" loading="lazy" decoding="async">
     <figcaption>設定 上半分</figcaption>
   </figure>
   <figure class="shot-phone">
@@ -3884,8 +3951,8 @@
 <p>設定画面は 5 つのセクションで構成されています。</p>
 <ol>
   <li><strong>個人設定</strong>：マイページ、ホームバナー表示</li>
-  <li><strong>プレミアム</strong>：広告非表示の購入・復元</li>
-  <li><strong>データ管理</strong>：バックアップ、復元、データ再構築、デモモード</li>
+  <li><strong>プレミアム</strong>：内容と価格の案内ページへの入口</li>
+  <li><strong>データ管理</strong>：バックアップ、復元、データ再構築、デモモード、家族と共有</li>
   <li><strong>表示</strong>：モード切替、カウンター表示、テーマ、言語</li>
   <li><strong>アプリ</strong>：レビュー、フィードバック、チュートリアル、マニュアル、バージョン、ライセンス</li>
 </ol>
@@ -3893,14 +3960,14 @@
 <h3 id="settings-premium">プレミアム</h3>
 <p>買い切り型の課金です（月額ではありません）。設定の「プレミアムでできること」タイルをタップすると案内ページが開き、内容と価格を確かめてから購入できます。プレミアムでできることは次の 2 つです。</p>
 <ul>
+  <li><strong>家族と共有</strong>：お手入れ当番表の共有を「はじめる」ことができます。購入が必要なのは共有をはじめる 1 人だけで、招待された家族は無料のまま参加できます → <a href="#maintenance-family">家族と共有</a></li>
   <li><strong>広告を非表示</strong>：アプリ内の広告が表示されなくなります</li>
-  <li><strong>家族と共有</strong>：お手入れ当番表の家族共有を「はじめる」ことができます。購入が必要なのは共有をはじめる 1 人だけで、招待された家族は無料のまま参加できます → <a href="#maintenance-family">家族と共有</a></li>
 </ul>
+<p>案内ページの操作は次のとおりです。</p>
 <ul>
-  <li><strong>購入ボタン</strong>：「◯◯円｜プレミアムにする」をタップするとストアの購入フローへ。購入後は案内ページが「プレミアムをご利用中です」の表示に切り替わります</li>
-  <li><strong>機種変更などで購入を復元</strong>：同じ Apple ID／Google アカウントで再インストールした場合、タップで購入状態を復元</li>
+  <li><strong>購入</strong>：画面下部に固定表示される「◯◯円｜プレミアムにする」をタップするとストアの購入フローへ進みます。購入後は案内ページが「プレミアムをご利用中です」の表示に切り替わり、ホーム画面のタイトル横に「Premium」バッジが出ます</li>
+  <li><strong>機種変更のときは「購入を復元」</strong>：購入ボタンの下にあります。同じ Apple ID／Google アカウントで再インストールした場合、タップで購入状態を復元できます</li>
   <li>購入しなくても、登録済みのデータが見られなくなることはありません</li>
-  <li>設定のタイルに「新しく使えることがあります」と出るのは、案内ページにまだ見ていない項目があるときです。開くと消えます</li>
 </ul>
 
 <div class="callout info">
@@ -3908,17 +3975,9 @@
 </div>
 
 <div class="shot-grid">
-  <figure class="shot-phone">
-    <img src="images/settings_premium.webp" width="720" height="682" alt="プレミアム購入カード（未購入状態）" loading="lazy" decoding="async">
-    <figcaption>未購入状態</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/settings_premium_confirm.webp" width="720" height="885" alt="プレミアム購入確認ダイアログ" loading="lazy" decoding="async">
-    <figcaption>購入確認ダイアログ</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/settings_premium_active.webp" width="720" height="507" alt="プレミアム有効状態（購入済み）" loading="lazy" decoding="async">
-    <figcaption>購入済み（有効）</figcaption>
+  <figure>
+    <img src="images/premium_page.webp" width="720" height="1210" alt="プレミアム案内ページ。家族と共有・広告を非表示の2つの特典カード" loading="lazy" decoding="async">
+    <figcaption>プレミアム案内ページ（説明部分）<br><small>価格と購入ボタンは画面下部に固定表示されます</small></figcaption>
   </figure>
   <figure class="shot-phone">
     <img src="images/home_premium_badge.webp" width="720" height="653" alt="ホーム画面の Premium バッジ" loading="lazy" decoding="async">
@@ -3980,7 +4039,12 @@
 </table>
 
 <h3 id="settings-family">家族と共有</h3>
-<p>お手入れ当番表を家族と同じ画面で使うための入口です。共有の状態（参加の承認待ち・承認済み・停止中など）もこのタイルに表示され、タップすると共有の管理画面が開きます。使い方は <a href="#maintenance-family">お手入れ当番表 &gt; 家族と共有</a> をご覧ください。</p>
+<p>お手入れ当番表を家族と同じ画面で使うための入口です。データ管理セクションの一番下にあります。共有の状態（参加の承認待ち・承認済み・停止中など）もこのタイルに表示され、タップすると共有の管理画面が開きます。使い方は <a href="#maintenance-family">お手入れ当番表 &gt; 家族と共有</a> をご覧ください。</p>
+
+<figure>
+  <img src="images/settings_family_tile.webp" width="720" height="167" alt="設定画面の「家族と共有」タイル" loading="lazy" decoding="async">
+  <figcaption>設定 &gt; データ管理 の一番下</figcaption>
+</figure>
 
 <h3 id="settings-mode">モード切替</h3>
 <p>家づくりモード ↔ 暮らしモードを切り替えるトグルスイッチ。切り替えるとホーム画面のタイル構成、サイドメニュー、便利ツール一覧が変わります。</p>
@@ -4088,8 +4152,9 @@
 
 <h3 id="settings-actions">操作リファレンス</h3>
 <div class="action-box">
-  <div class="action-row"><strong>プレミアム購入ボタン</strong><span>広告非表示を購入（買い切り）</span></div>
+  <div class="action-row"><strong>プレミアムでできること</strong><span>案内ページを開く（内容・価格・購入）</span></div>
   <div class="action-row"><strong>購入を復元</strong><span>機種変更後に購入状態を復元</span></div>
+  <div class="action-row"><strong>家族と共有</strong><span>共有の管理画面を開く</span></div>
   <div class="action-row"><strong>バックアップ作成タップ</strong><span>Zip作成→共有メニュー</span></div>
   <div class="action-row"><strong>バックアップ復元タップ</strong><span>ファイル選択→確認→復元→再起動（iOSは手動終了）</span></div>
   <div class="action-row"><strong>再構築タップ</strong><span>確認→全PDFを再パース</span></div>
@@ -4169,10 +4234,10 @@
 <h3 id="troubleshooting-family">家族共有で困ったとき</h3>
 <ul>
   <li><strong>招待コードが通らない／承認できない</strong>：招待コードは発行から 3 日で期限切れになります。新しい招待コードを発行してもらってください。「先に進めていない参加の申請があります」と出るときは、共有画面で申請を取り下げてからやり直してください</li>
-  <li><strong>「同期の再設定が必要です」と出る</strong>：バックアップの復元などで端末の同期情報が変わったときの案内です。「共有をオフにする」を選んでから、新しい招待で参加し直してください → <a href="#maintenance-family-device-change">機種変更のとき</a></li>
+  <li><strong>「同期の再設定が必要です」と出る</strong>：バックアップの復元などで端末の同期情報が変わったときの案内です。「再設定」をタップして「共有をオフにする」を選んでから、新しい招待で参加し直してください → <a href="#maintenance-family-device-change">機種変更のとき</a></li>
   <li><strong>「共有を一時停止しました」と出る</strong>：しばらく同期できなかったときの安全装置です。表示された「停止して再開」または「もう一度試す」で復帰できます。まだ送っていない変更は失われることがあります</li>
   <li><strong>「家族共有の処理が完了していません」と出る</strong>：通信できる状態で「再開」を押してください。直らないときはアプリを起動し直してください</li>
-  <li><strong>家族の通知が来ない</strong>：右上メニューの「通知の範囲」が「通知しない」になっていないか、端末の通知の許可がオフになっていないかを確認してください。家族の更新のお知らせは、その日の夜にまとめて届きます</li>
+  <li><strong>家族の通知が来ない</strong>：右上メニューの「通知の範囲」が「通知しない」になっていないか、端末の通知の許可がオフになっていないかを確認してください。家族の更新のお知らせは、その日の夜（19時ごろ）にまとめて届きます</li>
   <li><strong>停止中に入力した内容が消えた</strong>：仕様です。「共有を停止（この端末のみ）」中の変更は共有されず、再開すると家族の共有データに置き換わります</li>
 </ul>
 
