@@ -43,13 +43,13 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "私の図面や見積りのデータは誰かに見られませんか？", "acceptedAnswer": {"@type": "Answer", "text": "見られません。取り込んだデータはすべてお使いのスマホの中だけに保管され、インターネットを通じてどこかに送られることはありません。アプリの開発者にも中身は一切見えない仕組みです。"}},
+    {"@type": "Question", "name": "私の図面や見積りのデータは誰かに見られませんか？", "acceptedAnswer": {"@type": "Answer", "text": "見られません。取り込んだデータはすべてお使いのスマホの中だけに保管され、インターネットを通じてどこかに送られることはありません。アプリの開発者にも中身は一切見えない仕組みです。お手入れ当番表の「家族と共有」を使う場合だけ、当番表のデータが同期のためにサーバーへ送られます。"}},
     {"@type": "Question", "name": "アカウント登録やログインは必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "不要です。インストールしたらすぐに使えます。メールアドレスなどの個人情報の入力も一切ありません。"}},
     {"@type": "Question", "name": "PDFはどうやって取り込みますか？", "acceptedAnswer": {"@type": "Answer", "text": "一条公式アプリ（iサポ）でダウンロードしたPDFを「共有」からこのアプリに送るだけです。クラウドやスマホ内に保存してある場合は、まとめて一気に取り込むこともできます。"}},
     {"@type": "Question", "name": "一条公式アプリ「iサポ」と何が違うのですか？", "acceptedAnswer": {"@type": "Answer", "text": "iサポは一条工務店の公式アプリです。このアプリは、iサポで受け取った図面や見積りのPDFを取り込んで「前回からどこが変わったか」を確認したり、見積りの増減を追ったりするための、施主が個人で作った非公式のツールです。"}},
     {"@type": "Question", "name": "図面の差分がうまく出ません。", "acceptedAnswer": {"@type": "Answer", "text": "新旧の図面の位置・大きさ・ページの組み合わせがずれていると、変更のない場所まで赤と青になります。差分画面の「調整」メニューにある位置合わせ・サイズ合わせ・ページの組み合わせで直せます。細かい差分が多すぎるときはノイズ除去フィルタを強めてください。症状別の対処はマニュアルの「図面の差分がうまく出ない」にまとめています。"}},
     {"@type": "Question", "name": "「サイレントフィリピン」とは何ですか？このアプリで見つけられますか？", "acceptedAnswer": {"@type": "Answer", "text": "一条工務店の図面修正で、依頼していない箇所までひっそり変わっていることを指す、施主の間の俗称です。「サイレント修正」とも呼ばれます。窓の位置が少し動いていた、コンセントが消えていた、といった例が報告されています。このアプリの「図面チェック」は新旧2枚の図面を重ね合わせて変更箇所を赤・青で色分けするので、目視では見落としがちな小さな変更も確認できます。"}},
-    {"@type": "Question", "name": "無料ですか？", "acceptedAnswer": {"@type": "Answer", "text": "無料です。画面の下部に広告が表示されますが、すべての機能を制限なくお使いいただけます。広告は買い切りのプレミアムで非表示にすることもできます。"}},
+    {"@type": "Question", "name": "無料ですか？", "acceptedAnswer": {"@type": "Answer", "text": "無料です。画面の下部に広告が表示されますが、ほとんどの機能を制限なくお使いいただけます。買い切りのプレミアムで広告を非表示にでき、お手入れ当番表の「家族と共有」をはじめる人だけプレミアムが必要です（招待された家族は無料で参加できます）。"}},
     {"@type": "Question", "name": "一条工務店の公式アプリですか？", "acceptedAnswer": {"@type": "Answer", "text": "いいえ。施主個人が自分の家づくりのために開発した非公式アプリです。一条工務店とは一切関係がありません。"}}
   ]
 }
@@ -627,7 +627,7 @@
   <div class="trust-inner">
     <div class="trust-item">
       <span class="t-icon">🔒</span>
-      <span><strong>データは端末内のみ</strong><small>クラウド送信なし・開発者にも見えません</small></span>
+      <span><strong>図面・見積りは端末内のみ</strong><small>クラウド送信なし・開発者にも見えません（家族共有で同期するのはお手入れ当番表だけ）</small></span>
     </div>
     <div class="trust-item">
       <span class="t-icon">👤</span>
@@ -635,7 +635,7 @@
     </div>
     <div class="trust-item">
       <span class="t-icon">💰</span>
-      <span><strong>無料で全機能</strong><small>広告あり（買い切りで非表示にできます）</small></span>
+      <span><strong>無料で使える</strong><small>広告あり（買い切りで非表示。家族共有をはじめる人だけプレミアム）</small></span>
     </div>
   </div>
 </div>
@@ -974,7 +974,7 @@
 
       <details class="faq-item">
         <summary>Q. 私の図面や見積りのデータは誰かに見られませんか？</summary>
-        <p class="faq-a">見られません。取り込んだデータはすべてお使いのスマホの中だけに保管され、インターネットを通じてどこかに送られることはありません。アプリの開発者にも中身は一切見えない仕組みです。</p>
+        <p class="faq-a">見られません。取り込んだデータはすべてお使いのスマホの中だけに保管され、インターネットを通じてどこかに送られることはありません。アプリの開発者にも中身は一切見えない仕組みです。お手入れ当番表の「家族と共有」を使う場合だけ、当番表のデータが同期のためにサーバーへ送られます。</p>
       </details>
 
       <details class="faq-item">
@@ -1019,12 +1019,12 @@
 
       <details class="faq-item">
         <summary>Q. 電波の届かない場所でも使えますか？</summary>
-        <p class="faq-a">はい。すべての機能がスマホの中だけで動くので、電波のない場所でも問題なくお使いいただけます。</p>
+        <p class="faq-a">はい。図面や見積りの閲覧・比較など、ほとんどの機能はスマホの中だけで動くので、電波のない場所でもお使いいただけます。お手入れ当番表の「家族と共有」の同期だけは通信が必要です。</p>
       </details>
 
       <details class="faq-item">
         <summary>Q. 無料ですか？</summary>
-        <p class="faq-a">無料です。画面の下部に広告が表示されますが、すべての機能を制限なくお使いいただけます。広告は買い切りのプレミアムで非表示にすることもできます。</p>
+        <p class="faq-a">無料です。画面の下部に広告が表示されますが、ほとんどの機能を制限なくお使いいただけます。買い切りのプレミアムで広告を非表示にでき、お手入れ当番表の「家族と共有」をはじめる人だけプレミアムが必要です（招待された家族は無料で参加できます）。</p>
       </details>
 
       <details class="faq-item">
@@ -1265,7 +1265,7 @@
 
 <!-- Sticky CTA (mobile only) -->
 <div class="sticky-cta" id="sticky-cta" aria-hidden="true">
-  <div class="sc-text">無料でインストール<small>登録不要・データは端末内のみ</small></div>
+  <div class="sc-text">無料でインストール<small>登録不要・図面や見積りは端末内のみ</small></div>
   <a href="https://play.google.com/store/apps/details?id=jp.smartolio.ichijo_unofficial&referrer=utm_source%3Dwebsite%26utm_medium%3Dlp%26utm_campaign%3Dsticky" target="_blank" rel="noopener">Google Play</a>
   <a href="https://apps.apple.com/jp/app/ichijo%E6%96%BD%E4%B8%BB%E6%89%8B%E5%B8%B3-%E9%9D%9E%E5%85%AC%E5%BC%8F/id6761674540" target="_blank" rel="noopener">App Store</a>
 </div>
