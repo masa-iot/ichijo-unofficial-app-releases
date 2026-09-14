@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="ja"><head><meta charset="UTF-8">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1200px;height:630px;overflow:hidden}
+body{font-family:"Hiragino Sans","Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;color:#fff;
+  background:linear-gradient(135deg,#2F6EA5 0%,#5890c0 55%,#8EC5E8 100%);position:relative}
+.left{position:absolute;left:64px;top:66px;width:640px}
+.brand{display:flex;align-items:center;gap:18px;margin-bottom:22px}
+.brand img{width:96px;height:96px;border-radius:24px;box-shadow:0 10px 28px rgba(0,0,0,.22);background:#fff}
+.brand .t{display:flex;flex-direction:column;gap:8px}
+.brand .pill{display:inline-block;align-self:flex-start;font-size:17px;font-weight:700;background:rgba(255,255,255,.22);border:1.5px solid rgba(255,255,255,.55);border-radius:999px;padding:4px 14px}
+.brand .name{font-size:58px;font-weight:800;line-height:1.05;letter-spacing:.01em;text-shadow:0 2px 12px rgba(0,0,0,.12)}
+.tag{font-size:27px;font-weight:700;line-height:1.5;margin-bottom:14px}
+.feat{font-size:19px;font-weight:600;opacity:.92;line-height:1.5;margin-bottom:24px}
+.feat b{font-weight:700;opacity:1}
+.proof{display:flex;align-items:center;gap:22px;margin-bottom:24px}
+.proof .item{display:flex;align-items:center;gap:10px}
+.stars{font-size:24px;letter-spacing:1px;line-height:1;background:linear-gradient(90deg,#FFC83D 92%,rgba(255,255,255,.35) 92%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.num{font-size:34px;font-weight:800;line-height:1}
+.num small{font-size:20px;font-weight:700}
+.lbl{font-size:15px;opacity:.9;line-height:1.2}
+.sep{width:1.5px;height:38px;background:rgba(255,255,255,.4)}
+.tags{display:flex;gap:12px}
+.tags span{font-size:18px;font-weight:700;background:rgba(255,255,255,.2);border-radius:999px;padding:8px 18px}
+.phone{position:absolute;border:9px solid #1a1a1a;border-bottom:none;border-radius:38px 38px 0 0;background:#000;box-shadow:0 18px 50px rgba(0,0,0,.3);overflow:hidden}
+.phone img{display:block;width:100%;height:auto}
+.glow{position:absolute;left:650px;top:-40px;width:720px;height:720px;border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.22) 0%,rgba(255,255,255,.08) 40%,rgba(255,255,255,0) 68%);z-index:0}
+.phone{box-shadow:0 30px 60px rgba(0,0,0,.32),0 6px 14px rgba(0,0,0,.14)}
+.p1{left:738px;top:96px;width:292px;z-index:2;transform:perspective(1500px) rotateY(-18deg) rotateX(6deg) rotate(-2deg);transform-origin:center top}
+.p2{left:952px;top:150px;width:262px;z-index:1;opacity:.96;transform:perspective(1500px) rotateY(-18deg) rotateX(6deg) rotate(-2deg);transform-origin:center top}
+</style></head><body>
+<div class="left">
+  <div class="brand">
+    <img src="../../docs/images/icon.webp" alt="">
+    <div class="t"><span class="pill">非公式アプリ</span><span class="name">ICHIJO施主手帳</span></div>
+  </div>
+  <p class="tag">家づくりも、入居後の暮らしも。<br>一条工務店の施主のためのサポートアプリ</p>
+  <p class="feat">図面チェック ・ 見積り比較 ・ 仕様書チェック<br>でんき通信簿 ・ お手入れ当番表</p>
+  <div class="proof">
+    <div class="item"><span class="stars">★★★★★</span><div><div class="num">4.7</div><div class="lbl">App Store 評価</div></div></div>
+    <span class="sep"></span>
+    <div class="item"><div><div class="num">1,500<small>+</small></div><div class="lbl">累計ダウンロード</div></div></div>
+  </div>
+  <div class="tags"><span>🔒 端末内保存</span><span>登録不要</span><span>基本無料</span></div>
+</div>
+<div class="glow"></div>
+<div class="phone p1"><img src="../../docs/images/home_ieduzukuri.webp" alt=""></div>
+<div class="phone p2"><img src="../../docs/images/home_living.webp" alt=""></div>
+</body></html>
