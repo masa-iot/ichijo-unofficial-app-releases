@@ -214,6 +214,7 @@
   figure.shot-phone img{max-height:520px;width:auto;max-width:100%}
   /* スマホ画面の縦長スクショ（フル・タイル・ダイアログ）にフレーム風装飾 */
   figure.shot-phone img[height="1564"],
+  figure.shot-phone img[height="1565"],
   figure.shot-phone img[height="1600"],
   figure.shot-phone img[height="1557"],
   figure.shot-phone img[height="1523"],
@@ -834,6 +835,8 @@
     <li class="sub"><a href="#maintenance-rooms">部屋の管理</a></li>
     <li class="sub"><a href="#maintenance-consumables">消耗品と在庫</a></li>
     <li class="sub"><a href="#maintenance-notifications">通知</a></li>
+    <li class="sub"><a href="#maintenance-family">家族と共有</a></li>
+    <li class="sub"><a href="#maintenance-family-device-change">機種変更のとき</a></li>
     <li class="sub"><a href="#maintenance-actions">操作リファレンス</a></li>
   </ul>
 
@@ -866,6 +869,7 @@
     <li class="sub"><a href="#settings-premium">プレミアム</a></li>
     <li class="sub"><a href="#settings-backup">バックアップ</a></li>
     <li class="sub"><a href="#settings-rebuild">データ管理</a></li>
+    <li class="sub"><a href="#settings-family">家族と共有</a></li>
     <li class="sub"><a href="#settings-mode">モード切替</a></li>
     <li class="sub"><a href="#settings-display">表示</a></li>
     <li class="sub"><a href="#settings-theme">テーマ</a></li>
@@ -931,7 +935,7 @@
 </ul>
 
 <div class="callout info">
-  <p>🔒 <strong>すべてのデータは端末内のみ</strong>に保管されます。クラウドに送信されたり、開発者に送信されることはありません。アカウント登録も不要です。</p>
+  <p>🔒 <strong>図面・見積りなどのデータは端末内のみ</strong>に保管され、クラウドや開発者に送信されることはありません。お手入れ当番表の「<a href="#maintenance-family">家族と共有</a>」を使うときは、当番表のデータや表示名など、共有と通知に必要な情報が同期のためにサーバーへ送られます。アカウント登録は不要です。</p>
 </div>
 
 <h3 id="install">インストール</h3>
@@ -957,25 +961,31 @@
 <p>初回起動時は、以下の順で画面が遷移します。</p>
 <ol class="steps">
   <li><strong>スプラッシュ画面</strong><p>アプリのロゴが表示されます。</p></li>
-  <li><strong>オンボーディング（チュートリアル）</strong><p>アプリの使い方を紹介する5ページのスライド。左右スワイプまたはページ下のドットで移動できます。各ページ下部に「スキップ」「次へ」ボタン、最終ページで「はじめる」をタップすると完了します。</p></li>
-  <li><strong>ホーム画面（家づくりモード）</strong><p>初期状態は家づくりモード。入居済みの方は設定画面から暮らしモードに切り替えてください。</p></li>
+  <li><strong>今の状況をたずねる画面</strong><p>「家づくり中」「入居後」のどちらかを選びます。選んだ内容に合わせてホーム画面の構成（家づくりモード／暮らしモード）が決まります。あとから設定でいつでも変更できます。</p></li>
+  <li><strong>オンボーディング（チュートリアル）</strong><p>アプリの使い方を紹介するスライド。左右スワイプまたはページ下のドットで移動できます。各ページ下部に「スキップ」「次へ」ボタン、最終ページで「はじめる」をタップすると完了します。</p></li>
+  <li><strong>ホーム画面</strong><p>選んだモードのホーム画面が開きます。モードは設定画面から切り替えられます。</p></li>
 </ol>
 
 <h3 id="onboarding">オンボーディング（チュートリアル）</h3>
-<p>5ページ構成のアプリ紹介スライドです。初回起動後に自動表示されるほか、<strong>設定 → チュートリアルを再表示</strong> からいつでも再確認できます。</p>
-<p>ページ構成：</p>
+<p>アプリ紹介のスライドです。初回起動後に自動表示されるほか、<strong>設定 → チュートリアルを再表示</strong> からいつでも再確認できます。最初に「今の状況を教えてください」で <strong>家づくり中</strong> か <strong>入居後</strong> を選び、選んだ内容に合わせて紹介するページが変わります。</p>
+<p><strong>「家づくり中」を選んだとき</strong>（5ページ）：</p>
 <ol>
   <li><strong>書類を取り込む</strong>：PDFの取り込みとドキュメント管理の紹介</li>
   <li><strong>図面をチェック</strong>：CAD差分の赤青色分けと位置合わせの紹介</li>
   <li><strong>見積り・仕様書を比較</strong>：推移表と2版比較の紹介</li>
   <li><strong>メモを残す</strong>：画面に直接ピン留めするウチメモ+の紹介</li>
-  <li><strong>プライバシーについて</strong>：端末内のみでデータを扱うことの説明</li>
+  <li><strong>はじめましょう</strong>：書類データは端末内のみで扱い、「家族と共有」をはじめた場合のみ、当番表や表示名など共有と通知に必要な情報が同期される、という説明</li>
 </ol>
+<p><strong>「入居後」を選んだとき</strong>（4ページ）：電気のお得が一目でわかる／お手入れを忘れない／予定や記念日を見逃さない／はじめましょう</p>
 
 <div class="shot-grid">
   <figure class="shot-phone">
     <img src="images/splash.webp" width="720" height="1564" alt="スプラッシュ画面" loading="lazy" decoding="async">
     <figcaption>起動時スプラッシュ</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/onboarding_00_mode.webp" width="720" height="1564" alt="今の状況を選ぶ画面（家づくり中／入居後）" loading="lazy" decoding="async">
+    <figcaption>今の状況を選ぶ</figcaption>
   </figure>
   <figure class="shot-phone">
     <img src="images/onboarding_01.webp" width="720" height="1564" alt="オンボーディング 1/5：書類を取り込む" loading="lazy" decoding="async">
@@ -994,8 +1004,8 @@
     <figcaption>4. メモを残す</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/onboarding_05.webp" width="720" height="1564" alt="オンボーディング 5/5：プライバシーについて" loading="lazy" decoding="async">
-    <figcaption>5. プライバシーについて</figcaption>
+    <img src="images/onboarding_05.webp" width="720" height="1565" alt="オンボーディング 5/5：はじめましょう（データの扱いの説明）" loading="lazy" decoding="async">
+    <figcaption>5. はじめましょう（データの扱い）</figcaption>
   </figure>
 </div>
 
@@ -1007,7 +1017,7 @@
 <p>アプリの起点となる画面です。カラフルなタイルで各機能にアクセスできます。</p>
 
 <figure class="shot-phone">
-  <img src="images/home_ieduzukuri.webp" width="720" height="1564" alt="ホーム画面（家づくりモード / 10タイル）" loading="lazy" decoding="async">
+  <img src="images/home_ieduzukuri.webp" width="720" height="1565" alt="ホーム画面（家づくりモード / 10タイル）" loading="lazy" decoding="async">
   <figcaption>ホーム画面（家づくりモード / 10タイル）</figcaption>
 </figure>
 
@@ -1087,7 +1097,7 @@
 
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/home_drawer_ieduzukuri.webp" width="720" height="1564" alt="サイドメニュー（家づくりモード）" loading="lazy" decoding="async">
+    <img src="images/home_drawer_ieduzukuri.webp" width="720" height="1565" alt="サイドメニュー（家づくりモード）" loading="lazy" decoding="async">
     <figcaption>サイドメニュー（家づくりモード）</figcaption>
   </figure>
   <figure class="shot-phone">
@@ -1155,11 +1165,11 @@
 
 <ol class="steps">
   <li><strong>「PDF取り込み」タイルをタップ</strong><p>ホーム画面から起動します。</p></li>
-  <li><strong>「ファイルから選択」をタップ</strong><p>取り込み画面上部のボタン。</p></li>
+  <li><strong>「タップしてPDFを選択（複数可）」をタップ</strong><p>取り込み画面上部のカード。2 枚目以降を足すときは「タップしてさらに追加」に変わります。</p></li>
   <li><strong>PDF を複数選択</strong><p>端末内やクラウドから、一度に何枚でも選べます。</p></li>
   <li><strong>プレビューリストで確認</strong><p>選択した PDF が一覧表示され、各ファイルに自動検出された図面番号・種別・日付が表示されます。</p></li>
   <li><strong>必要なら個別編集</strong><p>検出が失敗した項目は、その場で手動修正できます。</p></li>
-  <li><strong>「取り込み実行」をタップ</strong><p>選んだ PDF をまとめて登録します。</p></li>
+  <li><strong>「◯件を取り込み」をタップ</strong><p>画面下部のボタン（◯には選択中の件数が入ります）。選んだ PDF をまとめて登録します。</p></li>
 </ol>
 
 <div class="gallery">
@@ -1172,8 +1182,8 @@
     <figcaption>取り込み画面のプレビューリスト</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/import_duplicate.webp" width="720" height="1564" alt="重複警告（同じPDFを再取り込み時）" loading="lazy" decoding="async">
-    <figcaption>重複警告（同じPDFを再取り込み時）</figcaption>
+    <img src="images/import_duplicate.webp" width="720" height="1565" alt="ファイルの上書き確認（同じ図面番号・種別で内容の違うPDFを再取り込みしたとき）" loading="lazy" decoding="async">
+    <figcaption>ファイルの上書き確認（同じ図面番号・種別で内容の違うPDFを再取り込みしたとき）</figcaption>
   </figure>
 </div>
 
@@ -1181,7 +1191,7 @@
 <p>iサポ、Files、Safari、各種 PDF ビューアなど、<strong>他のアプリで PDF を開いている状態から</strong>本アプリに送り込むルート。1 枚をその場ですぐ取り込みたいときに便利。</p>
 
 <div class="callout tip">
-  <p>💡 <strong>まとめ取りも可能</strong>：送り込んだ後、すぐ「取り込み実行」を押さずに送り元アプリ（iサポ等）に戻り、別のPDFを同じように送り込むと、本アプリの取り込み画面のプレビューリストに次々と追加されていきます。一通り送り終わったら最後に「取り込み実行」を1回押せば、まとめて登録できます。</p>
+  <p>💡 <strong>まとめ取りも可能</strong>：送り込んだ後、すぐ「◯件を取り込み」を押さずに送り元アプリ（iサポ等）に戻り、別のPDFを同じように送り込むと、本アプリの取り込み画面のプレビューリストに次々と追加されていきます。一通り送り終わったら最後に「◯件を取り込み」を1回押せば、まとめて登録できます。</p>
 </div>
 
 <h4>共有メニュー経由</h4>
@@ -1233,15 +1243,16 @@
 <p>取り込み時に検出ミスがあっても、後から <strong>ファイル名・図面番号・種別</strong> を修正できます。詳しい操作とエントリポイント（ファイル長押し / PDFビューア / 見積り詳細 / 仕様書詳細）は <a href="#doc-metadata-edit">ドキュメント管理 → ファイル情報の編集</a> を参照してください。</p>
 
 <h3 id="import-dedupe">重複チェック</h3>
-<p>同じPDFを2回取り込もうとすると、自動で重複検知されて「既に取り込み済み」の警告が出ます。バックアップから復元した直後など、同じPDFを再取り込みしようとしたときに便利です。</p>
+<p>同じ図面番号・同じ種別の枠に、すでに取り込み済みのものと<strong>中身がまったく同じPDF</strong>を取り込もうとしたときは、そのファイルだけが自動で見送られます。取り込み完了の通知に「（◯件は同一ファイルのためスキップ）」と出るので、何が入らなかったか分かります。バックアップから復元した直後など、同じPDFを再取り込みしようとしたときに便利です。</p>
+<p>同じ枠に<strong>中身が違うPDF</strong>を取り込もうとしたときは、取り込みの直前に「ファイルの上書き確認」ダイアログが出ます。上書きすると、そのファイルに紐づいていたメモや比較データは初期化されます。どちらも残したいときは、キャンセルして図面番号に枝番を付けると別のファイルとして保存できます。</p>
 
 <h3 id="import-actions">操作リファレンス</h3>
 <div class="action-box">
-  <div class="action-row"><strong>「ファイルから選択」</strong><span>ファイルピッカー起動（複数選択可）</span></div>
+  <div class="action-row"><strong>「タップしてPDFを選択（複数可）」</strong><span>ファイルピッカー起動（複数選択可）</span></div>
   <div class="action-row"><strong>プレビュー行の鉛筆アイコン</strong><span>ファイル名を編集</span></div>
   <div class="action-row"><strong>プレビュー行の目アイコン</strong><span>PDF内容をプレビュー</span></div>
   <div class="action-row"><strong>プレビュー行の × アイコン</strong><span>取り込み候補から除外</span></div>
-  <div class="action-row"><strong>「取り込み実行」</strong><span>選択したPDF全てを登録</span></div>
+  <div class="action-row"><strong>「◯件を取り込み」</strong><span>選択したPDF全てを登録</span></div>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
@@ -1263,7 +1274,7 @@
     <figcaption>ドキュメント一覧（図面番号グループ表示）</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/doc_list_empty.webp" width="720" height="1564" alt="ドキュメント一覧の空状態" loading="lazy" decoding="async">
+    <img src="images/doc_list_empty.webp" width="720" height="1565" alt="ドキュメント一覧の空状態" loading="lazy" decoding="async">
     <figcaption>空状態（取り込み前）</figcaption>
   </figure>
 </div>
@@ -1287,7 +1298,7 @@
 <h4>2カラムのカラフルタイル表示</h4>
 <p>グループ内の全ファイルが、種別色付きのタイル（2カラムグリッド）として並びます。</p>
 <ul>
-  <li>中央に大きな種別アイコン（CAD / 電気 / 仕様書 / 見積り / その他）</li>
+  <li>中央に大きな種別アイコン（種別ごとに色とアイコンが変わります）</li>
   <li>種別ラベル</li>
   <li>枝番（基本番号と違う場合のみ小バッジで表示）</li>
   <li>ファイル名</li>
@@ -1326,7 +1337,7 @@
 <ul>
   <li><strong>ファイル名</strong>（一覧やメニューに表示される名前）</li>
   <li><strong>図面番号</strong>（グループの基準）</li>
-  <li><strong>種別</strong>（CAD図面 / 電気図面 / 見積り / 設備仕様書 / その他）</li>
+  <li><strong>種別</strong>（CAD図面 / カラーパース / カラー配置図 / カラー立面図 / プレゼンテーション / 電気図面 / 照明仕様書 / 設備仕様書 / 見積り / その他 の 10 種）</li>
 </ul>
 
 <h4 id="doc-metadata-edit-entry">編集を開く 4 つの場所</h4>
@@ -1462,11 +1473,11 @@
 
 <div class="gallery">
   <figure class="shot-phone">
-    <img src="images/pdf_viewer.webp" width="720" height="1564" alt="PDFビューア（画面上部のバーと右下の丸ボタン）" loading="lazy" decoding="async">
+    <img src="images/pdf_viewer.webp" width="720" height="1565" alt="PDFビューア（画面上部のバーと右下の丸ボタン）" loading="lazy" decoding="async">
     <figcaption>PDFビューア（画面上部のバーと右下の丸ボタン）</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/pdf_viewer_memo_badge.webp" width="720" height="1564" alt="画面上部のバー にページメモバッジが付いた状態" loading="lazy" decoding="async">
+    <img src="images/pdf_viewer_memo_badge.webp" width="720" height="1565" alt="画面上部のバー にページメモバッジが付いた状態" loading="lazy" decoding="async">
     <figcaption>画面上部のバー にページメモバッジが付いた状態</figcaption>
   </figure>
   <figure class="shot-phone">
@@ -1474,7 +1485,7 @@
     <figcaption>ページメモ一覧ポップアップ</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/pdf_viewer_add_memo.webp" width="720" height="1564" alt="右下の丸ボタンから開くメモ追加ダイアログ" loading="lazy" decoding="async">
+    <img src="images/pdf_viewer_add_memo.webp" width="720" height="1565" alt="右下の丸ボタンから開くメモ追加ダイアログ" loading="lazy" decoding="async">
     <figcaption>右下の丸ボタンから開くメモ追加ダイアログ</figcaption>
   </figure>
   <figure class="shot-phone">
@@ -1620,8 +1631,7 @@
 
 <h4>画面上部のバー</h4>
 <ul>
-  <li><strong>タイトル</strong>：図面番号の旧→新（例：2-6 → 2-7）、単独モード時はファイル名</li>
-  <li><strong>メモアイコン</strong>：このページのメモ一覧</li>
+  <li><strong>タイトル</strong>：「図面チェック - 差分」「図面チェック - カラー（新）」「図面チェック - カラー（旧）」（表示中のビューモードが入ります）。単独モード時は「図面チェック - 単独」</li>
   <li><strong>🔖 ブックマーク</strong>：この比較結果を登録／解除</li>
   <li><strong>「調整 ▾」メニュー</strong>：<a href="#alignment">位置合わせ画面</a>・<a href="#size-alignment">サイズ合わせ画面</a>・<a href="#page-mapping">ページの組み合わせ</a> を選択</li>
   <li><strong>エクスポートアイコン</strong>：画像保存／共有</li>
@@ -1942,17 +1952,18 @@
     <figcaption>ホームから「見積り管理」タイルをタップ</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/estimate_list.webp" width="720" height="1564" alt="見積り一覧タブ（図面番号順カード／タブ切替）" loading="lazy" decoding="async">
+    <img src="images/estimate_list.webp" width="720" height="1565" alt="見積り一覧タブ（図面番号順カード／タブ切替）" loading="lazy" decoding="async">
     <figcaption>見積り一覧タブ（図面番号順カード、上部に「2版比較」「推移表」、下に一覧／比較履歴タブ）</figcaption>
   </figure>
 </div>
 
 <h4>一覧カードの情報</h4>
 <ul>
+  <li>図面番号（左端の丸アイコン）</li>
   <li>通し番号（No.xxx）— PDFから自動抽出される連番（編集不可）</li>
   <li>発行日</li>
-  <li>総額（税込）</li>
   <li>最新バッジ — 同じ枝で最も新しい版に付与</li>
+  <li>メモ件数バッジ（この見積りにメモがあるときだけ表示）</li>
   <li>検算ステータス（⚠️ バッジは金額の整合にズレがある場合のみ表示）</li>
 </ul>
 
@@ -2310,12 +2321,12 @@
 <p>画面上で気づいたことを <strong>その場で残せる</strong> 仕組みです。メモはすべて元の画面・位置にリンクされ、一覧からワンタップで戻れます。</p>
 
 <h3 id="memo-entry-points">メモの記録方法</h3>
-<p>メモを残せる画面は以下の4箇所。一覧ではメモの種別ごとにフィルタできます。</p>
+<p>メモを残せる画面は以下の6箇所。一覧ではメモの種別ごとにフィルタできます。</p>
 <table>
   <thead><tr><th>記録場所</th><th>操作</th><th>内部種別</th></tr></thead>
   <tbody>
     <tr><td>PDFビューア</td><td>画面右下のオレンジ色の丸ボタンをタップ → 現在ページへ記録</td><td>PDF</td></tr>
-    <tr><td>CAD差分画面</td><td>画面上の気になる位置を <strong>長押し</strong>（ピンメモ）</td><td>図面差分</td></tr>
+    <tr><td>CAD差分画面</td><td>画面上の気になる位置を <strong>長押し</strong>（ピンメモ）</td><td>CAD差分</td></tr>
     <tr><td>見積り詳細</td><td>項目を <strong>長押し</strong> → メモ追加</td><td>見積り詳細</td></tr>
     <tr><td>見積り2版比較</td><td>項目を <strong>長押し</strong> → メモ追加</td><td>見積り比較</td></tr>
     <tr><td>仕様書詳細</td><td>項目を <strong>長押し</strong> → メモ追加</td><td>仕様書詳細</td></tr>
@@ -2332,11 +2343,11 @@
 
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/pdf_viewer_add_memo.webp" width="720" height="1564" alt="PDFビューアの右下の丸ボタンから開くメモ追加ダイアログ" loading="lazy" decoding="async">
+    <img src="images/pdf_viewer_add_memo.webp" width="720" height="1565" alt="PDFビューアの右下の丸ボタンから開くメモ追加ダイアログ" loading="lazy" decoding="async">
     <figcaption>右下の丸ボタンでメモ追加</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/pdf_viewer_memo_badge.webp" width="720" height="1564" alt="画面上部のバーにページメモバッジが表示" loading="lazy" decoding="async">
+    <img src="images/pdf_viewer_memo_badge.webp" width="720" height="1565" alt="画面上部のバーにページメモバッジが表示" loading="lazy" decoding="async">
     <figcaption>登録後：ページメモバッジ</figcaption>
   </figure>
   <figure class="shot-phone">
@@ -2384,7 +2395,7 @@
 
 <h4>カード情報</h4>
 <ul>
-  <li>種別バッジ（PDF／図面差分／見積り詳細／見積り比較／仕様書詳細／仕様書比較）</li>
+  <li>種別バッジ（PDF／CAD差分／見積り詳細／見積り比較／仕様書詳細／仕様書比較）</li>
   <li>紐づく対象（図面番号・ページ番号・項目名 など）</li>
   <li>メモ本文の先頭</li>
   <li>作成日時</li>
@@ -2393,7 +2404,7 @@
 <h4 id="memo-filter">フィルタと検索</h4>
 <p>画面上部の右上からフィルタ＆検索が開けます。</p>
 <ul>
-  <li><strong>種別フィルタ</strong>：すべて／PDF／図面差分／見積り詳細／見積り比較／仕様書詳細／仕様書比較</li>
+  <li><strong>種別フィルタ</strong>：PDF／CAD差分／見積り詳細／見積り比較／仕様書詳細／仕様書比較（絞り込みを外すときは「クリア」）</li>
   <li><strong>図面番号フィルタ</strong>：特定の図面番号に紐づくメモのみ表示</li>
   <li><strong>キーワード検索</strong>：メモ本文を全文検索</li>
 </ul>
@@ -2410,7 +2421,7 @@
 </div>
 
 <h4 id="memo-jump">元画面へのジャンプ</h4>
-<p>メモカードをタップすると、<strong>メモを残した元の画面にそのまま戻れます</strong>。図面差分ならそのピン位置で、見積りならその項目で。</p>
+<p>メモカードをタップすると、<strong>メモを残した元の画面にそのまま戻れます</strong>。CAD差分ならそのピン位置で、見積りならその項目で。</p>
 
 <h4 id="memo-export">CSVエクスポート</h4>
 <p>画面上部の右上のエクスポートアイコンから、フィルタ適用後のメモ一覧を CSV で書き出せます。Excel でそのまま開けます。</p>
@@ -2502,7 +2513,7 @@
     <figcaption>多種混在状態</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/bookmark_empty.webp" width="720" height="1564" alt="ブックマーク一覧の空状態" loading="lazy" decoding="async">
+    <img src="images/bookmark_empty.webp" width="720" height="1565" alt="ブックマーク一覧の空状態" loading="lazy" decoding="async">
     <figcaption>ブックマーク一覧の空状態</figcaption>
   </figure>
   <figure class="shot-phone">
@@ -2766,7 +2777,7 @@
     <figcaption>ホーム（暮らしモード）から「でんき通信簿」タイルをタップ</figcaption>
   </figure>
   <figure class="shot-phone">
-      <img src="images/electricity_empty.webp" width="720" height="1564" alt="でんき通信簿 初回・データ未取り込みの空状態" loading="lazy" decoding="async">
+      <img src="images/electricity_empty.webp" width="720" height="1565" alt="でんき通信簿 初回・データ未取り込みの空状態" loading="lazy" decoding="async">
       <figcaption>でんき通信簿 初回・データ未取り込みの空状態</figcaption>
     </figure>
 </div>
@@ -3304,7 +3315,7 @@
     <figcaption>ホーム（暮らしモード）から「お手入れ当番表」タイルをタップ</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/maintenance_list.webp" width="720" height="1564" alt="お手入れ当番表 一覧（緊急度ビュー）" loading="lazy" decoding="async">
+    <img src="images/maintenance_list.webp" width="720" height="1565" alt="お手入れ当番表 一覧（緊急度ビュー）" loading="lazy" decoding="async">
     <figcaption>一覧画面（緊急度ビュー）</figcaption>
   </figure>
 </div>
@@ -3321,6 +3332,7 @@
   <li><strong>ビュー切替</strong>：<strong>緊急度 / 部屋ごと</strong> の2種類</li>
   <li><strong>緊急度ビュー</strong>：「今日実施」「今すぐ」「もうすぐ」「余裕あり」のセクションに自動分類。「もうすぐ」に入るタイミングは項目の周期に応じて自動で変わります（周期が短い項目ほど直前に表示）</li>
   <li><strong>部屋ごとビュー</strong>：割り当てた部屋単位のグループ表示</li>
+  <li><strong>一緒にお手入れする人（上部の帯）</strong>：<a href="#maintenance-family">家族と共有</a>中のときだけ表示。メンバーのアイコンが並び、タップすると共有の管理画面が開きます</li>
 </ul>
 
 <h4>カードの見方</h4>
@@ -3337,7 +3349,7 @@
     <figcaption>部屋ごとビュー</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/maintenance_menu.webp" width="720" height="1564" alt="右上メニュー（部屋を管理／消耗品を管理／通知時刻）" loading="lazy" decoding="async">
+    <img src="images/maintenance_menu.webp" width="720" height="1565" alt="右上メニュー（部屋を管理／消耗品を管理／通知時刻／通知の範囲／家族と共有）" loading="lazy" decoding="async">
     <figcaption>右上メニュー</figcaption>
   </figure>
 </div>
@@ -3463,6 +3475,7 @@
   <li><strong>何日前に通知</strong>：通知が始まる日を予定日の◯日前にずらせます（0 なら予定日当日から）</li>
   <li><strong>通知時刻</strong>：すべての項目で共通です。右上メニューの「通知時刻」または編集画面から変更できます（はじめは 9:00）</li>
   <li><strong>通知をタップ</strong>すると、その項目の詳細シートが直接開きます</li>
+  <li><strong>通知の範囲</strong>：右上メニューの「通知の範囲」で、この端末に届く通知をまとめて切り替えられます。ふだんは「通知する」「通知しない」の 2 択で、<a href="#maintenance-family">家族と共有</a>中はここに「自分の担当だけ」が加わります（端末ごとの設定）。ダイアログには「家族共有のお知らせ（参加・退出、予定の更新）も、この設定に従います」と常に表示されます — 共有していないときに「通知しない」を選ぶと、あとで共有をはじめたときのお知らせも届きません</li>
 </ul>
 
 <div class="shot-grid">
@@ -3477,8 +3490,125 @@
 </div>
 
 <div class="callout warn">
-  <p>通知の許可（OSのダイアログ）は、通知をオンにした項目を保存したときや、通知時刻を変更したときに表示されます。許可しなかった場合も、あとからアプリ内の案内で端末の設定画面を開いて変更できます。なお、省電力の仕組みの都合で、通知は設定時刻から数分前後することがあります。</p>
+  <p>通知の許可（OSのダイアログ）は、通知をオンにした項目を保存したとき、通知時刻を変えたとき、通知の範囲を「通知しない」以外で保存したときに表示されます。<a href="#maintenance-family">家族と共有</a>を使っている端末では、お手入れ当番表や共有の画面を開いたときに 1 回だけ確認することもあります。通知を使わない方に許可を求めることはありません。許可しなかった場合も、あとからアプリ内の案内で端末の設定画面を開いて変更できます。なお、省電力の仕組みの都合で、通知は設定時刻から数分前後することがあります。</p>
 </div>
+
+<h3 id="maintenance-family">家族と共有</h3>
+<p>お手入れ当番表のデータ（項目・部屋・消耗品と在庫・実施の記録・担当）を、家族やパートナーなど一緒に住まいをお手入れする人と同じ画面で使えます。参加した端末どうしで自動的に同期されます。</p>
+<ul>
+  <li><strong>入口は3つ</strong>：設定 &gt; 家族と共有 ／ お手入れ当番表の右上メニュー &gt; 家族と共有 ／ 共有中は一覧上部に出るメンバーのアイコンの帯をタップ</li>
+  <li><strong>共有をはじめる人（管理者）だけ<a href="#settings-premium">プレミアム</a>が必要</strong>です。招待された人は購入しなくても参加できます</li>
+  <li>参加は<strong>6 人まで</strong>が目安です</li>
+  <li>同期されるのは、お手入れ当番表のデータと家族内の表示名・アイコンなど、共有と通知に必要な情報です。図面・見積りなどほかのデータは端末内のままです。詳しくは <a href="https://smartolio.jp/privacy/ichijo-unofficial-app/" target="_blank" rel="noopener">プライバシーポリシー</a> をご覧ください</li>
+  <li>デモモードでは使えません</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/family_share_off.webp" width="720" height="1565" alt="家族と共有の画面（共有していない状態。共有をはじめる／招待から参加の2択）" loading="lazy" decoding="async">
+    <figcaption>共有していない状態</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/family_share_on.webp" width="720" height="1565" alt="家族と共有の画面（共有中。メンバーのチップと操作メニュー）" loading="lazy" decoding="async">
+    <figcaption>共有中（2人で共有）</figcaption>
+  </figure>
+</div>
+
+<h4>はじめかた（管理者）</h4>
+<ol>
+  <li>設定 &gt; <strong>家族と共有</strong> &gt; <strong>共有をはじめる</strong></li>
+  <li>家族内の表示名とアイコンを決めて<strong>作成</strong>。前回実施日が実施履歴と食い違っている項目があると、揃え直すかどうかの確認が出ます</li>
+  <li>共有画面の<strong>招待コードを発行</strong>で QR コードと招待コードが表示されます。参加する人に QR を読み取ってもらうか、「コードをコピー」で送ってください。招待コードは発行から 3 日間使えます</li>
+  <li>参加する人が申請すると、<strong>参加リクエストを確認</strong>に届きます（端末の通知でもお知らせします）。名前を確かめて<strong>承認する</strong>か<strong>断る</strong>を選びます</li>
+</ol>
+<p>招待コードの発行と参加リクエストの承認は、管理者に限らずメンバーの誰でもできます。</p>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/family_name_avatar.webp" width="720" height="1565" alt="家族内の表示名とアイコンを決める入力画面" loading="lazy" decoding="async">
+    <figcaption>表示名とアイコンを決める</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/family_invite_qr.webp" width="720" height="1565" alt="招待コードの画面。QRコードと有効期限、下に届いた参加リクエスト" loading="lazy" decoding="async">
+    <figcaption>招待コードの発行と、届いた参加リクエスト<br><small>（QR とコードは伏せています）</small></figcaption>
+  </figure>
+</div>
+
+<h4>参加のしかた（招待された人）</h4>
+<ol>
+  <li>設定 &gt; <strong>家族と共有</strong> &gt; <strong>招待から参加</strong></li>
+  <li><strong>カメラでスキャン</strong>で QR を読み取るか、招待コードを入力します</li>
+  <li>家族内の表示名とアイコンを決めて<strong>参加</strong>。参加の申請が送られ、承認待ちになります。画面を閉じても申請は残ります（招待の期限を過ぎると取り消されます）</li>
+  <li>承認されると、設定のタイルや当番表のメニューに加えて、お手入れ当番表の上部にも「参加が承認されました。共有をはじめられます」の帯が出ます。<strong>はじめる</strong>を押すと共有の画面が開き、データの置き換えをもう一度確認したうえで共有が始まります</li>
+</ol>
+<p>承認を待っている間も、お手入れ当番表の上部に同じ帯が出て「承認を待っています」と知らせます。手続きの確認が必要なときは「参加手続きの確認が必要です」に変わるので、帯の<strong>状態を確認</strong>から共有の画面を開いてください。</p>
+<div class="callout warn">
+  <p><strong>参加すると、この端末のお手入れデータは家族の共有データに置き換わります。</strong>端末に入力済みの項目を残したいときは、その端末で「共有をはじめる」を選んで管理者になってください。</p>
+</div>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/family_join_replace.webp" width="720" height="1564" alt="共有データへの置き換えを確認するダイアログ" loading="lazy" decoding="async">
+    <figcaption>参加の直前に出る確認</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/family_join_waiting.webp" width="720" height="1564" alt="参加の承認を待っている画面" loading="lazy" decoding="async">
+    <figcaption>承認待ちの画面</figcaption>
+  </figure>
+</div>
+
+<h4>共有中にできること</h4>
+<ul>
+  <li><strong>担当</strong>：項目の編集画面に「担当」が増えます。「決めない」「いつも同じ人」「持ち回り」から選べます。持ち回りは、まわす順番にメンバーをタップして決めます。担当が決まった項目はカードに「次は◯◯さん」と表示され、実施を記録するたびに次の人へ回ります</li>
+  <li><strong>通知の範囲</strong>：右上メニューの「通知の範囲」で、この端末に届く通知を「すべての項目」「自分の担当だけ」「通知しない」から選べます。端末ごとの設定です</li>
+  <li><strong>家族の更新のお知らせ</strong>：家族の誰かがお手入れの予定を変えた日は、その日の夜（19時ごろ）にまとめて 1 通お知らせします。アプリを開くと、この端末の通知が最新の予定に合わせて組み直されます</li>
+  <li><strong>参加・退出のお知らせ</strong>：メンバーが参加・退出したときに通知します。タップするとメンバー一覧が開きます</li>
+  <li><strong>名前とアイコンを変える</strong>：共有画面から、自分の表示名とアイコンをいつでも変更できます</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/maintenance_family_band.webp" width="720" height="1565" alt="お手入れ当番表。上部にメンバーのアイコンの帯、カードに「次は◯◯さん」" loading="lazy" decoding="async">
+    <figcaption>共有中の一覧（上部の帯と担当の表示）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/maintenance_assignee.webp" width="720" height="1565" alt="項目の編集画面の担当。持ち回りでメンバーの順番を指定" loading="lazy" decoding="async">
+    <figcaption>担当を「持ち回り」にする</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/maintenance_notify_scope.webp" width="720" height="1565" alt="通知の範囲のダイアログ（すべての項目／自分の担当だけ／通知しない）" loading="lazy" decoding="async">
+    <figcaption>通知の範囲（端末ごと）</figcaption>
+  </figure>
+</div>
+
+<h4>メンバーの管理と共有の終了</h4>
+<ul>
+  <li><strong>メンバーを外す</strong>（管理者のみ）：共有画面のメンバー一覧で名前を長押し → 「外す」。外された端末では共有が止まり、データはその端末に残ります</li>
+  <li><strong>共有を停止（この端末のみ）</strong>：この端末の同期だけを止めます。ほかのメンバーはそのままです。停止中に変えた内容は共有されず、<strong>共有を再開</strong>すると家族の共有データに置き換わります</li>
+  <li><strong>共有から退出</strong>：グループから抜けます。データはこの端末に残ります。もう一度参加するには新しい招待が必要です</li>
+  <li><strong>管理者の退出</strong>：ほかのメンバーがいる間は退出できません。「全員を外して退出する」を選ぶと、メンバー全員を外してから共有を終了します。外れた各メンバーのデータは、それぞれの端末に残ります</li>
+  <li><strong>サーバー上のデータの削除</strong>：ご希望のときは、家族共有画面の下に表示される「サポート用 ID」を添えて <a href="#contact">お問い合わせ</a>ください（設定 &gt; ご意見・不具合の報告、または info@smartolio.jp）。共有を終了すると表示されなくなるので、依頼は終了前にお願いします</li>
+  <li><strong>この端末の共有情報を破棄</strong>：停止中の端末で、再開用の情報を消して完全にオフに戻します</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/family_members.webp" width="720" height="1565" alt="メンバー一覧。管理者/自分のラベルと、長押しの案内" loading="lazy" decoding="async">
+    <figcaption>メンバー一覧</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/family_kick_confirm.webp" width="720" height="1565" alt="メンバーを外す確認ダイアログ" loading="lazy" decoding="async">
+    <figcaption>名前を長押し → 外す</figcaption>
+  </figure>
+</div>
+
+<h3 id="maintenance-family-device-change">機種変更のとき</h3>
+<p>共有への参加は端末ごとに結びついているため、新しい端末には自動で引き継がれません。バックアップの復元でも共有は引き継がれず、復元した端末では共有がオフに戻るか、「同期の再設定が必要です」の案内が出ます。案内が出た場合は「再設定」から「共有をオフにする」を選んでください。そのあと、下の手順で参加し直してください。</p>
+<ul>
+  <li><strong>メンバーの場合</strong>：旧端末で<strong>共有から退出</strong>してから、新端末で<strong>招待から参加</strong>します。旧端末で退出し忘れたときは、管理者に旧端末のメンバーを外してもらってください</li>
+  <li><strong>管理者の場合</strong>：旧端末で<strong>全員を外して退出</strong>して共有をいったん終了し、新端末で<strong>共有をはじめる</strong>から作り直して、家族を招待し直してください。各メンバーのデータはそれぞれの端末に残ります</li>
+  <li><strong>管理者が旧端末を先に手放してしまったとき</strong>：ほかのメンバーが発行した招待で新端末から参加できますが、管理者の権限は戻りません（メンバーを外す・共有を終了する操作ができなくなります）。全員が退出してから、新端末で作り直すのが確実です</li>
+</ul>
 
 <h3 id="maintenance-actions">操作リファレンス</h3>
 <div class="action-box">
@@ -3488,7 +3618,9 @@
   <div class="action-row"><strong>ダッシュボードをタップ</strong><span>「今すぐ」「在庫わずか」で絞り込み（再タップで解除）</span></div>
   <div class="action-row"><strong>緊急度／部屋ごと</strong><span>一覧の表示切替</span></div>
   <div class="action-row"><strong>＋ボタン</strong><span>お手入れの追加（プリセット／カスタム）</span></div>
-  <div class="action-row"><strong>右上メニュー</strong><span>部屋を管理／消耗品を管理／通知時刻</span></div>
+  <div class="action-row"><strong>右上メニュー</strong><span>部屋を管理／消耗品を管理／通知時刻／通知の範囲／家族と共有</span></div>
+  <div class="action-row"><strong>一覧上部の帯をタップ</strong><span>（共有中）メンバーの管理画面を開く</span></div>
+  <div class="action-row"><strong>メンバー名を長押し</strong><span>（管理者）メンバーを外す</span></div>
   <div class="action-row"><strong>シートのタイトル右アイコン</strong><span>編集（鉛筆）／削除（ゴミ箱）</span></div>
   <div class="action-row"><strong>部屋・消耗品の行</strong><span>タップで編集、長押しで削除</span></div>
 </div>
@@ -3508,7 +3640,7 @@
 </ol>
 
 <figure class="shot-phone">
-  <img src="images/settings_show_home_banner.webp" width="720" height="1564" alt="設定画面のマイページセクション（マイページ項目とホームバナー表示スイッチ）" loading="lazy" decoding="async">
+  <img src="images/settings_show_home_banner.webp" width="720" height="1565" alt="設定画面のマイページセクション（マイページ項目とホームバナー表示スイッチ）" loading="lazy" decoding="async">
   <figcaption>設定画面 マイページセクション（マイページ項目 + バナー表示スイッチ）</figcaption>
 </figure>
 
@@ -3589,12 +3721,14 @@
   </figure>
 </div>
 
-<h4>5 つのセクション</h4>
+<h4>7 つのセクション</h4>
 <ol>
   <li><strong>基本情報</strong> — アバター（絵文字プリセット or 写真アップロード） / ニックネーム / 商品プラン / 都道府県 / 断熱地域区分 / シェア時の表記（都道府県 ⇄ 断熱地域区分）</li>
   <li><strong>間取り・構造</strong> — 階数（平屋 / 2階建て / 3階建て / 二世帯 / その他自由入力） / 延床面積（坪）</li>
-  <li><strong>設備</strong> — 太陽光発電（kW） / 蓄電池（容量と台数） / 空調・換気タイプ</li>
+  <li><strong>設備</strong> — 太陽光発電（kW） / 蓄電池（容量と台数） / 空調・換気タイプ / V2H</li>
   <li><strong>家族構成</strong> — 大人 / 子ども / ペットを ± ボタンで増減</li>
+  <li><strong>車</strong> — ICE / EV / HV の台数を ± ボタンで増減。「車種を追加」で水素・トラックなど自由な車種も足せます</li>
+  <li><strong>住宅性能値</strong> — C値 / UA値 / ηAC値 / ηAH値 / 耐震等級 / 断熱等性能等級（入力した項目だけがマイページに並びます）</li>
   <li><strong>マイページの見た目</strong> — ホームバナーの縮小プレビュー + マイホームカード画面のホームタブ／シェアタブへの 2 入口（ここでは見栄え自体は編集せず、マイホームカード画面に誘導）</li>
 </ol>
 
@@ -3661,7 +3795,7 @@
 <ul>
   <li><strong>候補一覧</strong> から chip をタップでスロットに追加。すでに使用中の chip はグレー＋取り消し線で「使用中」表示されます</li>
   <li>追加済 chip は ↑↓ で並び替え、× で削除</li>
-  <li>シェア PHOTO は <strong>大スロット</strong>（既定 7 個まで） と <strong>小スロット</strong>（既定 5 個まで）に分かれていて、追加先を切替できます</li>
+  <li>シェア PHOTO は <strong>大スロット</strong> と <strong>小スロット</strong> の 2 段に分かれていて、「追加先」で切り替えます。個数の上限はありません（入れすぎると画像に収まりきらないことがあります）</li>
 </ul>
 
 <figure class="shot-phone">
@@ -3810,7 +3944,7 @@
     <figcaption>ホームから「設定」タイルをタップ</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/settings.webp" width="720" height="1564" alt="設定画面（上半分：個人設定／プレミアム／データ管理）" loading="lazy" decoding="async">
+    <img src="images/settings.webp" width="720" height="1565" alt="設定画面（上半分：個人設定／プレミアム／データ管理）" loading="lazy" decoding="async">
     <figcaption>設定 上半分</figcaption>
   </figure>
   <figure class="shot-phone">
@@ -3822,17 +3956,23 @@
 <p>設定画面は 5 つのセクションで構成されています。</p>
 <ol>
   <li><strong>個人設定</strong>：マイページ、ホームバナー表示</li>
-  <li><strong>プレミアム</strong>：広告非表示の購入・復元</li>
-  <li><strong>データ管理</strong>：バックアップ、復元、データ再構築、デモモード</li>
+  <li><strong>プレミアム</strong>：内容と価格の案内ページへの入口</li>
+  <li><strong>データ管理</strong>：バックアップ、復元、データ再構築、デモモード、家族と共有</li>
   <li><strong>表示</strong>：モード切替、カウンター表示、テーマ、言語</li>
   <li><strong>アプリ</strong>：レビュー、フィードバック、チュートリアル、マニュアル、バージョン、ライセンス</li>
 </ol>
 
-<h3 id="settings-premium">プレミアム（広告なし）</h3>
-<p>買い切り型の課金で、アプリ内の広告バナーを非表示にできます。購入すると設定画面のプレミアムカードが「有効」表示に切り替わり、ホーム画面の AppBar に「Premium」バッジが表示されます。</p>
+<h3 id="settings-premium">プレミアム</h3>
+<p>買い切り型の課金です（月額ではありません）。設定の「プレミアムでできること」タイルをタップすると案内ページが開き、内容と価格を確かめてから購入できます。プレミアムでできることは次の 2 つです。</p>
 <ul>
-  <li><strong>購入ボタン</strong>：タップすると確認ダイアログ → ストアの購入フローへ</li>
-  <li><strong>機種変更などで購入を復元</strong>：同じ Apple ID／Google アカウントで再インストールした場合、タップで購入状態を復元</li>
+  <li><strong>家族と共有</strong>：お手入れ当番表の共有を「はじめる」ことができます。購入が必要なのは共有をはじめる 1 人だけで、招待された家族は無料のまま参加できます → <a href="#maintenance-family">家族と共有</a></li>
+  <li><strong>広告を非表示</strong>：アプリ内の広告が表示されなくなります</li>
+</ul>
+<p>案内ページの操作は次のとおりです。</p>
+<ul>
+  <li><strong>購入</strong>：画面下部に固定表示される「◯◯円｜プレミアムにする」をタップするとストアの購入フローへ進みます。購入後は案内ページが「プレミアムをご利用中です」の表示に切り替わり、ホーム画面のタイトル横に「Premium」バッジが出ます</li>
+  <li><strong>機種変更のときは「購入を復元」</strong>：購入ボタンの下にあります。同じ Apple ID／Google アカウントで再インストールした場合、タップで購入状態を復元できます</li>
+  <li>購入しなくても、登録済みのデータが見られなくなることはありません</li>
 </ul>
 
 <div class="callout info">
@@ -3840,17 +3980,9 @@
 </div>
 
 <div class="shot-grid">
-  <figure class="shot-phone">
-    <img src="images/settings_premium.webp" width="720" height="682" alt="プレミアム購入カード（未購入状態）" loading="lazy" decoding="async">
-    <figcaption>未購入状態</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/settings_premium_confirm.webp" width="720" height="885" alt="プレミアム購入確認ダイアログ" loading="lazy" decoding="async">
-    <figcaption>購入確認ダイアログ</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/settings_premium_active.webp" width="720" height="507" alt="プレミアム有効状態（購入済み）" loading="lazy" decoding="async">
-    <figcaption>購入済み（有効）</figcaption>
+  <figure>
+    <img src="images/premium_page.webp" width="720" height="1210" alt="プレミアム案内ページ。家族と共有・広告を非表示の2つの特典カード" loading="lazy" decoding="async">
+    <figcaption>プレミアム案内ページ（説明部分）<br><small>価格と購入ボタンは画面下部に固定表示されます</small></figcaption>
   </figure>
   <figure class="shot-phone">
     <img src="images/home_premium_badge.webp" width="720" height="653" alt="ホーム画面の Premium バッジ" loading="lazy" decoding="async">
@@ -3911,6 +4043,14 @@
   </tbody>
 </table>
 
+<h3 id="settings-family">家族と共有</h3>
+<p>お手入れ当番表を家族と同じ画面で使うための入口です。データ管理セクションの一番下にあります。共有できるのは<strong>お手入れ当番表のデータ（項目・部屋・消耗品・実施の記録・担当）だけ</strong>で、図面や見積りなどの書類は共有されません。共有の状態（参加の承認待ち・承認済み・停止中など）もこのタイルに表示され、タップすると共有の管理画面が開きます。使い方は <a href="#maintenance-family">お手入れ当番表 &gt; 家族と共有</a> をご覧ください。</p>
+
+<figure>
+  <img src="images/settings_family_tile.webp" width="720" height="167" alt="設定画面の「家族と共有」タイル" loading="lazy" decoding="async">
+  <figcaption>設定 &gt; データ管理 の一番下</figcaption>
+</figure>
+
 <h3 id="settings-mode">モード切替</h3>
 <p>家づくりモード ↔ 暮らしモードを切り替えるトグルスイッチ。切り替えるとホーム画面のタイル構成、サイドメニュー、便利ツール一覧が変わります。</p>
 <ul>
@@ -3961,8 +4101,7 @@
   <li>サンプル見積り（複数版、推移表が楽しめる内容）</li>
   <li>サンプル仕様書</li>
   <li>サンプルメモ</li>
-  <li>スケジュール（仮契約〜引き渡しまでの想定）</li>
-  <li>でんき通信簿のダミーデータ（1年分）</li>
+  <li>でんき通信簿のダミーデータ（3ヶ月分）</li>
 </ul>
 
 <div class="callout warn">
@@ -4017,8 +4156,9 @@
 
 <h3 id="settings-actions">操作リファレンス</h3>
 <div class="action-box">
-  <div class="action-row"><strong>プレミアム購入ボタン</strong><span>広告非表示を購入（買い切り）</span></div>
+  <div class="action-row"><strong>プレミアムでできること</strong><span>案内ページを開く（内容・価格・購入）</span></div>
   <div class="action-row"><strong>購入を復元</strong><span>機種変更後に購入状態を復元</span></div>
+  <div class="action-row"><strong>家族と共有</strong><span>共有の管理画面を開く</span></div>
   <div class="action-row"><strong>バックアップ作成タップ</strong><span>Zip作成→共有メニュー</span></div>
   <div class="action-row"><strong>バックアップ復元タップ</strong><span>ファイル選択→確認→復元→再起動（iOSは手動終了）</span></div>
   <div class="action-row"><strong>再構築タップ</strong><span>確認→全PDFを再パース</span></div>
@@ -4040,9 +4180,9 @@
 <h3>PDFの取り込みで困ったとき</h3>
 <ul>
   <li><strong>パスワード保護PDFは非対応</strong>：iサポからダウンロードしたままの状態で取り込んでください。他アプリでロックを付けている場合は解除を</li>
-  <li><strong>図面番号・種別が自動検出されない</strong>：取り込み画面のプレビューリストで各項目の<strong>鉛筆アイコン</strong>から手動編集してから「取り込み実行」してください</li>
+  <li><strong>図面番号・種別が自動検出されない</strong>：取り込み画面のプレビューリストで各項目の<strong>鉛筆アイコン</strong>から手動編集してから「◯件を取り込み」をタップしてください</li>
   <li><strong>iOSで「このアプリで開く」に本アプリが出ない</strong>：既定のPDFビューアが Adobe Acrobat など別アプリに設定されていると選択肢に表示されないことがあります。その場合は<strong>共有メニュー経由</strong>で ICHIJO 施主手帳を選んでください</li>
-  <li><strong>同じPDFを取り込もうとすると弾かれる</strong>：重複チェックが効いています。既に取り込み済みなのでドキュメント管理から確認できます</li>
+  <li><strong>取り込んだはずのPDFが増えていない</strong>：<a href="#import-dedupe">重複チェック</a>が効いています。中身が同じPDFは取り込まれず、完了の通知に「（◯件は同一ファイルのためスキップ）」と出ます。取り込み済みのものはドキュメント管理から確認できます</li>
   <li><strong>どうしても取り込めない</strong>：PDFの種類・エラー内容を添えてお問い合わせください</li>
 </ul>
 
@@ -4095,12 +4235,23 @@
   <li>それでも直らない場合は、症状・利用OS・アプリバージョンを添えてお問い合わせください</li>
 </ul>
 
+<h3 id="troubleshooting-family">家族共有で困ったとき</h3>
+<ul>
+  <li><strong>招待コードが通らない／承認できない</strong>：招待コードは発行から 3 日で期限切れになります。新しい招待コードを発行してもらってください。「先に進めていない参加の申請があります」と出るときは、共有画面で申請を取り下げてからやり直してください</li>
+  <li><strong>「同期の再設定が必要です」と出る</strong>：バックアップの復元などで端末の同期情報が変わったときの案内です。「再設定」をタップして「共有をオフにする」を選んでから、新しい招待で参加し直してください → <a href="#maintenance-family-device-change">機種変更のとき</a></li>
+  <li><strong>「共有を一時停止しました」と出る</strong>：しばらく同期できなかったときの安全装置です。表示された「停止して再開」または「もう一度試す」で復帰できます。まだ送っていない変更は失われることがあります</li>
+  <li><strong>「家族共有の処理が完了していません」と出る</strong>：通信できる状態で「再開」を押してください。直らないときはアプリを起動し直してください</li>
+  <li><strong>家族の通知が来ない</strong>：右上メニューの「通知の範囲」が「通知しない」になっていないか、端末の通知の許可がオフになっていないかを確認してください。家族の更新のお知らせは、その日の夜（19時ごろ）にまとめて届きます</li>
+  <li><strong>停止中に入力した内容が消えた</strong>：仕様です。「共有を停止（この端末のみ）」中の変更は共有されず、再開すると家族の共有データに置き換わります</li>
+</ul>
+
 <h2 id="privacy">プライバシー</h2>
-<p>取り込んだPDF・解析結果・メモ・でんき通信簿のデータは、すべて端末内のみに保管されます。外部に送信されることはありません。詳細は <a href="https://smartolio.jp/privacy/ichijo-unofficial-app/" target="_blank" rel="noopener">プライバシーポリシー全文</a> をご確認ください。</p>
+<p>取り込んだPDF・解析結果・メモ・でんき通信簿のデータは、すべて端末内のみに保管されます。外部に送信されることはありません。お手入れ当番表の「<a href="#maintenance-family">家族と共有</a>」を使うときは、お手入れ当番表のデータや家族内の表示名など、共有と通知に必要な情報が同期のためにサーバー（Google Firebase）へ送信されます。詳細は <a href="https://smartolio.jp/privacy/ichijo-unofficial-app/" target="_blank" rel="noopener">プライバシーポリシー全文</a> をご確認ください。</p>
 
 <h2 id="contact">お問い合わせ</h2>
 <p>バグ報告・要望・質問などは、以下の窓口へ。</p>
 <ul>
+  <li>メール: <a href="mailto:info@smartolio.jp">info@smartolio.jp</a>（アプリの <strong>設定 &gt; ご意見・不具合の報告</strong> から開くと、バージョンや端末情報が本文に入った状態でメールを作成できます）</li>
   <li>𝕏（Twitter）: <a href="https://x.com/masa_iot" target="_blank" rel="noopener">@masa_iot</a></li>
   <li>note: <a href="https://note.com/masa_iot" target="_blank" rel="noopener">note.com/masa_iot</a></li>
 </ul>
