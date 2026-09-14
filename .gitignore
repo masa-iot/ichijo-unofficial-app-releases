@@ -4,5 +4,8 @@
 docs/images/_raw/
 docs/images/_unused/
 
-# 画像変換スクリプト（ローカル作業用、公開不要）
-tools/
+# 画像変換スクリプト（ローカル作業用、公開不要）— OGP 生成元のみ履歴に残す
+tools/*
+!tools/ogp/
+tools/ogp/*
+!tools/ogp/ogp.html
