@@ -690,6 +690,7 @@
     <li><a href="#home">ホーム画面</a></li>
     <li class="sub"><a href="#home-ieduzukuri">家づくりモード</a></li>
     <li class="sub"><a href="#home-living">暮らしモード</a></li>
+    <li class="sub"><a href="#home-notice">お知らせカード</a></li>
     <li class="sub"><a href="#home-countdown">カウントダウン／カウンター</a></li>
     <li class="sub"><a href="#home-drawer">サイドメニュー</a></li>
     <li class="sub"><a href="#home-links">リンク集</a></li>
@@ -701,6 +702,7 @@
     <li><a href="#import">書類の取り込み</a></li>
     <li class="sub"><a href="#import-from-app">アプリから取りに行く</a></li>
     <li class="sub"><a href="#import-from-outside">外から送り込む</a></li>
+    <li class="sub"><a href="#import-meeting-material">打ち合わせ資料</a></li>
     <li class="sub"><a href="#import-edit">取り込み後の修正</a></li>
     <li class="sub"><a href="#import-dedupe">重複チェック</a></li>
     <li class="sub"><a href="#import-actions">操作リファレンス</a></li>
@@ -725,6 +727,7 @@
     <li class="sub"><a href="#diff-history">比較履歴</a></li>
     <li class="sub"><a href="#diff-single">単独図面解析モード</a></li>
     <li class="sub"><a href="#diff-result">差分結果画面</a></li>
+    <li class="sub2"><a href="#diff-comments">コメントの表示・非表示</a></li>
     <li class="sub2"><a href="#diff-view-mode">ビューモード切替</a></li>
     <li class="sub2"><a href="#diff-filter">ノイズ除去フィルタ</a></li>
     <li class="sub2"><a href="#diff-adjusted">調整済/元切替</a></li>
@@ -875,6 +878,7 @@
     <li class="sub"><a href="#settings-theme">テーマ</a></li>
     <li class="sub"><a href="#settings-language">言語</a></li>
     <li class="sub"><a href="#settings-demo">デモモード</a></li>
+    <li class="sub"><a href="#settings-notices">お知らせ</a></li>
     <li class="sub"><a href="#settings-info">アプリ</a></li>
     <li class="sub"><a href="#settings-devmode">開発者モード</a></li>
     <li class="sub"><a href="#settings-actions">操作リファレンス</a></li>
@@ -1067,6 +1071,19 @@
   </figure>
 </div>
 
+<h3 id="home-notice">お知らせカード（ホーム上部）</h3>
+<p>アプリの更新内容や変更のお知らせがあるときだけ、ホームの上部にカードが出ます。お知らせが無い人の画面には何も出ません。</p>
+<ul>
+  <li><strong>「詳しく」</strong>：くわしい説明をブラウザで開きます（お知らせによってはアプリ内の画面に移動します）</li>
+  <li><strong>「閉じる」</strong>：以後そのお知らせは出なくなります</li>
+  <li><strong>本文をタップ</strong>：カードでは 3 行までしか出ないので、続きを全文で読めます</li>
+  <li><strong>「他◯件」</strong>：同時に出るカードは 1 枚だけです。残りは件数のリンクから<a href="#settings-notices">設定の「お知らせ」</a>へ</li>
+</ul>
+
+<div class="callout info">
+  <p>閉じたお知らせも、<a href="#settings-notices">設定の「お知らせ」</a>からいつでも読み返せます。</p>
+</div>
+
 <h3 id="home-countdown">カウントダウン／カウンターカード（ホーム上部）</h3>
 <p>ホーム画面の上部には、状況に応じて2種類のカードが切り替わって表示されます。</p>
 <ul>
@@ -1127,6 +1144,8 @@
 <div class="action-box">
   <div class="action-row"><strong>タイルをタップ</strong><span>各機能画面に遷移</span></div>
   <div class="action-row"><strong>☰アイコン（左上）</strong><span>サイドメニュー展開</span></div>
+  <div class="action-row"><strong>お知らせカードの本文をタップ</strong><span>全文を表示</span></div>
+  <div class="action-row"><strong>お知らせカードの「他◯件」</strong><span>設定の「お知らせ」一覧へ</span></div>
   <div class="action-row"><strong>カウントダウンカードをタップ</strong><span>スケジュール画面に遷移</span></div>
   <div class="action-row"><strong>リンクカードをタップ</strong><span>外部ブラウザで開く</span></div>
 </div>
@@ -1239,12 +1258,26 @@
   <p>どちらのルートでも、取り込み時に端末内へ PDF のコピーが作られます。元の PDF はそのまま残るので、誤って削除する心配はありません。</p>
 </div>
 
+<h3 id="import-meeting-material">打ち合わせ資料</h3>
+<p>打ち合わせの席で書き込みをした図面（コメント入りの PDF）は、<strong>「打ち合わせ資料」</strong>として、同じ図面番号の図面と<strong>両方保存</strong>できます。取り込み画面のプレビューリストで、図面のときだけ「打ち合わせ資料:」のスイッチが出ます。</p>
+<ul>
+  <li><strong>取り込むときは自動で ON / OFF が決まります</strong>：PDF にコメントが見つかると自動で ON、見つからなければ OFF。違うときはスイッチで切り替えてください</li>
+  <li><strong>あとからでも変えられます</strong>：<a href="#doc-metadata-edit">ファイル情報の編集</a>のスイッチで、いつでも ON / OFF を切り替えられます</li>
+  <li><strong>種別は変わりません</strong>：CAD 図面は CAD 図面のまま。一覧やタイルに「打ち合わせ資料」の小さなラベルが 1 つ増えるだけです</li>
+  <li><strong>スイッチの横の「?」</strong>：説明が開きます。取り込み画面・<a href="#diff-overview">図面チェックの選択画面</a>・ファイル情報の編集の 3 か所で、同じ説明が読めます</li>
+</ul>
+
+<div class="callout info">
+  <p>「打ち合わせ資料」の ON / OFF が違うファイルは、同じ図面番号・同じ種別でも<strong>別のファイル</strong>として保存されます。上書き確認は出ません。詳しくは <a href="#import-dedupe">重複チェック</a> をご覧ください。</p>
+</div>
+
 <h3 id="import-edit">取り込み後の修正</h3>
 <p>取り込み時に検出ミスがあっても、後から <strong>ファイル名・図面番号・種別</strong> を修正できます。詳しい操作とエントリポイント（ファイル長押し / PDFビューア / 見積り詳細 / 仕様書詳細）は <a href="#doc-metadata-edit">ドキュメント管理 → ファイル情報の編集</a> を参照してください。</p>
 
 <h3 id="import-dedupe">重複チェック</h3>
 <p>同じ図面番号・同じ種別の枠に、すでに取り込み済みのものと<strong>中身がまったく同じPDF</strong>を取り込もうとしたときは、そのファイルだけが自動で見送られます。取り込み完了の通知に「（◯件は同一ファイルのためスキップ）」と出るので、何が入らなかったか分かります。バックアップから復元した直後など、同じPDFを再取り込みしようとしたときに便利です。</p>
 <p>同じ枠に<strong>中身が違うPDF</strong>を取り込もうとしたときは、取り込みの直前に「ファイルの上書き確認」ダイアログが出ます。上書きすると、そのファイルに紐づいていたメモや比較データは初期化されます。どちらも残したいときは、キャンセルして図面番号に枝番を付けると別のファイルとして保存できます。</p>
+<p>ここでいう「同じ枠」は、図面（CAD・電気など）では<strong>種別と<a href="#import-meeting-material">「打ち合わせ資料」の ON / OFF</a>の組み合わせ</strong>です。打ち合わせで書き込みをした版（ON）と元の版（OFF）は<strong>別の枠</strong>なので、同じ図面番号でも上書き確認は出ず、そのまま 2 本目として保存されます。見積りは通し番号、設備仕様書は仕様書番号が枠の基準です。</p>
 
 <h3 id="import-actions">操作リファレンス</h3>
 <div class="action-box">
@@ -1286,6 +1319,7 @@
   <li><strong>取り込み日時</strong>（PDFを取り込んだ時刻）</li>
   <li><strong>サブリビジョン件数</strong>（例：「(3件)」枝番3つある場合）</li>
   <li><strong>ファイル種別バッジ</strong>：CAD x2、電気 x1 など、含まれるファイル種別と件数</li>
+  <li>グループの中に<a href="#import-meeting-material">打ち合わせ資料</a>が 1 つでもあると、種別バッジの並びに「打ち合わせ資料」のラベルが 1 つ付きます</li>
   <li><strong>右端の</strong> › アイコン</li>
 </ul>
 
@@ -1303,6 +1337,7 @@
   <li>枝番（基本番号と違う場合のみ小バッジで表示）</li>
   <li>ファイル名</li>
   <li>見積りの場合は通し番号（No.xxx）</li>
+  <li>打ち合わせ資料のファイルは、タイルの中に「打ち合わせ資料」のラベルが出ます</li>
 </ul>
 
 <div class="shot-grid">
@@ -1353,6 +1388,11 @@
   <img src="images/doc_file_edit_dialog.webp" width="720" height="1564" alt="ファイル情報の編集ダイアログ（ファイル名・図面番号・種別）" loading="lazy" decoding="async">
   <figcaption>ファイル情報の編集ダイアログ（3項目）</figcaption>
 </figure>
+
+<p>図面（CAD・電気など）では、ファイル名・図面番号・種別に加えて <strong>「打ち合わせ資料」</strong> のスイッチが出ます。ON / OFF はいつでも切り替えられます（コメントが入っているかどうかは関係ありません）。詳しくは <a href="#import-meeting-material">打ち合わせ資料</a> をご覧ください。</p>
+<div class="callout note">
+  <p>同じ図面番号・同じ種別で、切り替えた先と同じ設定のファイルが既にあるときは切り替えられません（「打ち合わせ資料の設定を変更できません」と出ます）。</p>
+</div>
 
 <h4>変更したときの挙動</h4>
 <table>
@@ -1445,16 +1485,17 @@
 </div>
 
 <h3 id="pdf-viewer">PDFビューア</h3>
-<p>ファイルタップで開くPDF閲覧画面です。iOSでは図面系のページ回転に対応、Androidおよび見積り/仕様書はテキスト表示の安定性を優先したビューアで開きます。</p>
+<p>ファイルタップで開くPDF閲覧画面です。図面（CAD・電気など）は iPhone・Android のどちらでも、図面に書き込まれた<strong>コメント</strong>を表示できるビューアで開きます。見積り・仕様書はテキスト表示の安定性を優先したビューアで開きます。</p>
 
 <h4>画面要素</h4>
 <ul>
-  <li><strong>画面上部のタイトル</strong>：現在のページ番号と総ページ数（例：「3 / 12 ページ」）</li>
+  <li><strong>画面上部のタイトル</strong>：現在のページ番号と総ページ数（例：「3 / 12 ページ」）。<a href="#import-meeting-material">「打ち合わせ資料」</a>のファイルでは、2 行目に小さく「打ち合わせ資料」と出ます</li>
   <li><strong>画面上部の右上アクション</strong>：
     <ul>
       <li>✏️ <strong>編集</strong>：このファイルの情報（ファイル名・図面番号・種別）を編集（詳細は <a href="#doc-metadata-edit">ファイル情報の編集</a>）</li>
       <li>🔖 <strong>ブックマーク</strong>：このPDFをブックマーク登録／解除（トグル）</li>
       <li>📝 <strong>ページメモバッジ</strong>：このページにメモが1件以上あるときのみ表示。タップで当該ページのメモ一覧</li>
+      <li>💬 <strong>コメントの表示 / 非表示</strong>：図面のときだけ表示。タップするたびに、図面に書き込まれたコメントを表示するか隠すかが切り替わります（この画面を閉じると表示ありに戻ります）</li>
       <li>↗️ <strong>他のアプリで開く</strong>：共有メニューを表示し、Adobe Reader 等の外部アプリでPDFを開けます</li>
     </ul>
   </li>
@@ -1469,6 +1510,7 @@
   <li><strong>右下の丸ボタンのタップ</strong>：現在ページにメモを追加</li>
   <li><strong>ブックマークアイコン</strong>：登録／解除トグル</li>
   <li><strong>↗️ アイコン</strong>：他のアプリで開く（共有メニュー経由）</li>
+  <li><strong>💬 アイコン</strong>：コメントの表示／非表示を切替</li>
 </ul>
 
 <div class="gallery">
@@ -1507,6 +1549,8 @@
   <div class="action-row"><strong>PDFビューアの ✏️ アイコン</strong><span>ファイル情報の編集ダイアログを開く</span></div>
   <div class="action-row"><strong>PDFビューアのブックマークアイコン</strong><span>登録／解除トグル</span></div>
   <div class="action-row"><strong>PDFビューアの ↗️ アイコン</strong><span>他のアプリで開く（共有メニュー）</span></div>
+  <div class="action-row"><strong>PDFビューアの 💬 アイコン</strong><span>図面のコメントを表示／非表示</span></div>
+  <div class="action-row"><strong>ファイル情報の編集：打ち合わせ資料</strong><span>ON / OFF を切替（<a href="#import-meeting-material">打ち合わせ資料</a>）</span></div>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
@@ -1533,13 +1577,18 @@
   <li><strong>画面上部のバー</strong>：タイトル「図面チェック」</li>
   <li><strong>種別セグメント</strong>：CAD図面 ／ 電気図面</li>
   <li><strong>単独図面解析トグル</strong>：差分ではなく1枚を高画質で開くモードへ切替</li>
-  <li><strong>バージョンセレクター</strong>：旧／新の2つのプルダウン（単独モード時は1つ）</li>
+  <li><strong>バージョンセレクター</strong>：旧／新の2つのプルダウン（単独モード時は1つ）。<a href="#import-meeting-material">打ち合わせ資料</a>には項目の先頭にアイコンが付き、末尾に「・打ち合わせ資料」と出ます</li>
+  <li><strong>凡例</strong>：打ち合わせ資料の版が選択肢に 1 つでもあるときだけ、プルダウンの下に1行だけ出ます（行末の「?」で説明が開きます）</li>
   <li><strong>アクションボタン</strong>：「比較する」または「表示する」（単独モード時）</li>
   <li><strong>比較履歴リスト</strong>：過去の比較実績を新しい順に表示</li>
 </ul>
 
 <div class="callout info">
   <p>種別セグメントを切り替えると、対応するリビジョンだけがプルダウンの選択肢になります。</p>
+</div>
+
+<div class="callout tip">
+  <p>同じ図面番号で「打ち合わせ資料あり」と「なし」の両方を持っているときは、その 2 つを選んで比較できます。書き込みだけの違いを見たいときに使えます。</p>
 </div>
 
 <div class="shot-grid">
@@ -1560,6 +1609,7 @@
   <li>図面番号（旧 → 新、または「(単独)」）</li>
   <li>実行日時</li>
   <li>メモバッジ（この比較に紐づくメモ件数。0件のときは非表示）</li>
+  <li><a href="#import-meeting-material">打ち合わせ資料</a>のアイコン（旧・新それぞれに付きます）</li>
 </ul>
 
 <h4>操作</h4>
@@ -1589,6 +1639,7 @@
   <li>「表示する」ボタンで該当ファイルを高画質変換して開きます</li>
   <li>画面構成は差分結果画面とほぼ同じですが、差分／新／旧の切替は無効</li>
   <li>右上のエクスポートから、現在ページ単体 or 全ページまとめての保存／共有が可能</li>
+  <li>画面右上の <a href="#diff-comments">コメント切替ボタン</a> も使えます（単独では一時的で、画面を閉じると「表示あり」に戻ります）</li>
 </ul>
 
 <div class="shot-grid">
@@ -1637,6 +1688,18 @@
   <li><strong>エクスポートアイコン</strong>：画像保存／共有</li>
 </ul>
 
+<h4 id="diff-comments">コメントの表示・非表示（画面右上）</h4>
+<p>図面に書き込まれた<strong>コメント</strong>は、画面右上のボタンで表示／非表示を切り替えられます。コメントを隠すと、図面そのものの変更点だけを見られます。</p>
+<ul>
+  <li><strong>最初は「表示あり」</strong>：コメントが描かれた状態で開きます</li>
+  <li><strong>ボタンの文字は「これから起きること」</strong>：「コメントを隠す」＝いま表示中、「コメントを表示」＝いま非表示です</li>
+  <li><strong>比較では覚えます</strong>：切り替えた状態はその比較ごとに保存され、次に同じ比較を開いたときもそのままです</li>
+  <li><strong>単独図面解析は一時的</strong>：画面を閉じると「表示あり」に戻ります</li>
+  <li><strong>切り替えると描き直します</strong>：はじめての組み合わせでは、旧版・新版を描き直して差分を計算しなおすため少し待ちます</li>
+  <li><strong>コメントが無い図面では押せません</strong>：旧版・新版のどちらにもコメントが無いときはボタンが灰色になり、タップすると「この図面にコメントはありません」と出ます</li>
+</ul>
+
+
 <h4 id="diff-view-mode">ビューモード切替（画面下部）</h4>
 <p>画面下のバーにセグメント切替で3つのビューモードが並びます。</p>
 <ul>
@@ -1662,7 +1725,7 @@
 </div>
 
 <h4 id="diff-filter">ノイズ除去フィルタ</h4>
-<p>スキャンノイズや1pxの細かいズレで不要な差分が大量に出る場合、右上のドロップダウンから4段階のフィルタを選べます。</p>
+<p>スキャンノイズや1pxの細かいズレで不要な差分が大量に出る場合、画面右上のドロップダウン（コメント切替ボタンの下）から4段階のフィルタを選べます。</p>
 <table>
   <thead><tr><th>レベル</th><th>効果</th></tr></thead>
   <tbody>
@@ -1689,7 +1752,7 @@
 </div>
 
 <h4 id="diff-adjusted">調整済 / 元の差分 切替</h4>
-<p>位置合わせ または サイズ合わせ を適用したページでは、画面右上に「調整済 / 元の差分」の切替スイッチが表示されます。調整結果を適用した差分と、自動位置合わせ時の差分を比較できます。</p>
+<p>位置合わせ または サイズ合わせ を適用したページでは、画面右上（コメント切替ボタンの下）に「調整済 / 元の差分」の切替スイッチが表示されます。調整結果を適用した差分と、自動位置合わせ時の差分を比較できます。</p>
 <p>※フィルタレベルが「しっかり」以外の場合、このスイッチは無効になります（常に調整済を表示）。</p>
 
 <figure class="shot-phone">
@@ -3959,7 +4022,7 @@
   <li><strong>プレミアム</strong>：内容と価格の案内ページへの入口</li>
   <li><strong>データ管理</strong>：バックアップ、復元、データ再構築、デモモード、家族と共有</li>
   <li><strong>表示</strong>：モード切替、カウンター表示、テーマ、言語</li>
-  <li><strong>アプリ</strong>：レビュー、フィードバック、チュートリアル、マニュアル、バージョン、ライセンス</li>
+  <li><strong>アプリ</strong>：レビュー、フィードバック、チュートリアル、お知らせ、マニュアル、バージョン、ライセンス</li>
 </ol>
 
 <h3 id="settings-premium">プレミアム</h3>
@@ -4119,11 +4182,20 @@
   </figure>
 </div>
 
+<h3 id="settings-notices">お知らせ</h3>
+<p>設定 →「お知らせ」（アプリセクション）から、これまでに届いたお知らせの一覧を開けます。<a href="#home-notice">ホームのカード</a>を閉じたあとで「何だっけ」と読み返すための場所です。</p>
+<ul>
+  <li><strong>タップ</strong>：全文がダイアログで開きます</li>
+  <li><strong>状態のラベル</strong>：「表示中」「閉じた」「終了」の 3 つ</li>
+  <li><strong>1 件も無いとき</strong>：「お知らせはありません」と出ます（このアプリを使いはじめたあとに届いたお知らせだけが並びます）</li>
+</ul>
+
 <h3 id="settings-info">アプリ</h3>
 <ul>
   <li><strong>アプリをレビューする</strong>：ストアの評価画面を開きます</li>
   <li><strong>ご意見・不具合の報告</strong>：メールで開発者にフィードバックを送信（端末情報が自動で添付されます）</li>
   <li><strong id="settings-tutorial">チュートリアルを再表示</strong>：タップで <a href="#onboarding">オンボーディング</a>（5ページチュートリアル）に遷移します</li>
+  <li><strong>お知らせ</strong>：これまでに届いたお知らせの一覧（<a href="#settings-notices">お知らせ</a>）</li>
   <li><strong>ユーザーマニュアル</strong>：このマニュアルをブラウザで開きます</li>
   <li><strong>バージョン</strong>：現在のアプリバージョン（タップに反応 — 7回連続タップで開発者モード有効化）</li>
   <li><strong>オープンソースライセンス</strong>：使用している OSS／フォントのライセンス一覧を表示</li>
@@ -4168,6 +4240,7 @@
   <div class="action-row"><strong>デモモードトグル</strong><span>ダミーデータ投入/削除</span></div>
   <div class="action-row"><strong>アプリをレビューする</strong><span>ストアの評価画面へ</span></div>
   <div class="action-row"><strong>ご意見・不具合の報告</strong><span>メールでフィードバック送信</span></div>
+  <div class="action-row"><strong>お知らせ</strong><span>これまでのお知らせ一覧を開く</span></div>
   <div class="action-row"><strong>バージョン行7タップ</strong><span>開発者モード有効化</span></div>
 </div>
 
