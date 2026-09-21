@@ -215,10 +215,12 @@
   /* スマホ画面の縦長スクショ（フル・タイル・ダイアログ）にフレーム風装飾 */
   figure.shot-phone img[height="1564"],
   figure.shot-phone img[height="1565"],
+  figure.shot-phone img[height="1560"],   /* Android フル */
   figure.shot-phone img[height="1600"],
   figure.shot-phone img[height="1557"],
   figure.shot-phone img[height="1523"],
   figure.shot-phone img[height="1378"],
+  figure.shot-phone img[height="539"],   /* ホーム上部のお知らせカード（クロップ） */
   figure.shot-phone img[height="903"]{
     border-radius:28px;
     border:6px solid #1a1a1a;
@@ -1084,6 +1086,11 @@
   <p>閉じたお知らせも、<a href="#settings-notices">設定の「お知らせ」</a>からいつでも読み返せます。</p>
 </div>
 
+<figure class="shot-phone">
+  <img src="images/home_notice_card.webp" width="720" height="539" alt="ホーム上部のお知らせカード（タイトル・本文・「閉じる」「詳しく」）" loading="lazy" decoding="async">
+  <figcaption>ホーム上部のお知らせカード</figcaption>
+</figure>
+
 <h3 id="home-countdown">カウントダウン／カウンターカード（ホーム上部）</h3>
 <p>ホーム画面の上部には、状況に応じて2種類のカードが切り替わって表示されます。</p>
 <ul>
@@ -1271,6 +1278,17 @@
   <p>「打ち合わせ資料」の ON / OFF が違うファイルは、同じ図面番号・同じ種別でも<strong>別のファイル</strong>として保存されます。上書き確認は出ません。詳しくは <a href="#import-dedupe">重複チェック</a> をご覧ください。</p>
 </div>
 
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/import_meeting_material_toggle.webp" width="720" height="1565" alt="取り込み画面のプレビュー行に出る「打ち合わせ資料:」のスイッチと「?」" loading="lazy" decoding="async">
+    <figcaption>取り込み画面の「打ち合わせ資料:」スイッチ</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/meeting_material_help_sheet.webp" width="720" height="1565" alt="「?」から開く「打ち合わせ資料」の説明シート" loading="lazy" decoding="async">
+    <figcaption>「?」から開く説明</figcaption>
+  </figure>
+</div>
+
 <h3 id="import-edit">取り込み後の修正</h3>
 <p>取り込み時に検出ミスがあっても、後から <strong>ファイル名・図面番号・種別</strong> を修正できます。詳しい操作とエントリポイント（ファイル長押し / PDFビューア / 見積り詳細 / 仕様書詳細）は <a href="#doc-metadata-edit">ドキュメント管理 → ファイル情報の編集</a> を参照してください。</p>
 
@@ -1323,6 +1341,11 @@
   <li><strong>右端の</strong> › アイコン</li>
 </ul>
 
+<figure class="shot-phone">
+  <img src="images/doc_list_meeting_material.webp" width="720" height="1565" alt="図面番号一覧のカードに出る「打ち合わせ資料」ラベル" loading="lazy" decoding="async">
+  <figcaption>一覧の「打ち合わせ資料」ラベル</figcaption>
+</figure>
+
 <h4>空状態</h4>
 <p>取り込み前のアイコン＋「まだドキュメントがありません」＋取り込み画面への誘導ボタンが表示されます。</p>
 
@@ -1352,6 +1375,10 @@
   <figure class="shot-phone">
     <img src="images/doc_group_branches.webp" width="720" height="1564" alt="グループ詳細（枝番付き：電気図面に D8/D9/D10 の枝番、見積りも複数版）" loading="lazy" decoding="async">
     <figcaption>枝番がある例（電気の D8/D9/D10、見積り3版）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/doc_group_meeting_material.webp" width="720" height="1565" alt="グループ詳細のタイルに出る「打ち合わせ資料」ラベル" loading="lazy" decoding="async">
+    <figcaption>タイルの「打ち合わせ資料」ラベル</figcaption>
   </figure>
 </div>
 
@@ -1393,6 +1420,11 @@
 <div class="callout note">
   <p>同じ図面番号・同じ種別で、切り替えた先と同じ設定のファイルが既にあるときは切り替えられません（「打ち合わせ資料の設定を変更できません」と出ます）。</p>
 </div>
+
+<figure class="shot-phone">
+  <img src="images/file_info_edit_meeting_material.webp" width="720" height="1565" alt="ファイル情報の編集ダイアログの「打ち合わせ資料」スイッチと「?」" loading="lazy" decoding="async">
+  <figcaption>ファイル情報の編集の「打ち合わせ資料」スイッチ</figcaption>
+</figure>
 
 <h4>変更したときの挙動</h4>
 <table>
@@ -1534,6 +1566,14 @@
     <img src="images/pdf_viewer_edit.webp" width="720" height="1564" alt="PDFビューアから ✏️ で開いたファイル情報の編集ダイアログ" loading="lazy" decoding="async">
     <figcaption>PDFビューアから ✏️ で開いた編集ダイアログ</figcaption>
   </figure>
+  <figure class="shot-phone">
+    <img src="images/pdf_viewer_comments_on.webp" width="720" height="1565" alt="PDFビューア・コメント表示中（図面に赤枠のコメントが出ている）" loading="lazy" decoding="async">
+    <figcaption>コメント表示中</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/pdf_viewer_comments_off.webp" width="720" height="1565" alt="PDFビューア・コメント非表示（図面だけが表示されている）" loading="lazy" decoding="async">
+    <figcaption>コメント非表示</figcaption>
+  </figure>
 </div>
 
 <h3 id="doc-actions">操作リファレンス</h3>
@@ -1591,6 +1631,11 @@
   <p>同じ図面番号で「打ち合わせ資料あり」と「なし」の両方を持っているときは、その 2 つを選んで比較できます。書き込みだけの違いを見たいときに使えます。</p>
 </div>
 
+<figure class="shot-phone">
+  <img src="images/diff_select_meeting_material.webp" width="720" height="1565" alt="図面チェックの選択画面・プルダウンの各項目に打ち合わせ資料の印が付いた状態" loading="lazy" decoding="async">
+  <figcaption>プルダウンの「・打ち合わせ資料」</figcaption>
+</figure>
+
 <div class="shot-grid">
   <figure class="shot-phone">
     <img src="images/diff_select_versions.webp" width="720" height="1564" alt="2版選択済みで「比較する」が活性化" loading="lazy" decoding="async">
@@ -1625,6 +1670,10 @@
 <figure class="shot-phone">
   <img src="images/diff_history.webp" width="720" height="1564" alt="比較履歴リスト（種別アイコン＋図面番号＋実行日時＋メモバッジ）" loading="lazy" decoding="async">
   <figcaption>比較履歴リスト（種別アイコン＋図面番号＋実行日時＋メモバッジ）</figcaption>
+</figure>
+<figure class="shot-phone">
+  <img src="images/diff_history_meeting_material.webp" width="720" height="1565" alt="比較履歴の行に付く打ち合わせ資料のアイコン（旧・新それぞれ）" loading="lazy" decoding="async">
+  <figcaption>比較履歴の打ち合わせ資料アイコン</figcaption>
 </figure>
 
 <h3 id="diff-single">単独図面解析モード</h3>
@@ -1699,6 +1748,17 @@
   <li><strong>コメントが無い図面では押せません</strong>：旧版・新版のどちらにもコメントが無いときはボタンが灰色になり、タップすると「この図面にコメントはありません」と出ます</li>
 </ul>
 
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/diff_result_comments_on.webp" width="720" height="1565" alt="差分結果画面・右上に「コメントを隠す」ボタン（コメント表示中）" loading="lazy" decoding="async">
+    <figcaption>コメント表示中（ボタンは「コメントを隠す」）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/diff_result_comments_off.webp" width="720" height="1565" alt="差分結果画面・右上に「コメントを表示」ボタン（コメント非表示）" loading="lazy" decoding="async">
+    <figcaption>コメント非表示（ボタンは「コメントを表示」）</figcaption>
+  </figure>
+</div>
 
 <h4 id="diff-view-mode">ビューモード切替（画面下部）</h4>
 <p>画面下のバーにセグメント切替で3つのビューモードが並びます。</p>
@@ -4189,6 +4249,17 @@
   <li><strong>状態のラベル</strong>：「表示中」「閉じた」「終了」の 3 つ</li>
   <li><strong>1 件も無いとき</strong>：「お知らせはありません」と出ます（このアプリを使いはじめたあとに届いたお知らせだけが並びます）</li>
 </ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/settings_notices.webp" width="720" height="1560" alt="設定のアプリセクションにある「お知らせ」タイル" loading="lazy" decoding="async">
+    <figcaption>設定 →「お知らせ」</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/notice_list.webp" width="720" height="1560" alt="お知らせ一覧画面（状態ラベル付き）" loading="lazy" decoding="async">
+    <figcaption>お知らせ一覧</figcaption>
+  </figure>
+</div>
 
 <h3 id="settings-info">アプリ</h3>
 <ul>
