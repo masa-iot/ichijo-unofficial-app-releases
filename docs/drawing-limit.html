@@ -89,7 +89,8 @@
     color:#fff;
   }
   .dl-hero-inner{max-width:760px;margin:0 auto;text-align:center}
-  .dl-hero h1{font-size:2rem;font-weight:800;letter-spacing:.01em;line-height:1.35}
+  .dl-hero h1{font-size:2rem;font-weight:800;letter-spacing:.01em;line-height:1.35;text-wrap:balance}
+  .nw{white-space:nowrap}
 
   /* ---- Section common ---- */
   section{padding:64px 20px}
@@ -194,8 +195,9 @@
     font-size:14px;font-weight:700;text-align:center;
   }
   .ph-btn.primary{background:#3A608F;color:#fff}
-  .ph-btn.premium{border:1px solid #B8901F;background:#fff;color:#6B5210;font-size:12.5px;font-weight:500;gap:6px;padding:0 12px}
-  .ph-btn.premium span{
+  .ph-btn.premium{border:1px solid #B8901F;background:#fff;color:#6B5210;font-size:12px;font-weight:500;gap:6px;padding:0 10px;line-height:1.35}
+  .ph-btn.premium .nw{white-space:nowrap}
+  .ph-btn.premium span.badge{
     font-size:10px;font-weight:700;color:#fff;padding:2px 7px 3px;border-radius:4px;
     background:linear-gradient(90deg,#D4A017,#E8C252);
   }
@@ -284,7 +286,7 @@
 <!-- Hero -->
 <section class="dl-hero">
   <div class="dl-hero-inner">
-    <h1>無料版の図面番号の上限について</h1>
+    <h1><span class="nw">無料版の図面番号の</span><span class="nw">上限について</span></h1>
   </div>
 </section>
 
@@ -363,7 +365,7 @@
       <div class="count-fig">
         <h3><span class="ex">例 1</span>3 件保存している方が 2-8 を取り込むとき</h3>
         <svg viewBox="0 0 340 186" role="img" aria-label="2-5、2-6、2-7 の 3 件を保存している方が 2-8 を取り込むときは、2-5 を削除して入れ替えます。入れ替えたあとは 2-6、2-7、2-8 の 3 件です。" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif">
-          <text x="0" y="13" font-size="12" fill="#666">いま（3 件）</text>
+          <text x="0" y="13" font-size="12" fill="#666">保存している図面番号（3 件）</text>
           <text x="242" y="13" font-size="12" fill="#2F6EA5" font-weight="700" text-anchor="middle">取り込む</text>
           <g font-size="14" font-weight="700" text-anchor="middle">
             <rect x="0.75" y="22.75" width="54.5" height="28.5" rx="8" fill="#FFF1EF" stroke="#BA1A1A" stroke-width="1.5"/>
@@ -401,7 +403,7 @@
       <div class="count-fig">
         <h3><span class="ex">例 2</span>5 件保存している方</h3>
         <svg viewBox="0 0 340 158" role="img" aria-label="5 件保存している方は、5 件のまま使えます。新しく取り込むときは、同じ数だけ入れ替えます。たとえば 2-3 を削除して 2-8 を取り込みます。" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif">
-          <text x="0" y="13" font-size="12" fill="#666">いま（5 件）</text>
+          <text x="0" y="13" font-size="12" fill="#666">保存している図面番号（5 件）</text>
           <g font-size="14" font-weight="700" text-anchor="middle">
             <rect x="0.75" y="22.75" width="54.5" height="28.5" rx="8" fill="#fff" stroke="#b9c4cf" stroke-width="1.5"/>
             <text x="28" y="42" fill="#333">2-3</text>
@@ -518,7 +520,7 @@
         </div>
         <div class="ph-foot" aria-hidden="true">
           <div class="ph-btn primary">2 件削除して 2 件取り込む</div>
-          <div class="ph-btn premium"><span>Premium</span>プレミアムにして 2 件すべて取り込む</div>
+          <div class="ph-btn premium"><span class="badge">Premium</span><span class="lbl"><span class="nw">プレミアムにして </span><span class="nw">2 件すべて取り込む</span></span></div>
         </div>
       </div>
       <p class="phone-caption">入れ替え画面のイメージ（描き起こし）</p>
