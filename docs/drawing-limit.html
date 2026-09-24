@@ -144,63 +144,13 @@
   .fig-legend .lg-del{background:var(--del-bg);border-color:var(--del)}
   .fig-legend .lg-keep{background:#fff;border-color:#b9c4cf}
 
-  /* ---- Figure: phone mock (描き起こし) ---- */
+  /* ---- Figure: screenshot ---- */
   .phone-wrap{display:flex;flex-direction:column;align-items:center;margin-top:32px}
-  .phone{
+  .shot{
     width:100%;max-width:340px;border:10px solid #22262b;border-radius:36px;overflow:hidden;
-    background:#F9F9FF;color:#1A1C20;box-shadow:0 12px 36px rgba(0,0,0,.16);
-    font-size:13px;line-height:1.55;
+    background:#F9F9FF;box-shadow:0 12px 36px rgba(0,0,0,.16);
   }
-  .ph-bar{
-    display:flex;align-items:center;gap:6px;height:50px;padding:0 10px;
-    background:#fff;border-bottom:1px solid #E1E2EC;font-size:16px;font-weight:500;
-  }
-  .ph-bar svg{flex-shrink:0;color:#44474E}
-  .ph-body{padding:14px;display:flex;flex-direction:column;gap:14px}
-  .ph-info{
-    display:flex;gap:10px;padding:14px;background:#D6E3FF;border-radius:12px;color:#001B3E;
-  }
-  .ph-info svg{flex-shrink:0;margin-top:2px}
-  .ph-info b{display:block;font-size:14px;line-height:1.5;margin-bottom:4px}
-  .ph-info p{font-size:12px;line-height:1.6}
-  .ph-info p + p{margin-top:4px;color:#284777;font-size:11.5px}
-  .ph-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:6px}
-  .ph-head b{font-size:13px}
-  .ph-count{font-size:11px;font-weight:500;padding:3px 9px;border-radius:12px;background:#3A608F;color:#fff;white-space:nowrap}
-  .ph-order{font-size:11px;color:#5D5F66;white-space:nowrap}
-  .ph-note{font-size:11px;line-height:1.6;color:#5D5F66;padding:0 2px;margin-bottom:6px}
-  .ph-list{background:#fff;border:1px solid #E1E2EC;border-radius:12px;overflow:hidden}
-  .ph-row{display:flex;align-items:center;gap:10px;padding:9px 12px}
-  .ph-row + .ph-row{border-top:1px solid #E1E2EC}
-  .ph-row.sel-del{background:#FFF1EF}
-  .ph-cb{
-    width:20px;height:20px;border-radius:4px;flex-shrink:0;
-    border:2px solid #74777F;display:flex;align-items:center;justify-content:center;
-  }
-  .ph-cb.on{border-color:transparent;background:#3A608F}
-  .ph-cb.on.red{background:#BA1A1A}
-  .ph-txt{flex-grow:1;display:flex;flex-direction:column;gap:1px;min-width:0}
-  .ph-txt .id{font-size:14px;font-weight:500}
-  .ph-txt .id small{font-size:12px;font-weight:400;color:#44474E}
-  .ph-txt .meta{font-size:10.5px;color:#5D5F66}
-  .ph-tag{font-size:10px;font-weight:700;padding:1px 6px;border-radius:4px;flex-shrink:0}
-  .ph-tag.newest{color:#fff;background:#3A608F}
-  .ph-tag.del{color:#BA1A1A;border:1px solid #BA1A1A}
-  .ph-foot{
-    padding:12px 14px 16px;background:#fff;border-top:1px solid #E1E2EC;
-    display:flex;flex-direction:column;gap:9px;
-  }
-  .ph-btn{
-    height:44px;border-radius:22px;display:flex;align-items:center;justify-content:center;gap:8px;
-    font-size:14px;font-weight:700;text-align:center;
-  }
-  .ph-btn.primary{background:#3A608F;color:#fff}
-  .ph-btn.premium{border:1px solid #B8901F;background:#fff;color:#6B5210;font-size:12px;font-weight:500;gap:6px;padding:0 10px;line-height:1.35}
-  .ph-btn.premium .nw{white-space:nowrap}
-  .ph-btn.premium span.badge{
-    font-size:10px;font-weight:700;color:#fff;padding:2px 7px 3px;border-radius:4px;
-    background:linear-gradient(90deg,#D4A017,#E8C252);
-  }
+  .shot img{display:block;width:100%;height:auto}
   .phone-caption{font-size:.8rem;color:var(--faint);margin-top:14px;text-align:center}
 
   /* ---- FAQ ---- */
@@ -466,65 +416,12 @@
       </ul>
     </div>
 
-    <div class="phone-wrap">
-      <div class="phone" role="img" aria-label="入れ替え画面の描き起こし。保存している 2-5、2-6、2-7 のうち 2-5 と 2-6 を削除し、新しい 2-8 と 2-9 を取り込む選択をしている状態です。">
-        <div class="ph-bar" aria-hidden="true">
-          <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M8 8l8 8M16 8l-8 8"/></svg>
-          取り込む図面番号を選ぶ
-        </div>
-        <div class="ph-body" aria-hidden="true">
-          <div class="ph-info">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 7.5v.5"/></svg>
-            <div>
-              <b>無料版で保存できる図面番号は 3 件までです</b>
-              <p>図面番号がすでに 3 件あるため、新しく取り込むには古い図面番号を削除してください。</p>
-              <p>削除しない図面番号とデータは、そのまま残ります。</p>
-            </div>
-          </div>
-
-          <div>
-            <div class="ph-head"><b>新しく取り込む図面番号</b><span class="ph-count">2 / 2 件</span></div>
-            <div class="ph-list">
-              <div class="ph-row">
-                <span class="ph-cb on"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-                <span class="ph-txt"><span class="id">2-9</span><span class="meta">ファイル 6 件</span></span>
-                <span class="ph-tag newest">最新</span>
-              </div>
-              <div class="ph-row">
-                <span class="ph-cb on"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-                <span class="ph-txt"><span class="id">2-8</span><span class="meta">ファイル 5 件</span></span>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <div class="ph-head"><b>削除して空ける図面番号（任意）</b><span class="ph-order">古い順</span></div>
-            <p class="ph-note">削除すると、その図面番号のファイル・メモ・ブックマーク・比較履歴も消えます。</p>
-            <div class="ph-list">
-              <div class="ph-row sel-del">
-                <span class="ph-cb on red"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-                <span class="ph-txt"><span class="id">2-5 <small>(2026/01/10)</small></span><span class="meta">ファイル 4 ・ メモ 2 ・ ブックマーク 1 ・ 比較履歴 1</span></span>
-                <span class="ph-tag del">削除</span>
-              </div>
-              <div class="ph-row sel-del">
-                <span class="ph-cb on red"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
-                <span class="ph-txt"><span class="id">2-6 <small>(2026/02/15)</small></span><span class="meta">ファイル 7 ・ メモ 3 ・ 比較履歴 2</span></span>
-                <span class="ph-tag del">削除</span>
-              </div>
-              <div class="ph-row">
-                <span class="ph-cb"></span>
-                <span class="ph-txt"><span class="id">2-7 <small>(2026/03/21)</small></span><span class="meta">ファイル 5 ・ メモ 4 ・ ブックマーク 2 ・ 比較履歴 3</span></span>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="ph-foot" aria-hidden="true">
-          <div class="ph-btn primary">2 件削除して 2 件取り込む</div>
-          <div class="ph-btn premium"><span class="badge">Premium</span><span class="lbl"><span class="nw">プレミアムにして </span><span class="nw">2 件すべて取り込む</span></span></div>
-        </div>
+    <figure class="phone-wrap">
+      <div class="shot">
+        <img src="images/drawing_swap_import.webp" width="720" height="1564" alt="入れ替え画面。保存している 2-5、2-6、2-7 のうち 2-5 と 2-6 を削除し、新しい 2-8 と 2-9 を取り込む選択をしている状態です。下のボタンは「2 件削除して 2 件取り込む」と「プレミアムにして 2 件すべて取り込む」です。" loading="lazy" decoding="async">
       </div>
-      <p class="phone-caption">入れ替え画面のイメージ（描き起こし）</p>
-    </div>
+      <figcaption class="phone-caption">入れ替え画面（2 件削除して 2 件取り込む例）</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -535,6 +432,12 @@
     <div class="prose">
       <p>図面チェックに「その他」が加わりました。CAD 図面と電気図面に加えて、照明仕様書、カラーパース、カラー配置図、カラー立面図、プレゼンテーションなどの書類も、2 つの版で比べられるようになりました。プレミアムでなくても使えます。</p>
     </div>
+    <figure class="phone-wrap">
+      <div class="shot">
+        <img src="images/diff_select_other.webp" width="720" height="1564" alt="図面チェックの「その他」を選んだ画面。書類の種類でカラー配置図を選び、比べる 2 つの版を選んでいます。下の比較履歴には、照明仕様書の比較が並んでいます。" loading="lazy" decoding="async">
+      </div>
+      <figcaption class="phone-caption">図面チェックの「その他」</figcaption>
+    </figure>
   </div>
 </section>
 
