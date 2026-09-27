@@ -1,0 +1,19 @@
+name: sitemap-check
+
+on:
+  pull_request:
+    paths:
+      - "docs/**"
+      - ".github/scripts/check_sitemap.py"
+      - ".github/workflows/sitemap-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 .github/scripts/check_sitemap.py
