@@ -1,0 +1,171 @@
+<!--
+  解説記事の雛形（このファイルはサイトには配信されない）
+
+  置き場所と URL
+  - 1 記事 = docs/guide/<slug>/index.html。URL は /guide/<slug>/（末尾のスラッシュまで）
+  - slug は英小文字とハイフン。記事の主題を表す語にし、公開後は変えない（俗称や日付を入れない）
+  - カテゴリは URL に入れず、docs/guide/index.html の一覧の見出しで分ける
+  - パスはルートから書く（/images/…、/assets/guide.css）
+  - 記事専用の画像は記事のフォルダに置く。アプリの画面は /images/ の既存の画像を使う
+  - 画像に実際の図面・見積り・住所・名前などを写さない
+  - 専用の OGP 画像（1200x630）は tools/ogp/<slug>.html から生成し、記事のフォルダの ogp.jpg に置く（作るまでは /images/ogp_v2.jpg）
+
+  記事を足すときに書き換える場所（__ で囲んだ所）
+  - title / description / canonical / og:url / og:title / og:description / og:image
+  - Article（headline・description・datePublished・dateModified・mainEntityOfPage）と BreadcrumbList
+  - パンくずの表示 / h1 / 本文
+  - Google Play のリンクの utm_campaign（記事ごとに変える）
+  - docs/sitemap.xml に URL を足す / docs/guide/index.html の一覧に足す
+
+  sitemap の漏れと canonical・og:url の食い違いは、PR のチェック（sitemap-check）が検査する
+-->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>__TITLE__ - ICHIJO施主手帳【非公式】</title>
+<meta name="description" content="__DESCRIPTION__">
+<link rel="canonical" href="https://ichijo-unofficial.smartolio.jp/guide/__SLUG__/">
+<meta name="theme-color" content="#2F6EA5">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/favicon-192.png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://ichijo-unofficial.smartolio.jp/guide/__SLUG__/">
+<meta property="og:site_name" content="ICHIJO施主手帳【非公式】">
+<meta property="og:title" content="__TITLE__">
+<meta property="og:description" content="__OG_DESCRIPTION__">
+<meta property="og:image" content="https://ichijo-unofficial.smartolio.jp/images/ogp_v2.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:creator" content="@masa_iot">
+<link rel="stylesheet" href="/assets/guide.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "__TITLE__",
+  "description": "__DESCRIPTION__",
+  "image": "https://ichijo-unofficial.smartolio.jp/images/ogp_v2.jpg",
+  "datePublished": "__YYYY-MM-DD__",
+  "dateModified": "__YYYY-MM-DD__",
+  "author": {"@type": "Person", "name": "masa_iot", "url": "https://note.com/masa_iot"},
+  "mainEntityOfPage": "https://ichijo-unofficial.smartolio.jp/guide/__SLUG__/",
+  "inLanguage": "ja"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "ICHIJO施主手帳【非公式】", "item": "https://ichijo-unofficial.smartolio.jp/"},
+    {"@type": "ListItem", "position": 2, "name": "解説記事", "item": "https://ichijo-unofficial.smartolio.jp/guide/"},
+    {"@type": "ListItem", "position": 3, "name": "__TITLE__"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a class="header-logo" href="/">
+      <img src="/images/favicon-32.png" alt="" width="32" height="32">
+      ICHIJO施主手帳
+    </a>
+    <nav class="header-nav">
+      <a class="optional" href="/guide/">解説記事</a>
+      <a class="optional" href="/manual.html">マニュアル</a>
+      <a href="/">アプリのページへ</a>
+    </nav>
+  </div>
+</header>
+
+<section class="guide-hero">
+  <div class="guide-hero-inner">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <ol>
+        <li><a href="/">トップ</a></li>
+        <li><a href="/guide/">解説記事</a></li>
+        <li aria-current="page">__BREADCRUMB__</li>
+      </ol>
+    </nav>
+    <h1>__H1__</h1>
+  </div>
+</section>
+
+<section class="sec-white" id="summary">
+  <div class="section-inner">
+    <div class="card summary prose">
+      <p>__SUMMARY__</p>
+    </div>
+    <p class="note">このページは、一条工務店で家を建てた施主が個人で開発しているアプリ「ICHIJO施主手帳【非公式】」のサイトです。一条工務店の公式情報ではありません。</p>
+    <nav class="toc card" aria-label="目次">
+      <h2>目次</h2>
+      <ol>
+        <li><a href="#__SECTION_ID__">__SECTION_TITLE__</a></li>
+        <li><a href="#faq">よくある質問</a></li>
+      </ol>
+    </nav>
+  </div>
+</section>
+
+<section class="sec-gray" id="__SECTION_ID__">
+  <div class="section-inner">
+    <h2 class="section-title">__SECTION_TITLE__</h2>
+    <div class="prose">
+      <p>__BODY__</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec-white" id="faq">
+  <div class="section-inner">
+    <h2 class="section-title">よくある質問</h2>
+    <div class="faq-list">
+      <details class="faq-item" open>
+        <summary>Q. __QUESTION__</summary>
+        <p class="faq-a">A. __ANSWER__</p>
+      </details>
+      <details class="faq-item" open>
+        <summary>Q. 一条工務店の公式アプリですか？</summary>
+        <p class="faq-a">A. いいえ。一条工務店で家を建てた施主が、個人で開発している非公式アプリです。一条工務店とは一切関係がありません。</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="sec-gray cta">
+  <div class="section-inner">
+    <h2 class="section-title">ICHIJO施主手帳【非公式】</h2>
+    <div class="prose">
+      <p>__APP_PITCH__</p>
+    </div>
+    <div class="store-badges">
+      <a href="https://play.google.com/store/apps/details?id=jp.smartolio.ichijo_unofficial&referrer=utm_source%3Dwebsite%26utm_medium%3Dguide%26utm_campaign%3D__UTM_CAMPAIGN__" target="_blank" rel="noopener">
+        <img class="badge-google" alt="Google Play で手に入れよう" src="/images/google_play_badge_ja.png" width="646" height="250">
+      </a>
+      <a href="https://apps.apple.com/jp/app/ichijo%E6%96%BD%E4%B8%BB%E6%89%8B%E5%B8%B3-%E9%9D%9E%E5%85%AC%E5%BC%8F/id6761674540" target="_blank" rel="noopener">
+        <img class="badge-apple" alt="Download on the App Store" src="/images/app_store_badge_ja.svg" width="109" height="40">
+      </a>
+    </div>
+    <div class="links">
+      <a href="/">アプリのページへ</a>
+      <a href="/manual.html">マニュアル</a>
+      <a href="/guide/">解説記事の一覧</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2026 masa_iot. All rights reserved.</p>
+  <p class="disclaimer-footer">「ICHIJO施主手帳」は一条工務店の公式アプリではありません。一条工務店とは一切の関係がありません。</p>
+</footer>
+
+<!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "73d5f13377704e23a17468d3ed2185f7"}'></script><!-- End Cloudflare Web Analytics -->
+</body>
+</html>
