@@ -10,3 +10,7 @@ tools/*
 tools/ogp/*
 !tools/ogp/ogp.html
 !tools/ogp/drawing_limit.html
+!tools/ogp/change_check.html
+!tools/guide/
+tools/guide/*
+!tools/guide/template.html

@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400" width="480" height="400" font-family="-apple-system,BlinkMacSystemFont,'Hiragino Sans','Hiragino Kaku Gothic ProN','Noto Sans JP',sans-serif">
+  <circle cx="240" cy="205" r="188" fill="#E3EEF8"/>
+
+  <!-- 前の版 -->
+  <g transform="rotate(-6 150 200)">
+    <rect x="48" y="78" width="204" height="246" rx="14" fill="#fff" stroke="#C9D6E3" stroke-width="2"/>
+    <rect x="64" y="94" width="68" height="26" rx="13" fill="#EEF2F6"/>
+    <text x="98" y="112" font-size="14" font-weight="700" fill="#5B6B7B" text-anchor="middle">前の版</text>
+    <g fill="none" stroke="#9AA8B6" stroke-linecap="round">
+      <rect x="70" y="134" width="160" height="170" stroke-width="5"/>
+      <path d="M150 134 V214 M70 214 H230" stroke-width="4"/>
+      <rect x="88" y="130" width="40" height="8" fill="#fff" stroke-width="2"/>
+      <rect x="92" y="168" width="24" height="14" rx="3" stroke-width="2.5"/>
+      <ellipse cx="104" cy="194" rx="11" ry="12" stroke-width="2.5"/>
+      <circle cx="118" cy="262" r="8" stroke-width="2.5"/>
+      <path d="M114 262 H122" stroke-width="2.5"/>
+      <path d="M170 214 A30 30 0 0 1 200 244" stroke-width="2"/>
+    </g>
+  </g>
+
+  <!-- 新しい版 -->
+  <g transform="rotate(4 330 200)">
+    <rect x="228" y="66" width="204" height="246" rx="14" fill="#fff" stroke="#C9D6E3" stroke-width="2"/>
+    <rect x="244" y="82" width="84" height="26" rx="13" fill="#E3EEF8"/>
+    <text x="286" y="100" font-size="14" font-weight="700" fill="#2F6EA5" text-anchor="middle">新しい版</text>
+    <g fill="none" stroke="#9AA8B6" stroke-linecap="round">
+      <rect x="250" y="122" width="160" height="170" stroke-width="5"/>
+      <path d="M330 122 V202 M250 202 H410" stroke-width="4"/>
+      <path d="M350 202 A30 30 0 0 1 380 232" stroke-width="2"/>
+    </g>
+    <!-- 窓：消えた位置（赤）と新しい位置（青） -->
+    <rect x="268" y="118" width="40" height="8" fill="#fff" stroke="#E5484D" stroke-width="3"/>
+    <rect x="352" y="118" width="40" height="8" fill="#fff" stroke="#3B6CF5" stroke-width="3"/>
+    <!-- トイレ：元の位置（赤）と動いた位置（青） -->
+    <g fill="none" stroke-width="2.5">
+      <rect x="272" y="156" width="24" height="14" rx="3" stroke="#E5484D"/>
+      <ellipse cx="284" cy="182" rx="11" ry="12" stroke="#E5484D"/>
+      <rect x="290" y="156" width="24" height="14" rx="3" stroke="#3B6CF5"/>
+      <ellipse cx="302" cy="182" rx="11" ry="12" stroke="#3B6CF5"/>
+    </g>
+    <!-- コンセント：消えた（赤） -->
+    <circle cx="298" cy="250" r="8" fill="none" stroke="#E5484D" stroke-width="3"/>
+    <path d="M294 250 H302" stroke="#E5484D" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- 虫めがね -->
+  <g>
+    <circle cx="318" cy="178" r="60" fill="#fff" fill-opacity=".18" stroke="#1F2A36" stroke-width="9"/>
+    <path d="M361 222 L404 266" stroke="#1F2A36" stroke-width="17" stroke-linecap="round"/>
+  </g>
+
+  <!-- 間違い探しの「？」 -->
+  <g>
+    <circle cx="86" cy="64" r="26" fill="#2F6EA5"/>
+    <text x="86" y="75" font-size="32" font-weight="800" fill="#fff" text-anchor="middle">?</text>
+  </g>
+
+  <!-- 凡例 -->
+  <g font-size="14" font-weight="700">
+    <rect x="150" y="346" width="16" height="12" rx="3" fill="#FDECEC" stroke="#E5484D" stroke-width="2"/>
+    <text x="172" y="357" fill="#1F2A36">消えた</text>
+    <rect x="240" y="346" width="16" height="12" rx="3" fill="#EAF0FE" stroke="#3B6CF5" stroke-width="2"/>
+    <text x="262" y="357" fill="#1F2A36">増えた・動いた</text>
+  </g>
+</svg>
