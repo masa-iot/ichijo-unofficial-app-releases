@@ -69,6 +69,7 @@
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   section[id]{scroll-margin-top:64px}
+  .release-card[id]{scroll-margin-top:64px}
   body{
     font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
     color:var(--ink);background:var(--bg);line-height:1.7;
@@ -1080,7 +1081,7 @@
   <div class="section-inner">
     <h2 class="section-title">What's New</h2>
     <div style="max-width:720px;margin:0 auto">
-      <div class="release-card">
+      <div class="release-card" id="v1-15-0">
         <h3>v1.15.0 — でんき通信簿「クラス」/ お手入れ当番表のウィジェット <span class="tag-new">NEW</span></h3>
         <ul>
           <li><strong>でんき通信簿: 「クラス」</strong> — 月の数字をクラスに提出すると、発電量や電気代などが、提出した家の中で上位何%かが「クラスの通信簿」で分かります。すべての家・同じ断熱地域・同じ売電単価の家と比べたり、坪・kW あたりで比べたり、月・年・歴代ベストで見たりできます。提出するかどうかは自分で選べて、提出する前に送る数字を画面で確かめられます → <a href="manual.html#electricity-class">くわしくはこちら</a></li>
@@ -1091,7 +1092,7 @@
       </div>
       <details class="release-history">
         <summary>過去のリリースを表示…</summary>
-      <div class="release-card">
+      <div class="release-card" id="v1-14-0">
         <h3>v1.14.0 — 図面チェック「その他」/ 図面番号の入れ替え</h3>
         <ul>
           <li><strong>図面チェック: 「その他」</strong> — CAD 図面と電気図面に加えて、照明仕様書やカラーパースなどの書類も、新旧 2 つの版を比較できます</li>
@@ -1099,7 +1100,7 @@
           <li><strong>その他の不具合修正など</strong></li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-13-0">
         <h3>v1.13.0 — 図面のコメント表示 / 打ち合わせ資料</h3>
         <ul>
           <li><strong>図面チェック: 描画を新しくしました</strong> — 図面に書き込まれたコメントがそのまま表示されるようになり、iPhone と Android で同じ結果が出るようになりました<br><span style="font-size:.8em;color:#999">※ 更新後にはじめて比較履歴を開くときは、描き直すため時間がかかります（それぞれ最初の1回だけです）</span></li>
@@ -1108,7 +1109,7 @@
           <li><strong>お知らせ</strong> — 更新内容や変更のお知らせを、ホーム画面のカードでお伝えするようになりました。閉じたあとも設定の「お知らせ」から読み返せます</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-12-0">
         <h3>v1.12.0 — お手入れ当番表「家族と共有」追加</h3>
         <ul>
           <li><strong>お手入れ当番表: 家族と共有</strong> — お手入れ当番表のデータ（項目・部屋・消耗品と在庫・実施の記録・担当）を、家族やパートナーなど一緒に住まいをお手入れする人と同じ画面で使えるようになりました。QR コードか招待コードで招待し、承認された端末どうしで自動的に同期されます（参加は6人までが目安）。共有をはじめる人だけプレミアムが必要で、招待された人は無料のまま参加できます
@@ -1121,7 +1122,7 @@
           <li><strong>不具合の修正</strong> — タブレット（iPad など）で図面チェックの画面を横向きにすると表示が消える問題を修正しました</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-11-0">
         <h3>v1.11.0 — ページの組み合わせ / 位置合わせ手順ガイド</h3>
         <ul>
           <li><strong>図面チェック: ページの組み合わせ</strong> — 旧版と新版でどのページ同士を比べるかを自由に変更できるようになりました。版の途中でページが増えた・減ったときもズレずに比較できます。ページ数が違うときは案内が表示され、そこから直接直せます</li>
@@ -1130,7 +1131,7 @@
           <li><strong>ご利用条件の変更（iOS）</strong> — ご利用には iOS 15.0 以降が必要になりました</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-10-0">
         <h3>v1.10.0 — 縮尺入力でサイズ合わせ / でんき通信簿シェア画像</h3>
         <ul>
           <li><strong>図面チェック: 縮尺入力でサイズ合わせ</strong> — 図面に記載の縮尺を入力するだけで2枚の図面のサイズが揃うようになりました（従来の2点計測も引き続き使えます・動作も軽量化）</li>
@@ -1139,7 +1140,7 @@
           <li><strong>使いやすさの改善</strong> — PDF閲覧のメモボタンにラベルを追加、未入力画面の案内を強化、仕様書チェックの「設定外工事」の読み取り修正など</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-9-0">
         <h3>v1.9.0 — はじめての設定を選べるように / 安定性の強化</h3>
         <ul>
           <li><strong>はじめての設定でモードを選択</strong> — 最初の設定で「家づくり中」「入居後」を選ぶと、状況に合った画面でスタートできるようになりました</li>
@@ -1147,14 +1148,14 @@
           <li><strong>安全性の強化</strong> — バックアップ・復元やデータの取り込みを、より安全に行えるよう内部処理を改善しました</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-8-0">
         <h3>v1.8.0 — お手入れ当番表 追加</h3>
         <ul>
           <li><strong>お手入れ当番表を新設</strong> — 換気フィルターやレンジフードなど、忘れがちな定期お手入れをワンタップで消し込み管理。プリセット42項目（周期は自由に変更可）・部屋ごと表示・消耗品の在庫管理（実施で自動消費）・通知リマインド（毎日くり返し/1回だけ/オフ）に対応</li>
           <li><strong>図面チェック: 位置合わせの操作性改善</strong> — スライダーと±ボタンの間隔を調整し、誤タップしにくくしました</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-7-0">
         <h3>v1.7.0 — プレミアム（広告なし）/ でんき通信簿拡張</h3>
         <ul>
           <li><strong>プレミアム（広告なし）</strong> — 買い切りで広告バナーを非表示にできます</li>
@@ -1164,21 +1165,21 @@
           <li><strong>PDFビューア: 他のアプリで開く</strong> — 共有メニュー経由で Adobe Reader 等の外部アプリで PDF を開けます</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-6-0">
         <h3>v1.6.0 — 英語表示に対応</h3>
         <ul>
           <li><strong>英語表示に対応</strong> — 設定 → 「言語」 で日本語/英語を切り替えられます</li>
           <li><strong>端末言語の自動反映</strong> — 端末の言語設定 (OS locale) を初回起動時に自動反映</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-5-0">
         <h3>v1.5.0 — CAD 図面 サイズ合わせ 追加</h3>
         <ul>
           <li><strong>「サイズ合わせ」機能を新設</strong> — 版によって図面の大きさが違う場合でも、旧版・新版それぞれの「点線（グリッド線）が交わる場所」に①②の目印を置くだけで自動で揃えて差分検出できるようになりました</li>
           <li><strong>図面チェック画面の「位置調整」ボタンを「調整 ▾」メニューに統合</strong> — 位置合わせ / サイズ合わせ を場面に応じて選べる構成に</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-4-0">
         <h3>v1.4.0 — マイページ拡充 / でんき通信簿 UX 改善</h3>
         <ul>
           <li><strong>マイページに項目追加</strong> — 車（V2H 対応含む）、住宅性能値（C値・UA値・ηAC・ηAH・耐震等級・断熱等級）、全館空調オプションをプロフィールに追加</li>
@@ -1187,7 +1188,7 @@
           <li><strong>でんき通信簿: 0 円表示時のヒント</strong> — 計算結果が 0 円になっている月にプラン開始日や取り込みデータの確認、再計算メニューへの案内を表示</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-3-0">
         <h3>v1.3.0 — マイページ機能 追加</h3>
         <ul>
           <li><strong>マイページ機能を新設</strong> — プロフィール（商品プラン / 居住地域 / 階数 / 坪数 / 設備 / 家族構成 / 画像）登録 + ホームバナーカスタマイズ + マイホームカード画面（家づくりの歩み・でんき実績の派生統計）。SNS等の家づくりアカウントでの自己紹介にご利用いただけます<br><span style="font-size:.8em;color:#999">※ 登録情報はスマホ内のみで管理されます。機種変更時はバックアップ／復元機能をご利用ください</span></li>
@@ -1197,7 +1198,7 @@
           <li><strong>iOS 共有シート経由 PDF 取込の修正</strong> — ファイルが「ファイル」アプリのフォルダに残ってしまう問題を修正</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-2-0">
         <h3>v1.2.0 — でんき通信簿 追加</h3>
         <ul>
           <li><strong>でんき通信簿</strong> — 太陽光・蓄電池の"得した合計"を、iサポのCSVを取り込むだけで見える化</li>
@@ -1209,7 +1210,7 @@
         <h3>🍎 iOS App Store 公開</h3>
         <p>App Store で正式公開しました。Android / iOS 両対応になりました。</p>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-1-0">
         <h3>v1.1.0</h3>
         <ul>
           <li><strong>ノイズ除去フィルタ</strong> — 図面チェックに4段階のフィルタを追加。細かなズレを除去して大きな変更点だけを見やすく表示します</li>
@@ -1217,7 +1218,7 @@
           <li><strong>見積りPDFの日付認識を修正</strong></li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-0-0">
         <h3>v1.0.0 — Google Play ストア公開</h3>
         <p>Google Play ストアで正式公開。3つの新機能を追加しました。</p>
         <ul>
@@ -1226,7 +1227,7 @@
           <li><strong>ホームウィジェット</strong> — 端末のホーム画面にカウントダウンを表示</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v0-2-1">
         <h3>v0.2.1</h3>
         <ul>
           <li><strong>メモバッジ</strong> — メモが紐づいている項目に件数バッジを表示</li>
@@ -1234,7 +1235,7 @@
           <li><strong>単独図面解析</strong> — 図面チェックに単独表示モードを追加</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v0-2-0">
         <h3>v0.2.0 — 仕様書チェック</h3>
         <ul>
           <li>設備仕様書PDFを自動パース — 8セクションに構造化</li>
@@ -1385,6 +1386,21 @@
     dlVisible = es[0].isIntersecting;
     update();
   }, {threshold: 0.15}).observe(dl);
+})();
+(function(){
+  function reveal(){
+    var id = location.hash.slice(1);
+    if(!/^v\d+-\d+-\d+$/.test(id)) return;
+    var el = document.getElementById(id);
+    if(!el) return;
+    var d = el.closest('details');
+    if(d && !d.open){
+      d.open = true;
+      el.scrollIntoView();
+    }
+  }
+  reveal();
+  window.addEventListener('hashchange', reveal);
 })();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "73d5f13377704e23a17468d3ed2185f7"}'></script><!-- End Cloudflare Web Analytics -->
