@@ -805,9 +805,12 @@
     <li class="sub"><a href="#schedule-meeting">打ち合わせ第N回</a></li>
     <li class="sub"><a href="#schedule-actions">操作リファレンス</a></li>
     <li><a href="#widget">ホームウィジェット</a></li>
-    <li class="sub"><a href="#widget-add">追加手順（iOS / Android）</a></li>
-    <li class="sub"><a href="#widget-patterns">表示パターン</a></li>
-    <li class="sub"><a href="#widget-maintenance">お手入れ当番表のウィジェット</a></li>
+    <li class="sub"><a href="#widget-countdown">カウントダウン</a></li>
+    <li class="sub2"><a href="#widget-add">置き方</a></li>
+    <li class="sub2"><a href="#widget-patterns">表示パターン</a></li>
+    <li class="sub"><a href="#widget-maintenance">お手入れ当番表</a></li>
+    <li class="sub2"><a href="#widget-maintenance-add">置き方</a></li>
+    <li class="sub2"><a href="#widget-maintenance-sizes">大きさごとの表示</a></li>
   </ul>
 
   <h4>でんき通信簿</h4>
@@ -2868,11 +2871,14 @@
 
 <p>端末のホーム画面に置けるウィジェットは 2 つあります。</p>
 <ul>
-  <li><strong>カウントダウン</strong>：スケジュールでピン留めしたイベントのカウントダウン（入居後は新居生活カウンター）を表示します。ピン留めしたイベントがそのまま反映されます（このページの <a href="#widget-add">追加手順</a>・<a href="#widget-patterns">表示パターン</a>）</li>
+  <li><strong>カウントダウン</strong>：スケジュールでピン留めしたイベントのカウントダウン（入居後は新居生活カウンター）を表示します。ピン留めしたイベントがそのまま反映されます（<a href="#widget-countdown">カウントダウンのウィジェット</a>）</li>
   <li><strong>お手入れ当番表</strong>：今すぐ・もうすぐのお手入れと、残りわずかの消耗品を表示します（<a href="#widget-maintenance">お手入れ当番表のウィジェット</a>）</li>
 </ul>
 
-<h3 id="widget-add">追加手順（カウントダウン）</h3>
+<h3 id="widget-countdown">カウントダウンのウィジェット</h3>
+<p><a href="#schedule">スケジュール</a>でピン留めしたイベントまでの日数（入居後は新居生活カウンター）を、ホーム画面に表示するウィジェットです。</p>
+
+<h4 id="widget-add">置き方</h4>
 <p>端末の OS に応じて下記タブを切り替えてください。</p>
 
 <div class="tabs">
@@ -2889,7 +2895,7 @@
     <li><strong>「ウィジェットを追加」をタップ</strong></li>
   </ol>
 
-  <h4>更新タイミング（iOS）</h4>
+  <h5>更新タイミング（iOS）</h5>
   <ul>
     <li>翌日以降に OS が自動で順次更新</li>
     <li>アプリを開いた時にも最新化</li>
@@ -2906,7 +2912,7 @@
     <li><strong>ホーム画面にドラッグ</strong></li>
   </ol>
 
-  <h4>更新タイミング（Android）</h4>
+  <h5>更新タイミング（Android）</h5>
   <ul>
     <li>毎日深夜0時過ぎにAlarmManagerで自動更新</li>
     <li>アプリ内でスケジュールが変わったら即時更新</li>
@@ -2917,7 +2923,7 @@
   </div>
 </div>
 
-<h3 id="widget-patterns">表示パターン</h3>
+<h4 id="widget-patterns">表示パターン</h4>
 
 <table>
   <thead><tr><th>状態</th><th>表示内容</th><th>色味</th></tr></thead>
@@ -2930,7 +2936,7 @@
   </tbody>
 </table>
 
-<h4>カウントダウン表示</h4>
+<h5>カウントダウン表示</h5>
 <p>引き渡しなど未来イベントがピン留めされているとき。</p>
 <div class="shot-grid">
   <figure class="shot-phone">
@@ -2947,7 +2953,7 @@
   </figure>
 </div>
 
-<h4>新居生活カウンター表示</h4>
+<h5>新居生活カウンター表示</h5>
 <p>引き渡し／引っ越しが過ぎると自動で切り替わる入居後のモード。</p>
 <div class="shot-grid">
   <figure class="shot-phone">
@@ -2969,14 +2975,14 @@
 <h3 id="widget-maintenance">お手入れ当番表のウィジェット</h3>
 <p><a href="#maintenance">お手入れ当番表</a>の「今すぐ」「もうすぐ」のお手入れと、残りわずかの消耗品を、ホーム画面で確かめられるウィジェットです。スマホのほか、iPad や Android タブレットの大きなサイズにも対応しています。<strong>表示のみ</strong>のウィジェットで、実施の記録（消し込み）はタップして開くアプリの画面で行います。</p>
 
-<h4>置き方</h4>
+<h4 id="widget-maintenance-add">置き方</h4>
 <ul>
   <li><strong>iOS</strong>：ホーム画面を長押し → 左上の「＋」→「ICHIJO施主手帳」を選び、「お手入れ当番表」のサイズを選んで「ウィジェットを追加」。サイズは 小（正方形）・中（横長）・大 の 3 つで、iPad では 3 列の当番表になる特大も選べます。iPhone のスタンバイ（充電中の横置き）にも置けます</li>
   <li><strong>Android</strong>：ホーム画面の空きスペースを長押し →「ウィジェット」→「ICHIJO施主手帳」から、<strong>「次のお手入れ」</strong>（はじめは 2×2）か<strong>「お手入れ当番表」</strong>（はじめは 4×2）をホーム画面にドラッグ。2 つは中身が同じで、はじめの大きさだけが違います。置いたあとに大きさを変えると、下の 4 つの形が自動で切り替わります</li>
   <li><strong>ライト／ダーク</strong>：端末の設定に合わせて自動で切り替わります（カウントダウンのように別々に選ぶ必要はありません）</li>
 </ul>
 
-<h4>大きさごとの表示</h4>
+<h4 id="widget-maintenance-sizes">大きさごとの表示</h4>
 <table>
   <thead><tr><th>形</th><th>目安</th><th>表示内容</th></tr></thead>
   <tbody>
@@ -3567,6 +3573,17 @@
   <li>提出するかどうかは自分で選べます。提出しなくても、でんき通信簿のほかの機能はこれまでどおり使えます</li>
 </ul>
 
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/class_report_month.webp" width="720" height="1565" alt="クラスの画面（比べる家・ものさし・期間の切り替え、7月のあなたの一番 = 発電量 上位1%、クラスの通信簿の行）" loading="lazy" decoding="async">
+    <figcaption>クラスの通信簿：科目ごとに提出した家の中での位置</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/class_detail.webp" width="720" height="1565" alt="科目の詳しい画面（自給率 上位20%・中央値・分布・月別推移）" loading="lazy" decoding="async">
+    <figcaption>行をタップすると、中央値や分布も見られます</figcaption>
+  </figure>
+</div>
+
 <div class="callout info">
   <p>提出すると、月の数字と家の条件がサーバーに送られます。送る数字・送らないもの・保存期間は <a href="#electricity-class-data">送る数字と保存期間</a> をご覧ください。デモモード中と開発者モード中は提出できません。</p>
 </div>
@@ -3578,6 +3595,17 @@
   <li><strong>月次レポートのカード</strong>：得した合計カードのすぐ下に出ます。まだ提出したことがないときは「提出すると、クラスの通信簿がもらえます」（× で閉じると、この端末では出なくなります）。提出している人には「◯年◯月分をクラスに提出する」、提出済みの月は「◯年◯月分を提出しました」と「クラスの通信簿を見る ›」（押すとクラスの画面のその月へ）。料金プランが未設定のあいだと、今後の提出をやめたあとは、このカードは出ません</li>
   <li><strong>クラスのセグメント</strong>：まだ提出していないときは「発電量や電気代などが、提出した家の中で上位何%かが分かります」の説明と「提出する」ボタン（いちばん新しい月の提出の画面が開きます）</li>
 </ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/electricity_csv_done.webp" width="720" height="1565" alt="CSV取り込み完了ダイアログ（「2026年7月分をクラスに提出する」のボタン）" loading="lazy" decoding="async">
+    <figcaption>入口：取り込み完了ダイアログの「◯年◯月分をクラスに提出する」</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/electricity_monthly.webp" width="720" height="1565" alt="月次レポートの得した合計の下の「提出すると、クラスの通信簿がもらえます」のカード" loading="lazy" decoding="async">
+    <figcaption>入口：月次レポートのカード</figcaption>
+  </figure>
+</div>
 
 <h5>「提出する内容」の画面（上から順）</h5>
 <ol>
