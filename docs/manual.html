@@ -804,13 +804,6 @@
     <li class="sub2"><a href="#schedule-display-option">新居生活カウンター表示</a></li>
     <li class="sub"><a href="#schedule-meeting">打ち合わせ第N回</a></li>
     <li class="sub"><a href="#schedule-actions">操作リファレンス</a></li>
-    <li><a href="#widget">ホームウィジェット</a></li>
-    <li class="sub"><a href="#widget-countdown">カウントダウン</a></li>
-    <li class="sub2"><a href="#widget-add">置き方</a></li>
-    <li class="sub2"><a href="#widget-patterns">表示パターン</a></li>
-    <li class="sub"><a href="#widget-maintenance">お手入れ当番表</a></li>
-    <li class="sub2"><a href="#widget-maintenance-add">置き方</a></li>
-    <li class="sub2"><a href="#widget-maintenance-sizes">大きさごとの表示</a></li>
   </ul>
 
   <h4>でんき通信簿</h4>
@@ -854,6 +847,17 @@
     <li class="sub"><a href="#maintenance-family">家族と共有</a></li>
     <li class="sub"><a href="#maintenance-family-device-change">機種変更のとき</a></li>
     <li class="sub"><a href="#maintenance-actions">操作リファレンス</a></li>
+  </ul>
+
+  <h4>ホームウィジェット</h4>
+  <ul>
+    <li><a href="#widget">ホームウィジェット</a></li>
+    <li class="sub"><a href="#widget-countdown">カウントダウン</a></li>
+    <li class="sub2"><a href="#widget-add">置き方</a></li>
+    <li class="sub2"><a href="#widget-patterns">表示パターン</a></li>
+    <li class="sub"><a href="#widget-maintenance">お手入れ当番表</a></li>
+    <li class="sub2"><a href="#widget-maintenance-add">置き方</a></li>
+    <li class="sub2"><a href="#widget-maintenance-sizes">大きさごとの表示</a></li>
   </ul>
 
   <h4>マイページ</h4>
@@ -2865,182 +2869,6 @@
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- ウィジェット                                             -->
-<!-- ═══════════════════════════════════════════════════════ -->
-<h2 id="widget">ホームウィジェット</h2>
-
-<p>端末のホーム画面に置けるウィジェットは 2 つあります。</p>
-<ul>
-  <li><strong>カウントダウン</strong>：スケジュールでピン留めしたイベントのカウントダウン（入居後は新居生活カウンター）を表示します。ピン留めしたイベントがそのまま反映されます（<a href="#widget-countdown">カウントダウンのウィジェット</a>）</li>
-  <li><strong>お手入れ当番表</strong>：今すぐ・もうすぐのお手入れと、残りわずかの消耗品を表示します（<a href="#widget-maintenance">お手入れ当番表のウィジェット</a>）</li>
-</ul>
-
-<h3 id="widget-countdown">カウントダウンのウィジェット</h3>
-<p><a href="#schedule">スケジュール</a>でピン留めしたイベントまでの日数（入居後は新居生活カウンター）を、ホーム画面に表示するウィジェットです。</p>
-
-<h4 id="widget-add">置き方</h4>
-<p>端末の OS に応じて下記タブを切り替えてください。</p>
-
-<div class="tabs">
-  <button class="tab-btn active" onclick="switchTab(event,'wadd-ios')">🍎 iOS</button>
-  <button class="tab-btn" onclick="switchTab(event,'wadd-android')">🤖 Android</button>
-</div>
-
-<div id="wadd-ios" class="tab-content active">
-  <ol class="steps">
-    <li><strong>ホーム画面を長押し</strong><p>編集モードに入ります。</p></li>
-    <li><strong>左上の「＋」をタップ</strong></li>
-    <li><strong>「ICHIJO施主手帳」を検索／選択</strong></li>
-    <li><strong>サイズを選ぶ</strong><p>2種類：<br>- Small（正方形）<br>- Medium（横長）<br>ライト／ダーク両方のデザインを用意しています。</p></li>
-    <li><strong>「ウィジェットを追加」をタップ</strong></li>
-  </ol>
-
-  <h5>更新タイミング（iOS）</h5>
-  <ul>
-    <li>翌日以降に OS が自動で順次更新</li>
-    <li>アプリを開いた時にも最新化</li>
-    <li>OS の判断で適切なタイミングで再読み込み</li>
-  </ul>
-</div>
-
-<div id="wadd-android" class="tab-content">
-  <ol class="steps">
-    <li><strong>ホーム画面の空きスペースを長押し</strong></li>
-    <li><strong>「ウィジェット」を選択</strong></li>
-    <li><strong>「ICHIJO施主手帳」を探す</strong><p>ウィジェット一覧をスクロールしてアプリ名を探します。</p></li>
-    <li><strong>サイズとテーマを選ぶ</strong><p>全8種類：<br>- <code>2×1</code>（横長・小）<br>- <code>2×2</code>（正方形）<br>- <code>4×1</code>（横長・大）<br>- <code>4×2</code>（大）<br>× ライト／ダーク</p></li>
-    <li><strong>ホーム画面にドラッグ</strong></li>
-  </ol>
-
-  <h5>更新タイミング（Android）</h5>
-  <ul>
-    <li>毎日深夜0時過ぎにAlarmManagerで自動更新</li>
-    <li>アプリ内でスケジュールが変わったら即時更新</li>
-    <li>端末再起動／タイムゾーン変更時に再登録</li>
-  </ul>
-  <div class="callout warn">
-    <p>バッテリー最適化が厳しい端末では深夜更新が遅延します。<strong>設定アプリ → アプリ → ICHIJO施主手帳 → バッテリー → 最適化から除外</strong> を推奨。</p>
-  </div>
-</div>
-
-<h4 id="widget-patterns">表示パターン</h4>
-
-<table>
-  <thead><tr><th>状態</th><th>表示内容</th><th>色味</th></tr></thead>
-  <tbody>
-    <tr><td>カウントダウン</td><td>イベント名＋「あと〇日」</td><td>通常</td></tr>
-    <tr><td>今日</td><td>イベント名＋「今日です！」</td><td>ゴールド</td></tr>
-    <tr><td>新居生活カウンター</td><td>🏠「新居生活 〇年〇ヶ月〇日」</td><td>通常</td></tr>
-    <tr><td>過去イベント</td><td>「〇日経過」</td><td>グレー</td></tr>
-    <tr><td>空状態</td><td>「スケジュールを追加してください」</td><td>通常</td></tr>
-  </tbody>
-</table>
-
-<h5>カウントダウン表示</h5>
-<p>引き渡しなど未来イベントがピン留めされているとき。</p>
-<div class="shot-grid">
-  <figure class="shot-phone">
-    <img src="images/widget_ios_countdown.webp" width="720" height="1564" alt="iOS ウィジェット カウントダウン（Small / Medium × ライト・ダーク）" loading="lazy" decoding="async">
-    <figcaption>iOS：Small / Medium（ライト／ダーク）</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/widget_android_countdown.webp" width="720" height="1600" alt="Android ウィジェット カウントダウン（2×1 / 2×2 / 4×1 × ライト・ダーク）" loading="lazy" decoding="async">
-    <figcaption>Android：2×1 / 2×2 / 4×1（ライト／ダーク）</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/widget_android_countdown_4x2.webp" width="720" height="1600" alt="Android ウィジェット 4×2 カウントダウン（ライト・ダーク）" loading="lazy" decoding="async">
-    <figcaption>Android：4×2（ライト／ダーク）</figcaption>
-  </figure>
-</div>
-
-<h5>新居生活カウンター表示</h5>
-<p>引き渡し／引っ越しが過ぎると自動で切り替わる入居後のモード。</p>
-<div class="shot-grid">
-  <figure class="shot-phone">
-    <img src="images/widget_ios_life_counter.webp" width="720" height="1564" alt="iOS ウィジェット 新居生活カウンター（Small / Medium × ライト・ダーク）" loading="lazy" decoding="async">
-    <figcaption>iOS：Small / Medium（ライト／ダーク）</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/widget_android_life_counter.webp" width="720" height="1600" alt="Android ウィジェット 新居生活カウンター（2×1 / 2×2 / 4×1 × ライト・ダーク）" loading="lazy" decoding="async">
-    <figcaption>Android：2×1 / 2×2 / 4×1（ライト／ダーク）</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/widget_android_life_counter_4x2.webp" width="720" height="1600" alt="Android ウィジェット 4×2 新居生活カウンター（ライト・ダーク）" loading="lazy" decoding="async">
-    <figcaption>Android：4×2（ライト／ダーク）</figcaption>
-  </figure>
-</div>
-
-<p>ウィジェットをタップするとアプリが起動し、スケジュール画面に遷移します。</p>
-
-<h3 id="widget-maintenance">お手入れ当番表のウィジェット</h3>
-<p><a href="#maintenance">お手入れ当番表</a>の「今すぐ」「もうすぐ」のお手入れと、残りわずかの消耗品を、ホーム画面で確かめられるウィジェットです。スマホのほか、iPad や Android タブレットの大きなサイズにも対応しています。<strong>表示のみ</strong>のウィジェットで、実施の記録（消し込み）はタップして開くアプリの画面で行います。</p>
-
-<h4 id="widget-maintenance-add">置き方</h4>
-<ul>
-  <li><strong>iOS</strong>：ホーム画面を長押し → 左上の「＋」→「ICHIJO施主手帳」を選び、「お手入れ当番表」のサイズを選んで「ウィジェットを追加」。サイズは 小（正方形）・中（横長）・大 の 3 つで、iPad では 3 列の当番表になる特大も選べます。iPhone のスタンバイ（充電中の横置き）にも置けます</li>
-  <li><strong>Android</strong>：ホーム画面の空きスペースを長押し →「ウィジェット」→「ICHIJO施主手帳」から、<strong>「次のお手入れ」</strong>（はじめは 2×2）か<strong>「お手入れ当番表」</strong>（はじめは 4×2）をホーム画面にドラッグ。2 つは中身が同じで、はじめの大きさだけが違います。置いたあとに大きさを変えると、下の 4 つの形が自動で切り替わります</li>
-  <li><strong>ライト／ダーク</strong>：端末の設定に合わせて自動で切り替わります（カウントダウンのように別々に選ぶ必要はありません）</li>
-</ul>
-
-<h4 id="widget-maintenance-sizes">大きさごとの表示</h4>
-<table>
-  <thead><tr><th>形</th><th>目安</th><th>表示内容</th></tr></thead>
-  <tbody>
-    <tr><td>小</td><td>iOS の小 ／ Android の 2×2 ほど</td><td>見出し「次のお手入れ」と、期日がいちばん近いお手入れ 1 件（名前・場所・残り日数・進み具合のバー）。今すぐのものがあるときは「今すぐ ◯件」も出ます</td></tr>
-    <tr><td>中</td><td>iOS の中 ／ Android の 4×2 ほど（スマホ。タブレットでは 4×2 でも大になります）</td><td>「今すぐ」「もうすぐ」「在庫わずか」の数と、期日が近いお手入れ 3 件まで</td></tr>
-    <tr><td>大</td><td>iOS の大 ／ Android の 4×3 以上</td><td>今日の日付と件数、「今すぐ」「もうすぐ」の一覧。下に「余裕あり」「今日実施」の件数</td></tr>
-    <tr><td>特大</td><td>iPad の特大 ／ 横に広い Android タブレット</td><td>「今すぐ」「もうすぐ」「今日実施」と「在庫わずか」（消耗品の名前と在庫数）を 3 列の当番表で表示</td></tr>
-  </tbody>
-</table>
-<ul>
-  <li><strong>分け方</strong>：「今日実施」「今すぐ」「もうすぐ」「余裕あり」の分け方は、お手入れ当番表の<a href="#maintenance-overview">緊急度ビュー</a>と同じです。一覧の絞り込みはウィジェットには反映されません</li>
-  <li><strong>残り日数</strong>：「今日」「あと◯日」「◯日超過」（期日を過ぎたものには ⚠ が付きます）</li>
-  <li><strong>在庫わずか</strong>：残りわずかの目安以下になった消耗品の数です（お手入れ当番表のダッシュボードと同じ数え方）</li>
-  <li><strong>担当</strong>：<a href="#maintenance-family">家族と共有</a>中で担当が決まっている項目は、場所の横に「◯◯さん」と表示されます</li>
-  <li>入りきらない分は「他◯件」とまとめて表示されます</li>
-</ul>
-<div class="shot-grid">
-  <figure class="shot-phone">
-    <img src="images/widget_maintenance_ios.webp" width="720" height="1565" alt="iOS お手入れ当番表のウィジェット 小（次のお手入れ・今すぐ 2件）と中（今すぐ・もうすぐ・在庫わずかの数と、期日が近い 3 件）" loading="lazy" decoding="async">
-    <figcaption>iOS：小 / 中</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/widget_maintenance_ios_large.webp" width="720" height="1565" alt="iOS お手入れ当番表のウィジェット 大（今すぐ・もうすぐの一覧と、余裕あり・今日実施の件数）" loading="lazy" decoding="async">
-    <figcaption>iOS：大</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/widget_maintenance_android.webp" width="720" height="1560" alt="Android お手入れ当番表のウィジェット 4×3（大）と次のお手入れ 2×2（小）" loading="lazy" decoding="async">
-    <figcaption>Android：お手入れ当番表 4×3 / 次のお手入れ 2×2</figcaption>
-  </figure>
-</div>
-<figure>
-  <img src="images/widget_maintenance_ipad.webp" width="720" height="361" alt="iPad お手入れ当番表のウィジェット 特大（今すぐ・もうすぐ・今日実施と在庫わずかの 3 列の当番表）" loading="lazy" decoding="async">
-  <figcaption>iPad：特大（3 列の当番表）</figcaption>
-</figure>
-
-<h4>お手入れが表示されないとき</h4>
-<ul>
-  <li><strong>「アプリでお手入れを追加してください」</strong>：お手入れが 1 件もないときの表示です</li>
-  <li><strong>「今すぐのお手入れはありません」</strong>：今すぐのものがないときの表示です。次のお手入れがあれば、その下に表示されます</li>
-  <li><strong>「アプリを開くと表示されます」</strong>：アプリをインストール（更新）してから、まだ一度もアプリを開いていないときの表示です。アプリを一度開くと表示されます</li>
-</ul>
-
-<h4>タップしたとき</h4>
-<ul>
-  <li><strong>お手入れの行</strong>（小ではウィジェット全体）：お手入れ当番表が開き、その項目の<a href="#maintenance-detail">詳細シート</a>が開きます。「実施した」で記録すると、ウィジェットにもすぐ反映されます</li>
-  <li><strong>それ以外の場所</strong>（見出し・件数・在庫わずかの行など）：お手入れ当番表が開きます</li>
-  <li>ほかの画面で作業中のときは「作業中の画面があります」の確認が出ます。「開く」を押すと、作業中の内容は破棄されます</li>
-</ul>
-
-<h4>更新のタイミング</h4>
-<ul>
-  <li>アプリでお手入れ・部屋・消耗品・担当などを変えると、すぐに反映されます。アプリを開いたときや、アプリに戻ってきたときも最新になります</li>
-  <li>残り日数と「今すぐ」「もうすぐ」の分け方は、日付が変わると自動で進みます（アプリを開かなくても「あと1日」→「今日」→「1日超過」と変わります。切り替わるのは 0 時ちょうどとは限らず、少し遅れることがあります）</li>
-  <li><a href="#maintenance-family">家族と共有</a>中に家族が記録した内容は、この端末でアプリを開いたときに反映されます</li>
-  <li>デモモード中はウィジェットの表示を書き換えません（デモを始める前の表示のままです）</li>
-</ul>
-
-<!-- ═══════════════════════════════════════════════════════ -->
 <!-- でんき通信簿                                             -->
 <!-- ═══════════════════════════════════════════════════════ -->
 <h2 id="electricity">でんき通信簿</h2>
@@ -4095,6 +3923,182 @@
   <div class="action-row"><strong>シートのタイトル右アイコン</strong><span>編集（鉛筆）／削除（ゴミ箱）</span></div>
   <div class="action-row"><strong>部屋・消耗品の行</strong><span>タップで編集、長押しで削除</span></div>
 </div>
+
+<!-- ═══════════════════════════════════════════════════════ -->
+<!-- ウィジェット                                             -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="widget">ホームウィジェット</h2>
+
+<p>端末のホーム画面に置けるウィジェットは 2 つあります。</p>
+<ul>
+  <li><strong>カウントダウン</strong>：スケジュールでピン留めしたイベントのカウントダウン（入居後は新居生活カウンター）を表示します。ピン留めしたイベントがそのまま反映されます（<a href="#widget-countdown">カウントダウンのウィジェット</a>）</li>
+  <li><strong>お手入れ当番表</strong>：今すぐ・もうすぐのお手入れと、残りわずかの消耗品を表示します（<a href="#widget-maintenance">お手入れ当番表のウィジェット</a>）</li>
+</ul>
+
+<h3 id="widget-countdown">カウントダウンのウィジェット</h3>
+<p><a href="#schedule">スケジュール</a>でピン留めしたイベントまでの日数（入居後は新居生活カウンター）を、ホーム画面に表示するウィジェットです。</p>
+
+<h4 id="widget-add">置き方</h4>
+<p>端末の OS に応じて下記タブを切り替えてください。</p>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="switchTab(event,'wadd-ios')">🍎 iOS</button>
+  <button class="tab-btn" onclick="switchTab(event,'wadd-android')">🤖 Android</button>
+</div>
+
+<div id="wadd-ios" class="tab-content active">
+  <ol class="steps">
+    <li><strong>ホーム画面を長押し</strong><p>編集モードに入ります。</p></li>
+    <li><strong>左上の「＋」をタップ</strong></li>
+    <li><strong>「ICHIJO施主手帳」を検索／選択</strong></li>
+    <li><strong>サイズを選ぶ</strong><p>2種類：<br>- Small（正方形）<br>- Medium（横長）<br>ライト／ダーク両方のデザインを用意しています。</p></li>
+    <li><strong>「ウィジェットを追加」をタップ</strong></li>
+  </ol>
+
+  <h5>更新タイミング（iOS）</h5>
+  <ul>
+    <li>翌日以降に OS が自動で順次更新</li>
+    <li>アプリを開いた時にも最新化</li>
+    <li>OS の判断で適切なタイミングで再読み込み</li>
+  </ul>
+</div>
+
+<div id="wadd-android" class="tab-content">
+  <ol class="steps">
+    <li><strong>ホーム画面の空きスペースを長押し</strong></li>
+    <li><strong>「ウィジェット」を選択</strong></li>
+    <li><strong>「ICHIJO施主手帳」を探す</strong><p>ウィジェット一覧をスクロールしてアプリ名を探します。</p></li>
+    <li><strong>サイズとテーマを選ぶ</strong><p>全8種類：<br>- <code>2×1</code>（横長・小）<br>- <code>2×2</code>（正方形）<br>- <code>4×1</code>（横長・大）<br>- <code>4×2</code>（大）<br>× ライト／ダーク</p></li>
+    <li><strong>ホーム画面にドラッグ</strong></li>
+  </ol>
+
+  <h5>更新タイミング（Android）</h5>
+  <ul>
+    <li>毎日深夜0時過ぎにAlarmManagerで自動更新</li>
+    <li>アプリ内でスケジュールが変わったら即時更新</li>
+    <li>端末再起動／タイムゾーン変更時に再登録</li>
+  </ul>
+  <div class="callout warn">
+    <p>バッテリー最適化が厳しい端末では深夜更新が遅延します。<strong>設定アプリ → アプリ → ICHIJO施主手帳 → バッテリー → 最適化から除外</strong> を推奨。</p>
+  </div>
+</div>
+
+<h4 id="widget-patterns">表示パターン</h4>
+
+<table>
+  <thead><tr><th>状態</th><th>表示内容</th><th>色味</th></tr></thead>
+  <tbody>
+    <tr><td>カウントダウン</td><td>イベント名＋「あと〇日」</td><td>通常</td></tr>
+    <tr><td>今日</td><td>イベント名＋「今日です！」</td><td>ゴールド</td></tr>
+    <tr><td>新居生活カウンター</td><td>🏠「新居生活 〇年〇ヶ月〇日」</td><td>通常</td></tr>
+    <tr><td>過去イベント</td><td>「〇日経過」</td><td>グレー</td></tr>
+    <tr><td>空状態</td><td>「スケジュールを追加してください」</td><td>通常</td></tr>
+  </tbody>
+</table>
+
+<h5>カウントダウン表示</h5>
+<p>引き渡しなど未来イベントがピン留めされているとき。</p>
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/widget_ios_countdown.webp" width="720" height="1564" alt="iOS ウィジェット カウントダウン（Small / Medium × ライト・ダーク）" loading="lazy" decoding="async">
+    <figcaption>iOS：Small / Medium（ライト／ダーク）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/widget_android_countdown.webp" width="720" height="1600" alt="Android ウィジェット カウントダウン（2×1 / 2×2 / 4×1 × ライト・ダーク）" loading="lazy" decoding="async">
+    <figcaption>Android：2×1 / 2×2 / 4×1（ライト／ダーク）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/widget_android_countdown_4x2.webp" width="720" height="1600" alt="Android ウィジェット 4×2 カウントダウン（ライト・ダーク）" loading="lazy" decoding="async">
+    <figcaption>Android：4×2（ライト／ダーク）</figcaption>
+  </figure>
+</div>
+
+<h5>新居生活カウンター表示</h5>
+<p>引き渡し／引っ越しが過ぎると自動で切り替わる入居後のモード。</p>
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/widget_ios_life_counter.webp" width="720" height="1564" alt="iOS ウィジェット 新居生活カウンター（Small / Medium × ライト・ダーク）" loading="lazy" decoding="async">
+    <figcaption>iOS：Small / Medium（ライト／ダーク）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/widget_android_life_counter.webp" width="720" height="1600" alt="Android ウィジェット 新居生活カウンター（2×1 / 2×2 / 4×1 × ライト・ダーク）" loading="lazy" decoding="async">
+    <figcaption>Android：2×1 / 2×2 / 4×1（ライト／ダーク）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/widget_android_life_counter_4x2.webp" width="720" height="1600" alt="Android ウィジェット 4×2 新居生活カウンター（ライト・ダーク）" loading="lazy" decoding="async">
+    <figcaption>Android：4×2（ライト／ダーク）</figcaption>
+  </figure>
+</div>
+
+<p>ウィジェットをタップするとアプリが起動し、スケジュール画面に遷移します。</p>
+
+<h3 id="widget-maintenance">お手入れ当番表のウィジェット</h3>
+<p><a href="#maintenance">お手入れ当番表</a>の「今すぐ」「もうすぐ」のお手入れと、残りわずかの消耗品を、ホーム画面で確かめられるウィジェットです。スマホのほか、iPad や Android タブレットの大きなサイズにも対応しています。<strong>表示のみ</strong>のウィジェットで、実施の記録（消し込み）はタップして開くアプリの画面で行います。</p>
+
+<h4 id="widget-maintenance-add">置き方</h4>
+<ul>
+  <li><strong>iOS</strong>：ホーム画面を長押し → 左上の「＋」→「ICHIJO施主手帳」を選び、「お手入れ当番表」のサイズを選んで「ウィジェットを追加」。サイズは 小（正方形）・中（横長）・大 の 3 つで、iPad では 3 列の当番表になる特大も選べます。iPhone のスタンバイ（充電中の横置き）にも置けます</li>
+  <li><strong>Android</strong>：ホーム画面の空きスペースを長押し →「ウィジェット」→「ICHIJO施主手帳」から、<strong>「次のお手入れ」</strong>（はじめは 2×2）か<strong>「お手入れ当番表」</strong>（はじめは 4×2）をホーム画面にドラッグ。2 つは中身が同じで、はじめの大きさだけが違います。置いたあとに大きさを変えると、下の 4 つの形が自動で切り替わります</li>
+  <li><strong>ライト／ダーク</strong>：端末の設定に合わせて自動で切り替わります（カウントダウンのように別々に選ぶ必要はありません）</li>
+</ul>
+
+<h4 id="widget-maintenance-sizes">大きさごとの表示</h4>
+<table>
+  <thead><tr><th>形</th><th>目安</th><th>表示内容</th></tr></thead>
+  <tbody>
+    <tr><td>小</td><td>iOS の小 ／ Android の 2×2 ほど</td><td>見出し「次のお手入れ」と、期日がいちばん近いお手入れ 1 件（名前・場所・残り日数・進み具合のバー）。今すぐのものがあるときは「今すぐ ◯件」も出ます</td></tr>
+    <tr><td>中</td><td>iOS の中 ／ Android の 4×2 ほど（スマホ。タブレットでは 4×2 でも大になります）</td><td>「今すぐ」「もうすぐ」「在庫わずか」の数と、期日が近いお手入れ 3 件まで</td></tr>
+    <tr><td>大</td><td>iOS の大 ／ Android の 4×3 以上</td><td>今日の日付と件数、「今すぐ」「もうすぐ」の一覧。下に「余裕あり」「今日実施」の件数</td></tr>
+    <tr><td>特大</td><td>iPad の特大 ／ 横に広い Android タブレット</td><td>「今すぐ」「もうすぐ」「今日実施」と「在庫わずか」（消耗品の名前と在庫数）を 3 列の当番表で表示</td></tr>
+  </tbody>
+</table>
+<ul>
+  <li><strong>分け方</strong>：「今日実施」「今すぐ」「もうすぐ」「余裕あり」の分け方は、お手入れ当番表の<a href="#maintenance-overview">緊急度ビュー</a>と同じです。一覧の絞り込みはウィジェットには反映されません</li>
+  <li><strong>残り日数</strong>：「今日」「あと◯日」「◯日超過」（期日を過ぎたものには ⚠ が付きます）</li>
+  <li><strong>在庫わずか</strong>：残りわずかの目安以下になった消耗品の数です（お手入れ当番表のダッシュボードと同じ数え方）</li>
+  <li><strong>担当</strong>：<a href="#maintenance-family">家族と共有</a>中で担当が決まっている項目は、場所の横に「◯◯さん」と表示されます</li>
+  <li>入りきらない分は「他◯件」とまとめて表示されます</li>
+</ul>
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/widget_maintenance_ios.webp" width="720" height="1565" alt="iOS お手入れ当番表のウィジェット 小（次のお手入れ・今すぐ 2件）と中（今すぐ・もうすぐ・在庫わずかの数と、期日が近い 3 件）" loading="lazy" decoding="async">
+    <figcaption>iOS：小 / 中</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/widget_maintenance_ios_large.webp" width="720" height="1565" alt="iOS お手入れ当番表のウィジェット 大（今すぐ・もうすぐの一覧と、余裕あり・今日実施の件数）" loading="lazy" decoding="async">
+    <figcaption>iOS：大</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/widget_maintenance_android.webp" width="720" height="1560" alt="Android お手入れ当番表のウィジェット 4×3（大）と次のお手入れ 2×2（小）" loading="lazy" decoding="async">
+    <figcaption>Android：お手入れ当番表 4×3 / 次のお手入れ 2×2</figcaption>
+  </figure>
+</div>
+<figure>
+  <img src="images/widget_maintenance_ipad.webp" width="720" height="361" alt="iPad お手入れ当番表のウィジェット 特大（今すぐ・もうすぐ・今日実施と在庫わずかの 3 列の当番表）" loading="lazy" decoding="async">
+  <figcaption>iPad：特大（3 列の当番表）</figcaption>
+</figure>
+
+<h4>お手入れが表示されないとき</h4>
+<ul>
+  <li><strong>「アプリでお手入れを追加してください」</strong>：お手入れが 1 件もないときの表示です</li>
+  <li><strong>「今すぐのお手入れはありません」</strong>：今すぐのものがないときの表示です。次のお手入れがあれば、その下に表示されます</li>
+  <li><strong>「アプリを開くと表示されます」</strong>：アプリをインストール（更新）してから、まだ一度もアプリを開いていないときの表示です。アプリを一度開くと表示されます</li>
+</ul>
+
+<h4>タップしたとき</h4>
+<ul>
+  <li><strong>お手入れの行</strong>（小ではウィジェット全体）：お手入れ当番表が開き、その項目の<a href="#maintenance-detail">詳細シート</a>が開きます。「実施した」で記録すると、ウィジェットにもすぐ反映されます</li>
+  <li><strong>それ以外の場所</strong>（見出し・件数・在庫わずかの行など）：お手入れ当番表が開きます</li>
+  <li>ほかの画面で作業中のときは「作業中の画面があります」の確認が出ます。「開く」を押すと、作業中の内容は破棄されます</li>
+</ul>
+
+<h4>更新のタイミング</h4>
+<ul>
+  <li>アプリでお手入れ・部屋・消耗品・担当などを変えると、すぐに反映されます。アプリを開いたときや、アプリに戻ってきたときも最新になります</li>
+  <li>残り日数と「今すぐ」「もうすぐ」の分け方は、日付が変わると自動で進みます（アプリを開かなくても「あと1日」→「今日」→「1日超過」と変わります。切り替わるのは 0 時ちょうどとは限らず、少し遅れることがあります）</li>
+  <li><a href="#maintenance-family">家族と共有</a>中に家族が記録した内容は、この端末でアプリを開いたときに反映されます</li>
+  <li>デモモード中はウィジェットの表示を書き換えません（デモを始める前の表示のままです）</li>
+</ul>
 
 <!-- ═══════════════════════════════════════════════════════ -->
 <!-- マイページ                                               -->
