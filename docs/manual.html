@@ -2981,7 +2981,7 @@
   <thead><tr><th>形</th><th>目安</th><th>表示内容</th></tr></thead>
   <tbody>
     <tr><td>小</td><td>iOS の小 ／ Android の 2×2 ほど</td><td>見出し「次のお手入れ」と、期日がいちばん近いお手入れ 1 件（名前・場所・残り日数・進み具合のバー）。今すぐのものがあるときは「今すぐ ◯件」も出ます</td></tr>
-    <tr><td>中</td><td>iOS の中 ／ Android の 4×2 ほど</td><td>「今すぐ」「もうすぐ」「在庫わずか」の数と、期日が近いお手入れ 3 件まで</td></tr>
+    <tr><td>中</td><td>iOS の中 ／ Android の 4×2 ほど（スマホ。タブレットでは 4×2 でも大になります）</td><td>「今すぐ」「もうすぐ」「在庫わずか」の数と、期日が近いお手入れ 3 件まで</td></tr>
     <tr><td>大</td><td>iOS の大 ／ Android の 4×3 以上</td><td>今日の日付と件数、「今すぐ」「もうすぐ」の一覧。下に「余裕あり」「今日実施」の件数</td></tr>
     <tr><td>特大</td><td>iPad の特大 ／ 横に広い Android タブレット</td><td>「今すぐ」「もうすぐ」「今日実施」と「在庫わずか」（消耗品の名前と在庫数）を 3 列の当番表で表示</td></tr>
   </tbody>
@@ -2998,7 +2998,7 @@
 <ul>
   <li><strong>「アプリでお手入れを追加してください」</strong>：お手入れが 1 件もないときの表示です</li>
   <li><strong>「今すぐのお手入れはありません」</strong>：今すぐのものがないときの表示です。次のお手入れがあれば、その下に表示されます</li>
-  <li><strong>「アプリを開くと表示されます」</strong>：ウィジェットに表示するデータがまだないときの表示です（ウィジェットを置いた直後やアプリの更新の直後など）。アプリを一度開くと表示されます</li>
+  <li><strong>「アプリを開くと表示されます」</strong>：アプリをインストール（更新）してから、まだ一度もアプリを開いていないときの表示です。アプリを一度開くと表示されます</li>
 </ul>
 
 <h4>タップしたとき</h4>
@@ -3011,7 +3011,7 @@
 <h4>更新のタイミング</h4>
 <ul>
   <li>アプリでお手入れ・部屋・消耗品・担当などを変えると、すぐに反映されます。アプリを開いたときや、アプリに戻ってきたときも最新になります</li>
-  <li>残り日数と「今すぐ」「もうすぐ」の分け方は、日付が変わると自動で進みます（アプリを開かなくても「あと1日」→「今日」→「1日超過」と変わります）</li>
+  <li>残り日数と「今すぐ」「もうすぐ」の分け方は、日付が変わると自動で進みます（アプリを開かなくても「あと1日」→「今日」→「1日超過」と変わります。切り替わるのは 0 時ちょうどとは限らず、少し遅れることがあります）</li>
   <li><a href="#maintenance-family">家族と共有</a>中に家族が記録した内容は、この端末でアプリを開いたときに反映されます</li>
   <li>デモモード中はウィジェットの表示を書き換えません（デモを始める前の表示のままです）</li>
 </ul>
@@ -3049,15 +3049,15 @@
 
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/electricity_monthly.webp" width="720" height="1564" alt="でんき通信簿メイン（月次）" loading="lazy" decoding="async">
+    <img src="images/electricity_monthly.webp" width="720" height="1565" alt="でんき通信簿メイン（月次・得した合計の下にクラスのカード）" loading="lazy" decoding="async">
     <figcaption>月次セグメント</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/electricity_annual.webp" width="720" height="1564" alt="でんき通信簿メイン（年間）" loading="lazy" decoding="async">
+    <img src="images/electricity_annual.webp" width="720" height="1565" alt="でんき通信簿メイン（年間）" loading="lazy" decoding="async">
     <figcaption>年間セグメント</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/electricity_total.webp" width="720" height="1564" alt="でんき通信簿メイン（通算）" loading="lazy" decoding="async">
+    <img src="images/electricity_total.webp" width="720" height="1565" alt="でんき通信簿メイン（通算）" loading="lazy" decoding="async">
     <figcaption>通算セグメント</figcaption>
   </figure>
   <figure class="shot-phone">
@@ -3108,7 +3108,7 @@
   <li><strong>右上のメニューから「CSVインポート」</strong></li>
   <li><strong>ファイルピッカーでCSVを選択</strong></li>
   <li><strong>取り込み進捗を確認</strong></li>
-  <li><strong>インポート完了ダイアログ</strong><p>取り込んだ件数・対象期間・月数が表示されます。新記録（発電量・収支など）を更新した場合は、🏆 マークとともに「レコード更新！」セクションで何の記録がどれだけ伸びたかが一覧表示されます。この取り込みで新しくそろった月があると、「OK」の左に「◯年◯月分をクラスに提出する」が出ます（<a href="#electricity-class-submit">クラスへの提出</a>）。OKを押すと、画面が自動で最新月に更新されます。</p></li>
+  <li><strong>インポート完了ダイアログ</strong><p>取り込んだ件数・対象期間・月数が表示されます。新記録（発電量・収支など）を更新した場合は、🏆 マークとともに「レコード更新！」セクションで何の記録がどれだけ伸びたかが一覧表示されます。この取り込みで新しくそろった月があると、「OK」の左に「◯年◯月分をクラスに提出する」が出ます（<a href="#electricity-class-submit">クラスへの提出</a>。自動で提出する設定のときは、代わりにダイアログの中に提出の結果が出ます）。OKを押すと、画面が自動で最新月に更新されます。</p></li>
 </ol>
 
 <div class="shot-grid">
@@ -3117,8 +3117,8 @@
     <figcaption>取り込み中</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/electricity_csv_done.webp" width="720" height="1564" alt="CSV取り込み完了ダイアログ（新記録の通知付き）" loading="lazy" decoding="async">
-    <figcaption>取り込み完了（新記録の通知付き）</figcaption>
+    <img src="images/electricity_csv_done.webp" width="720" height="1565" alt="CSV取り込み完了ダイアログ（新記録の通知と「2026年7月分をクラスに提出する」付き）" loading="lazy" decoding="async">
+    <figcaption>取り込み完了（新記録の通知・クラスに提出するボタン付き）</figcaption>
   </figure>
 </div>
 
@@ -3398,8 +3398,8 @@
 
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/electricity_monthly.webp" width="720" height="1564" alt="月次レポート 上半分（得した合計・蓄電池）" loading="lazy" decoding="async">
-    <figcaption>月次レポート上半分：得した合計・蓄電池</figcaption>
+    <img src="images/electricity_monthly.webp" width="720" height="1565" alt="月次レポート 上半分（得した合計・クラスのカード・蓄電池）" loading="lazy" decoding="async">
+    <figcaption>月次レポート上半分：得した合計・クラスのカード・蓄電池</figcaption>
   </figure>
   <figure class="shot-phone">
     <img src="images/electricity_monthly_scroll.webp" width="720" height="1564" alt="月次レポート 下半分（ヒートマップ・日別リスト・ハイライト）" loading="lazy" decoding="async">
@@ -3425,7 +3425,7 @@
 
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/electricity_annual.webp" width="720" height="1564" alt="年間レポート 上半分（年間の得した合計・蓄電池・月別棒グラフ）" loading="lazy" decoding="async">
+    <img src="images/electricity_annual.webp" width="720" height="1565" alt="年間レポート 上半分（年間の得した合計・蓄電池・月別棒グラフ）" loading="lazy" decoding="async">
     <figcaption>年間レポート上半分：年間の得した合計・蓄電池・棒グラフ</figcaption>
   </figure>
   <figure class="shot-phone">
@@ -3484,7 +3484,7 @@
 </table>
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/electricity_records_daily.webp" width="720" height="1564" alt="デイリーベスト（1日の記録 8 項目）" loading="lazy" decoding="async">
+    <img src="images/electricity_records_daily.webp" width="720" height="1565" alt="デイリーベスト（1日の記録 8 項目）" loading="lazy" decoding="async">
     <figcaption>デイリーベスト</figcaption>
   </figure>
   <figure class="shot-phone">
@@ -3556,8 +3556,8 @@
 <h4 id="electricity-class-submit">提出のしかた</h4>
 <p>提出できるのは、その月のデータが月末までそろった月です（途中の月は提出できません）。過去の月も提出できます。入口は次の 3 つで、どれも同じ「提出する内容」の画面が開きます。</p>
 <ul>
-  <li><strong>CSV 取り込みの完了ダイアログ</strong>：その取り込みで新しくそろった月があると、「OK」の左に<strong>「◯年◯月分をクラスに提出する」</strong>が出ます</li>
-  <li><strong>月次レポートのカード</strong>：得した合計カードのすぐ下に出ます。まだ提出したことがないときは「提出すると、クラスの通信簿がもらえます」（× で閉じると、この端末では出なくなります）。提出している人には「◯年◯月分をクラスに提出する」、提出済みの月は「◯年◯月分を提出しました」と「クラスの通信簿を見る ›」（押すとクラスの画面のその月へ）。料金プランが未設定のあいだは、このカードは出ません</li>
+  <li><strong>CSV 取り込みの完了ダイアログ</strong>：その取り込みで新しくそろった月があると、「OK」の左に<strong>「◯年◯月分をクラスに提出する」</strong>が出ます（自動で提出する設定のときは、ボタンの代わりに提出の結果が出ます。送れなかったときだけボタンが出ます）</li>
+  <li><strong>月次レポートのカード</strong>：得した合計カードのすぐ下に出ます。まだ提出したことがないときは「提出すると、クラスの通信簿がもらえます」（× で閉じると、この端末では出なくなります）。提出している人には「◯年◯月分をクラスに提出する」、提出済みの月は「◯年◯月分を提出しました」と「クラスの通信簿を見る ›」（押すとクラスの画面のその月へ）。料金プランが未設定のあいだと、今後の提出をやめたあとは、このカードは出ません</li>
   <li><strong>クラスのセグメント</strong>：まだ提出していないときは「発電量や電気代などが、提出した家の中で上位何%かが分かります」の説明と「提出する」ボタン（いちばん新しい月の提出の画面が開きます）</li>
 </ul>
 
@@ -3577,12 +3577,34 @@
   <li><strong>「提出する」</strong>：押すと送信します。提出するのは、この画面に表示している数字だけです</li>
 </ol>
 
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/class_submit_sheet_top.webp" width="720" height="1565" alt="「提出する内容」の画面の上部（2026年7月分の月の数字 8 つと、家の情報の「提出する」スイッチ）" loading="lazy" decoding="async">
+    <figcaption>提出する内容：月の数字と家の情報</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/class_submit_sheet_bottom.webp" width="720" height="1565" alt="「提出する内容」の画面の下部（これまでの月もまとめて提出する・歴代ベストもいっしょに提出します）" loading="lazy" decoding="async">
+    <figcaption>まとめて提出・歴代ベスト</figcaption>
+  </figure>
+</div>
+
 <h5>提出したあと</h5>
 <ul>
   <li>「提出しました」と「今回の数字は、明日からクラスの通信簿に載ります」が出ます。集計は 1 日 1 回、朝 4 時ごろです</li>
-  <li><strong>「次からは、データを取り込んだときに自動で提出する」</strong>（はじめは OFF）：ON にすると、次からは CSV を取り込んで新しくそろった月を自動で提出します（歴代ベストもいっしょに提出します）。結果は取り込み完了ダイアログの下に「◯年◯月分を提出しました」のように出ます。あとからクラスの画面や<a href="#electricity-class-settings">提出の設定</a>で切り替えられます</li>
+  <li><strong>「次からは、データを取り込んだときに自動で提出する」</strong>（はじめは OFF）：ON にすると、次からは CSV を取り込んで新しくそろった月を自動で提出します（歴代ベストもいっしょに提出します）。結果は取り込み完了ダイアログの中に「◯年◯月分を提出しました」のように出ます（通信できないときは「まだ提出できていません」、送れなかったときは「提出できませんでした」と「◯年◯月分をクラスに提出する」）。あとからクラスの画面や<a href="#electricity-class-settings">提出の設定</a>で切り替えられます</li>
   <li>通信できないときは「まだ提出できていません」と出ます。通信できるようになると、自動で提出されます</li>
 </ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/class_done_sheet.webp" width="720" height="1565" alt="「提出しました」の画面（2026年7月分の提出のはんこ・次からは自動で提出するスイッチ・クラスの通信簿を見る）" loading="lazy" decoding="async">
+    <figcaption>提出しました・自動で提出するスイッチ</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/class_import_auto.webp" width="720" height="1565" alt="自動で提出したときの取り込み完了ダイアログ（クラス 2026年8月分を提出しました）" loading="lazy" decoding="async">
+    <figcaption>自動の提出の結果（取り込み完了ダイアログ）</figcaption>
+  </figure>
+</div>
 
 <h4 id="electricity-class-screen">クラスの画面（クラスの通信簿）</h4>
 <p>セグメントの「クラス」を選ぶと開きます。上から順に、切り替え・ハイライト・クラスの通信簿が並びます。</p>
@@ -3604,11 +3626,22 @@
   <li><strong>クラスの通信簿</strong>：8 つの科目の自分の数字と、位置（<strong>「上位◯%」「真ん中」「下位◯%」</strong>）が並びます。どの科目も<strong>数字の大きい順</strong>に数えます（電気代・消費量・買電量も、大きいほど「上位」です）</li>
   <li><strong>メダルとはんこ</strong>：上位 3% 以内は金のメダル、上位 4〜10% は朱のはんこが付きます</li>
   <li><strong>← →</strong>：月（期間が年なら年）を切り替えます。提出して集計に入った月（年）だけに移動します</li>
-  <li><strong>「◯月◯日の集計」と ↻</strong>：いつの集計かを表示します。↻ で最新の集計を読み込みます</li>
+  <li><strong>「2026/09/28の集計」のような日付と ↻</strong>：いつの集計かを表示します。↻ で最新の集計を読み込みます</li>
   <li>位置が出ないときは、行に理由が出ます：「まだ比べられる家が少ないです」／「延床を入力すると表示されます」「太陽光の容量を提出すると表示されます」など（行を押すと、その場で入力して提出済みの月と歴代ベストに付けて提出できます。表示されるのは明日からです）／「料金プラン未設定」</li>
-  <li>位置が 1 つも出ないときは、通信簿の代わりに<strong>「提出した家が集まってきています」</strong>のカードが出ます（いまの軒数の目安と、10 軒以上で表示されること）。「すべての家で見る」で比べる家を戻せます</li>
+  <li>位置が 1 つも出ないときは、ハイライトの代わりに<strong>「提出した家が集まってきています」</strong>のカードが出ます（いまの軒数の目安と、10 軒以上で表示されること）。「すべての家で見る」で比べる家を戻せます</li>
   <li>同じ断熱地域・同じ売電単価で比べられないときは、理由と、入力・提出・売電プランの設定への近道がカードで出ます。月の途中で売電プランが変わった月は、同じ売電単価の家とは比べられません（年で見ているときは「月ごとに見る」）</li>
 </ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/class_report_month.webp" width="720" height="1565" alt="クラスの画面（比べる家・ものさし・期間の切り替え、7月のあなたの一番 = 発電量 上位1%、クラスの通信簿のメダルとはんこ）" loading="lazy" decoding="async">
+    <figcaption>切り替え・ハイライト・クラスの通信簿</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/class_gathering.webp" width="720" height="1565" alt="同じ断熱地域で比べたときの「5 地域の家が集まってきています」のカード（軒数の目安・すべての家で見る）" loading="lazy" decoding="async">
+    <figcaption>提出した家が集まってきています</figcaption>
+  </figure>
+</div>
 
 <h5>期間：年</h5>
 <p>1 月からの合計で比べます（年の途中は「1〜◯月の合計」）。比べる相手は、その年の 1 月から同じ月までを<strong>すべて提出した家</strong>です。途中の月が抜けているときは「◯月分がまだ提出されていません」と出て、合計と位置は表示されません（「提出する」から抜けた月を提出できます）。</p>
@@ -3616,8 +3649,8 @@
 <h5>期間：歴代ベスト</h5>
 <p>自分の歴代ベスト（科目ごとの過去最高の 1 か月）が、提出した家の歴代ベストの中でどのあたりかを表示します。上位 10% 以内の科目には<strong>「殿堂入り」</strong>の札が付きます。記録を更新すると、翌日から歴代ベストに反映されます。同じ売電単価で比べるときは、記録の月の売電単価ごとに比べます。</p>
 
-<h5>くわしく（行をタップ）</h5>
-<p>通信簿の行（› が付いた行）をタップすると、その科目の「くわしく」が開きます。</p>
+<h5>科目の詳しい画面（行をタップ）</h5>
+<p>通信簿の行（› が付いた行）をタップすると、その科目の詳しい画面が下から開きます。</p>
 <ul>
   <li>比べた条件（期間・比べる家と軒数の目安・ものさし）と、自分の数字・位置</li>
   <li>「中央値」「下位25%の境目」「上位25%の境目」（10 軒以上のとき）</li>
@@ -3625,6 +3658,17 @@
   <li>自分の数字と中央値の推移のグラフ（歴代ベスト以外）</li>
   <li>注記：金額の科目は「金額は、料金プランの違いも含めて比べています」、自給率は「自給率は発電量 ÷ 消費量です。100%を超えることがあります」。どの科目も<strong>提出したときの数字</strong>で比べています（あとからマイページや料金プランを直しても、提出済みの数字は変わりません）</li>
 </ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/class_best.webp" width="720" height="1565" alt="期間：歴代ベスト（殿堂入りの札が付いた科目と、各科目の位置）" loading="lazy" decoding="async">
+    <figcaption>歴代ベスト（殿堂入り）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/class_detail.webp" width="720" height="1565" alt="自給率の詳しい画面（中央値・下位25%の境目・上位25%の境目、分布の図、月別推移）" loading="lazy" decoding="async">
+    <figcaption>科目の詳しい画面：中央値・分布・推移</figcaption>
+  </figure>
+</div>
 
 <h4 id="electricity-class-settings">提出の設定・今後の提出をやめる</h4>
 <p>クラスの画面のいちばん下に「提出の設定」があります。</p>
@@ -3638,6 +3682,17 @@
   <li><strong>提出した月</strong>：年ごとに、提出した月が並びます</li>
   <li><strong>家の情報</strong>：延床・太陽光の容量・断熱地域・売電単価のそれぞれを、次から提出するかどうかをスイッチで切り替えます。切り替えは次の提出から反映され、提出済みの月は変わりません。提出済みの月の値を直すときは、その行を押して入力し直してください（提出済みの月と歴代ベストに付けて提出し直します）</li>
 </ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/class_settings_tail.webp" width="720" height="1565" alt="クラスの画面のいちばん下の「提出の設定」（自動で提出するスイッチ・今後の提出をやめる・クラスのサポート用 ID）" loading="lazy" decoding="async">
+    <figcaption>クラスの画面の末尾：提出の設定</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/class_settings_sheet.webp" width="720" height="1565" alt="設定から開いた「でんき通信簿のクラス」（提出した月・自動で提出するスイッチ・家の情報のスイッチ）" loading="lazy" decoding="async">
+    <figcaption>設定 &gt; でんき通信簿のクラス</figcaption>
+  </figure>
+</div>
 <div class="callout info">
   <p>延床・太陽光の容量・断熱地域は、<a href="#mypage-edit">マイページ</a>の値をそのまま使います。マイページで直しても、その場では提出されず、次の提出から変更後の値になります。クラスに提出している間は、マイページの編集画面のこの 3 つの欄の下に「でんき通信簿のクラスにも提出しています。変更は次の提出から反映されます」と表示されます。</p>
 </div>
@@ -3646,13 +3701,13 @@
 <table>
   <thead><tr><th></th><th>内容</th></tr></thead>
   <tbody>
-    <tr><td>送るもの</td><td>提出する月ごとの発電量・売電量・消費量・買電量（kWh）と自給率 ／ 得した合計・電気代・売電収入（円・料金プランを設定している月だけ）／ 売電単価（1 円単位）／ 断熱地域・延床（坪の整数）・太陽光の容量（0.1kW 単位）／ 歴代ベスト（8 科目の値と年月・その月の売電単価）。あわせて、アプリが自動で作る識別子と提出の日時が送られます</td></tr>
+    <tr><td>送るもの</td><td>提出する月ごとの発電量・売電量・消費量・買電量（kWh）と自給率 ／ 得した合計・電気代・売電収入（円・料金プランを設定している月だけ）／ 売電単価（1 円単位）／ 断熱地域・延床（坪の整数）・太陽光の容量（0.1kW 単位）／ 歴代ベスト（8 科目の値と年月・その月の売電単価）。あわせて、アプリが自動で作る ID と提出の日時が送られます</td></tr>
     <tr><td>送らないもの</td><td>名前・ニックネーム・写真・住所・都道府県・メールアドレス ／ 料金プラン名・電力会社 ／ 1 日ごと・1 時間ごとの数字 ／ 図面・見積りなどの書類</td></tr>
   </tbody>
 </table>
 <ul>
   <li><strong>保存期間</strong>：提出した数字は、最後に提出してから約 1 年で自動的に消えます。保存期間が過ぎると、クラスの画面に「提出した数字の保存期間（1年）が過ぎました。もう一度まとめて提出しますか」と出ます</li>
-  <li><strong>すぐに消したいとき</strong>：<a href="#electricity-class-settings">クラスのサポート用 ID</a> を添えて <a href="#contact">お問い合わせ</a> ください（設定 &gt; ご意見・不具合の報告、または info@smartolio.jp）。アプリを入れ直す前に提出した数字は、今の ID では特定できません（最後の提出から約 1 年で自動的に消えます）</li>
+  <li><strong>すぐに消したいとき</strong>：<a href="#electricity-class-settings">クラスのサポート用 ID</a> を添えて <a href="#contact">お問い合わせ</a> ください（設定 &gt; ご意見・不具合の報告、または info@smartolio.jp）。アプリを入れ直す前に提出した数字は、今の ID では特定できないことがあります（最後の提出から約 1 年で自動的に消えます）</li>
 </ul>
 <p>くわしくは <a href="https://smartolio.jp/privacy/ichijo-unofficial-app/" target="_blank" rel="noopener">プライバシーポリシー</a> をご覧ください。</p>
 
@@ -3670,7 +3725,7 @@
   <div class="action-row"><strong>実績データ削除（右上メニュー）</strong><span>月次：当月／年次：当年／通算：年＋月ツリーピッカーで選択削除</span></div>
   <div class="action-row"><strong>「◯年◯月分をクラスに提出する」</strong><span>クラスへの提出の画面を開く（取り込み完了ダイアログ・月次のカード）</span></div>
   <div class="action-row"><strong>クラス：比べる家／ものさし／期間</strong><span>クラスの通信簿の比べ方を切替</span></div>
-  <div class="action-row"><strong>クラス：通信簿の行をタップ</strong><span>その科目の「くわしく」（中央値・分布・推移）を開く</span></div>
+  <div class="action-row"><strong>クラス：通信簿の行をタップ</strong><span>その科目の詳しい画面（中央値・分布・推移）を開く</span></div>
   <div class="action-row"><strong>クラス：↻</strong><span>最新の集計を読み込む</span></div>
   <div class="action-row"><strong>クラス：今後の提出をやめる</strong><span>確認のあと、今後の提出と自動の提出を止める</span></div>
 </div>
@@ -4621,7 +4676,7 @@
   <li><strong>「まだ比べられる家が少ないです」「提出した家が集まってきています」と出る</strong>：比べる家が 10 軒以上になると、上位・下位が表示されます。「同じ断熱地域」「同じ売電単価」で足りないときは、「すべての家」に切り替えてみてください</li>
   <li><strong>坪・kW あたりの数字が「—」になる</strong>：延床・太陽光の容量が入っていないか、提出しない設定になっています。行を押すと、その場で入力して提出できます → <a href="#electricity-class-screen">クラスの通信簿</a></li>
   <li><strong>同じ売電単価の家と比べられない</strong>：<a href="#electricity-plan">売電プラン</a>を設定してから提出してください。月の途中で売電プランが変わった月は、同じ売電単価の家とは比べられません</li>
-  <li><strong>「◯年◯月分をクラスに提出する」が出ない</strong>：その月のデータが月末までそろっていない、デモモード・開発者モードがオンになっている、のどちらかが考えられます。月次のカードは料金プランが未設定のあいだと、× で閉じたあとは出ません（取り込み完了ダイアログとクラスの画面からは提出できます）</li>
+  <li><strong>「◯年◯月分をクラスに提出する」が出ない</strong>：その月のデータが月末までそろっていない、デモモード・開発者モードがオンになっている、今後の提出をやめている、のどれかが考えられます。その月を提出済みのときは「◯年◯月分を提出しました」が出ます。自動で提出する設定のときは、取り込み完了ダイアログにはボタンではなく提出の結果が出ます。月次のカードは料金プランが未設定のあいだと、× で閉じたあとは出ません（取り込み完了ダイアログとクラスの画面からは提出できます）</li>
   <li><strong>「まだ提出できていません」と出る</strong>：通信できない状態でした。通信できるようになると、自動で提出されます</li>
   <li><strong>提出した数字を消したい</strong>：何もしなくても、最後の提出から約 1 年で自動的に消えます。すぐに消したいときは、クラスの画面の下（または 設定 &gt; データ管理 &gt; でんき通信簿のクラス）に表示される「クラスのサポート用 ID」を添えて <a href="#contact">お問い合わせ</a> ください → <a href="#electricity-class-data">送る数字と保存期間</a></li>
 </ul>
