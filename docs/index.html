@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ICHIJO施主手帳【非公式】- 一条工務店の施主のための家づくり・暮らしサポートアプリ</title>
-<meta name="description" content="一条工務店の施主のための非公式アプリ。図面チェック（CAD差分）・見積り比較・仕様書チェックから、でんき通信簿・お手入れ当番表まで。家づくりも入居後の暮らしもサポート。データはすべて端末内保存で安心。">
+<meta name="description" content="一条工務店の施主のための非公式アプリ。図面チェック（CAD差分）・見積り比較・仕様書チェックから、でんき通信簿・お手入れ当番表まで。家づくりも入居後の暮らしもサポート。図面・見積りのデータは端末内保存で安心。">
 <link rel="canonical" href="https://ichijo-unofficial.smartolio.jp/">
 <meta name="theme-color" content="#2F6EA5">
 <meta name="apple-itunes-app" content="app-id=6761674540">
@@ -43,7 +43,7 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {"@type": "Question", "name": "私の図面や見積りのデータは誰かに見られませんか？", "acceptedAnswer": {"@type": "Answer", "text": "見られません。取り込んだデータはすべてお使いのスマホの中だけに保管され、インターネットを通じてどこかに送られることはありません。アプリの開発者にも中身は一切見えない仕組みです。お手入れ当番表の「家族と共有」を使う場合は、当番表のデータなど共有と通知に必要な情報が同期のためにサーバーへ送られます。"}},
+    {"@type": "Question", "name": "私の図面や見積りのデータは誰かに見られませんか？", "acceptedAnswer": {"@type": "Answer", "text": "見られません。取り込んだ図面や見積りは、すべてお使いのスマホの中だけに保管され、インターネットを通じてどこかに送られることはありません。アプリの開発者にも中身は一切見えない仕組みです。お手入れ当番表の「家族と共有」を使う場合は、当番表のデータなど共有と通知に必要な情報が同期のためにサーバーへ送られます。でんき通信簿の「クラス」に提出を選んだ場合は、月ごとの電気の数字と家の条件（断熱地域・延床面積など）が送られます（図面や見積りは送られません）。"}},
     {"@type": "Question", "name": "アカウント登録やログインは必要ですか？", "acceptedAnswer": {"@type": "Answer", "text": "不要です。インストールしたらすぐに使えます。メールアドレスなどの個人情報の入力も一切ありません。"}},
     {"@type": "Question", "name": "PDFはどうやって取り込みますか？", "acceptedAnswer": {"@type": "Answer", "text": "一条公式アプリ（iサポ）でダウンロードしたPDFを「共有」からこのアプリに送るだけです。クラウドやスマホ内に保存してある場合は、まとめて一気に取り込むこともできます。"}},
     {"@type": "Question", "name": "一条公式アプリ「iサポ」と何が違うのですか？", "acceptedAnswer": {"@type": "Answer", "text": "iサポは一条工務店の公式アプリです。このアプリは、iサポで受け取った図面や見積りのPDFを取り込んで「前回からどこが変わったか」を確認したり、見積りの増減を追ったりするための、施主が個人で作った非公式のツールです。"}},
@@ -69,6 +69,7 @@
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
   section[id]{scroll-margin-top:64px}
+  .release-card[id]{scroll-margin-top:64px}
   body{
     font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
     color:var(--ink);background:var(--bg);line-height:1.7;
@@ -662,6 +663,7 @@
         <h3>太陽光、本当に元が取れてる？</h3>
         <ul>
           <li>売電・自家消費・蓄電池の効果を月ごとに見える化</li>
+          <li>月の数字を提出して、提出した家の中での位置を「クラス」で確かめる</li>
           <li>フィルター交換などのお手入れを消し込み、通知でお知らせ</li>
           <li>我が家のスペックをマイページにまとめてシェア</li>
         </ul>
@@ -832,6 +834,7 @@
           <li>北海道電力から九州電力まで、主要な電力プランを内蔵</li>
           <li>「あと何年で元が取れるか」を予測グラフで可視化</li>
           <li>最高発電の日、最低電気代の月など、記念すべき記録を自動で残します</li>
+          <li>「クラス」：月の数字を提出すると、発電量や電気代などが提出した家の中で上位何%かが分かります</li>
         </ul>
         <p class="f-more"><a href="manual.html#electricity">使い方を見る →</a></p>
       </div>
@@ -880,7 +883,7 @@
       <div class="subfeature-card">
         <span class="sf-icon">📱</span>
         <h3>ホームウィジェット</h3>
-        <p>カウントダウンや新居生活カウンターを端末のホーム画面に。iOS / Android 両対応。</p>
+        <p>カウントダウンや新居生活カウンター、お手入れ当番表の今すぐ・もうすぐのお手入れを端末のホーム画面に。iOS / Android 両対応。</p>
         <a href="manual.html#widget">使い方を見る →</a>
       </div>
       <div class="subfeature-card">
@@ -976,7 +979,7 @@
 
       <details class="faq-item">
         <summary>Q. 私の図面や見積りのデータは誰かに見られませんか？</summary>
-        <p class="faq-a">見られません。取り込んだデータはすべてお使いのスマホの中だけに保管され、インターネットを通じてどこかに送られることはありません。アプリの開発者にも中身は一切見えない仕組みです。お手入れ当番表の「家族と共有」を使う場合は、当番表のデータなど共有と通知に必要な情報が同期のためにサーバーへ送られます。</p>
+        <p class="faq-a">見られません。取り込んだ図面や見積りは、すべてお使いのスマホの中だけに保管され、インターネットを通じてどこかに送られることはありません。アプリの開発者にも中身は一切見えない仕組みです。お手入れ当番表の「家族と共有」を使う場合は、当番表のデータなど共有と通知に必要な情報が同期のためにサーバーへ送られます。でんき通信簿の「クラス」に提出を選んだ場合は、月ごとの電気の数字と家の条件（断熱地域・延床面積など）が送られます（図面や見積りは送られません）。</p>
       </details>
 
       <details class="faq-item">
@@ -1021,7 +1024,7 @@
 
       <details class="faq-item">
         <summary>Q. 電波の届かない場所でも使えますか？</summary>
-        <p class="faq-a">はい。図面や見積りの閲覧・比較など、ほとんどの機能はスマホの中だけで動くので、電波のない場所でもお使いいただけます。お手入れ当番表の「家族と共有」の同期や購入など、一部の機能は通信が必要です。</p>
+        <p class="faq-a">はい。図面や見積りの閲覧・比較など、ほとんどの機能はスマホの中だけで動くので、電波のない場所でもお使いいただけます。お手入れ当番表の「家族と共有」の同期、でんき通信簿の「クラス」、購入など、一部の機能は通信が必要です。</p>
       </details>
 
       <details class="faq-item">
@@ -1036,7 +1039,7 @@
 
       <details class="faq-item">
         <summary>Q. iPadでも使えますか？</summary>
-        <p class="faq-a">現在はiPhone・Androidスマートフォン向けに最適化しています。iPadでも動作しますが、画面レイアウトはスマートフォン向けです。</p>
+        <p class="faq-a">現在はiPhone・Androidスマートフォン向けに最適化しています。iPadでも動作しますが、画面レイアウトはスマートフォン向けです。お手入れ当番表のホームウィジェットは、iPad の大きなサイズにも対応しています。</p>
       </details>
 
     </div>
@@ -1078,17 +1081,26 @@
   <div class="section-inner">
     <h2 class="section-title">What's New</h2>
     <div style="max-width:720px;margin:0 auto">
-      <div class="release-card">
-        <h3>v1.14.0 — 図面チェック「その他」/ 図面番号の入れ替え <span class="tag-new">NEW</span></h3>
+      <div class="release-card" id="v1-15-0">
+        <h3>v1.15.0 — でんき通信簿「クラス」/ お手入れ当番表のウィジェット <span class="tag-new">NEW</span></h3>
+        <ul>
+          <li><strong>でんき通信簿: 「クラス」</strong> — 月の数字をクラスに提出すると、発電量や電気代などが、提出した家の中で上位何%かが「クラスの通信簿」で分かります。比較対象は、すべての家・同じ断熱地域・同じ売電単価から選べます。坪・kW あたりの数字や、月・年・歴代ベストでも見られます。提出するかどうかは自分で選べて、提出する前に送る数字を画面で確かめられます → <a href="manual.html#electricity-class">くわしくはこちら</a></li>
+          <li><strong>お手入れ当番表: ホームウィジェット</strong> — 今すぐ・もうすぐのお手入れと、残りわずかの消耗品を、端末のホーム画面に表示できます。スマホのほか、iPad や Android タブレットの大きなサイズにも対応しています。タップするとお手入れ当番表が開きます → <a href="manual.html#widget-maintenance">くわしくはこちら</a></li>
+          <li><strong>お手入れ当番表: 「在庫わずか」の数え方</strong> — ダッシュボードの「在庫わずか」を、残りわずかになった消耗品の数で数えるようにしました（同じ消耗品を複数のお手入れで使っていても 1 つと数えます）</li>
+          <li><strong>でんき通信簿: 「買電ゼロ日数」の数え方</strong> — 1 時間あたり 0.01 kWh 以下のわずかな買電は数えないようにしました</li>
+        </ul>
+      </div>
+      <details class="release-history">
+        <summary>過去のリリースを表示…</summary>
+      <div class="release-card" id="v1-14-0">
+        <h3>v1.14.0 — 図面チェック「その他」/ 図面番号の入れ替え</h3>
         <ul>
           <li><strong>図面チェック: 「その他」</strong> — CAD 図面と電気図面に加えて、照明仕様書やカラーパースなどの書類も、新旧 2 つの版を比較できます</li>
           <li><strong>無料版での図面番号の入れ替え</strong> — 11月1日から、無料版では新しい図面番号を保存するときに、古い図面番号との入れ替えが必要になります（保存している図面番号が 3 件より少ないうちは、入れ替えなしで保存できます）。プレミアムでは、これまでどおり件数の制限なく保存できます。10月31日までは、これまでどおり件数の制限なく取り込めます。保存済みの図面番号とデータが消えることはなく、3 件より多く保存している方も減らす必要はありません → <a href="drawing-limit.html">くわしくはこちら</a></li>
           <li><strong>その他の不具合修正など</strong></li>
         </ul>
       </div>
-      <details class="release-history">
-        <summary>過去のリリースを表示…</summary>
-      <div class="release-card">
+      <div class="release-card" id="v1-13-0">
         <h3>v1.13.0 — 図面のコメント表示 / 打ち合わせ資料</h3>
         <ul>
           <li><strong>図面チェック: 描画を新しくしました</strong> — 図面に書き込まれたコメントがそのまま表示されるようになり、iPhone と Android で同じ結果が出るようになりました<br><span style="font-size:.8em;color:#999">※ 更新後にはじめて比較履歴を開くときは、描き直すため時間がかかります（それぞれ最初の1回だけです）</span></li>
@@ -1097,7 +1109,7 @@
           <li><strong>お知らせ</strong> — 更新内容や変更のお知らせを、ホーム画面のカードでお伝えするようになりました。閉じたあとも設定の「お知らせ」から読み返せます</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-12-0">
         <h3>v1.12.0 — お手入れ当番表「家族と共有」追加</h3>
         <ul>
           <li><strong>お手入れ当番表: 家族と共有</strong> — お手入れ当番表のデータ（項目・部屋・消耗品と在庫・実施の記録・担当）を、家族やパートナーなど一緒に住まいをお手入れする人と同じ画面で使えるようになりました。QR コードか招待コードで招待し、承認された端末どうしで自動的に同期されます（参加は6人までが目安）。共有をはじめる人だけプレミアムが必要で、招待された人は無料のまま参加できます
@@ -1110,7 +1122,7 @@
           <li><strong>不具合の修正</strong> — タブレット（iPad など）で図面チェックの画面を横向きにすると表示が消える問題を修正しました</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-11-0">
         <h3>v1.11.0 — ページの組み合わせ / 位置合わせ手順ガイド</h3>
         <ul>
           <li><strong>図面チェック: ページの組み合わせ</strong> — 旧版と新版でどのページ同士を比べるかを自由に変更できるようになりました。版の途中でページが増えた・減ったときもズレずに比較できます。ページ数が違うときは案内が表示され、そこから直接直せます</li>
@@ -1119,7 +1131,7 @@
           <li><strong>ご利用条件の変更（iOS）</strong> — ご利用には iOS 15.0 以降が必要になりました</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-10-0">
         <h3>v1.10.0 — 縮尺入力でサイズ合わせ / でんき通信簿シェア画像</h3>
         <ul>
           <li><strong>図面チェック: 縮尺入力でサイズ合わせ</strong> — 図面に記載の縮尺を入力するだけで2枚の図面のサイズが揃うようになりました（従来の2点計測も引き続き使えます・動作も軽量化）</li>
@@ -1128,7 +1140,7 @@
           <li><strong>使いやすさの改善</strong> — PDF閲覧のメモボタンにラベルを追加、未入力画面の案内を強化、仕様書チェックの「設定外工事」の読み取り修正など</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-9-0">
         <h3>v1.9.0 — はじめての設定を選べるように / 安定性の強化</h3>
         <ul>
           <li><strong>はじめての設定でモードを選択</strong> — 最初の設定で「家づくり中」「入居後」を選ぶと、状況に合った画面でスタートできるようになりました</li>
@@ -1136,14 +1148,14 @@
           <li><strong>安全性の強化</strong> — バックアップ・復元やデータの取り込みを、より安全に行えるよう内部処理を改善しました</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-8-0">
         <h3>v1.8.0 — お手入れ当番表 追加</h3>
         <ul>
           <li><strong>お手入れ当番表を新設</strong> — 換気フィルターやレンジフードなど、忘れがちな定期お手入れをワンタップで消し込み管理。プリセット42項目（周期は自由に変更可）・部屋ごと表示・消耗品の在庫管理（実施で自動消費）・通知リマインド（毎日くり返し/1回だけ/オフ）に対応</li>
           <li><strong>図面チェック: 位置合わせの操作性改善</strong> — スライダーと±ボタンの間隔を調整し、誤タップしにくくしました</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-7-0">
         <h3>v1.7.0 — プレミアム（広告なし）/ でんき通信簿拡張</h3>
         <ul>
           <li><strong>プレミアム（広告なし）</strong> — 買い切りで広告バナーを非表示にできます</li>
@@ -1153,21 +1165,21 @@
           <li><strong>PDFビューア: 他のアプリで開く</strong> — 共有メニュー経由で Adobe Reader 等の外部アプリで PDF を開けます</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-6-0">
         <h3>v1.6.0 — 英語表示に対応</h3>
         <ul>
           <li><strong>英語表示に対応</strong> — 設定 → 「言語」 で日本語/英語を切り替えられます</li>
           <li><strong>端末言語の自動反映</strong> — 端末の言語設定 (OS locale) を初回起動時に自動反映</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-5-0">
         <h3>v1.5.0 — CAD 図面 サイズ合わせ 追加</h3>
         <ul>
           <li><strong>「サイズ合わせ」機能を新設</strong> — 版によって図面の大きさが違う場合でも、旧版・新版それぞれの「点線（グリッド線）が交わる場所」に①②の目印を置くだけで自動で揃えて差分検出できるようになりました</li>
           <li><strong>図面チェック画面の「位置調整」ボタンを「調整 ▾」メニューに統合</strong> — 位置合わせ / サイズ合わせ を場面に応じて選べる構成に</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-4-0">
         <h3>v1.4.0 — マイページ拡充 / でんき通信簿 UX 改善</h3>
         <ul>
           <li><strong>マイページに項目追加</strong> — 車（V2H 対応含む）、住宅性能値（C値・UA値・ηAC・ηAH・耐震等級・断熱等級）、全館空調オプションをプロフィールに追加</li>
@@ -1176,7 +1188,7 @@
           <li><strong>でんき通信簿: 0 円表示時のヒント</strong> — 計算結果が 0 円になっている月にプラン開始日や取り込みデータの確認、再計算メニューへの案内を表示</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-3-0">
         <h3>v1.3.0 — マイページ機能 追加</h3>
         <ul>
           <li><strong>マイページ機能を新設</strong> — プロフィール（商品プラン / 居住地域 / 階数 / 坪数 / 設備 / 家族構成 / 画像）登録 + ホームバナーカスタマイズ + マイホームカード画面（家づくりの歩み・でんき実績の派生統計）。SNS等の家づくりアカウントでの自己紹介にご利用いただけます<br><span style="font-size:.8em;color:#999">※ 登録情報はスマホ内のみで管理されます。機種変更時はバックアップ／復元機能をご利用ください</span></li>
@@ -1186,7 +1198,7 @@
           <li><strong>iOS 共有シート経由 PDF 取込の修正</strong> — ファイルが「ファイル」アプリのフォルダに残ってしまう問題を修正</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-2-0">
         <h3>v1.2.0 — でんき通信簿 追加</h3>
         <ul>
           <li><strong>でんき通信簿</strong> — 太陽光・蓄電池の"得した合計"を、iサポのCSVを取り込むだけで見える化</li>
@@ -1198,7 +1210,7 @@
         <h3>🍎 iOS App Store 公開</h3>
         <p>App Store で正式公開しました。Android / iOS 両対応になりました。</p>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-1-0">
         <h3>v1.1.0</h3>
         <ul>
           <li><strong>ノイズ除去フィルタ</strong> — 図面チェックに4段階のフィルタを追加。細かなズレを除去して大きな変更点だけを見やすく表示します</li>
@@ -1206,7 +1218,7 @@
           <li><strong>見積りPDFの日付認識を修正</strong></li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v1-0-0">
         <h3>v1.0.0 — Google Play ストア公開</h3>
         <p>Google Play ストアで正式公開。3つの新機能を追加しました。</p>
         <ul>
@@ -1215,7 +1227,7 @@
           <li><strong>ホームウィジェット</strong> — 端末のホーム画面にカウントダウンを表示</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v0-2-1">
         <h3>v0.2.1</h3>
         <ul>
           <li><strong>メモバッジ</strong> — メモが紐づいている項目に件数バッジを表示</li>
@@ -1223,7 +1235,7 @@
           <li><strong>単独図面解析</strong> — 図面チェックに単独表示モードを追加</li>
         </ul>
       </div>
-      <div class="release-card">
+      <div class="release-card" id="v0-2-0">
         <h3>v0.2.0 — 仕様書チェック</h3>
         <ul>
           <li>設備仕様書PDFを自動パース — 8セクションに構造化</li>
@@ -1374,6 +1386,21 @@
     dlVisible = es[0].isIntersecting;
     update();
   }, {threshold: 0.15}).observe(dl);
+})();
+(function(){
+  function reveal(){
+    var id = location.hash.slice(1);
+    if(!/^v\d+-\d+-\d+$/.test(id)) return;
+    var el = document.getElementById(id);
+    if(!el) return;
+    var d = el.closest('details');
+    if(d && !d.open){
+      d.open = true;
+      el.scrollIntoView();
+    }
+  }
+  reveal();
+  window.addEventListener('hashchange', reveal);
 })();
 </script>
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "73d5f13377704e23a17468d3ed2185f7"}'></script><!-- End Cloudflare Web Analytics -->
