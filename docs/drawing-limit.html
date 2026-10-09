@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>無料版の図面番号の入れ替えについて - ICHIJO施主手帳【非公式】</title>
-<meta name="description" content="ICHIJO施主手帳【非公式】の無料版で、11月1日から必要になる図面番号の入れ替えについて、変わること・変わらないこと、件数の数え方、入れ替えのしかた、よくある質問をまとめています。">
+<title>無料版の図面番号の入れ替えについて - 施主手帳（旧名：ICHIJO施主手帳）</title>
+<meta name="description" content="施主手帳（旧名：ICHIJO施主手帳）の無料版で、11月1日から必要になる図面番号の入れ替えについて、変わること・変わらないこと、件数の数え方、入れ替えのしかた、よくある質問をまとめています。">
 <link rel="canonical" href="https://ichijo-unofficial.smartolio.jp/drawing-limit.html">
 <meta name="theme-color" content="#2F6EA5">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
@@ -13,8 +13,8 @@
 <!-- OGP -->
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ichijo-unofficial.smartolio.jp/drawing-limit.html">
-<meta property="og:site_name" content="ICHIJO施主手帳【非公式】">
-<meta property="og:title" content="無料版の図面番号の入れ替えについて - ICHIJO施主手帳【非公式】">
+<meta property="og:site_name" content="施主手帳">
+<meta property="og:title" content="無料版の図面番号の入れ替えについて - 施主手帳（旧名：ICHIJO施主手帳）">
 <meta property="og:description" content="今ある図面番号とデータは消えません。無料版で11月1日から必要になる図面番号の入れ替えについて、変わること・変わらないこと、件数の数え方、入れ替えのしかたをまとめています。">
 <meta property="og:image" content="https://ichijo-unofficial.smartolio.jp/images/ogp_drawing_limit.jpg">
 <meta property="og:image:width" content="1200">
@@ -64,6 +64,7 @@
     display:flex;align-items:center;gap:8px;white-space:nowrap;
   }
   .header-logo img{width:26px;height:26px;border-radius:6px}
+  .header-logo .old-name{font-size:.75rem;font-weight:500;color:#888}
   .header-nav a{margin-left:18px;font-size:.875rem;color:#555}
   .header-nav a:hover{color:var(--brand);text-decoration:none}
   .hamburger{
@@ -194,6 +195,7 @@
     .hamburger{display:block}
   }
   @media(max-width:600px){
+    .header-logo .old-name{display:none}
     .dl-hero{padding:96px 16px 40px}
     .dl-hero h1{font-size:1.45rem}
     section{padding:48px 16px}
@@ -211,7 +213,7 @@
   <div class="header-inner">
     <a class="header-logo" href="index.html">
       <img src="images/favicon-32.png" alt="" width="32" height="32">
-      ICHIJO施主手帳
+      施主手帳<small class="old-name">（旧名：ICHIJO施主手帳）</small>
     </a>
     <nav class="header-nav">
       <a href="#summary">まとめ</a>
@@ -494,7 +496,7 @@
 <!-- Footer -->
 <footer>
   <p>&copy; 2026 masa_iot. All rights reserved.</p>
-  <p class="disclaimer-footer">「ICHIJO施主手帳」は一条工務店の公式アプリではありません。一条工務店とは一切の関係がありません。</p>
+  <p class="disclaimer-footer">「施主手帳（旧名：ICHIJO施主手帳）」は一条工務店の公式アプリではありません。一条工務店とは一切の関係がありません。</p>
 </footer>
 
 <!-- Cloudflare Web Analytics --><script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "73d5f13377704e23a17468d3ed2185f7"}'></script><!-- End Cloudflare Web Analytics -->

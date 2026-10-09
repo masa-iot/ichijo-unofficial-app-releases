@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ICHIJO施主手帳【非公式】ユーザーマニュアル</title>
-<meta name="description" content="ICHIJO施主手帳【非公式】のユーザーマニュアル。各画面と操作をスクリーンショット付きで紹介します。">
+<title>施主手帳（旧名：ICHIJO施主手帳） ユーザーマニュアル</title>
+<meta name="description" content="施主手帳（旧名：ICHIJO施主手帳）のユーザーマニュアル。各画面と操作をスクリーンショット付きで紹介します。">
 <link rel="canonical" href="https://ichijo-unofficial.smartolio.jp/manual.html">
 <meta name="apple-itunes-app" content="app-id=6761674540">
 <meta name="theme-color" content="#2F6EA5" media="(prefers-color-scheme: light)">
@@ -15,8 +15,8 @@
 <!-- OGP -->
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://ichijo-unofficial.smartolio.jp/manual.html">
-<meta property="og:site_name" content="ICHIJO施主手帳【非公式】">
-<meta property="og:title" content="ICHIJO施主手帳【非公式】ユーザーマニュアル">
+<meta property="og:site_name" content="施主手帳">
+<meta property="og:title" content="施主手帳（旧名：ICHIJO施主手帳） ユーザーマニュアル">
 <meta property="og:description" content="各画面と操作をスクリーンショット付きで紹介するユーザーマニュアル。">
 <meta property="og:image" content="https://ichijo-unofficial.smartolio.jp/images/ogp_v2.jpg">
 <meta property="og:image:width" content="1200">
@@ -658,7 +658,7 @@
   <div class="header-inner">
     <div class="header-logo">
       <button class="hamburger" onclick="(function(b){var s=document.querySelector('.sidebar');s.classList.toggle('open');b.setAttribute('aria-expanded',s.classList.contains('open'));})(this)" aria-label="目次" aria-controls="sidebar-nav" aria-expanded="false">☰</button>
-      <span>ICHIJO施主手帳【非公式】ユーザーマニュアル</span>
+      <span>施主手帳 ユーザーマニュアル</span>
       <a href="index.html" class="home-link">← LPへ戻る</a>
     </div>
     <div class="search-box" role="search">
@@ -804,9 +804,6 @@
     <li class="sub2"><a href="#schedule-display-option">新居生活カウンター表示</a></li>
     <li class="sub"><a href="#schedule-meeting">打ち合わせ第N回</a></li>
     <li class="sub"><a href="#schedule-actions">操作リファレンス</a></li>
-    <li><a href="#widget">ホームウィジェット</a></li>
-    <li class="sub"><a href="#widget-add">追加手順（iOS / Android）</a></li>
-    <li class="sub"><a href="#widget-patterns">表示パターン</a></li>
   </ul>
 
   <h4>でんき通信簿</h4>
@@ -828,6 +825,11 @@
     <li class="sub2"><a href="#electricity-annual">年間レポート</a></li>
     <li class="sub2"><a href="#electricity-best">通算（マイベスト）</a></li>
     <li class="sub"><a href="#electricity-share">シェア画像</a></li>
+    <li class="sub"><a href="#electricity-class">クラス</a></li>
+    <li class="sub2"><a href="#electricity-class-submit">はじめ方</a></li>
+    <li class="sub2"><a href="#electricity-class-screen">クラスの通信簿の見方</a></li>
+    <li class="sub2"><a href="#electricity-class-settings">提出の設定とやめ方</a></li>
+    <li class="sub2"><a href="#electricity-class-data">送る数字と保存期間</a></li>
     <li class="sub"><a href="#electricity-actions">操作リファレンス</a></li>
   </ul>
 
@@ -845,6 +847,17 @@
     <li class="sub"><a href="#maintenance-family">家族と共有</a></li>
     <li class="sub"><a href="#maintenance-family-device-change">機種変更のとき</a></li>
     <li class="sub"><a href="#maintenance-actions">操作リファレンス</a></li>
+  </ul>
+
+  <h4>ホームウィジェット</h4>
+  <ul>
+    <li><a href="#widget">ホームウィジェット</a></li>
+    <li class="sub"><a href="#widget-countdown">カウントダウン</a></li>
+    <li class="sub2"><a href="#widget-add">置き方</a></li>
+    <li class="sub2"><a href="#widget-patterns">表示パターン</a></li>
+    <li class="sub"><a href="#widget-maintenance">お手入れ当番表</a></li>
+    <li class="sub2"><a href="#widget-maintenance-add">置き方</a></li>
+    <li class="sub2"><a href="#widget-maintenance-sizes">大きさごとの表示</a></li>
   </ul>
 
   <h4>マイページ</h4>
@@ -876,6 +889,7 @@
     <li class="sub"><a href="#settings-premium">プレミアム</a></li>
     <li class="sub"><a href="#settings-backup">バックアップ</a></li>
     <li class="sub"><a href="#settings-rebuild">データ管理</a></li>
+    <li class="sub"><a href="#settings-class">でんき通信簿のクラス</a></li>
     <li class="sub"><a href="#settings-family">家族と共有</a></li>
     <li class="sub"><a href="#settings-mode">モード切替</a></li>
     <li class="sub"><a href="#settings-display">表示</a></li>
@@ -898,10 +912,10 @@
 
 <main>
 
-<p class="breadcrumb"><a href="index.html">ICHIJO施主手帳</a> › ユーザーマニュアル</p>
+<p class="breadcrumb"><a href="index.html">施主手帳</a> › ユーザーマニュアル</p>
 
 <div class="intro">
-  <h1>ICHIJO施主手帳【非公式】 ユーザーマニュアル</h1>
+  <h1>施主手帳 ユーザーマニュアル</h1>
   <p>各画面と主な操作を、スクリーンショットと一緒に紹介します。目次（左メニュー、スマホは☰）から気になる項目へジャンプしてください。画像をタップすると拡大表示されます。</p>
 </div>
 
@@ -927,7 +941,7 @@
 <h2 id="getting-started">はじめに</h2>
 
 <h3 id="overview">このアプリについて</h3>
-<p><strong>ICHIJO施主手帳（非公式）</strong>は、一条工務店の施主が自分の打ち合わせを効率化するために作った非公式アプリです。一条公式「iサポ」で届くPDFを取り込むだけで、以下のことが片手でできます。打ち合わせ中はもちろん、入居後にも便利な機能（でんき通信簿・お手入れ当番表・新居生活カウンター等）を順次拡充中です。</p>
+<p><strong>施主手帳</strong>（旧名：ICHIJO施主手帳）は、一条工務店の施主が自分の打ち合わせを効率化するために作った非公式アプリです。一条公式「iサポ」で届くPDFを取り込むだけで、以下のことが片手でできます。打ち合わせ中はもちろん、入居後にも便利な機能（でんき通信簿・お手入れ当番表・新居生活カウンター等）を順次拡充中です。</p>
 <ul>
   <li><strong>ドキュメント管理</strong>：図面番号ベースでグループ化</li>
   <li><strong>図面チェック</strong>：CAD・電気図面のピクセル差分を色分け表示（照明仕様書やカラーパースなどの書類も比べられます）</li>
@@ -936,14 +950,14 @@
   <li><strong>ウチメモ+</strong>：画面上の位置にピン留めしてメモ</li>
   <li><strong>ブックマーク</strong>：よく見る画面にワンタップアクセス</li>
   <li><strong>スケジュール</strong>：家づくり工程のタイムライン＆カウントダウン</li>
-  <li><strong>ホームウィジェット</strong>：端末ホーム画面にカウントダウン表示</li>
-  <li><strong>でんき通信簿</strong>（入居後）：太陽光・蓄電池の経済効果を可視化</li>
+  <li><strong>ホームウィジェット</strong>：端末ホーム画面にカウントダウンや、お手入れ当番表の今すぐ・もうすぐのお手入れを表示</li>
+  <li><strong>でんき通信簿</strong>（入居後）：太陽光・蓄電池の経済効果を可視化。月の数字を提出すると、提出した家の中での位置が分かる「クラス」も</li>
   <li><strong>お手入れ当番表</strong>（入居後）：定期お手入れの消し込み管理・消耗品在庫・通知</li>
   <li><strong>便利ツール</strong>：湿度計算、外部リンク集など</li>
 </ul>
 
 <div class="callout info">
-  <p>🔒 <strong>図面・見積りなどのデータは端末内のみ</strong>に保管され、クラウドや開発者に送信されることはありません。お手入れ当番表の「<a href="#maintenance-family">家族と共有</a>」を使うときは、当番表のデータや表示名など、共有と通知に必要な情報が同期のためにサーバーへ送られます。アカウント登録は不要です。</p>
+  <p>🔒 <strong>図面・見積りなどのデータは端末内のみ</strong>に保管され、クラウドや開発者に送信されることはありません。お手入れ当番表の「<a href="#maintenance-family">家族と共有</a>」を使うときは、当番表のデータや表示名など、共有と通知に必要な情報が同期のためにサーバーへ送られます。でんき通信簿の「<a href="#electricity-class">クラス</a>」に提出するときは、提出する月の電気の数字と家の条件（断熱地域・延床など）がサーバーへ送られます。アカウント登録は不要です。</p>
 </div>
 
 <h3 id="install">インストール</h3>
@@ -982,7 +996,7 @@
   <li><strong>図面をチェック</strong>：CAD差分の赤青色分けと位置合わせの紹介</li>
   <li><strong>見積り・仕様書を比較</strong>：推移表と2版比較の紹介</li>
   <li><strong>メモを残す</strong>：画面に直接ピン留めするウチメモ+の紹介</li>
-  <li><strong>はじめましょう</strong>：書類データは端末内のみで扱い、「家族と共有」をはじめた場合のみ、当番表や表示名など共有と通知に必要な情報が同期される、という説明</li>
+  <li><strong>はじめましょう</strong>：書類データや家の情報、電気の記録は端末内に保存され、外部に送信されないこと。ただし、でんき通信簿の「クラス」に提出した数字は送信され、「家族と共有」をはじめた場合のみ、当番表や表示名など共有と通知に必要な情報が同期される、という説明</li>
 </ol>
 <p><strong>「入居後」を選んだとき</strong>（4ページ）：電気のお得が一目でわかる／お手入れを忘れない／予定や記念日を見逃さない／はじめましょう</p>
 
@@ -1178,7 +1192,7 @@
 <p>このアプリで最初にやるのは <strong>PDF の取り込み</strong>。取り込み方法には大きく 2 パターンあります。</p>
 <ul>
   <li><strong>アプリから取りに行く</strong>：ホームの「PDF 取り込み」タイル → 端末内やクラウド（iCloud Drive / Google Drive / Dropbox 等）から PDF を選ぶ</li>
-  <li><strong>外から送り込む</strong>：iサポや Files、Safari、PDF ビューアなど<strong>他のアプリから</strong>共有メニューや「このアプリで開く」で ICHIJO 施主手帳を選ぶ</li>
+  <li><strong>外から送り込む</strong>：iサポや Files、Safari、PDF ビューアなど<strong>他のアプリから</strong>共有メニューや「このアプリで開く」で 施主手帳を選ぶ</li>
 </ul>
 <p>どちらのルートでも、取り込むと自動で図面番号・種別を検出し、取り込み日時とあわせてドキュメントに整理します。</p>
 
@@ -1217,7 +1231,7 @@
   </figure>
 </div>
 
-<h3 id="import-from-outside">外から送り込む（他アプリ → ICHIJO 施主手帳）</h3>
+<h3 id="import-from-outside">外から送り込む（他アプリ → 施主手帳）</h3>
 <p>iサポ、Files、Safari、各種 PDF ビューアなど、<strong>他のアプリで PDF を開いている状態から</strong>本アプリに送り込むルート。1 枚をその場ですぐ取り込みたいときに便利。</p>
 
 <div class="callout tip">
@@ -1228,14 +1242,14 @@
 <ol class="steps">
   <li><strong>PDFを開く</strong><p>iサポや Files、Safari、お使いの PDF ビューアなどで取り込みたい PDF を開きます。</p></li>
   <li><strong>共有メニューを開く</strong><p>画面上部または下部の共有ボタン（四角に上向き矢印のアイコン）をタップして、共有先を選ぶメニューを呼び出します。</p></li>
-  <li><strong>「ICHIJO 施主手帳」を選択</strong><p>アプリ一覧から本アプリをタップ。</p></li>
+  <li><strong>「施主手帳」（アップデート前は「ICHIJO施主手帳【非公式】」）を選択</strong><p>アプリ一覧から本アプリをタップ。</p></li>
   <li><strong>自動取り込み完了</strong><p>アプリが起動（もしくはフォアグラウンドに戻り）、取り込みが自動で始まります。</p></li>
 </ol>
 
 <div class="shot-grid">
   <figure class="shot-phone">
     <img src="images/import_share_step2.webp" width="720" height="1564" alt="共有メニューからアプリ選択" loading="lazy" decoding="async">
-    <figcaption>共有メニューから ICHIJO 施主手帳 を選択</figcaption>
+    <figcaption>共有メニューから 施主手帳 を選択</figcaption>
   </figure>
   <figure class="shot-phone">
     <img src="images/import_preview_list.webp" width="720" height="1564" alt="送り込んだPDFが取り込み画面のプレビューリストに表示" loading="lazy" decoding="async">
@@ -1244,15 +1258,15 @@
 </div>
 
 <h4>「このアプリで開く」経由</h4>
-<p>Files アプリなどで PDF を長押しするか、「どのアプリで開きますか？」リストが出た場合に、本アプリを選ぶルートです。ワンタップで取り込みが走ります。Android では iサポ アプリ内の PDF をタップするとそのまま「アプリで開く」シートが立ち上がり、ICHIJO 施主手帳【非公式】を選べます。</p>
+<p>Files アプリなどで PDF を長押しするか、「どのアプリで開きますか？」リストが出た場合に、本アプリを選ぶルートです。ワンタップで取り込みが走ります。Android では iサポ アプリ内の PDF をタップするとそのまま「アプリで開く」シートが立ち上がり、「施主手帳」（アップデート前は「ICHIJO施主手帳【非公式】」）を選べます。</p>
 
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/import_open_with.webp" width="720" height="1564" alt="iOS：ファイルアプリの「このアプリで開く」から ICHIJO施主手帳 を選択" loading="lazy" decoding="async">
+    <img src="images/import_open_with.webp" width="720" height="1564" alt="iOS：ファイルアプリの「このアプリで開く」から 施主手帳 を選択" loading="lazy" decoding="async">
     <figcaption>iOS：「このアプリで開く」から本アプリを選択</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/import_open_with_android.webp" width="720" height="1523" alt="Android：iサポ MYポストから「アプリで開く」シートを呼び出し ICHIJO施主手帳【非公式】を選択" loading="lazy" decoding="async">
+    <img src="images/import_open_with_android.webp" width="720" height="1523" alt="Android：iサポ MYポストから「アプリで開く」シートを呼び出し 施主手帳 を選択" loading="lazy" decoding="async">
     <figcaption>Android：iサポ MYポストから「アプリで開く」を選択</figcaption>
   </figure>
   <figure class="shot-phone">
@@ -2855,107 +2869,6 @@
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
-<!-- ウィジェット                                             -->
-<!-- ═══════════════════════════════════════════════════════ -->
-<h2 id="widget">ホームウィジェット</h2>
-
-<p>端末のホーム画面に、スケジュールのカウントダウンを表示するウィジェットです。ピン留めしたイベントがそのまま反映されます。</p>
-
-<h3 id="widget-add">追加手順</h3>
-<p>端末の OS に応じて下記タブを切り替えてください。</p>
-
-<div class="tabs">
-  <button class="tab-btn active" onclick="switchTab(event,'wadd-ios')">🍎 iOS</button>
-  <button class="tab-btn" onclick="switchTab(event,'wadd-android')">🤖 Android</button>
-</div>
-
-<div id="wadd-ios" class="tab-content active">
-  <ol class="steps">
-    <li><strong>ホーム画面を長押し</strong><p>編集モードに入ります。</p></li>
-    <li><strong>左上の「＋」をタップ</strong></li>
-    <li><strong>「ICHIJO施主手帳」を検索／選択</strong></li>
-    <li><strong>サイズを選ぶ</strong><p>2種類：<br>- Small（正方形）<br>- Medium（横長）<br>ライト／ダーク両方のデザインを用意しています。</p></li>
-    <li><strong>「ウィジェットを追加」をタップ</strong></li>
-  </ol>
-
-  <h4>更新タイミング（iOS）</h4>
-  <ul>
-    <li>翌日以降に OS が自動で順次更新</li>
-    <li>アプリを開いた時にも最新化</li>
-    <li>OS の判断で適切なタイミングで再読み込み</li>
-  </ul>
-</div>
-
-<div id="wadd-android" class="tab-content">
-  <ol class="steps">
-    <li><strong>ホーム画面の空きスペースを長押し</strong></li>
-    <li><strong>「ウィジェット」を選択</strong></li>
-    <li><strong>「ICHIJO施主手帳」を探す</strong><p>ウィジェット一覧をスクロールしてアプリ名を探します。</p></li>
-    <li><strong>サイズとテーマを選ぶ</strong><p>全8種類：<br>- <code>2×1</code>（横長・小）<br>- <code>2×2</code>（正方形）<br>- <code>4×1</code>（横長・大）<br>- <code>4×2</code>（大）<br>× ライト／ダーク</p></li>
-    <li><strong>ホーム画面にドラッグ</strong></li>
-  </ol>
-
-  <h4>更新タイミング（Android）</h4>
-  <ul>
-    <li>毎日深夜0時過ぎにAlarmManagerで自動更新</li>
-    <li>アプリ内でスケジュールが変わったら即時更新</li>
-    <li>端末再起動／タイムゾーン変更時に再登録</li>
-  </ul>
-  <div class="callout warn">
-    <p>バッテリー最適化が厳しい端末では深夜更新が遅延します。<strong>設定アプリ → アプリ → ICHIJO施主手帳 → バッテリー → 最適化から除外</strong> を推奨。</p>
-  </div>
-</div>
-
-<h3 id="widget-patterns">表示パターン</h3>
-
-<table>
-  <thead><tr><th>状態</th><th>表示内容</th><th>色味</th></tr></thead>
-  <tbody>
-    <tr><td>カウントダウン</td><td>イベント名＋「あと〇日」</td><td>通常</td></tr>
-    <tr><td>今日</td><td>イベント名＋「今日です！」</td><td>ゴールド</td></tr>
-    <tr><td>新居生活カウンター</td><td>🏠「新居生活 〇年〇ヶ月〇日」</td><td>通常</td></tr>
-    <tr><td>過去イベント</td><td>「〇日経過」</td><td>グレー</td></tr>
-    <tr><td>空状態</td><td>「スケジュールを追加してください」</td><td>通常</td></tr>
-  </tbody>
-</table>
-
-<h4>カウントダウン表示</h4>
-<p>引き渡しなど未来イベントがピン留めされているとき。</p>
-<div class="shot-grid">
-  <figure class="shot-phone">
-    <img src="images/widget_ios_countdown.webp" width="720" height="1564" alt="iOS ウィジェット カウントダウン（Small / Medium × ライト・ダーク）" loading="lazy" decoding="async">
-    <figcaption>iOS：Small / Medium（ライト／ダーク）</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/widget_android_countdown.webp" width="720" height="1600" alt="Android ウィジェット カウントダウン（2×1 / 2×2 / 4×1 × ライト・ダーク）" loading="lazy" decoding="async">
-    <figcaption>Android：2×1 / 2×2 / 4×1（ライト／ダーク）</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/widget_android_countdown_4x2.webp" width="720" height="1600" alt="Android ウィジェット 4×2 カウントダウン（ライト・ダーク）" loading="lazy" decoding="async">
-    <figcaption>Android：4×2（ライト／ダーク）</figcaption>
-  </figure>
-</div>
-
-<h4>新居生活カウンター表示</h4>
-<p>引き渡し／引っ越しが過ぎると自動で切り替わる入居後のモード。</p>
-<div class="shot-grid">
-  <figure class="shot-phone">
-    <img src="images/widget_ios_life_counter.webp" width="720" height="1564" alt="iOS ウィジェット 新居生活カウンター（Small / Medium × ライト・ダーク）" loading="lazy" decoding="async">
-    <figcaption>iOS：Small / Medium（ライト／ダーク）</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/widget_android_life_counter.webp" width="720" height="1600" alt="Android ウィジェット 新居生活カウンター（2×1 / 2×2 / 4×1 × ライト・ダーク）" loading="lazy" decoding="async">
-    <figcaption>Android：2×1 / 2×2 / 4×1（ライト／ダーク）</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/widget_android_life_counter_4x2.webp" width="720" height="1600" alt="Android ウィジェット 4×2 新居生活カウンター（ライト・ダーク）" loading="lazy" decoding="async">
-    <figcaption>Android：4×2（ライト／ダーク）</figcaption>
-  </figure>
-</div>
-
-<p>ウィジェットをタップするとアプリが起動し、スケジュール画面に遷移します。</p>
-
-<!-- ═══════════════════════════════════════════════════════ -->
 <!-- でんき通信簿                                             -->
 <!-- ═══════════════════════════════════════════════════════ -->
 <h2 id="electricity">でんき通信簿</h2>
@@ -2980,23 +2893,23 @@
 
 <h3 id="electricity-overview">画面構成</h3>
 <ul>
-  <li><strong>画面上部のバー</strong>：タイトル「でんき通信簿」＋右上メニュー（CSVインポート／料金プラン設定／再計算）</li>
-  <li><strong>セグメント</strong>：<strong>月次 / 年間 / 通算</strong> の3種類</li>
+  <li><strong>画面上部のバー</strong>：タイトル「でんき通信簿」＋右上メニュー（CSVインポート／料金プラン設定／再計算 など）</li>
+  <li><strong>セグメント</strong>：<strong>月次 / 年間 / 通算 / クラス</strong> の4種類（クラスは <a href="#electricity-class">クラス</a> を参照）</li>
   <li><strong>月／年ナビ</strong>：セグメントに応じて年月 or 年のセレクター</li>
   <li><strong>メインコンテンツ</strong>：セグメントごとに異なるカード／グラフ（詳細は <a href="#electricity-reports">レポートの見方</a>）</li>
 </ul>
 
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/electricity_monthly.webp" width="720" height="1564" alt="でんき通信簿メイン（月次）" loading="lazy" decoding="async">
+    <img src="images/electricity_monthly.webp" width="720" height="1565" alt="でんき通信簿メイン（月次・得した合計の下にクラスのカード）" loading="lazy" decoding="async">
     <figcaption>月次セグメント</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/electricity_annual.webp" width="720" height="1564" alt="でんき通信簿メイン（年間）" loading="lazy" decoding="async">
+    <img src="images/electricity_annual.webp" width="720" height="1565" alt="でんき通信簿メイン（年間）" loading="lazy" decoding="async">
     <figcaption>年間セグメント</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/electricity_total.webp" width="720" height="1564" alt="でんき通信簿メイン（通算）" loading="lazy" decoding="async">
+    <img src="images/electricity_total.webp" width="720" height="1565" alt="でんき通信簿メイン（通算）" loading="lazy" decoding="async">
     <figcaption>通算セグメント</figcaption>
   </figure>
   <figure class="shot-phone">
@@ -3047,7 +2960,7 @@
   <li><strong>右上のメニューから「CSVインポート」</strong></li>
   <li><strong>ファイルピッカーでCSVを選択</strong></li>
   <li><strong>取り込み進捗を確認</strong></li>
-  <li><strong>インポート完了ダイアログ</strong><p>取り込んだ件数・対象期間・月数が表示されます。新記録（発電量・収支など）を更新した場合は、🏆 マークとともに「レコード更新！」セクションで何の記録がどれだけ伸びたかが一覧表示されます。OKを押すと、画面が自動で最新月に更新されます。</p></li>
+  <li><strong>インポート完了ダイアログ</strong><p>取り込んだ件数・対象期間・月数が表示されます。新記録（発電量・収支など）を更新した場合は、🏆 マークとともに「レコード更新！」セクションで何の記録がどれだけ伸びたかが一覧表示されます。この取り込みで新しくそろった月があると、「OK」の左に「◯年◯月分をクラスに提出する」が出ます（<a href="#electricity-class-submit">クラスへの提出</a>。自動で提出する設定のときは、代わりにダイアログの中に提出の結果が出ます）。OKを押すと、画面が自動で最新月に更新されます。</p></li>
 </ol>
 
 <div class="shot-grid">
@@ -3056,8 +2969,8 @@
     <figcaption>取り込み中</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/electricity_csv_done.webp" width="720" height="1564" alt="CSV取り込み完了ダイアログ（新記録の通知付き）" loading="lazy" decoding="async">
-    <figcaption>取り込み完了（新記録の通知付き）</figcaption>
+    <img src="images/electricity_csv_done.webp" width="720" height="1565" alt="CSV取り込み完了ダイアログ（新記録の通知と「2026年7月分をクラスに提出する」付き）" loading="lazy" decoding="async">
+    <figcaption>取り込み完了（新記録の通知・クラスに提出するボタン付き）</figcaption>
   </figure>
 </div>
 
@@ -3326,9 +3239,10 @@
   <li><strong>最終データ日付</strong>：「最終データ: YYYY/MM/DD まで」</li>
   <li><strong>月セレクタ</strong></li>
   <li><strong>得した合計カード</strong>（共通仕様）</li>
+  <li><strong>クラスのカード</strong>：クラスへの提出の案内、または提出済みの表示（<a href="#electricity-class-submit">はじめ方</a>）。料金プランが未設定のときは出ません</li>
   <li><strong>蓄電池カード</strong></li>
   <li><strong>日別 得した合計</strong>：カレンダーヒートマップ（正の収支日のみ色付け）＋日別リスト。日タップで時間別内訳がボトムシートで開く</li>
-  <li><strong>この月のハイライト</strong>：🏆 最も得した日 ／ 💰 最高売電収入日 ／ ⚡ 最大発電日 ／ 📊 最高自給率日 ／ 🔥 黒字日数 ／ 🌞 買電ゼロ日数</li>
+  <li><strong>この月のハイライト</strong>：🏆 最も得した日 ／ 💰 最高売電収入日 ／ ⚡ 最大発電日 ／ 📊 最高自給率日 ／ 🔥 黒字日数 ／ 🌞 買電ゼロ日数（数え方は <a href="#electricity-badges">達成</a> を参照）</li>
 </ol>
 
 <h5>CSVエクスポート・シェア</h5>
@@ -3336,8 +3250,8 @@
 
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/electricity_monthly.webp" width="720" height="1564" alt="月次レポート 上半分（得した合計・蓄電池）" loading="lazy" decoding="async">
-    <figcaption>月次レポート上半分：得した合計・蓄電池</figcaption>
+    <img src="images/electricity_monthly.webp" width="720" height="1565" alt="月次レポート 上半分（得した合計・クラスのカード・蓄電池）" loading="lazy" decoding="async">
+    <figcaption>月次レポート上半分：得した合計・クラスのカード・蓄電池</figcaption>
   </figure>
   <figure class="shot-phone">
     <img src="images/electricity_monthly_scroll.webp" width="720" height="1564" alt="月次レポート 下半分（ヒートマップ・日別リスト・ハイライト）" loading="lazy" decoding="async">
@@ -3363,7 +3277,7 @@
 
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/electricity_annual.webp" width="720" height="1564" alt="年間レポート 上半分（年間の得した合計・蓄電池・月別棒グラフ）" loading="lazy" decoding="async">
+    <img src="images/electricity_annual.webp" width="720" height="1565" alt="年間レポート 上半分（年間の得した合計・蓄電池・月別棒グラフ）" loading="lazy" decoding="async">
     <figcaption>年間レポート上半分：年間の得した合計・蓄電池・棒グラフ</figcaption>
   </figure>
   <figure class="shot-phone">
@@ -3422,7 +3336,7 @@
 </table>
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/electricity_records_daily.webp" width="720" height="1564" alt="デイリーベスト（1日の記録 8 項目）" loading="lazy" decoding="async">
+    <img src="images/electricity_records_daily.webp" width="720" height="1565" alt="デイリーベスト（1日の記録 8 項目）" loading="lazy" decoding="async">
     <figcaption>デイリーベスト</figcaption>
   </figure>
   <figure class="shot-phone">
@@ -3434,7 +3348,7 @@
 <h5 id="electricity-badges">達成（累計カウント）</h5>
 <p>特定の条件を満たした日・月の累計数を記録します。「N 日中 X 日」のように割合も添えて表示。</p>
 <ul>
-  <li><strong>買電ゼロ日数</strong>：電力会社から買わずに済んだ日の累計</li>
+  <li><strong>買電ゼロ日数</strong>：電力会社からほとんど買わずに済んだ日の累計（1 時間あたり 0.01 kWh 以下のわずかな買電は数えません）</li>
   <li><strong>黒字日数</strong>：1 日の収支がプラスだった日の累計</li>
   <li><strong>黒字月数</strong>：1 ヶ月の収支がプラスだった月の累計</li>
 </ul>
@@ -3479,18 +3393,215 @@
 
 <p>CSV 取り込みでその月のデータが月末まで揃うと、取り込み完了の画面にも「◯年◯月をシェア」ボタンが表示され、その場でシェア画像を作れます。なお、料金プランが未設定の月や、プランの適用前の期間を含む月は、正しい金額にならないためシェア画像を作れません（設定を促すメッセージが表示されます）。</p>
 
+<h3 id="electricity-class">クラス（提出した家の中での位置）</h3>
+<ul>
+  <li>月の数字をクラスに<strong>提出</strong>すると、発電量や電気代などが、提出した家の中で上位何%かが<strong>「クラスの通信簿」</strong>で分かります。でんき通信簿の 4 つ目のセグメント「クラス」で見られます</li>
+  <li>提出した家が 10 軒以上になると、位置（上位・下位）が表示されます。画面に出るのは、自分の数字と位置、提出した家の数字をまとめた統計（中央値など）です。ほかの家の数字や名前は表示されません</li>
+  <li>提出するかどうかは自分で選べます。送る数字は、提出する前に画面で確かめられます</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/class_report_month.webp" width="720" height="1565" alt="クラスの画面（比較対象・ものさし・期間の切り替え、7月のあなたの一番 = 発電量 上位1%、クラスの通信簿の行とメダル・はんこ）" loading="lazy" decoding="async">
+    <figcaption>クラスの通信簿：科目ごとに提出した家の中での位置</figcaption>
+  </figure>
+</div>
+
+<div class="callout info">
+  <p>提出すると、月の数字と家の条件がサーバーに送られます。送る数字・送らないもの・保存期間は <a href="#electricity-class-data">送る数字と保存期間</a> をご覧ください。デモモード中と開発者モード中は提出できません。</p>
+</div>
+
+<h4 id="electricity-class-submit">はじめ方</h4>
+<ol class="steps">
+  <li><strong>その月のデータを月末までそろえる</strong><p>CSV を取り込んで、その月のデータが月末までそろうと提出できます（途中の月は提出できません）。過去の月も提出できます。</p></li>
+  <li><strong>「◯年◯月分をクラスに提出する」を押す</strong><p>取り込み完了ダイアログ・月次レポートのカード（得した合計の下）・クラスの画面の「提出する」のどれからでも、同じ「提出する内容」の画面が開きます。</p></li>
+  <li><strong>内容を確かめて「提出する」を押す</strong><p>提出するのは、この画面に表示している数字だけです。</p></li>
+  <li><strong>翌日からクラスの通信簿に載る</strong><p>集計は 1 日 1 回、朝 4 時ごろです。</p></li>
+</ol>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/electricity_csv_done.webp" width="720" height="1565" alt="CSV取り込み完了ダイアログ（「2026年7月分をクラスに提出する」のボタン）" loading="lazy" decoding="async">
+    <figcaption>取り込み完了ダイアログの「◯年◯月分をクラスに提出する」</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/electricity_monthly.webp" width="720" height="1565" alt="月次レポートの得した合計の下の「提出すると、クラスの通信簿がもらえます」のカード" loading="lazy" decoding="async">
+    <figcaption>月次レポートのカード</figcaption>
+  </figure>
+</div>
+
+<h5>「提出する内容」の画面（上から順）</h5>
+<ol>
+  <li><strong>月の数字</strong>：発電量・売電量・売電収入・得した合計・自給率・消費量・買電量・電気代の 8 つ。料金プランが設定されていない月は、金額が「—（料金プラン未設定）」になります。自給率が 1000% を超える月（入居前など、使う電力がとても少ない月）は、自給率だけが「—」になります</li>
+  <li><strong>家の情報</strong>（入力は任意です）：売電単価・断熱地域・延床・太陽光の容量。行の右のスイッチで、それぞれ提出するかどうかを選べます（はじめはすべて提出する）
+    <ul>
+      <li>マイページに入っていない項目は、その場で入力できます（断熱地域は 1〜8 から選ぶ、延床は坪、太陽光の容量は kW）。分からなければ空のままで提出できます。入力した値はマイページに保存されます（<a href="#electricity-class-house">家の情報とマイページ</a>）</li>
+      <li>延床と太陽光の容量は、取り込んだ見積りから読み取れたときに「見積りの ◯坪 を使う」「見積りの ◯kW を使う」ボタンが出ます。押したときだけ入ります</li>
+      <li>売電単価は、<a href="#electricity-plan">売電プラン</a>からその月の単価を取ります（1 円単位）。売電プランがないときは「売電プランを設定する」から設定できます。設定して戻ると、金額と歴代ベストが設定後の内容で表示されます。月の途中で売電プランが変わった月は「—（月の途中で売電プランが変わりました）」になります</li>
+    </ul>
+  </li>
+  <li><strong>これまでの月もまとめて提出する</strong>（はじめは ON）：データがそろっているほかの未提出の月も、まとめて提出します。「ほかの ◯ヶ月の数字を見る」で中身を確かめられます</li>
+  <li><strong>歴代ベストもいっしょに提出します</strong>：端末にある全期間の記録から、8 つの科目それぞれのいちばん大きかった月の値と年月（その月の売電単価）を提出します。通算タブのマンスリーベストとは数え方が違うため、数字が一致しないことがあります</li>
+  <li><strong>「提出する」</strong>：押すと送信します</li>
+</ol>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/class_submit_sheet_top.webp" width="720" height="1565" alt="「提出する内容」の画面の上部（2026年7月分の月の数字 8 つと、家の情報の「提出する」スイッチ）" loading="lazy" decoding="async">
+    <figcaption>提出する内容：月の数字と家の情報</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/class_submit_sheet_bottom.webp" width="720" height="1565" alt="「提出する内容」の画面の下部（これまでの月もまとめて提出する・歴代ベストもいっしょに提出します）" loading="lazy" decoding="async">
+    <figcaption>まとめて提出・歴代ベスト</figcaption>
+  </figure>
+</div>
+
+<h5>提出したあと</h5>
+<ul>
+  <li>「提出しました」の画面が出ます。この画面の<strong>「次からは、データを取り込んだときに自動で提出する」</strong>（はじめは OFF）を ON にすると、次からは自動で提出します（<a href="#electricity-class-settings">自動の提出</a>）</li>
+  <li>通信できないときは「まだ提出できていません」と出ます。通信できるようになってから、でんき通信簿のクラスを開くと提出されます</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/class_done_sheet.webp" width="720" height="1565" alt="「提出しました」の画面（2026年7月分の提出のはんこ・次からは自動で提出するスイッチ・クラスの通信簿を見る）" loading="lazy" decoding="async">
+    <figcaption>提出しました・自動で提出するスイッチ</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/class_import_auto.webp" width="720" height="1565" alt="自動で提出したときの取り込み完了ダイアログ（クラス 2026年8月分を提出しました）" loading="lazy" decoding="async">
+    <figcaption>自動の提出の結果（取り込み完了ダイアログ）</figcaption>
+  </figure>
+</div>
+
+<h4 id="electricity-class-screen">クラスの通信簿の見方</h4>
+<p>セグメントの「クラス」を選ぶと開きます。どの科目も<strong>数字の大きい順</strong>に数えます（電気代・消費量・買電量も、大きいほど「上位」です）。</p>
+
+<h5>3 つの切り替え</h5>
+<table>
+  <thead><tr><th>切り替え</th><th>選べるもの</th></tr></thead>
+  <tbody>
+    <tr><td>比較対象</td><td>すべての家 ／ 同じ断熱地域 ／ 同じ売電単価</td></tr>
+    <tr><td>ものさし</td><td>実際の数字 ／ 坪・kW あたり（発電量・売電量・売電収入・得した合計は太陽光の容量 1kW あたり、消費量・買電量・電気代は延床 1 坪あたり。自給率はそのまま）</td></tr>
+    <tr><td>期間</td><td>月 ／ 年 ／ 歴代ベスト</td></tr>
+  </tbody>
+</table>
+<p>選んだ組み合わせは次に開いたときも同じです。「同じ断熱地域」「同じ売電単価」には、その条件の提出が必要です。坪・kW あたりには延床と太陽光の容量が必要です。</p>
+
+<h5>通信簿の行と印</h5>
+<ul>
+  <li><strong>位置</strong>：8 つの科目の自分の数字と、<strong>「上位◯%」「真ん中」「下位◯%」</strong>が並びます</li>
+  <li><strong>ハイライト</strong>：「◯月のあなたの一番」として、いちばん上位だった科目を大きく表示します（「上位◯%」の科目があるときだけ）</li>
+  <li><strong>メダルとはんこ</strong>（期間が月・年のとき）：上位 3% 以内は金のメダル、上位 4〜10% は朱のはんこが付きます</li>
+  <li><strong>← →</strong>：月（期間が年なら年）を切り替えます。提出して集計が済んだ月（年）だけに移動します</li>
+  <li><strong>「2026/09/28の集計」のような日付と ↻</strong>：いつの集計かを表示します。↻ で最新の集計を読み込みます</li>
+  <li><strong>行を押す</strong>：その科目の<a href="#electricity-class-detail">詳しい画面</a>が開きます</li>
+</ul>
+
+<h5>位置が出ないとき</h5>
+<ul>
+  <li><strong>提出した家が 10 軒に満たない</strong>：行に「まだ比較対象の家が少ないです」と出ます。どの科目も位置が出ないときは、ハイライトの代わりに「提出した家が集まってきています」のカード（いまの軒数の目安）が出ます。「すべての家で見る」で比較対象を戻せます</li>
+  <li><strong>延床・太陽光の容量がない</strong>：「延床を入力すると表示されます」「太陽光の容量を提出すると表示されます」などと出ます。行を押すと、その場で入力して、提出済みの月に付けて提出できます（歴代ベストも作り直して提出します。表示されるのは明日からです）</li>
+  <li><strong>料金プランがない月</strong>：金額の科目に「料金プラン未設定」と出ます</li>
+  <li><strong>同じ断熱地域・同じ売電単価で比較できない</strong>：理由と、入力・提出・売電プランの設定への近道がカードで出ます。月の途中で売電プランが変わった月は、同じ売電単価の家とは比較できません（期間が年のときは「月ごとに見る」で月に切り替えられます）</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/class_gathering.webp" width="720" height="1565" alt="同じ断熱地域を選んだときの「5 地域の家が集まってきています」のカード（軒数の目安・すべての家で見る）" loading="lazy" decoding="async">
+    <figcaption>提出した家が集まってきています</figcaption>
+  </figure>
+</div>
+
+<h5>期間：年</h5>
+<p>1 月からの合計で比較します（年の途中は「1〜◯月の合計」）。比較対象は、その年の 1 月から同じ月までを<strong>すべて提出した家</strong>です。抜けた月があると合計と位置は表示されず、「提出する」から抜けた月を提出できます。</p>
+
+<h5>期間：歴代ベスト</h5>
+<p>自分の歴代ベスト（科目ごとの過去最高の 1 か月）が、提出した家の歴代ベストの中でどのあたりかを表示します。上位 10% 以内の科目には<strong>「殿堂入り」</strong>の札が付きます（メダルとはんこは付きません）。記録を更新すると、翌日から歴代ベストに反映されます。同じ売電単価のときは、記録の月の売電単価ごとに比較します。</p>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/class_best.webp" width="720" height="1565" alt="期間：歴代ベスト（殿堂入りの札が付いた科目と、各科目の位置）" loading="lazy" decoding="async">
+    <figcaption>歴代ベスト（殿堂入り）</figcaption>
+  </figure>
+</div>
+
+<h5 id="electricity-class-detail">科目の詳しい画面（行を押す）</h5>
+<ul>
+  <li>比較した条件（期間・比較対象と軒数の目安・ものさし）と、自分の数字・位置</li>
+  <li>「中央値」「下位25%の境目」「上位25%の境目」（10 軒以上のとき）</li>
+  <li>「分布」の図（20 軒以上のとき）：棒と「あなた」の印（▼）。棒の高さは家の多さです。10〜19 軒のときは、図の場所に「20軒以上になると、分布の図が表示されます」と出ます</li>
+  <li>自分の数字と中央値の推移のグラフ（歴代ベスト以外）</li>
+  <li>注記：金額の科目は「金額は、料金プランの違いも含めて比較しています」、自給率は「自給率は発電量 ÷ 消費量です。100%を超えることがあります」。どの科目も「提出したときの数字で比較しています」（あとからマイページや料金プランを直しても、提出済みの数字は変わりません）</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/class_detail.webp" width="720" height="1565" alt="自給率の詳しい画面（中央値・下位25%の境目・上位25%の境目、分布の図、月別推移）" loading="lazy" decoding="async">
+    <figcaption>科目の詳しい画面：中央値・分布・推移</figcaption>
+  </figure>
+</div>
+
+<h4 id="electricity-class-settings">提出の設定とやめ方</h4>
+<p>クラスの画面のいちばん下に「提出の設定」があります。同じ内容は、クラスを表示しているときの<strong>右上メニュー →「提出の設定」</strong>と、<strong>設定 &gt; データ管理 &gt;「でんき通信簿のクラス」</strong>（提出したことがあるときに表示）からも開けます。メニューと設定から開いたときは、提出した月（年ごと）も表示されます。</p>
+<ul>
+  <li><strong>データを取り込んだときに自動で提出する</strong>：ON にすると、CSV を取り込んで新しくそろった月を自動で提出します（歴代ベストもいっしょに提出します）。結果は取り込み完了ダイアログに「◯年◯月分を提出しました」のように出ます。提出できなかったときは、代わりに「◯年◯月分をクラスに提出する」が出ます</li>
+  <li><strong>今後の提出をやめる</strong>：確認のダイアログで「やめる」を押すと、クラスの通信簿は見られなくなり、自動の提出も止まります。提出済みの数字は、最後の提出から約 1 年で自動的に消えます。もう一度提出すると再開できます</li>
+  <li><strong>クラスのサポート用 ID</strong>：提出済みの数字の削除を依頼するときに使う ID です（右のアイコンでコピー）。今後の提出をやめたあとも表示されます</li>
+</ul>
+
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/class_settings_tail.webp" width="720" height="1565" alt="クラスの画面のいちばん下の「提出の設定」（自動で提出するスイッチ・今後の提出をやめる・クラスのサポート用 ID）" loading="lazy" decoding="async">
+    <figcaption>クラスの画面の末尾：提出の設定</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/class_settings_sheet.webp" width="720" height="1565" alt="設定から開いた「でんき通信簿のクラス」（提出した月・自動で提出するスイッチ・家の情報のスイッチ）" loading="lazy" decoding="async">
+    <figcaption>設定 &gt; でんき通信簿のクラス</figcaption>
+  </figure>
+</div>
+
+<h5 id="electricity-class-house">家の情報とマイページ</h5>
+<ul>
+  <li>延床・太陽光の容量・断熱地域は、<a href="#mypage-edit">マイページ</a>の値をそのまま使います。提出の画面で入力した値もマイページに保存されます</li>
+  <li>マイページで直しても、その場では提出されず、次の提出から変更後の値になります。提出している間は、マイページの編集画面の提出している欄の下に「でんき通信簿のクラスにも提出しています。変更は次の提出から反映されます」と表示されます</li>
+  <li>メニューと設定から開いたときは、延床・太陽光の容量・断熱地域・売電単価のそれぞれを、次から提出するかどうかをスイッチで切り替えられます。切り替えは次の提出から反映され、提出済みの月は変わりません</li>
+  <li>提出済みの月の値を直すときは、その行を押して入力し直してください（提出済みの月に付けて提出し直し、歴代ベストも端末にあるすべての月から作り直して提出します）</li>
+</ul>
+
+<h5 id="electricity-class-data">送る数字と保存期間</h5>
+<table>
+  <thead><tr><th></th><th>内容</th></tr></thead>
+  <tbody>
+    <tr><td>送るもの</td><td>提出する月ごとの発電量・売電量・消費量・買電量（kWh）と自給率 ／ 得した合計・電気代・売電収入（円・料金プランを設定している月だけ）／ 売電単価（1 円単位）／ 断熱地域・延床（坪の整数）・太陽光の容量（0.1kW 単位）／ 歴代ベスト（8 科目の値と年月・その月の売電単価）。あわせて、アプリが自動で作る ID と提出の日時が送られます</td></tr>
+    <tr><td>送らないもの</td><td>名前・ニックネーム・写真・住所・都道府県・メールアドレス ／ 料金プラン名・電力会社 ／ 1 日ごと・1 時間ごとの数字 ／ 図面・見積りなどの書類</td></tr>
+  </tbody>
+</table>
+<ul>
+  <li><strong>保存期間</strong>：提出した数字は、最後に提出してから約 1 年で自動的に消えます。保存期間が過ぎると、クラスの画面に「提出した数字の保存期間（1年）が過ぎました。もう一度まとめて提出しますか」と出ます</li>
+  <li><strong>すぐに消したいとき</strong>：<a href="#electricity-class-settings">クラスのサポート用 ID</a> を添えて <a href="#contact">お問い合わせ</a> ください（設定 &gt; ご意見・不具合の報告、または info@smartolio.jp）。アプリを入れ直す前に提出した数字は、今の ID では特定できないことがあります（最後の提出から約 1 年で自動的に消えます）</li>
+</ul>
+<p>くわしくは <a href="https://smartolio.jp/privacy/ichijo-unofficial-app/" target="_blank" rel="noopener">プライバシーポリシー</a> をご覧ください。</p>
+
+<h4>困ったとき</h4>
+<p>載らない・位置が出ない・提出のボタンが出ないときなどは <a href="#troubleshooting-class">でんき通信簿のクラスで困ったとき</a> をご覧ください。</p>
+
 <h3 id="electricity-actions">操作リファレンス</h3>
 <div class="action-box">
-  <div class="action-row"><strong>セグメント</strong><span>月次／年間／通算 切替</span></div>
+  <div class="action-row"><strong>セグメント</strong><span>月次／年間／通算／クラス 切替</span></div>
   <div class="action-row"><strong>← / →</strong><span>月／年ナビゲーション</span></div>
   <div class="action-row"><strong>日付タップ（ヒートマップ）</strong><span>その日の時間別詳細をボトムシートで表示</span></div>
   <div class="action-row"><strong>月タップ（年間：月別一覧）</strong><span>月次レポートへジャンプ</span></div>
   <div class="action-row"><strong>右上 シェア（月次のみ）</strong><span>月次レポートのシェア画像を作成（配色 2 種・投稿文コピー・画像を保存/共有）</span></div>
   <div class="action-row"><strong>右上 CSVエクスポート</strong><span>月次／年間レポートを CSV で書き出し</span></div>
-  <div class="action-row"><strong>右上メニュー</strong><span>CSVインポート／料金プラン設定／再計算／実績データ削除</span></div>
+  <div class="action-row"><strong>右上メニュー</strong><span>CSVインポート／料金プラン設定／再計算／実績データ削除（クラスを表示中は実績データ削除が出ず、提出したことがあれば「提出の設定」が出ます）</span></div>
   <div class="action-row"><strong>「目標金額を変更」ボタン</strong><span>投資回収ゴールの追加・編集・削除（最大5件）</span></div>
   <div class="action-row"><strong>期間セレクタ（5年/10年/15年/20年/自動）</strong><span>回収予測グラフの表示期間を切替</span></div>
   <div class="action-row"><strong>実績データ削除（右上メニュー）</strong><span>月次：当月／年次：当年／通算：年＋月ツリーピッカーで選択削除</span></div>
+  <div class="action-row"><strong>「◯年◯月分をクラスに提出する」</strong><span>「提出する内容」の画面を開く（取り込み完了ダイアログ・月次のカード。クラスの画面では「提出する」）</span></div>
+  <div class="action-row"><strong>クラス：比較対象／ものさし／期間</strong><span>クラスの通信簿の表示を切替</span></div>
+  <div class="action-row"><strong>クラス：通信簿の行をタップ</strong><span>その科目の詳しい画面（中央値・分布・推移）を開く</span></div>
+  <div class="action-row"><strong>クラス：↻</strong><span>最新の集計を読み込む</span></div>
+  <div class="action-row"><strong>クラス：今後の提出をやめる</strong><span>確認のあと、今後の提出と自動の提出を止める</span></div>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
@@ -3508,7 +3619,7 @@
   </figure>
 </div>
 
-<p>換気フィルターやレンジフードなど、忘れがちなおうちの定期お手入れをワンタップで記録できる機能です。よくあるお手入れ42項目をプリセット収録。消耗品の在庫管理と、お手入れ時期の通知にも対応しています。</p>
+<p>換気フィルターやレンジフードなど、忘れがちなおうちの定期お手入れをワンタップで記録できる機能です。よくあるお手入れ42項目をプリセット収録。消耗品の在庫管理と、お手入れ時期の通知にも対応しています。今すぐ・もうすぐのお手入れは、<a href="#widget-maintenance">ホームウィジェット</a>で端末のホーム画面にも表示できます。</p>
 
 <div class="callout info">
   <p>お手入れ当番表は <strong>暮らしモード</strong> のホーム画面で前面に出てきますが、家づくりモードでは <strong>便利ツール</strong> 画面からアクセスできます。</p>
@@ -3516,7 +3627,7 @@
 
 <h3 id="maintenance-overview">画面構成</h3>
 <ul>
-  <li><strong>ダッシュボード（上部）</strong>：「今すぐ」（期日が今日・期日超過）と「在庫わずか」の件数。タップするとその条件で一覧を絞り込みます（もう一度タップ、またはバナーの「解除」で戻る）</li>
+  <li><strong>ダッシュボード（上部）</strong>：「今すぐ」（期日が今日・期日超過）のお手入れの件数と、「在庫わずか」の消耗品の数。タップするとその条件でお手入れの一覧を絞り込みます（もう一度タップ、またはバナーの「解除」で戻る）</li>
   <li><strong>ビュー切替</strong>：<strong>緊急度 / 部屋ごと</strong> の2種類</li>
   <li><strong>緊急度ビュー</strong>：「今日実施」「今すぐ」「もうすぐ」「余裕あり」のセクションに自動分類。「もうすぐ」に入るタイミングは項目の周期に応じて自動で変わります（周期が短い項目ほど直前に表示）</li>
   <li><strong>部屋ごとビュー</strong>：割り当てた部屋単位のグループ表示</li>
@@ -3814,6 +3925,182 @@
 </div>
 
 <!-- ═══════════════════════════════════════════════════════ -->
+<!-- ウィジェット                                             -->
+<!-- ═══════════════════════════════════════════════════════ -->
+<h2 id="widget">ホームウィジェット</h2>
+
+<p>端末のホーム画面に置けるウィジェットは 2 つあります。</p>
+<ul>
+  <li><strong>カウントダウン</strong>：スケジュールでピン留めしたイベントのカウントダウン（入居後は新居生活カウンター）を表示します。ピン留めしたイベントがそのまま反映されます（<a href="#widget-countdown">カウントダウンのウィジェット</a>）</li>
+  <li><strong>お手入れ当番表</strong>：今すぐ・もうすぐのお手入れと、残りわずかの消耗品を表示します（<a href="#widget-maintenance">お手入れ当番表のウィジェット</a>）</li>
+</ul>
+
+<h3 id="widget-countdown">カウントダウンのウィジェット</h3>
+<p><a href="#schedule">スケジュール</a>でピン留めしたイベントまでの日数（入居後は新居生活カウンター）を、ホーム画面に表示するウィジェットです。</p>
+
+<h4 id="widget-add">置き方</h4>
+<p>端末の OS に応じて下記タブを切り替えてください。</p>
+
+<div class="tabs">
+  <button class="tab-btn active" onclick="switchTab(event,'wadd-ios')">🍎 iOS</button>
+  <button class="tab-btn" onclick="switchTab(event,'wadd-android')">🤖 Android</button>
+</div>
+
+<div id="wadd-ios" class="tab-content active">
+  <ol class="steps">
+    <li><strong>ホーム画面を長押し</strong><p>編集モードに入ります。</p></li>
+    <li><strong>左上の「＋」をタップ</strong></li>
+    <li><strong>「施主手帳」（アップデート前は「ICHIJO施主手帳【非公式】」）を検索／選択</strong></li>
+    <li><strong>サイズを選ぶ</strong><p>2種類：<br>- Small（正方形）<br>- Medium（横長）<br>ライト／ダーク両方のデザインを用意しています。</p></li>
+    <li><strong>「ウィジェットを追加」をタップ</strong></li>
+  </ol>
+
+  <h5>更新タイミング（iOS）</h5>
+  <ul>
+    <li>翌日以降に OS が自動で順次更新</li>
+    <li>アプリを開いた時にも最新化</li>
+    <li>OS の判断で適切なタイミングで再読み込み</li>
+  </ul>
+</div>
+
+<div id="wadd-android" class="tab-content">
+  <ol class="steps">
+    <li><strong>ホーム画面の空きスペースを長押し</strong></li>
+    <li><strong>「ウィジェット」を選択</strong></li>
+    <li><strong>「施主手帳」（アップデート前は「ICHIJO施主手帳【非公式】」）を探す</strong><p>ウィジェット一覧をスクロールしてアプリ名を探します。</p></li>
+    <li><strong>サイズとテーマを選ぶ</strong><p>全8種類：<br>- <code>2×1</code>（横長・小）<br>- <code>2×2</code>（正方形）<br>- <code>4×1</code>（横長・大）<br>- <code>4×2</code>（大）<br>× ライト／ダーク</p></li>
+    <li><strong>ホーム画面にドラッグ</strong></li>
+  </ol>
+
+  <h5>更新タイミング（Android）</h5>
+  <ul>
+    <li>毎日深夜0時過ぎにAlarmManagerで自動更新</li>
+    <li>アプリ内でスケジュールが変わったら即時更新</li>
+    <li>端末再起動／タイムゾーン変更時に再登録</li>
+  </ul>
+  <div class="callout warn">
+    <p>バッテリー最適化が厳しい端末では深夜更新が遅延します。<strong>設定アプリ → アプリ → 施主手帳（アップデート前は「ICHIJO施主手帳【非公式】」）→ バッテリー → 最適化から除外</strong> を推奨。</p>
+  </div>
+</div>
+
+<h4 id="widget-patterns">表示パターン</h4>
+
+<table>
+  <thead><tr><th>状態</th><th>表示内容</th><th>色味</th></tr></thead>
+  <tbody>
+    <tr><td>カウントダウン</td><td>イベント名＋「あと〇日」</td><td>通常</td></tr>
+    <tr><td>今日</td><td>イベント名＋「今日です！」</td><td>ゴールド</td></tr>
+    <tr><td>新居生活カウンター</td><td>🏠「新居生活 〇年〇ヶ月〇日」</td><td>通常</td></tr>
+    <tr><td>過去イベント</td><td>「〇日経過」</td><td>グレー</td></tr>
+    <tr><td>空状態</td><td>「スケジュールを追加してください」</td><td>通常</td></tr>
+  </tbody>
+</table>
+
+<h5>カウントダウン表示</h5>
+<p>引き渡しなど未来イベントがピン留めされているとき。</p>
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/widget_ios_countdown.webp" width="720" height="1564" alt="iOS ウィジェット カウントダウン（Small / Medium × ライト・ダーク）" loading="lazy" decoding="async">
+    <figcaption>iOS：Small / Medium（ライト／ダーク）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/widget_android_countdown.webp" width="720" height="1600" alt="Android ウィジェット カウントダウン（2×1 / 2×2 / 4×1 × ライト・ダーク）" loading="lazy" decoding="async">
+    <figcaption>Android：2×1 / 2×2 / 4×1（ライト／ダーク）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/widget_android_countdown_4x2.webp" width="720" height="1600" alt="Android ウィジェット 4×2 カウントダウン（ライト・ダーク）" loading="lazy" decoding="async">
+    <figcaption>Android：4×2（ライト／ダーク）</figcaption>
+  </figure>
+</div>
+
+<h5>新居生活カウンター表示</h5>
+<p>引き渡し／引っ越しが過ぎると自動で切り替わる入居後のモード。</p>
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/widget_ios_life_counter.webp" width="720" height="1564" alt="iOS ウィジェット 新居生活カウンター（Small / Medium × ライト・ダーク）" loading="lazy" decoding="async">
+    <figcaption>iOS：Small / Medium（ライト／ダーク）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/widget_android_life_counter.webp" width="720" height="1600" alt="Android ウィジェット 新居生活カウンター（2×1 / 2×2 / 4×1 × ライト・ダーク）" loading="lazy" decoding="async">
+    <figcaption>Android：2×1 / 2×2 / 4×1（ライト／ダーク）</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/widget_android_life_counter_4x2.webp" width="720" height="1600" alt="Android ウィジェット 4×2 新居生活カウンター（ライト・ダーク）" loading="lazy" decoding="async">
+    <figcaption>Android：4×2（ライト／ダーク）</figcaption>
+  </figure>
+</div>
+
+<p>ウィジェットをタップするとアプリが起動し、スケジュール画面に遷移します。</p>
+
+<h3 id="widget-maintenance">お手入れ当番表のウィジェット</h3>
+<p><a href="#maintenance">お手入れ当番表</a>の「今すぐ」「もうすぐ」のお手入れと、残りわずかの消耗品を、ホーム画面で確かめられるウィジェットです。スマホのほか、iPad や Android タブレットの大きなサイズにも対応しています。<strong>表示のみ</strong>のウィジェットで、実施の記録（消し込み）はタップして開くアプリの画面で行います。</p>
+
+<h4 id="widget-maintenance-add">置き方</h4>
+<ul>
+  <li><strong>iOS</strong>：ホーム画面を長押し → 左上の「＋」→「施主手帳」（アップデート前は「ICHIJO施主手帳【非公式】」）を選び、「お手入れ当番表」のサイズを選んで「ウィジェットを追加」。サイズは 小（正方形）・中（横長）・大 の 3 つで、iPad では 3 列の当番表になる特大も選べます。iPhone のスタンバイ（充電中の横置き）にも置けます</li>
+  <li><strong>Android</strong>：ホーム画面の空きスペースを長押し →「ウィジェット」→「施主手帳」（アップデート前は「ICHIJO施主手帳【非公式】」）から、<strong>「次のお手入れ」</strong>（はじめは 2×2）か<strong>「お手入れ当番表」</strong>（はじめは 4×2）をホーム画面にドラッグ。2 つは中身が同じで、はじめの大きさだけが違います。置いたあとに大きさを変えると、下の 4 つの形が自動で切り替わります</li>
+  <li><strong>ライト／ダーク</strong>：端末の設定に合わせて自動で切り替わります（カウントダウンのように別々に選ぶ必要はありません）</li>
+</ul>
+
+<h4 id="widget-maintenance-sizes">大きさごとの表示</h4>
+<table>
+  <thead><tr><th>形</th><th>目安</th><th>表示内容</th></tr></thead>
+  <tbody>
+    <tr><td>小</td><td>iOS の小 ／ Android の 2×2 ほど</td><td>見出し「次のお手入れ」と、期日がいちばん近いお手入れ 1 件（名前・場所・残り日数・進み具合のバー）。今すぐのものがあるときは「今すぐ ◯件」も出ます</td></tr>
+    <tr><td>中</td><td>iOS の中 ／ Android の 4×2 ほど（スマホ。タブレットでは 4×2 でも大になります）</td><td>「今すぐ」「もうすぐ」「在庫わずか」の数と、期日が近いお手入れ 3 件まで</td></tr>
+    <tr><td>大</td><td>iOS の大 ／ Android の 4×3 以上</td><td>今日の日付と件数、「今すぐ」「もうすぐ」の一覧。下に「余裕あり」「今日実施」の件数</td></tr>
+    <tr><td>特大</td><td>iPad の特大 ／ 横に広い Android タブレット</td><td>「今すぐ」「もうすぐ」「今日実施」と「在庫わずか」（消耗品の名前と在庫数）を 3 列の当番表で表示</td></tr>
+  </tbody>
+</table>
+<ul>
+  <li><strong>分け方</strong>：「今日実施」「今すぐ」「もうすぐ」「余裕あり」の分け方は、お手入れ当番表の<a href="#maintenance-overview">緊急度ビュー</a>と同じです。一覧の絞り込みはウィジェットには反映されません</li>
+  <li><strong>残り日数</strong>：「今日」「あと◯日」「◯日超過」（期日を過ぎたものには ⚠ が付きます）</li>
+  <li><strong>在庫わずか</strong>：残りわずかの目安以下になった消耗品の数です（お手入れ当番表のダッシュボードと同じ数え方）</li>
+  <li><strong>担当</strong>：<a href="#maintenance-family">家族と共有</a>中で担当が決まっている項目は、場所の横に「◯◯さん」と表示されます</li>
+  <li>入りきらない分は「他◯件」とまとめて表示されます</li>
+</ul>
+<div class="shot-grid">
+  <figure class="shot-phone">
+    <img src="images/widget_maintenance_ios.webp" width="720" height="1565" alt="iOS お手入れ当番表のウィジェット 小（次のお手入れ・今すぐ 2件）と中（今すぐ・もうすぐ・在庫わずかの数と、期日が近い 3 件）" loading="lazy" decoding="async">
+    <figcaption>iOS：小 / 中</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/widget_maintenance_ios_large.webp" width="720" height="1565" alt="iOS お手入れ当番表のウィジェット 大（今すぐ・もうすぐの一覧と、余裕あり・今日実施の件数）" loading="lazy" decoding="async">
+    <figcaption>iOS：大</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/widget_maintenance_android.webp" width="720" height="1560" alt="Android お手入れ当番表のウィジェット 4×3（大）と次のお手入れ 2×2（小）" loading="lazy" decoding="async">
+    <figcaption>Android：お手入れ当番表 4×3 / 次のお手入れ 2×2</figcaption>
+  </figure>
+</div>
+<figure>
+  <img src="images/widget_maintenance_ipad.webp" width="720" height="361" alt="iPad お手入れ当番表のウィジェット 特大（今すぐ・もうすぐ・今日実施と在庫わずかの 3 列の当番表）" loading="lazy" decoding="async">
+  <figcaption>iPad：特大（3 列の当番表）</figcaption>
+</figure>
+
+<h4>お手入れが表示されないとき</h4>
+<ul>
+  <li><strong>「アプリでお手入れを追加してください」</strong>：お手入れが 1 件もないときの表示です</li>
+  <li><strong>「今すぐのお手入れはありません」</strong>：今すぐのものがないときの表示です。次のお手入れがあれば、その下に表示されます</li>
+  <li><strong>「アプリを開くと表示されます」</strong>：アプリをインストール（更新）してから、まだ一度もアプリを開いていないときの表示です。アプリを一度開くと表示されます</li>
+</ul>
+
+<h4>タップしたとき</h4>
+<ul>
+  <li><strong>お手入れの行</strong>（小ではウィジェット全体）：お手入れ当番表が開き、その項目の<a href="#maintenance-detail">詳細シート</a>が開きます。「実施した」で記録すると、ウィジェットにもすぐ反映されます</li>
+  <li><strong>それ以外の場所</strong>（見出し・件数・在庫わずかの行など）：お手入れ当番表が開きます</li>
+  <li>ほかの画面で作業中のときは「作業中の画面があります」の確認が出ます。「開く」を押すと、作業中の内容は破棄されます</li>
+</ul>
+
+<h4>更新のタイミング</h4>
+<ul>
+  <li>アプリでお手入れ・部屋・消耗品・担当などを変えると、すぐに反映されます。アプリを開いたときや、アプリに戻ってきたときも最新になります</li>
+  <li>残り日数と「今すぐ」「もうすぐ」の分け方は、日付が変わると自動で進みます（アプリを開かなくても「あと1日」→「今日」→「1日超過」と変わります。切り替わるのは 0 時ちょうどとは限らず、少し遅れることがあります）</li>
+  <li><a href="#maintenance-family">家族と共有</a>中に家族が記録した内容は、この端末でアプリを開いたときに反映されます</li>
+  <li>デモモード中はウィジェットの表示を書き換えません（デモを始める前の表示のままです）</li>
+</ul>
+
+<!-- ═══════════════════════════════════════════════════════ -->
 <!-- マイページ                                               -->
 <!-- ═══════════════════════════════════════════════════════ -->
 <h2 id="mypage">マイページ</h2>
@@ -3919,6 +4206,10 @@
   <li><strong>住宅性能値</strong> — C値 / UA値 / ηAC値 / ηAH値 / 耐震等級 / 断熱等性能等級（入力した項目だけがマイページに並びます）</li>
   <li><strong>マイページの見た目</strong> — ホームバナーの縮小プレビュー + マイホームカード画面のホームタブ／シェアタブへの 2 入口（ここでは見栄え自体は編集せず、マイホームカード画面に誘導）</li>
 </ol>
+
+<div class="callout info">
+  <p>断熱地域区分・延床面積・太陽光発電の値は、でんき通信簿の「<a href="#electricity-class">クラス</a>」に提出するときにも使われます（提出するかどうかは項目ごとに選べます）。クラスに提出している間は、この 3 つの欄のうち、提出している欄の下に「でんき通信簿のクラスにも提出しています。変更は次の提出から反映されます」と表示されます。ここで保存しても、その場では提出されません。</p>
+</div>
 
 <h4>未保存ガード</h4>
 <p>変更を加えたまま戻ろうとすると、「未保存の変更があります」ダイアログが出て、誤操作で入力を捨てるのを防ぎます。</p>
@@ -4145,7 +4436,7 @@
 <ol>
   <li><strong>個人設定</strong>：マイページ、ホームバナー表示</li>
   <li><strong>プレミアム</strong>：内容と価格の案内ページへの入口</li>
-  <li><strong>データ管理</strong>：バックアップ、復元、データ再構築、デモモード、家族と共有</li>
+  <li><strong>データ管理</strong>：バックアップ、復元、データ再構築、デモモード、でんき通信簿のクラス（提出したことがあるとき）、家族と共有</li>
   <li><strong>表示</strong>：モード切替、カウンター表示、テーマ、言語</li>
   <li><strong>アプリ</strong>：レビュー、フィードバック、チュートリアル、お知らせ、マニュアル、バージョン、ライセンス</li>
 </ol>
@@ -4232,6 +4523,9 @@
     <tr><td>仕様書データ再構築</td><td>同上、仕様書PDFに対して実行。</td></tr>
   </tbody>
 </table>
+
+<h3 id="settings-class">でんき通信簿のクラス</h3>
+<p>でんき通信簿の「<a href="#electricity-class">クラス</a>」に提出したことがあるときだけ、データ管理セクションの「家族と共有」の上に表示されます。行の下には「◯ヶ月分を提出しました」（提出をやめたあとは「提出をやめています」）と出ます。タップすると、提出した月・自動の提出・家の情報の切り替え・今後の提出をやめる・クラスのサポート用 ID のシートが開きます。使い方は <a href="#electricity-class-settings">でんき通信簿 &gt; 提出の設定</a> をご覧ください。デモモード中は使えません。</p>
 
 <h3 id="settings-family">家族と共有</h3>
 <p>お手入れ当番表を家族と同じ画面で使うための入口です。データ管理セクションの一番下にあります。共有できるのは<strong>お手入れ当番表のデータ（項目・部屋・消耗品・実施の記録・担当）だけ</strong>で、図面や見積りなどの書類は共有されません。共有の状態（参加の承認待ち・承認済み・停止中など）もこのタイルに表示され、タップすると共有の管理画面が開きます。使い方は <a href="#maintenance-family">お手入れ当番表 &gt; 家族と共有</a> をご覧ください。</p>
@@ -4392,7 +4686,7 @@
 <ul>
   <li><strong>パスワード保護PDFは非対応</strong>：iサポからダウンロードしたままの状態で取り込んでください。他アプリでロックを付けている場合は解除を</li>
   <li><strong>図面番号・種別が自動検出されない</strong>：取り込み画面のプレビューリストで各項目の<strong>鉛筆アイコン</strong>から手動編集してから「◯件を取り込み」をタップしてください</li>
-  <li><strong>iOSで「このアプリで開く」に本アプリが出ない</strong>：既定のPDFビューアが Adobe Acrobat など別アプリに設定されていると選択肢に表示されないことがあります。その場合は<strong>共有メニュー経由</strong>で ICHIJO 施主手帳を選んでください</li>
+  <li><strong>iOSで「このアプリで開く」に本アプリが出ない</strong>：既定のPDFビューアが Adobe Acrobat など別アプリに設定されていると選択肢に表示されないことがあります。その場合は<strong>共有メニュー経由</strong>で施主手帳を選んでください</li>
   <li><strong>取り込んだはずのPDFが増えていない</strong>：<a href="#import-dedupe">重複チェック</a>が効いています。中身が同じPDFは取り込まれず、完了の通知に「（◯件は同一ファイルのためスキップ）」と出ます。取り込み済みのものはドキュメント管理から確認できます</li>
   <li><strong>取り込もうとすると「取り込む図面番号を選ぶ」画面が出る</strong>：無料版で入れ替えが必要なときの画面です。古い図面番号を削除して入れ替えるか、プレミアムにすると取り込めます → <a href="#import-drawing-limit">図面番号の入れ替え</a></li>
   <li><strong>どうしても取り込めない</strong>：PDFの種類・エラー内容を添えてお問い合わせください</li>
@@ -4426,11 +4720,25 @@
   <li><strong>それでも合わない</strong>：料金プランや計算パラメータを変更すると<strong>自動で再計算</strong>されますが、異常時に手動で再計算したいときは右上メニューの<strong>再計算</strong>で全期間を再集計できます</li>
 </ul>
 
+<h3 id="troubleshooting-class">でんき通信簿のクラスで困ったとき</h3>
+<ul>
+  <li><strong>提出したのにクラスの通信簿に載らない</strong>：集計は 1 日 1 回、朝 4 時ごろです。提出した数字は、明日からクラスの通信簿に載ります</li>
+  <li><strong>「まだ比較対象の家が少ないです」「提出した家が集まってきています」と出る</strong>：提出した家が 10 軒以上になると、上位・下位が表示されます。「同じ断熱地域」「同じ売電単価」で足りないときは、比較対象を「すべての家」に切り替えてください</li>
+  <li><strong>詳しい画面に分布の図が出ない</strong>：分布の図は 20 軒以上で表示されます。10〜19 軒のときは「20軒以上になると、分布の図が表示されます」と出ます</li>
+  <li><strong>坪・kW あたりの数字が「—」になる</strong>：延床・太陽光の容量が入っていないか、提出しない設定になっています。行を押すと、その場で入力して提出できます → <a href="#electricity-class-screen">クラスの通信簿の見方</a></li>
+  <li><strong>同じ売電単価の家と比較できない</strong>：<a href="#electricity-plan">売電プラン</a>を設定してから提出してください。月の途中で売電プランが変わった月は、同じ売電単価の家とは比較できません</li>
+  <li><strong>「◯年◯月分をクラスに提出する」が出ない</strong>：その月のデータが月末までそろっていない、デモモード・開発者モードがオンになっている、今後の提出をやめている、のどれかが考えられます。その月を提出済みのときは「◯年◯月分を提出しました」が出ます。自動で提出する設定のときは、取り込み完了ダイアログにはボタンではなく提出の結果が出ます。月次のカードは料金プランが未設定のあいだと、× で閉じたあとは出ません（取り込み完了ダイアログとクラスの画面からは提出できます）</li>
+  <li><strong>「まだ提出できていません」と出る</strong>：通信できない状態でした。通信できるようになってから、でんき通信簿のクラスを開くと提出されます</li>
+  <li><strong>提出した数字を消したい</strong>：何もしなくても、最後の提出から約 1 年で自動的に消えます。すぐに消したいときは、クラスの画面の下（または 設定 &gt; データ管理 &gt; でんき通信簿のクラス）に表示される「クラスのサポート用 ID」を添えて <a href="#contact">お問い合わせ</a> ください → <a href="#electricity-class-data">送る数字と保存期間</a></li>
+</ul>
+
 <h3>ウィジェットが更新されない</h3>
 <ul>
-  <li><strong>Android</strong>：バッテリー最適化から除外してください（<strong>端末の 設定 → アプリ → ICHIJO施主手帳 → バッテリー → 最適化しない</strong>）</li>
+  <li><strong>Android</strong>：バッテリー最適化から除外してください（<strong>端末の 設定 → アプリ → 施主手帳（アップデート前は「ICHIJO施主手帳【非公式】」）→ バッテリー → 最適化しない</strong>）</li>
   <li><strong>iOS</strong>：OS が更新タイミングを決めるため、最大 1 日程度ずれることがあります。すぐ最新化したい場合はアプリを一度フォアグラウンドに持っていくと反映されます</li>
   <li><strong>スケジュールのピン留めを変えたのに反映されない</strong>：上記のタイミング要因です。それでも直らないときはウィジェットを一度削除して置き直してください</li>
+  <li><strong>お手入れ当番表のウィジェットに「アプリを開くと表示されます」と出る</strong>：アプリを一度開いてください。表示するデータが書き込まれます</li>
+  <li><strong>お手入れ当番表のウィジェットに、家族が記録した内容が出ない</strong>：<a href="#maintenance-family">家族と共有</a>中にほかの端末で記録した内容は、この端末でアプリを開いたときに反映されます</li>
 </ul>
 
 <h3>データが消えたように見える</h3>
@@ -4458,7 +4766,12 @@
 </ul>
 
 <h2 id="privacy">プライバシー</h2>
-<p>取り込んだPDF・解析結果・メモ・でんき通信簿のデータは、すべて端末内のみに保管されます。外部に送信されることはありません。お手入れ当番表の「<a href="#maintenance-family">家族と共有</a>」を使うときは、お手入れ当番表のデータや家族内の表示名など、共有と通知に必要な情報が同期のためにサーバー（Google Firebase）へ送信されます。詳細は <a href="https://smartolio.jp/privacy/ichijo-unofficial-app/" target="_blank" rel="noopener">プライバシーポリシー全文</a> をご確認ください。</p>
+<p>取り込んだPDF・解析結果・メモ・でんき通信簿のデータは、端末内に保管され、外部に送信されることはありません。ただし、次の機能を自分で使うときは、その機能に必要な情報がサーバー（Google Firebase）へ送信されます。</p>
+<ul>
+  <li><strong>でんき通信簿の「<a href="#electricity-class">クラス</a>」に提出するとき</strong>：提出する月の電気の数字、家の条件（断熱地域・延床・太陽光の容量・売電単価。それぞれ送らないことも選べます）、歴代ベスト。最後に提出してから約 1 年で自動的に消えます（<a href="#electricity-class-data">送る数字と保存期間</a>）</li>
+  <li><strong>お手入れ当番表の「<a href="#maintenance-family">家族と共有</a>」を使うとき</strong>：お手入れ当番表のデータや家族内の表示名など、共有と通知に必要な情報</li>
+</ul>
+<p>詳細は <a href="https://smartolio.jp/privacy/ichijo-unofficial-app/" target="_blank" rel="noopener">プライバシーポリシー全文</a> をご確認ください。</p>
 
 <h2 id="contact">お問い合わせ</h2>
 <p>バグ報告・要望・質問などは、以下の窓口へ。</p>
