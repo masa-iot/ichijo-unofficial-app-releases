@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ICHIJO施主手帳【非公式】- 一条工務店の施主のための家づくり・暮らしサポートアプリ</title>
+<title>施主手帳（旧名：ICHIJO施主手帳） - 一条工務店の施主のための家づくり・暮らしサポートアプリ</title>
 <meta name="description" content="一条工務店の施主のための非公式アプリ。図面チェック（CAD差分）・見積り比較・仕様書チェックから、でんき通信簿・お手入れ当番表まで。家づくりも入居後の暮らしもサポート。図面・見積りのデータは端末内保存で安心。">
 <link rel="canonical" href="https://ichijo-unofficial.smartolio.jp/">
 <meta name="theme-color" content="#2F6EA5">
@@ -14,9 +14,9 @@
 <!-- OGP -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ichijo-unofficial.smartolio.jp/">
-<meta property="og:site_name" content="ICHIJO施主手帳【非公式】">
-<meta property="og:title" content="ICHIJO施主手帳【非公式】- 一条工務店の施主のための家づくり・暮らしサポートアプリ">
-<meta property="og:description" content="家づくりも、入居後の暮らしも。図面チェック・見積り比較・でんき通信簿・お手入れ当番表など、一条施主のためのサポートアプリ。端末内保存・登録不要・基本無料。">
+<meta property="og:site_name" content="施主手帳">
+<meta property="og:title" content="施主手帳（旧名：ICHIJO施主手帳） - 一条工務店の施主のための家づくり・暮らしサポートアプリ">
+<meta property="og:description" content="家づくりも、入居後の暮らしも。図面チェック・見積り比較・でんき通信簿・お手入れ当番表など、一条施主のためのサポートアプリ（非公式）。端末内保存・登録不要・基本無料。">
 <meta property="og:image" content="https://ichijo-unofficial.smartolio.jp/images/ogp_v2.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -26,8 +26,18 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "施主手帳",
+  "alternateName": "施主手帳 - 建てる前も、住んでからも",
+  "url": "https://ichijo-unofficial.smartolio.jp/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
   "@type": "MobileApplication",
-  "name": "ICHIJO施主手帳【非公式】",
+  "name": "施主手帳",
+  "alternateName": "ICHIJO施主手帳【非公式】",
   "operatingSystem": "Android, iOS",
   "applicationCategory": "LifestyleApplication",
   "description": "一条工務店の施主のための非公式アプリ。図面チェック（CAD差分）・見積り比較・仕様書チェックから、でんき通信簿・お手入れ当番表まで、家づくりも入居後の暮らしもサポート。",
@@ -94,6 +104,7 @@
     display:flex;align-items:center;gap:8px;
   }
   .header-logo img{width:26px;height:26px;border-radius:6px}
+  .header-logo .old-name{font-size:.75rem;font-weight:500;color:#888}
   .header-nav a{margin-left:18px;font-size:.875rem;color:#555}
   .header-nav a:hover{color:var(--brand);text-decoration:none}
 
@@ -111,6 +122,7 @@
   .hero-brand{display:flex;align-items:center;gap:12px;margin-bottom:22px}
   .brand-name{font-size:1rem;font-weight:700;line-height:1.3;letter-spacing:.02em}
   .brand-name small{display:block;font-size:.78rem;font-weight:400;opacity:.85;margin-top:2px}
+  .brand-name .old-name{font-size:.8em;font-weight:500;opacity:.85}
   .hero-icon{
     width:56px;height:56px;border-radius:14px;flex:0 0 auto;
     background:#fff;overflow:hidden;
@@ -534,6 +546,7 @@
     .hero-icon{width:44px;height:44px;border-radius:11px}
     .brand-name{font-size:.9rem}
     .brand-name small{font-size:.72rem}
+    .header-logo .old-name{display:none}
     .hero .privacy-note br{display:none}
     section{padding:56px 16px}
     .trust-inner{grid-template-columns:1fr;gap:10px;padding:16px 20px}
@@ -552,7 +565,7 @@
   <div class="header-inner">
     <div class="header-logo">
       <img src="images/favicon-32.png" alt="" width="32" height="32">
-      ICHIJO施主手帳
+      施主手帳<small class="old-name">（旧名：ICHIJO施主手帳）</small>
     </div>
     <nav class="header-nav">
       <a href="#voices">施主の声</a>
@@ -591,7 +604,7 @@
         <div class="hero-icon">
           <img src="images/icon.webp" alt="アプリアイコン" width="720" height="720" decoding="async">
         </div>
-        <p class="brand-name">ICHIJO施主手帳【非公式】<small>一条工務店の施主のためのサポートアプリ</small></p>
+        <p class="brand-name">施主手帳<span class="old-name">（旧名：ICHIJO施主手帳）</span><small>一条工務店の施主のためのサポートアプリ（非公式）</small></p>
       </div>
       <h1>前回の図面から、<br>どこが変わった？</h1>
       <p class="tagline">新旧2枚の図面を選んで比較するだけ。<br>変わった場所が赤と青で浮かび上がります。<br>見積りも仕様書も同じように、家づくりから入居後の暮らしまで。</p>
@@ -948,7 +961,7 @@
         <h3>送る</h3>
         <p>iサポで開いた PDF を「アプリで開く」や「共有」からこのアプリへ。</p>
         </div>
-        <img src="images/import_open_with_android.webp" alt="iサポの PDF を「アプリで開く」から ICHIJO施主手帳 に送る画面" width="720" height="1523" loading="lazy" decoding="async">
+        <img src="images/import_open_with_android.webp" alt="iサポの PDF を「アプリで開く」から 施主手帳 に送る画面" width="720" height="1523" loading="lazy" decoding="async">
       </div>
       <div class="step">
         <div class="step-text">
@@ -1088,6 +1101,7 @@
           <li><strong>お手入れ当番表: ホームウィジェット</strong> — 今すぐ・もうすぐのお手入れと、残りわずかの消耗品を、端末のホーム画面に表示できます。スマホのほか、iPad や Android タブレットの大きなサイズにも対応しています。タップするとお手入れ当番表が開きます → <a href="manual.html#widget-maintenance">くわしくはこちら</a></li>
           <li><strong>お手入れ当番表: 「在庫わずか」の数え方</strong> — ダッシュボードの「在庫わずか」を、残りわずかになった消耗品の数で数えるようにしました（同じ消耗品を複数のお手入れで使っていても 1 つと数えます）</li>
           <li><strong>でんき通信簿: 「買電ゼロ日数」の数え方</strong> — 1 時間あたり 0.01 kWh 以下のわずかな買電は数えないようにしました</li>
+          <li><strong>アプリの名前</strong> — アプリの名前を「施主手帳」に変更しました（機能やデータはこれまでと変わりません）</li>
         </ul>
       </div>
       <details class="release-history">
@@ -1304,7 +1318,7 @@
 <!-- Footer -->
 <footer>
   <p>&copy; 2026 masa_iot. All rights reserved.</p>
-  <p class="disclaimer-footer">「ICHIJO施主手帳」は一条工務店の公式アプリではありません。一条工務店とは一切の関係がありません。</p>
+  <p class="disclaimer-footer">「施主手帳（旧名：ICHIJO施主手帳）」は一条工務店の公式アプリではありません。一条工務店とは一切の関係がありません。</p>
 </footer>
 
 <!-- Sticky CTA (mobile only) -->

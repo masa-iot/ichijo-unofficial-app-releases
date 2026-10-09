@@ -41,6 +41,7 @@ header{
   display:flex;align-items:center;gap:8px;white-space:nowrap;
 }
 .header-logo img{width:26px;height:26px;border-radius:6px}
+.header-logo .old-name{font-size:.75rem;font-weight:500;color:#888}
 .header-logo:hover{text-decoration:none}
 .header-nav a{margin-left:18px;font-size:.875rem;color:#555}
 .header-nav a:hover{color:var(--brand);text-decoration:none}
@@ -163,6 +164,7 @@ footer a{color:#ccc}
   .hero-visual{max-width:300px;margin:0 auto}
 }
 @media(max-width:600px){
+  .header-logo .old-name{display:none}
   .header-inner{padding:10px 16px}
   .header-nav a{margin-left:12px;font-size:.8rem}
   .guide-hero{padding:92px 16px 36px}
