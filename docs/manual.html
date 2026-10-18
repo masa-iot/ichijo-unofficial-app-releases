@@ -731,9 +731,10 @@
     <li class="sub"><a href="#diff-other">その他の書類を比べる</a></li>
     <li class="sub"><a href="#diff-single">単独図面解析モード</a></li>
     <li class="sub"><a href="#diff-result">差分結果画面</a></li>
+    <li class="sub2"><a href="#diff-shift-banner">ずれの案内</a></li>
     <li class="sub2"><a href="#diff-comments">コメントの表示・非表示</a></li>
     <li class="sub2"><a href="#diff-view-mode">ビューモード切替</a></li>
-    <li class="sub2"><a href="#diff-filter">ノイズ除去フィルタ</a></li>
+    <li class="sub2"><a href="#diff-filter">差分の表示（標準など）</a></li>
     <li class="sub2"><a href="#diff-adjusted">調整済/元切替</a></li>
     <li class="sub2"><a href="#diff-page">複数ページ操作</a></li>
     <li class="sub2"><a href="#diff-zoom">ズーム・パン</a></li>
@@ -1706,7 +1707,7 @@
 </div>
 
 <h3 id="diff-history">比較履歴</h3>
-<p>選択画面の下部に、過去の比較結果が新しい順に並びます。タップすると前回の状態（フィルタレベルや手動調整値）を保ったまま、すぐに再表示されます。</p>
+<p>選択画面の下部に、過去の比較結果が新しい順に並びます。タップすると前回の状態（差分の表示や調整値）を保ったまま、すぐに再表示されます。</p>
 <ul>
   <li>種別アイコン（CAD／電気／単独図面／その他の書類）</li>
   <li>図面番号（旧 → 新、または「(単独)」）</li>
@@ -1783,21 +1784,20 @@
 <h3 id="diff-result">差分結果画面</h3>
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/diff_result_aligned.webp" width="720" height="1564" alt="差分結果画面（位置が揃って差分が綺麗に出た状態）" loading="lazy" decoding="async">
-    <figcaption>位置が揃った例：本当に変わった箇所だけが赤（削除）と青（追加）で表示されます</figcaption>
+    <img src="images/diff_result_zoom.webp" width="720" height="1564" alt="差分結果画面を拡大したところ（位置が揃い、変わった壁や字が赤と青で表示されている）" loading="lazy" decoding="async">
+    <figcaption>位置が揃った例（拡大）：図の中で本当に変わった箇所が、赤（削除）と青（追加）で表示されます</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/diff_result.webp" width="720" height="1564" alt="差分結果画面（位置がずれた状態）" loading="lazy" decoding="async">
-    <figcaption>位置がずれている例：図面全体がずれていると、本来の変更箇所以外にも赤青がたくさん出てしまいます。こんな見え方になったら <a href="#alignment">「位置合わせ」機能</a> や <a href="#size-alignment">「サイズ合わせ」機能</a> で揃えましょう</figcaption>
+    <img src="images/diff_result.webp" width="720" height="1564" alt="差分結果画面（位置がずれた状態・図の上にずれの案内）" loading="lazy" decoding="async">
+    <figcaption>位置がずれている例：図面全体がずれていると、本来の変更箇所以外にも赤青がたくさん出てしまいます。ずれていそうなページでは図の上に <a href="#diff-shift-banner">ずれの案内</a> が出るので、［調整］から <a href="#alignment">「位置合わせ」機能</a> や <a href="#size-alignment">「サイズ合わせ」機能</a> で揃えましょう</figcaption>
   </figure>
 </div>
 
 <h4>自動計算の流れ</h4>
 <ol>
   <li><strong>PDFを高精細な画像に変換</strong></li>
-  <li><strong>旧版と新版を自動で位置合わせ</strong>（ずれた図面を重ね合わせられる状態に）</li>
-  <li><strong>差分を検出</strong></li>
-  <li><strong>色分け表示</strong>：赤=削除／青=追加／薄グレー=変化なし</li>
+  <li><strong>旧版と新版をそのまま重ねて差分を検出</strong>（位置は合わせません。ずれているときは <a href="#alignment">位置合わせ</a> で揃えます）</li>
+  <li><strong>色分け表示</strong>：赤=削除／青=追加／薄グレー=変化なし。最初の表示（<a href="#diff-filter">標準</a>）では、線のわずかなぶれは薄い色で表示されます</li>
 </ol>
 
 <p>計算中は進捗バーが表示されます。同じ版の組み合わせを再度開いたときは前回の結果がそのまま表示されます。</p>
@@ -1815,6 +1815,18 @@
   <li><strong>エクスポートアイコン</strong>：画像保存／共有</li>
 </ul>
 
+<h4 id="diff-shift-banner">ずれの案内</h4>
+<p>旧と新の図がずれていそうなページでは、図の上に「<strong>旧と新の図がずれて見えますか？ 図の位置・大きさ・比べるページは「調整」から直せます。</strong>」という案内が出ます。</p>
+<ul>
+  <li><strong>［調整］</strong>：右上の「調整 ▾」と同じメニュー（位置合わせ / サイズ合わせ / ページの組み合わせ）が開きます。まずは「位置合わせ」を選んでください → <a href="#alignment">位置合わせ画面</a></li>
+  <li><strong>［閉じる］</strong>：そのページでは、次からこの案内を出しません</li>
+  <li><strong>出ないページ</strong>：位置合わせ・サイズ合わせをしたページでは出ません。旧版と新版でページ数が違うときは、<a href="#page-mapping">ページ数の案内</a> が先に出ます</li>
+  <li><strong>表示の切り替え</strong>：差分・旧・新のどの表示でも、同じ場所に出ます</li>
+</ul>
+<div class="callout note">
+  <p>赤と青の出方から判断しているため、ずれていないページで出ることもあります。そのときは［閉じる］を押してください。</p>
+</div>
+
 <h4 id="diff-comments">コメントの表示・非表示（画面右上）</h4>
 <p>図面に書き込まれた<strong>コメント</strong>は、画面右上のボタンで表示／非表示を切り替えられます。コメントを隠すと、図面そのものの変更点だけを見られます。</p>
 <ul>
@@ -1829,11 +1841,11 @@
 
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/diff_result_comments_on.webp" width="720" height="1565" alt="差分結果画面・右上に「コメントを隠す」ボタン（コメント表示中）" loading="lazy" decoding="async">
+    <img src="images/diff_result_comments_on.webp" width="720" height="1564" alt="差分結果画面・右上に「コメントを隠す」ボタン（コメント表示中）" loading="lazy" decoding="async">
     <figcaption>コメント表示中（ボタンは「コメントを隠す」）</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/diff_result_comments_off.webp" width="720" height="1565" alt="差分結果画面・右上に「コメントを表示」ボタン（コメント非表示）" loading="lazy" decoding="async">
+    <img src="images/diff_result_comments_off.webp" width="720" height="1564" alt="差分結果画面・右上に「コメントを表示」ボタン（コメント非表示）" loading="lazy" decoding="async">
     <figcaption>コメント非表示（ボタンは「コメントを表示」）</figcaption>
   </figure>
 </div>
@@ -1849,25 +1861,39 @@
 
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/diff_result_aligned.webp" width="720" height="1564" alt="ビューモード「差分」表示" loading="lazy" decoding="async">
+    <img src="images/diff_result_zoom.webp" width="720" height="1564" alt="ビューモード「差分」表示（拡大）" loading="lazy" decoding="async">
     <figcaption>ビューモード「差分」表示（赤＝削除／青＝追加）</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/diff_result_old.webp" width="720" height="1564" alt="ビューモード「旧」表示" loading="lazy" decoding="async">
+    <img src="images/diff_result_old.webp" width="720" height="1564" alt="ビューモード「旧」表示（同じ場所を拡大）" loading="lazy" decoding="async">
     <figcaption>ビューモード「旧」表示</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/diff_result_new.webp" width="720" height="1564" alt="ビューモード「新」表示" loading="lazy" decoding="async">
+    <img src="images/diff_result_new.webp" width="720" height="1564" alt="ビューモード「新」表示（同じ場所を拡大）" loading="lazy" decoding="async">
     <figcaption>ビューモード「新」表示</figcaption>
   </figure>
 </div>
 
-<h4 id="diff-filter">ノイズ除去フィルタ</h4>
-<p>スキャンノイズや1pxの細かいズレで不要な差分が大量に出る場合、画面右上のドロップダウン（コメント切替ボタンの下）から4段階のフィルタを選べます。</p>
+<h4 id="diff-filter">差分の表示（厳密・標準・すっきり）</h4>
+<p>図面の作られ方によって、変わっていない線にもわずかなぶれが出ることがあります。画面右上のボタン（コメント切替ボタンの下）から、そのぶれをどう表示するかを選べます。</p>
 <table>
-  <thead><tr><th>レベル</th><th>効果</th></tr></thead>
+  <thead><tr><th>表示</th><th>効果</th></tr></thead>
   <tbody>
-    <tr><td>しっかり（デフォルト）</td><td>フィルタなし、全差分を表示</td></tr>
+    <tr><td>厳密</td><td>ぶれも出す：わずかなぶれも含めて、すべての差分を表示（以前の「しっかり」と同じ表示）</td></tr>
+    <tr><td>標準（最初の表示）</td><td>ぶれは薄く：線のわずかなぶれを薄い色で表示。本当に変わった所が見つけやすくなります</td></tr>
+    <tr><td>すっきり</td><td>ぶれは消す：線のわずかなぶれを表示しません</td></tr>
+  </tbody>
+</table>
+
+<figure>
+  <img src="images/diff_levels_compare.webp" width="720" height="1269" alt="同じ場所を厳密・標準・すっきりで比べた図。本当の変更（壁を動かした赤と青の線）はどれでも出て、変わっていない字の縁のぶれは厳密ではっきり、標準では薄く、すっきりでは出ない" loading="lazy" decoding="async">
+  <figcaption>同じ場所を拡大して比べたところ。本当の変更（壁を動かした赤と青の線）はどの表示でも出ます。変わっていない字の縁のぶれは、厳密ではっきり、標準では薄く、すっきりでは出ません</figcaption>
+</figure>
+
+<p>メニューの「<strong>以前の表示</strong>」から、これまでの表示も選べます。</p>
+<table>
+  <thead><tr><th>以前の表示</th><th>効果</th></tr></thead>
+  <tbody>
     <tr><td>ややざっくり</td><td>1pxノイズ除去</td></tr>
     <tr><td>ざっくり</td><td>小さな塊を除去</td></tr>
     <tr><td>超ざっくり</td><td>目立つ変更のみ表示</td></tr>
@@ -1875,23 +1901,18 @@
 </table>
 
 <div class="callout tip">
-  <p>フィルタレベルは <strong>ページ別</strong> に保存されます。1ページ目は「しっかり」、2ページ目は「ざっくり」のような使い分けが可能。レベル変更時は再計算が走ります。</p>
+  <p>表示は <strong>ページ別</strong> に保存されます。1ページ目は「標準」、2ページ目は「すっきり」のような使い分けができます。はじめて選んだ表示は、作るために少し待つことがあります。以前「しっかり」で見ていたページは「標準」で表示されます。</p>
+  <p>「すっきり」では、1px 以内のごく小さな違いも表示されません。細かな違いも見落としたくないときは「厳密」で確かめてください。</p>
 </div>
 
-<div class="shot-grid">
-  <figure class="shot-phone">
-    <img src="images/diff_filter_dropdown.webp" width="720" height="689" alt="ノイズフィルタのドロップダウン" loading="lazy" decoding="async">
-    <figcaption>ノイズフィルタのドロップダウン</figcaption>
-  </figure>
-  <figure class="shot-phone">
-    <img src="images/diff_filter_ultra.webp" width="720" height="689" alt="ノイズフィルタ「超ざっくり」適用" loading="lazy" decoding="async">
-    <figcaption>「超ざっくり」適用</figcaption>
-  </figure>
-</div>
+<figure class="shot-phone">
+  <img src="images/diff_filter_dropdown.webp" width="720" height="938" alt="差分の表示のメニュー（厳密・標準・すっきり・以前の表示）" loading="lazy" decoding="async">
+  <figcaption>差分の表示のメニュー（右上のボタンを押したところ）</figcaption>
+</figure>
 
 <h4 id="diff-adjusted">調整済 / 元の差分 切替</h4>
-<p>位置合わせ または サイズ合わせ を適用したページでは、画面右上（コメント切替ボタンの下）に「調整済 / 元の差分」の切替スイッチが表示されます。調整結果を適用した差分と、自動位置合わせ時の差分を比較できます。</p>
-<p>※フィルタレベルが「しっかり」以外の場合、このスイッチは無効になります（常に調整済を表示）。</p>
+<p>位置合わせ または サイズ合わせ を適用したページでは、画面右上（コメント切替ボタンの下）に「調整済 / 元の差分」の切替スイッチが表示されます。調整した差分と、調整する前の差分（元の差分）を見比べられます。</p>
+<p>※「以前の表示」（ややざっくり〜超ざっくり）を選んでいるときは、このスイッチは押せません（常に調整済を表示）。</p>
 
 <figure class="shot-phone">
   <img src="images/diff_adjusted_switch.webp" width="720" height="428" alt="調整済/元の差分スイッチ" loading="lazy" decoding="async">
@@ -1925,7 +1946,7 @@
   <li><strong>現在の画像を保存／共有</strong>：いま見ている1枚だけ（表示中のビューモードとページ番号が自動で反映されます）</li>
   <li><strong>現在ページの3枚をまとめて共有（差分・新・旧）</strong>：同じページの3モードを一気に</li>
 </ol>
-<p>保存されるPNGのファイル名には、図面番号とページ番号が自動で入ります（例：<code>2-7_P1.png</code>）。</p>
+<p>差分の画像は、選んでいる表示（<a href="#diff-filter">標準など</a>）で保存されます。保存されるPNGのファイル名には、表示とページ番号が自動で入ります（例：<code>図面_diff_P1.png</code>、3枚まとめは <code>図面_差分_P1.png</code> など）。単独図面解析では図面番号が入ります（例：<code>2-7_P1.png</code>）。</p>
 
 <div class="shot-grid">
   <figure class="shot-phone">
@@ -1938,51 +1959,64 @@
 <p>差分結果画面の気になる位置を長押しすると、その座標にピンが立ち、メモを残せます。詳細は <a href="#memo-on-diff">ウチメモ+ ＞ CAD差分画面のピンメモ</a> を参照。</p>
 
 <h3 id="alignment">位置合わせ画面</h3>
-<p>差分結果で位置がずれているときに、手動で旧図の位置を調整する画面です。差分結果画面の右上「<strong>調整 ▾</strong>」メニュー → 「位置合わせ」を選んで遷移します。</p>
+<p>差分結果で位置がずれているときに、旧図の位置を新図に合わせる画面です。差分結果画面の右上「<strong>調整 ▾</strong>」メニュー → 「位置合わせ」を選んで開きます。<a href="#diff-shift-banner">ずれの案内</a> の［調整］からも開けます。</p>
 
 <figure class="shot-phone">
   <img src="images/cad_adjust_menu.webp" width="720" height="1564" alt="「調整 ▾」メニュー（位置合わせ / サイズ合わせ / ページの組み合わせ）" loading="lazy" decoding="async">
   <figcaption>「調整 ▾」メニュー：位置合わせ / サイズ合わせ / <a href="#page-mapping">ページの組み合わせ</a> の 3 種を選べる</figcaption>
 </figure>
 
-<p>画面上部の「位置合わせの手順」カードに、以下の3ステップが表示されます。</p>
+<h4>合わせ方</h4>
+<p>画面の上に「<strong>図を枠で囲んで「ピタッと合わせる」を押します。合わせたら「適用」を押します。</strong>」と表示されます。右の <strong>？</strong> を押すと、次の手順が下から表示されます（横向きのときは、？ は画面上部のバーにあります）。</p>
 <ol>
-  <li><strong>下準備</strong>：X/Yスライダーでおおまかに位置を合わせる（大きくずれているときだけでOK）</li>
-  <li><strong>目印</strong>：緑の枠を、外壁のカドなど「ずれが分かる場所」に移動・リサイズ</li>
-  <li><strong>仕上げ</strong>：「ピタッと合わせる」を押す（<strong>「変化なし」と出るまで数回くり返す</strong>のがコツ）</li>
+  <li><strong>囲む</strong>：合わせたい図を緑の枠で囲みます。表題欄や図枠は入れません。枠は最初から画面の中央にあり、ドラッグで移動、四隅で大きさを変えられます</li>
+  <li><strong>合わせる</strong>：「ピタッと合わせる」を押すと、枠の周りを広く探して、重なる位置に合わせます</li>
+  <li><strong>確かめる</strong>：重なりを確かめて「適用」を押します。両方にある線は灰色、旧だけは赤、新だけは青で表示されます</li>
 </ol>
+
+<div class="callout tip">
+  <p>そのページで<strong>初めて位置合わせを開いたときは、自動で 1 回「ピタッと合わせる」</strong>を行います。<a href="#size-alignment">サイズ合わせ</a> で大きさを変えたあとに移ったときも、自動で 1 回合わせます。どちらも「適用」を押すまでは保存されません。</p>
+</div>
+
+<p>合わせている間は「重なる位置を探しています…」と表示され、戻る・適用などのボタンは押せません。終わると、ボタンの下に「重なる位置に合わせました」または「これ以上重なる位置は見つかりませんでした」と表示されます。</p>
 
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/diff_align.webp" width="720" height="1564" alt="位置合わせ初期画面（手順カード・目印枠・下準備スライダー）" loading="lazy" decoding="async">
-    <figcaption>初期画面（手順カード＋目印枠＋下準備スライダー）</figcaption>
+    <img src="images/diff_align.webp" width="720" height="1564" alt="位置合わせ画面（上に一言の案内と？、中央に枠、下に「ピタッと合わせる」）" loading="lazy" decoding="async">
+    <figcaption>位置合わせ画面：上に案内と ？、中央に枠、下に「ピタッと合わせる」</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/align_moved.webp" width="720" height="1564" alt="X/Yスライダーで位置を合わせ、選択枠も特徴部分に移動した状態（X:-80/Y:67）" loading="lazy" decoding="async">
-    <figcaption>① スライダーで位置合わせ／② 選択枠を特徴部分へ</figcaption>
+    <img src="images/align_help_sheet.webp" width="720" height="1564" alt="？を押すと出る手順（囲む・合わせる・確かめる）" loading="lazy" decoding="async">
+    <figcaption>？ で出る手順（囲む / 合わせる / 確かめる）</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/align_searching.webp" width="720" height="1564" alt="ピタッと合わせる実行中（最適位置を探索中）" loading="lazy" decoding="async">
-    <figcaption>③ 「ピタッと合わせる」探索中</figcaption>
+    <img src="images/align_searching.webp" width="720" height="1564" alt="「ピタッと合わせる」で重なる位置を探している間" loading="lazy" decoding="async">
+    <figcaption>重なる位置を探している間</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/align_done.webp" width="720" height="1564" alt="位置合わせ完了（変化なし表示と下準備の案内）" loading="lazy" decoding="async">
-    <figcaption>「変化なし」＝位置合わせ完了。ずれが残るときは下準備からやり直す案内が出る</figcaption>
+    <img src="images/align_done.webp" width="720" height="1564" alt="位置合わせ完了（重なる位置に合わせました・両方にある線が灰色）" loading="lazy" decoding="async">
+    <figcaption>合わせ終わったところ：両方にある線が灰色になる</figcaption>
+  </figure>
+  <figure class="shot-phone">
+    <img src="images/align_manual.webp" width="720" height="1564" alt="「手動で位置を調整する」を開いたところ（X / Y の行）" loading="lazy" decoding="async">
+    <figcaption>「手動で位置を調整する」を開いたところ</figcaption>
   </figure>
   <figure class="shot-phone">
     <img src="images/align_discard_dialog.webp" width="720" height="1564" alt="位置合わせ破棄確認ダイアログ" loading="lazy" decoding="async">
-    <figcaption>離脱時の破棄確認</figcaption>
+    <figcaption>適用せずに戻るときの確認</figcaption>
   </figure>
 </div>
 
 <h4>操作方法</h4>
 <ul>
-  <li><strong>X / Y スライダー</strong>（画面下）：旧図全体の位置を上下左右に微調整</li>
-  <li><strong>選択枠（緑）のドラッグ</strong>：枠を画面内で移動</li>
-  <li><strong>選択枠の四隅ハンドル</strong>：枠サイズをリサイズ</li>
-  <li><strong>「ピタッと合わせる」</strong>（右下）：選択枠の領域内で最適位置を自動探索</li>
-  <li><strong>「枠を初期位置に」</strong>（左下）：選択枠を初期サイズ・位置にリセット</li>
-  <li><strong>右上「適用」</strong>：現在の調整値を保存し、差分を再計算して結果画面へ戻る</li>
+  <li><strong>枠（緑）のドラッグ</strong>：枠を画面内で移動</li>
+  <li><strong>枠の四隅ハンドル</strong>：枠の大きさを変える</li>
+  <li><strong>「ピタッと合わせる」</strong>（画面下）：枠の周りを広く探して、重なる位置に合わせる</li>
+  <li><strong>「枠を初期位置に」</strong>（図の右下）：枠を最初の大きさ・位置に戻す</li>
+  <li><strong>「手動で位置を調整する」</strong>：開くと X / Y の行が表示され、−／＋（タップで 1 ずつ・長押しで続けて動く）、スライダー、0 に戻すボタンで旧図の位置を動かせます。大きくずれていて「ピタッと合わせる」で合わないときは、ここでおおまかに合わせてから、もう一度「ピタッと合わせる」を押してください</li>
+  <li><strong>？</strong>：手順を表示</li>
+  <li><strong>右上「適用」</strong>：今の位置を保存し、差分を再計算して結果画面へ戻る</li>
+  <li><strong>適用せずに戻る</strong>：位置が変わっていれば確認が出ます（「破棄する」/「適用して戻る」）。自動で合わせたあとも同じです</li>
 </ul>
 
 <div class="callout note">
@@ -2001,8 +2035,8 @@
 <ol>
   <li>「<strong>旧図面の縮尺</strong>」「<strong>新図面の縮尺</strong>」に、それぞれの分母の数字を入力します（例: 旧 1/80 → 新 1/70 なら「80」と「70」）</li>
   <li>「<strong>旧図面を XX% のサイズに変換します</strong>」と表示されたら「<strong>適用</strong>」を押します</li>
-  <li>自動で <a href="#alignment">位置合わせ画面</a> に移ります（初回は「サイズ変更した図面を準備しています…」と数秒待ちます）</li>
-  <li>位置を確認・調整して「<strong>適用</strong>」を押すと、サイズと位置がまとめて反映され、差分が再計算されます</li>
+  <li>自動で <a href="#alignment">位置合わせ画面</a> に移り、1 回自動で「ピタッと合わせる」を行います（初回は「サイズ変更した図面を準備しています…」と数秒待ちます）</li>
+  <li>重なりを確かめて「<strong>適用</strong>」を押すと、サイズと位置がまとめて反映され、差分が再計算されます</li>
 </ol>
 
 <figure class="shot-phone">
@@ -2118,13 +2152,16 @@
   <div class="action-row"><strong>履歴タップ</strong><span>キャッシュから即表示</span></div>
   <div class="action-row"><strong>履歴長押し</strong><span>履歴削除（確認あり）</span></div>
   <div class="action-row"><strong>差分結果：ビューモード</strong><span>差分／旧／新 切替</span></div>
-  <div class="action-row"><strong>差分結果：フィルタ選択</strong><span>ノイズ除去4段階</span></div>
+  <div class="action-row"><strong>差分結果：表示の選択</strong><span>厳密 / 標準 / すっきり（＋以前の表示）</span></div>
+  <div class="action-row"><strong>ずれの案内：［調整］／［閉じる］</strong><span>「調整 ▾」と同じメニュー／そのページでは次から出さない</span></div>
   <div class="action-row"><strong>差分結果：調整済/元</strong><span>位置合わせ適用前後の比較</span></div>
   <div class="action-row"><strong>ページ送り（←→）</strong><span>複数ページ切替</span></div>
   <div class="action-row"><strong>ピンチ・ダブルタップ</strong><span>最大8倍ズーム</span></div>
   <div class="action-row"><strong>画面長押し</strong><span>その位置にメモを追加（ピンメモ）</span></div>
   <div class="action-row"><strong>エクスポートアイコン</strong><span>現在の1枚 or 3枚まとめ</span></div>
   <div class="action-row"><strong>「調整 ▾」メニュー</strong><span>位置合わせ / サイズ合わせ / ページの組み合わせ を選択</span></div>
+  <div class="action-row"><strong>位置合わせ：「ピタッと合わせる」</strong><span>枠の周りを広く探して重なる位置に合わせる</span></div>
+  <div class="action-row"><strong>位置合わせ：「適用」</strong><span>位置を保存して差分を再計算</span></div>
   <div class="action-row"><strong>ページの組み合わせ：セルタップ</strong><span>比べる相手のページを選ぶ（「なし」も可）</span></div>
   <div class="action-row"><strong>ページの組み合わせ：「保存」</strong><span>変えたページだけ差分を再計算</span></div>
   <div class="action-row"><strong>サイズ合わせ：縮尺を入力</strong><span>旧/新の縮尺（1/◯◯）から大きさの比を算出</span></div>
@@ -4697,13 +4734,13 @@
 <h3 id="troubleshooting-diff">図面の差分がうまく出ない</h3>
 <p>変更していない場所まで赤・青になるときは、新旧の図面の<strong>位置・大きさ・ページの組み合わせ</strong>のどれかがずれています。差分結果画面の右上「調整 ▾」メニューから直せます。まず位置合わせ、それでも合わなければサイズ合わせ、ページ数が違うときはページの組み合わせ、の順に試してください。</p>
 <ul>
-  <li><strong>全体がずれて赤青だらけ</strong>：「調整 ▾」→「位置合わせ」で旧図の位置を合わせます。「下準備 → 目印 → 仕上げ」の3ステップで、最後は「ピタッと合わせる」が自動で追い込みます。結果はページ単位で保存され、次回も同じ調整で開きます → <a href="#alignment">位置合わせ画面</a></li>
+  <li><strong>全体がずれて赤青だらけ</strong>：「調整 ▾」→「位置合わせ」（または <a href="#diff-shift-banner">ずれの案内</a> の［調整］）で旧図の位置を合わせます。そのページで初めて開いたときは自動で 1 回「ピタッと合わせる」を行うので、重なりを確かめて「適用」を押します。ずれが残るときは「手動で位置を調整する」でおおまかに合わせてから、もう一度「ピタッと合わせる」を押してください。結果はページ単位で保存され、次回も同じ調整で開きます → <a href="#alignment">位置合わせ画面</a></li>
   <li><strong>片方の図面だけ大きい／小さい（重ねても輪郭が二重になる）</strong>：版の間で縮尺が変わっています。「調整 ▾」→「サイズ合わせ」で、図面に書かれている縮尺（例: 1/80）を入力すると大きさが揃います → <a href="#size-alignment">サイズ合わせ画面</a></li>
   <li><strong>別のページ同士が比べられている／版の途中でページが増減した</strong>：「調整 ▾」→「ページの組み合わせ」で、旧版と新版のどのページ同士を比べるかを指定します。ページ数が違うときは案内が表示され、そこから直接開けます → <a href="#page-mapping">ページの組み合わせ</a></li>
-  <li><strong>細かい赤青が出すぎる</strong>：右上のノイズ除去フィルタを「ややざっくり」〜「超ざっくり」にすると、線の太さ程度の差分が間引かれます（ページ別に保存されます） → <a href="#diff-filter">ノイズ除去フィルタ</a></li>
+  <li><strong>細かい赤青が出すぎる</strong>：右上の差分の表示を「すっきり」にすると、線のわずかなぶれが消えます。さらに減らしたいときは「以前の表示」の「ややざっくり」〜「超ざっくり」も選べます（ページ別に保存されます） → <a href="#diff-filter">差分の表示</a></li>
   <li><strong>一部のページだけズレている</strong>：位置合わせはページ単位です。画面下のバーで該当ページに切り替えてから調整してください → <a href="#diff-page">複数ページ操作</a></li>
   <li><strong>調整の前後を見比べたい</strong>：「調整済 / 元」の切替で、調整前の差分にいつでも戻せます → <a href="#diff-adjusted">調整済 / 元の差分 切替</a></li>
-  <li><strong>前回の調整結果にすぐ戻りたい</strong>：選択画面下部の<strong>比較履歴</strong>をタップするだけで即表示されます（調整値・フィルタレベルも復元） → <a href="#diff-history">比較履歴</a></li>
+  <li><strong>前回の調整結果にすぐ戻りたい</strong>：選択画面下部の<strong>比較履歴</strong>をタップするだけで即表示されます（調整値・差分の表示も復元） → <a href="#diff-history">比較履歴</a></li>
 </ul>
 
 <h3>見積り・仕様書の解析結果がおかしい</h3>
