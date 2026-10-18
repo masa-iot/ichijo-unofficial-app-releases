@@ -1784,8 +1784,8 @@
 <h3 id="diff-result">差分結果画面</h3>
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/diff_result_aligned.webp" width="720" height="1564" alt="差分結果画面（位置が揃って差分が綺麗に出た状態）" loading="lazy" decoding="async">
-    <figcaption>位置が揃った例：図の中で本当に変わった箇所が、赤（削除）と青（追加）で表示されます</figcaption>
+    <img src="images/diff_result_zoom.webp" width="720" height="1564" alt="差分結果画面を拡大したところ（位置が揃い、変わった壁や字が赤と青で表示されている）" loading="lazy" decoding="async">
+    <figcaption>位置が揃った例（拡大）：図の中で本当に変わった箇所が、赤（削除）と青（追加）で表示されます</figcaption>
   </figure>
   <figure class="shot-phone">
     <img src="images/diff_result.webp" width="720" height="1564" alt="差分結果画面（位置がずれた状態・図の上にずれの案内）" loading="lazy" decoding="async">
@@ -1861,15 +1861,15 @@
 
 <div class="shot-grid">
   <figure class="shot-phone">
-    <img src="images/diff_result_aligned.webp" width="720" height="1564" alt="ビューモード「差分」表示" loading="lazy" decoding="async">
+    <img src="images/diff_result_zoom.webp" width="720" height="1564" alt="ビューモード「差分」表示（拡大）" loading="lazy" decoding="async">
     <figcaption>ビューモード「差分」表示（赤＝削除／青＝追加）</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/diff_result_old.webp" width="720" height="1564" alt="ビューモード「旧」表示" loading="lazy" decoding="async">
+    <img src="images/diff_result_old.webp" width="720" height="1564" alt="ビューモード「旧」表示（同じ場所を拡大）" loading="lazy" decoding="async">
     <figcaption>ビューモード「旧」表示</figcaption>
   </figure>
   <figure class="shot-phone">
-    <img src="images/diff_result_new.webp" width="720" height="1564" alt="ビューモード「新」表示" loading="lazy" decoding="async">
+    <img src="images/diff_result_new.webp" width="720" height="1564" alt="ビューモード「新」表示（同じ場所を拡大）" loading="lazy" decoding="async">
     <figcaption>ビューモード「新」表示</figcaption>
   </figure>
 </div>
@@ -1884,6 +1884,12 @@
     <tr><td>すっきり</td><td>ぶれは消す：線のわずかなぶれを表示しません</td></tr>
   </tbody>
 </table>
+
+<figure>
+  <img src="images/diff_levels_compare.webp" width="720" height="1269" alt="同じ場所を厳密・標準・すっきりで比べた図。本当の変更（壁を動かした赤と青の線）はどれでも出て、変わっていない字の縁のぶれは厳密ではっきり、標準では薄く、すっきりでは出ない" loading="lazy" decoding="async">
+  <figcaption>同じ場所を拡大して比べたところ。本当の変更（壁を動かした赤と青の線）はどの表示でも出ます。変わっていない字の縁のぶれは、厳密ではっきり、標準では薄く、すっきりでは出ません</figcaption>
+</figure>
+
 <p>メニューの「<strong>以前の表示</strong>」から、これまでの表示も選べます。</p>
 <table>
   <thead><tr><th>以前の表示</th><th>効果</th></tr></thead>
@@ -1896,6 +1902,7 @@
 
 <div class="callout tip">
   <p>表示は <strong>ページ別</strong> に保存されます。1ページ目は「標準」、2ページ目は「すっきり」のような使い分けができます。はじめて選んだ表示は、作るために少し待つことがあります。以前「しっかり」で見ていたページは「標準」で表示されます。</p>
+  <p>「すっきり」では、1px 以内のごく小さな違いも表示されません。細かな違いも見落としたくないときは「厳密」で確かめてください。</p>
 </div>
 
 <figure class="shot-phone">
