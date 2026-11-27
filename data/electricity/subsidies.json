@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "publishedAt": "2026-05-31",
+  "publishedAt": "2026-11-27",
   "items": [
     {
       "subsidyKey": "gov_2023_02",
@@ -257,6 +257,30 @@
       "rate": -3.5,
       "note": "電気・ガス料金支援（2026年9月使用分）",
       "publishedAt": "2026-10-01"
+    },
+    {
+      "subsidyKey": "gov_2027_01",
+      "year": 2027,
+      "month": 1,
+      "rate": -1.0,
+      "note": "電気・ガス料金支援（2026年12月使用分）",
+      "publishedAt": "2027-01-01"
+    },
+    {
+      "subsidyKey": "gov_2027_02",
+      "year": 2027,
+      "month": 2,
+      "rate": -4.5,
+      "note": "電気・ガス料金支援（2027年1月使用分）",
+      "publishedAt": "2027-02-01"
+    },
+    {
+      "subsidyKey": "gov_2027_03",
+      "year": 2027,
+      "month": 3,
+      "rate": -4.5,
+      "note": "電気・ガス料金支援（2027年2月使用分）",
+      "publishedAt": "2027-03-01"
     }
   ]
 }
